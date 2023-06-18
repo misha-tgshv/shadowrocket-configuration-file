@@ -1,6 +1,6 @@
 # NAME: Proxy
 # AUTHOR: Misha Tugushev
-# REPO: https://github.com/misha-tgshv/shadowrocket-ios-ru
+# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
 # UPDATED: 2023-06-17 16:06:14
 DOMAIN-SUFFIX,aol.com
 DOMAIN-SUFFIX,browserleaks.com
