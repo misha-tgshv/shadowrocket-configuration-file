@@ -1,5 +1,7 @@
-# Shadowrocket: 2023-06-19 19:48:00
-# Все домены банков РФ с сайта https://www.cbr.ru/banking_sector/credit/cowebsites/
+# NAME: Template iOS non Russia
+# AUTHOR: Misha Tugushev
+# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
+# UPDATED: 2023-06-19 19:48:00
 
 [General]
 bypass-system = true 
