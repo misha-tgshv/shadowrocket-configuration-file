@@ -1,157 +1,19 @@
-# Misha Tugushev Shadowrocket config rules.
-# Basic on (https://github.com/KqSMea8/Rules-1/blob/master/Shadowrocket.conf)
-# Basic on (https://github.com/mtxadmin/ublock/blob/master/hosts/_marketing_yandex#L50)
-# Basic on (https://github.com/easylist/ruadlist/blob/master/advblock/adservers.txt)
+# Shadowrocket: 2023-06-19 19:48:00
 
 [General]
-bypass-system = true
-skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 17.0.0.0/8, localhost, *.local
+bypass-system = true 
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local
 bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.18.0.0/15, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
 dns-server = system, 223.5.5.5, 223.6.6.6, 8.8.8.8, 8.8.4.4
-update-url = https://raw.githubusercontent.com/misha-tgshv/shadowrocket-ios-ru/main/shadowrocket-tgshv.conf
+update-url = https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/template-ios-ru.conf
 
 [Rule]
-## ADBlock
-# Yandex
-DOMAIN-SUFFIX,1.adfox.ru,REJECT
-DOMAIN-SUFFIX,ad-constructor.yandex.ru,REJECT
-DOMAIN-SUFFIX,adfox.cz,REJECT
-DOMAIN-SUFFIX,adfox.me,REJECT
-DOMAIN-SUFFIX,adfox.ru,REJECT
-DOMAIN-SUFFIX,ads.adfox.ru,REJECT
-DOMAIN-SUFFIX,adsdk.yandex.ru,REJECT
-DOMAIN-SUFFIX,api-metrica.yandex.ru,REJECT
-DOMAIN-SUFFIX,api.appmetrica.yandex.com,REJECT
-DOMAIN-SUFFIX,api.appmetrica.yandex.net,REJECT
-DOMAIN-SUFFIX,api.appmetrica.yandex.ru,REJECT
-DOMAIN-SUFFIX,appmetrica.webvisor.com,REJECT
-DOMAIN-SUFFIX,awsync.yandex.ru,REJECT
-DOMAIN-SUFFIX,browser.mobile.yandex.net,REJECT
-DOMAIN-SUFFIX,browser.yandex.ru,REJECT
-DOMAIN-SUFFIX,clck.yandex.by,REJECT
-DOMAIN-SUFFIX,clck.yandex.com,REJECT
-DOMAIN-SUFFIX,clck.yandex.com.tr,REJECT
-DOMAIN-SUFFIX,clck.yandex.kz,REJECT
-DOMAIN-SUFFIX,clck.yandex.ru,REJECT
-DOMAIN-SUFFIX,clck.yandex.ua,REJECT
-DOMAIN-SUFFIX,external-promo-metrics.yandex.net,REJECT
-DOMAIN-SUFFIX,getyabrowser.com,REJECT
-DOMAIN-SUFFIX,help.adfox.ru,REJECT
-DOMAIN-SUFFIX,http-check-headers.yandex.ru,REJECT
-DOMAIN-SUFFIX,iva.adfox.ru,REJECT
-DOMAIN-SUFFIX,mc.yandex.com,REJECT
-DOMAIN-SUFFIX,mc.yandex.com,REJECT
-DOMAIN-SUFFIX,metrica-yandex.com,REJECT
-DOMAIN-SUFFIX,metrica.yandex.by,REJECT
-DOMAIN-SUFFIX,metrica.yandex.com,REJECT
-DOMAIN-SUFFIX,metrica.yandex.kz,REJECT
-DOMAIN-SUFFIX,metrica.yandex.net,REJECT
-DOMAIN-SUFFIX,metrica.yandex.ru,REJECT
-DOMAIN-SUFFIX,metrica.yandex.ua,REJECT
-DOMAIN-SUFFIX,mobile-browser.mobile.yandex.net,REJECT
-DOMAIN-SUFFIX,mobile-browser.tst.mobile.yandex.net,REJECT
-DOMAIN-SUFFIX,mobile.webvisor.com,REJECT
-DOMAIN-SUFFIX,myt.adfox.ru,REJECT
-DOMAIN-SUFFIX,offerwall.yandex.net,REJECT
-DOMAIN-SUFFIX,redirect.appmetrica.yandex.com,REJECT
-DOMAIN-SUFFIX,redirect.appmetrica.yandex.ru,REJECT
-DOMAIN-SUFFIX,sba.yandex.net,REJECT
-DOMAIN-SUFFIX,sba.yandex.ru,REJECT
-DOMAIN-SUFFIX,taxi-promotions.s3.yandex.net,REJECT
-DOMAIN-SUFFIX,tracking.ott.yandex.net,REJECT
-DOMAIN-SUFFIX,tracking.ott.yandex.net,REJECT
-DOMAIN-SUFFIX,ttnet.yandex.com.tr,REJECT
-DOMAIN-SUFFIX,uptime-info.yandex.ru,REJECT
-DOMAIN-SUFFIX,uxfeedback-cdn.s3.yandex.net,REJECT
-DOMAIN-SUFFIX,web-metrica.yandex.by,REJECT
-DOMAIN-SUFFIX,web-metrica.yandex.com,REJECT
-DOMAIN-SUFFIX,web-metrica.yandex.kz,REJECT
-DOMAIN-SUFFIX,web-metrica.yandex.net,REJECT
-DOMAIN-SUFFIX,web-metrica.yandex.ru,REJECT
-DOMAIN-SUFFIX,web-metrica.yandex.ru,REJECT
-DOMAIN-SUFFIX,web-metrica.yandex.ua,REJECT
-DOMAIN-SUFFIX,web-visor.com,REJECT
-DOMAIN-SUFFIX,webvisor.org,REJECT
-DOMAIN-SUFFIX,webvisor.ru,REJECT
-DOMAIN-SUFFIX,ya-counter.ru,REJECT
-DOMAIN-SUFFIX,ya-counter.ru,REJECT
-DOMAIN-SUFFIX,ya-distrib.ru,REJECT
-DOMAIN-SUFFIX,yandex-metrica.ru,REJECT
-DOMAIN-SUFFIX,yandex-metrica.ru,REJECT
-DOMAIN-SUFFIX,ymetrica.com,REJECT
-DOMAIN-SUFFIX,ymetrica.com,REJECT
-DOMAIN-SUFFIX,ymetrica1.com,REJECT
-DOMAIN-SUFFIX,ymetrica1.com,REJECT
-## END ADBlock
-
-## Proxy
-DOMAIN-SUFFIX,aol.com,Proxy
-DOMAIN-SUFFIX,browserleaks.com,Proxy
-DOMAIN-SUFFIX,canva.com,Proxy
-DOMAIN-SUFFIX,gravatar.com,Proxy
-DOMAIN-SUFFIX,ig.me,Proxy
-DOMAIN-SUFFIX,instagram.com,Proxy
-DOMAIN-SUFFIX,cdninstagram.com,Proxy
-DOMAIN-SUFFIX,facebook.com,Proxy
-DOMAIN-SUFFIX,connect.facebook.net,Proxy
-DOMAIN-SUFFIX,fb.com,PROXY
-DOMAIN-SUFFIX,fb.me,PROXY
-DOMAIN-SUFFIX,fbcdn.net,PROXY
-DOMAIN-SUFFIX,fbsbx.com,PROXY
-DOMAIN-SUFFIX,f.vision,Proxy
-DOMAIN-SUFFIX,fbcdn.net,Proxy
-DOMAIN-SUFFIX,cdnfacebook.com,Proxy
-DOMAIN-SUFFIX,fburl.com,Proxy
-DOMAIN-SUFFIX,kahoot.com,Proxy
-DOMAIN-SUFFIX,licdn.com,Proxy
-DOMAIN-SUFFIX,linkedin.com,Proxy
-DOMAIN-SUFFIX,lnkd.in,Proxy
-DOMAIN-SUFFIX,medium.com,Proxy
-DOMAIN-SUFFIX,meta.com,Proxy
-DOMAIN-SUFFIX,netflix.com,Proxy
-DOMAIN-SUFFIX,nnmclub.to,Proxy
-DOMAIN-SUFFIX,openai.com,Proxy
-DOMAIN-SUFFIX,proton.me,Proxy
-DOMAIN-SUFFIX,quora.com,Proxy
-DOMAIN-SUFFIX,setapp.com,Proxy
-DOMAIN-SUFFIX,slideshare.net,Proxy
-DOMAIN-SUFFIX,soundcloud.com,Proxy
-DOMAIN-SUFFIX,t.co,Proxy
-DOMAIN-SUFFIX,tumblr.com,Proxy
-DOMAIN-SUFFIX,twimg.com,Proxy
-DOMAIN-SUFFIX,twitter.co,Proxy
-DOMAIN-SUFFIX,twitthat.com,Proxy
-DOMAIN-SUFFIX,twtkr.com,Proxy
-DOMAIN-SUFFIX,twttr.com,Proxy
-DOMAIN-SUFFIX,vimeo.com,Proxy
-DOMAIN-SUFFIX,vimeocdn.com,Proxy
-DOMAIN-SUFFIX,youtu.be,Proxy
-
-#KEYWORD
-DOMAIN-KEYWORD,canva,Proxy
-DOMAIN-KEYWORD,dropbox,Proxy
-DOMAIN-KEYWORD,facebook,Proxy
-DOMAIN-KEYWORD,instagram,Proxy
-DOMAIN-KEYWORD,kahoot,Proxy
-DOMAIN-KEYWORD,proton,Proxy
-DOMAIN-KEYWORD,twitter,Proxy
-DOMAIN-KEYWORD,youtube,Proxy
-## END Proxy
-
-DOMAIN-SUFFIX,smtp,DIRECT
-IP-CIDR,10.0.0.0/8,DIRECT
-IP-CIDR,100.64.0.0/10,DIRECT
-IP-CIDR,127.0.0.0/8,DIRECT
-IP-CIDR,172.16.0.0/12,DIRECT
-IP-CIDR,192.168.0.0/16,DIRECT
-
-DOMAIN-SUFFIX,.ru,DIRECT
-DOMAIN-SUFFIX,.com.ru,DIRECT
-DOMAIN-SUFFIX,.рф,DIRECT
-
+RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/proxy-finance-ru.list,PROXY
 GEOIP,RU,DIRECT
 FINAL,DIRECT
 
+[Host]
+localhost = 127.0.0.1
+
 [URL Rewrite]
-# Rewrite
-^http://www.google.ru http://www.google.com.ru header
+^http://(www.)?yandex.ru https://www.ya.ru 302
