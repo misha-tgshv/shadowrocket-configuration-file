@@ -1,0 +1,12 @@
+DOMAIN-SUFFIX,# NAME: Proxy Finance Russia
+DOMAIN-SUFFIX,# AUTHOR: Misha Tugushev
+DOMAIN-SUFFIX,# REPO: https://github.com/misha-tgshv/shadowrocket-ios-ru
+DOMAIN-SUFFIX,# BASE ON: https://www.cbr.ru/banking_sector/credit/cowebsites/ 
+DOMAIN-SUFFIX,# UPDATED: 2023-06-19 22:49:55
+DOMAIN-SUFFIX,sso.ya.ru
+DOMAIN-SUFFIX,kinopoisk.ru
+DOMAIN-SUFFIX,hd.kinopoisk.ru
+DOMAIN-SUFFIX,sso.kinopoisk.ru
+DOMAIN-SUFFIX,api.ott.kinopoisk.ru
+DOMAIN-SUFFIX,graphql.kinopoisk.ru
+DOMAIN-SUFFIX,payment-widget.plus.kinopoisk.ru
