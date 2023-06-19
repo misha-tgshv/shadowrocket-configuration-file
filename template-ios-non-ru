@@ -1,4 +1,5 @@
 # Shadowrocket: 2023-06-19 19:48:00
+# Все домены банков РФ с сайта https://www.cbr.ru/banking_sector/credit/cowebsites/
 
 [General]
 bypass-system = true 
@@ -9,7 +10,7 @@ update-url = https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configur
 
 [Rule]
 RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/proxy-finance-ru.list,PROXY
-GEOIP,RU,DIRECT
+GEOIP,NL,DIRECT
 FINAL,DIRECT
 
 [Host]
