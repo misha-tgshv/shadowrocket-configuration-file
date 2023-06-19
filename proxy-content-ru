@@ -1,8 +1,7 @@
-DOMAIN-SUFFIX,# NAME: Proxy Finance Russia
-DOMAIN-SUFFIX,# AUTHOR: Misha Tugushev
-DOMAIN-SUFFIX,# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-
-DOMAIN-SUFFIX,# UPDATED: 2023-06-19 22:49:55
+# NAME: Proxy Finance Russia
+# AUTHOR: Misha Tugushev
+# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
+# UPDATED: 2023-06-19 22:49:55
 DOMAIN-SUFFIX,sso.ya.ru
 DOMAIN-SUFFIX,kinopoisk.ru
 DOMAIN-SUFFIX,hd.kinopoisk.ru
