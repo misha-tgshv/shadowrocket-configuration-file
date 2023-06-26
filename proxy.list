@@ -9,7 +9,6 @@ DOMAIN-SUFFIX,dyson.com
 DOMAIN-SUFFIX,gravatar.com
 DOMAIN-SUFFIX,ig.me
 DOMAIN-SUFFIX,instagram.com
-DOMAIN-SUFFIX,www.instagram.com
 DOMAIN-SUFFIX,graph.instagram.com
 DOMAIN-SUFFIX,edge-chat.instagram.com
 DOMAIN-SUFFIX,gateway.instagram.com
@@ -23,7 +22,6 @@ DOMAIN-SUFFIX,static.cdninstagram.com
 DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,connect.facebook.net
-DOMAIN-SUFFIX,www.facebook.com
 DOMAIN-SUFFIX,graph.facebook.com
 DOMAIN-SUFFIX,gateway.facebook.com
 DOMAIN-SUFFIX,edge-chat.facebook.com
