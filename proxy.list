@@ -121,3 +121,4 @@ DOMAIN-SUFFIX,twttr.com
 DOMAIN-SUFFIX,vimeo.com
 DOMAIN-SUFFIX,vimeocdn.com
 DOMAIN-KEYWORD,instagram
+IP-CIDR,157.240.214.174,no-resolve
