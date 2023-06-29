@@ -10,6 +10,7 @@ DOMAIN-SUFFIX,gravatar.com
 DOMAIN-SUFFIX,cdninstagram.com,force-remote-dns
 DOMAIN-SUFFIX,cdnfbsbx.com,force-remote-dns
 DOMAIN-SUFFIX,igcdn.com
+DOMAIN-SUFFIX,instagram.com
 DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,connect.facebook.net
 DOMAIN-SUFFIX,graph.facebook.com
@@ -50,4 +51,4 @@ DOMAIN-SUFFIX,twtkr.com
 DOMAIN-SUFFIX,twttr.com
 DOMAIN-SUFFIX,vimeo.com
 DOMAIN-SUFFIX,vimeocdn.com
-DOMAIN-KEYWORD,instagram,force-remote-dns
+DOMAIN-KEYWORD,instagram
