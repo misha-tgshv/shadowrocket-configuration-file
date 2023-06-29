@@ -8,7 +8,6 @@ DOMAIN-SUFFIX,canva.com
 DOMAIN-SUFFIX,dyson.com
 DOMAIN-SUFFIX,gravatar.com
 DOMAIN-SUFFIX,cdninstagram.com,force-remote-dns
-DOMAIN-SUFFIX,instagram.com,force-remote-dns
 DOMAIN-SUFFIX,cdnfbsbx.com,force-remote-dns
 DOMAIN-SUFFIX,igcdn.com
 DOMAIN-SUFFIX,facebook.com
