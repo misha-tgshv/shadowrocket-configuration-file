@@ -1,7 +1,7 @@
 # NAME: Proxy
 # AUTHOR: Misha Tugushev
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2023-06-17 16:06:14
+# UPDATED: 2024-01-22 12:30:14
 DOMAIN-SUFFIX,2ip.io
 DOMAIN-SUFFIX,aol.com
 DOMAIN-SUFFIX,browserleaks.com
