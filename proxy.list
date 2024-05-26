@@ -7,6 +7,7 @@ DOMAIN-SUFFIX,ipinfo.io
 DOMAIN-SUFFIX,aol.com
 DOMAIN-SUFFIX,browserleaks.com
 DOMAIN-SUFFIX,canva.com
+DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,dyson.com
 DOMAIN-SUFFIX,gravatar.com
 DOMAIN-SUFFIX,cdninstagram.com
@@ -37,12 +38,15 @@ DOMAIN-SUFFIX,nnmclub.to
 DOMAIN-SUFFIX,netpeaksoftware.com
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,openwrt.org
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,proton.me
 DOMAIN-SUFFIX,quora.com
 DOMAIN-SUFFIX,setapp.com
 DOMAIN-SUFFIX,skladchina.biz
 DOMAIN-SUFFIX,slideshare.net
 DOMAIN-SUFFIX,soundcloud.com
+DOMAIN-SUFFIX,spotify.com
 DOMAIN-SUFFIX,t.co
 DOMAIN-SUFFIX,tumblr.com
 DOMAIN-SUFFIX,twimg.com
