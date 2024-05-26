@@ -1,5 +1,5 @@
 # NAME: Proxy
-# AUTHOR: Misha Tugushev
+# AUTHOR: Mkrtich
 # REPO: https://github.com/mkrti-ch/shadowrocket-configuration-file
 # UPDATED: 2024-02-06 22:40:14
 DOMAIN-SUFFIX,ifconfig.me
