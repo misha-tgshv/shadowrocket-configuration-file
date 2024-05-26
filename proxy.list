@@ -1,7 +1,5 @@
-# NAME: Proxy
-# AUTHOR: Mkrtich
-# REPO: https://github.com/mkrti-ch/shadowrocket-configuration-file
-# UPDATED: 2024-05-26 00:00:00
+# NAME: Proxy list
+
 DOMAIN-SUFFIX,ifconfig.me
 DOMAIN-SUFFIX,ipinfo.io
 DOMAIN-SUFFIX,aol.com

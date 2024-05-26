@@ -1,8 +1,6 @@
 # NAME: Proxy Finance Russia
-# AUTHOR: Mkrtich
-# REPO: https://github.com/mkrti-ch/shadowrocket-configuration-file
 # BASE ON: https://www.cbr.ru/banking_sector/credit/cowebsites/ 
-# UPDATED: 2024-05-26 00:00:00
+
 DOMAIN-SUFFIX,go.unicredit.ru
 DOMAIN-SUFFIX,imb.ru
 DOMAIN-SUFFIX,imbank.ru

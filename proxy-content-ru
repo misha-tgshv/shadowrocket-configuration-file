@@ -1,7 +1,5 @@
 # NAME: Proxy Content Russia
-# AUTHOR: Mkrtich
-# REPO: https://github.com/mkrti-ch/shadowrocket-configuration-file
-# UPDATED: 2024-05-26 00:00:00
+
 DOMAIN-SUFFIX,sso.ya.ru
 DOMAIN-SUFFIX,kinopoisk.ru
 DOMAIN-SUFFIX,hd.kinopoisk.ru
