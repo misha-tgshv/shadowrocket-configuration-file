@@ -1,0 +1,3 @@
+[submodule "domain-list-community"]
+	path = domain-list-community
+	url = https://github.com/v2fly/domain-list-community
