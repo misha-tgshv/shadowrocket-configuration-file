@@ -1,7 +1,7 @@
 # NAME: Proxy
 # AUTHOR: Misha Tugushev
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2024-08-05 13:54:14
+# UPDATED: 2024-08-10 10:25:00
 DOMAIN-SUFFIX,ifconfig.me
 DOMAIN-SUFFIX,ipinfo.io
 DOMAIN-SUFFIX,aol.com
@@ -12,7 +12,6 @@ DOMAIN-SUFFIX,gravatar.com
 DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,cdnfbsbx.com
 DOMAIN-SUFFIX,igcdn.com
-DOMAIN-SUFFIX,instagram.com
 DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,connect.facebook.net
 DOMAIN-SUFFIX,graph.facebook.com
@@ -40,6 +39,7 @@ DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,openwrt.org
 DOMAIN-SUFFIX,proton.me
 DOMAIN-SUFFIX,quora.com
+DOMAIN-SUFFIX,semrush.com
 DOMAIN-SUFFIX,setapp.com
 DOMAIN-SUFFIX,skladchina.biz
 DOMAIN-SUFFIX,slideshare.net
@@ -59,3 +59,5 @@ DOMAIN-KEYWORD,anzu-us
 DOMAIN-KEYWORD,gameloft
 DOMAIN-KEYWORD,kahoot
 DOMAIN-KEYWORD,instagram
+DOMAIN-KEYWORD,spotify
+DOMAIN-KEYWORD,deezer
