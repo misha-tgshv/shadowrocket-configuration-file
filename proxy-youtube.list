@@ -3,6 +3,7 @@
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
 # UPDATED: 2024-08-05 13:55:00
 DOMAIN-SUFFIX,googlevideo.com
-DOMAIN-SUFFIX,yt3.ggpht.com
+DDOMAIN-KEYWORD,ggpht.com
+DOMAIN-KEYWORD,ytimg
 DOMAIN-KEYWORD,youtube
 
