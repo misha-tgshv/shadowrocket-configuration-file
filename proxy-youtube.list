@@ -5,4 +5,6 @@
 DOMAIN-SUFFIX,googlevideo.com
 DDOMAIN-KEYWORD,ggpht
 DOMAIN-KEYWORD,ytimg
+DOMAIN-SUFFIX,yt3.ggpht.com
+DOMAIN-SUFFIX,i.ytimg.com
 DOMAIN-KEYWORD,youtube
