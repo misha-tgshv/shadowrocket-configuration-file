@@ -159,6 +159,7 @@ DOMAIN-SUFFIX,libgen.rs
 DOMAIN-SUFFIX,linkedin.com
 DOMAIN-SUFFIX,linuxiac.com
 DOMAIN-SUFFIX,localbitcoins.com
+DOMAIN-SUFFIX,login.amd.com
 DOMAIN-SUFFIX,lostfilm.run
 DOMAIN-SUFFIX,lostfilm.tv
 DOMAIN-SUFFIX,lostfilm.win
@@ -422,6 +423,7 @@ IP-CIDR,13.226.244.93/32,no-resolve
 IP-CIDR,13.226.244.100/32,no-resolve
 IP-CIDR,13.226.244.119/32,no-resolve
 IP-CIDR,13.248.155.102/32,no-resolve
+IP-CIDR,13.248.245.245/32,no-resolve
 IP-CIDR,14.192.140.0/22,no-resolve
 IP-CIDR,14.192.154.0/23,no-resolve
 IP-CIDR,16.63.53.149/32,no-resolve
@@ -668,6 +670,7 @@ IP-CIDR,74.119.76.0/22,no-resolve
 IP-CIDR,75.2.124.44/32,no-resolve
 IP-CIDR,76.76.21.21/32,no-resolve
 IP-CIDR,76.223.21.241/32,no-resolve
+IP-CIDR,76.223.112.12/32,no-resolve
 IP-CIDR,77.86.162.1/32,no-resolve
 IP-CIDR,77.120.125.26/32,no-resolve
 IP-CIDR,78.46.102.85/32,no-resolve
