@@ -125,6 +125,7 @@ DOMAIN-SUFFIX,gordonua.com
 DOMAIN-SUFFIX,grammarly.com
 DOMAIN-SUFFIX,grazie.ai
 DOMAIN-SUFFIX,gulagu.net
+DOMAIN-SUFFIX,habr.com
 DOMAIN-SUFFIX,hd.zetfix.online
 DOMAIN-SUFFIX,helm.releases.hashicorp.com
 DOMAIN-SUFFIX,holod.global.ssl.fastly.net
@@ -898,6 +899,7 @@ IP-CIDR,173.252.64.0/18,no-resolve
 IP-CIDR,173.255.194.134/32,no-resolve
 IP-CIDR,176.115.184.0/22,no-resolve
 IP-CIDR,176.119.200.0/24,no-resolve
+IP-CIDR,178.248.237.68/32,no-resolve
 IP-CIDR,179.43.150.0/24,no-resolve
 IP-CIDR,179.43.166.58/32,no-resolve
 IP-CIDR,179.60.192.0/22,no-resolve
