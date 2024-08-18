@@ -354,6 +354,7 @@ DOMAIN-SUFFIX,lostfilm.tv
 DOMAIN-SUFFIX,lostfilmtv5.site
 DOMAIN-SUFFIX,microchip.com
 DOMAIN-SUFFIX,moscowtimes.ru
+DOMAIN-SUFFIX,mouser.com
 DOMAIN-SUFFIX,postfix.org
 DOMAIN-SUFFIX,qualcomm.com
 DOMAIN-SUFFIX,smashwords.com
@@ -531,6 +532,7 @@ IP-CIDR,23.54.16.0/23,no-resolve
 IP-CIDR,23.57.84.0/22,no-resolve
 IP-CIDR,23.72.252.168/32,no-resolve
 IP-CIDR,23.72.252.176/32,no-resolve
+IP-CIDR,23.79.87.17/32,no-resolve
 IP-CIDR,23.79.247.0/24,no-resolve
 IP-CIDR,23.185.0.2/32,no-resolve
 IP-CIDR,23.195.40.0/22,no-resolve
