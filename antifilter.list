@@ -1,7 +1,7 @@
 # NAME: Antifilter
 # AUTHOR: Misha Tugushev, based https://community.antifilter.download
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 19-08-2024 18:00:05
+# UPDATED: 19-08-2024 19:00:06
 DOMAIN-SUFFIX,10minutemail.com
 DOMAIN-SUFFIX,1337x.to
 DOMAIN-SUFFIX,4pda.ru
@@ -88,6 +88,7 @@ DOMAIN-SUFFIX,dist.torproject.org
 DOMAIN-SUFFIX,docker.elastic.co
 DOMAIN-SUFFIX,docs.redis.com
 DOMAIN-SUFFIX,documentation.meraki.com
+DOMAIN-SUFFIX,download.jetbrains.com
 DOMAIN-SUFFIX,download.lenovo.com
 DOMAIN-SUFFIX,download.screamingfrog.co.uk
 DOMAIN-SUFFIX,download.wetransfer.com
@@ -494,6 +495,10 @@ IP-CIDR,18.245.199.115/32,no-resolve
 IP-CIDR,18.245.218.34/31,no-resolve
 IP-CIDR,18.245.218.82/32,no-resolve
 IP-CIDR,18.245.218.93/32,no-resolve
+IP-CIDR,18.245.253.37/32,no-resolve
+IP-CIDR,18.245.253.55/32,no-resolve
+IP-CIDR,18.245.253.57/32,no-resolve
+IP-CIDR,18.245.253.62/32,no-resolve
 IP-CIDR,20.101.240.212/32,no-resolve
 IP-CIDR,23.1.106.236/32,no-resolve
 IP-CIDR,23.33.4.239/32,no-resolve
