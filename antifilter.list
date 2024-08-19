@@ -1,8 +1,3 @@
-"#NAME: Proxy Finance Russia
-# AUTHOR: Misha Tugushev
-# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2024-08-19 13:37:55"
-0
 DOMAIN-SUFFIX,10minutemail.com
 DOMAIN-SUFFIX,1337x.to
 DOMAIN-SUFFIX,4pda.ru
