@@ -1,10 +1,13 @@
-# NAME: Proxy
+# NAME: Proxy Youtube
 # AUTHOR: Misha Tugushev
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2024-08-05 13:55:00
+# UPDATED: 19-08-2024 10:30:28
+DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,googlevideo.com
-DDOMAIN-KEYWORD,ggpht
-DOMAIN-KEYWORD,ytimg
-DOMAIN-SUFFIX,yt3.ggpht.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,yt.be
 DOMAIN-SUFFIX,i.ytimg.com
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,yt3.ggpht.com
+DOMAIN-SUFFIX,youtube.googleapis.com
 DOMAIN-KEYWORD,youtube
