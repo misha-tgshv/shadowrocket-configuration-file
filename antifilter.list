@@ -1,8 +1,7 @@
-0
-#NAME: Antifilter
+# NAME: Antifilter
 # AUTHOR: Misha Tugushev, based https://community.antifilter.download
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 19-08-2024 10:09:39
+# UPDATED: 19-08-2024 10:11:08
 DOMAIN-SUFFIX,10minutemail.com
 DOMAIN-SUFFIX,1337x.to
 DOMAIN-SUFFIX,4pda.ru
