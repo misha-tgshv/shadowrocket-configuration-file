@@ -1,7 +1,7 @@
 # NAME: Proxy Youtube
 # AUTHOR: Misha Tugushev
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 20-08-2024 03:05:31
+# UPDATED: 20-08-2024 03:21:51
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,googlevideo.com
 DOMAIN-SUFFIX,youtu.be
