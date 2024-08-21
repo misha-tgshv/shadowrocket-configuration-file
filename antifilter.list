@@ -1,7 +1,7 @@
 # NAME: Antifilter
 # AUTHOR: Misha Tugushev, based https://community.antifilter.download
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 21-08-2024 16:00:06
+# UPDATED: 21-08-2024 17:00:08
 DOMAIN-SUFFIX,10minutemail.com
 DOMAIN-SUFFIX,1337x.to
 DOMAIN-SUFFIX,4pda.ru
@@ -736,6 +736,7 @@ IP-CIDR,102.221.189.0/24,no-resolve
 IP-CIDR,102.221.190.0/24,no-resolve
 IP-CIDR,103.4.96.0/22,no-resolve
 IP-CIDR,103.20.92.0/22,no-resolve
+IP-CIDR,103.102.166.0/24,no-resolve
 IP-CIDR,103.252.112.0/22,no-resolve
 IP-CIDR,104.18.33.45/32,no-resolve
 IP-CIDR,104.21.52.72/32,no-resolve
@@ -927,12 +928,14 @@ IP-CIDR,184.51.235.11/32,no-resolve
 IP-CIDR,184.85.151.75/32,no-resolve
 IP-CIDR,184.86.60.172/32,no-resolve
 IP-CIDR,185.2.139.203/32,no-resolve
+IP-CIDR,185.15.56.0/22,no-resolve
 IP-CIDR,185.39.18.98/32,no-resolve
 IP-CIDR,185.43.220.240/32,no-resolve
 IP-CIDR,185.60.216.0/22,no-resolve
 IP-CIDR,185.61.148.21/32,no-resolve
 IP-CIDR,185.70.40.0/22,no-resolve
 IP-CIDR,185.70.200.0/22,no-resolve
+IP-CIDR,185.71.138.0/24,no-resolve
 IP-CIDR,185.77.36.0/24,no-resolve
 IP-CIDR,185.81.128.108/32,no-resolve
 IP-CIDR,185.85.121.13/32,no-resolve
@@ -1009,8 +1012,10 @@ IP-CIDR,195.16.73.95/32,no-resolve
 IP-CIDR,195.22.192.0/19,no-resolve
 IP-CIDR,195.50.178.200/32,no-resolve
 IP-CIDR,195.82.146.0/23,no-resolve
+IP-CIDR,195.200.68.0/24,no-resolve
 IP-CIDR,195.225.83.0/24,no-resolve
 IP-CIDR,195.225.98.0/24,no-resolve
+IP-CIDR,198.35.26.0/23,no-resolve
 IP-CIDR,198.47.23.159/32,no-resolve
 IP-CIDR,198.58.118.167/32,no-resolve
 IP-CIDR,198.148.79.54/32,no-resolve
@@ -1036,6 +1041,7 @@ IP-CIDR,206.31.248.222/32,no-resolve
 IP-CIDR,207.199.159.0/24,no-resolve
 IP-CIDR,208.71.193.147/32,no-resolve
 IP-CIDR,208.71.199.147/32,no-resolve
+IP-CIDR,208.80.152.0/22,no-resolve
 IP-CIDR,208.84.80.0/21,no-resolve
 IP-CIDR,209.42.197.18/32,no-resolve
 IP-CIDR,209.237.192.0/19,no-resolve
