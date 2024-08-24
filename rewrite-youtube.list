@@ -1,7 +1,7 @@
 # NAME: Proxy Youtube
 # AUTHOR: Misha Tugushev
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 24-08-2024 16:26:34
+# UPDATED: 24-08-2024 17:33:58
 URL-REGEX,^https?:\/\/(\w+\.)?(adclick|ads([0-9]+)?|adx|adserver|adformat|analysis|analytics|banners?|click|counter|delivery|log|log-?\w+?|pagead|stat|stats|statis|trace|track|tracking|uniad)\.\w+\.(com|ru|org|info|io|net|nl|com.nl)
 URL-REGEX,^https?:\/\/.+\.googlevideo\.com\/.+oad=
 URL-REGEX,^https?:\/\/.+\.googlevideo\.com\/.+owc=
