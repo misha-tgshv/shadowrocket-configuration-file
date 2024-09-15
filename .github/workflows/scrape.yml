@@ -1,21 +1,24 @@
+name: Scrape latest data
+
 on:
   push:
   workflow_dispatch:
   schedule:
-    - cron:  '6,26,46 * * * *' # каждые двадцать минут
+    - cron:  '0 * * * *' # every twenty minutes 
+
 jobs:
   scheduled:
     runs-on: ubuntu-latest
     steps:
     - name: Check out this repo
       uses: actions/checkout@v2
-    - name: Fetch latest data from the API endpoint
+    - name: Fetch latest data
       run: |-
-        curl -s "[https://www.nu.nl/block/lean_json/articlelist?limit=20&offset=0&source=latest&filter=site](https://www.nu.nl/block/lean_json/articlelist?limit=20&offset=0&filter=site)" | jq '.data.context.articles' > headlines.json
-    - name: Commit and push if the data has changed
+        curl -s "https://www.nu.nl/block/lean_json/articlelist?limit=100&offset=0&source=latest&filter=site" | jq '.data.context.articles' > headlines.json
+    - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
-        git config user.email "[actions@users.noreply.github.com](mailto:actions@users.noreply.github.com)"
+        git config user.email "actions@users.noreply.github.com"
         git add -A
         timestamp=$(date -u)
         git commit -m "Latest data: ${timestamp}" || exit 0
