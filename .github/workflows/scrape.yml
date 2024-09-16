@@ -110,7 +110,7 @@ jobs:
       - name: Upload artifact to "release" branch
         run: |
           cd rules || exit 1
-          ggit init --initial-branch=release
+          git init --initial-branch=release
           git config --local user.name ${{ secrets.USER_NAME }}
           git config --local user.email ${{ secrets.USER_EMAIL }}
           git init -b release
