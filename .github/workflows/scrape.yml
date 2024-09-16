@@ -110,7 +110,7 @@ jobs:
       - name: Upload artifact to "trunk" branch
         run: |
           cd rules || exit 1
-          git init
+          ggit init --initial-branch=trunk
           git config --local user.name ${{ secrets.USER_NAME }}
           git config --local user.email ${{ secrets.USER_EMAIL }}
           git checkout -b trunk
