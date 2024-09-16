@@ -60,10 +60,10 @@ jobs:
         run: |
           cat <<EOF >> ./conf.d/General.txt
           [Rule]
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_custom.list,PROXY
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_antifilter.list,AUTO
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/devs/rules/domain_custom.list,PROXY
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/devs/rules/domain_antifilter.list,AUTO
 
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/geoip_antifilter.list,AUTO,no-resolve
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/devs/rules/geoip_antifilter.list,AUTO,no-resolve
           FINAL,AUTO
           
           EOF
@@ -86,7 +86,7 @@ jobs:
     steps:     
       - name: Configure variable names
         run: |
-          echo "RELEASE_NAME=Built on $(TZ="Asia/Novokuznetsk" date +%Y%m%d%H%M)" >> $GITHUB_ENV
+          echo "devs_NAME=Built on $(TZ="Asia/Novokuznetsk" date +%Y%m%d%H%M)" >> $GITHUB_ENV
           echo "TAG_NAME=$(TZ="Asia/Novokuznetsk" date +%Y%m%d%H%M)" >> $GITHUB_ENV
           mkdir -p rules
 
@@ -96,35 +96,35 @@ jobs:
           path: ./rules
 
       - name: Publish and upload artifacts
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-devs@v2
         with:
-          name: ${{ env.RELEASE_NAME }}
+          name: ${{ env.devs_NAME }}
           tag_name: ${{ env.TAG_NAME }}
           draft: false
-          prerelease: false
+          predevs: false
           files: |
             ./rules/*
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
-      - name: Upload artifact to "release" branch
+      - name: Upload artifact to "devs" branch
         run: |
           cd rules || exit 1
           git init
           git config --local user.name ${{ secrets.USER_NAME }}
           git config --local user.email ${{ secrets.USER_EMAIL }}
-          git checkout -b release
+          git checkout -b devs
           git add .
-          git commit -m "${{ env.RELEASE_NAME }}"
+          git commit -m "${{ env.devs_NAME }}"
           git remote add origin "https://${{ github.actor }}:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}"
-          git push -f origin release
+          git push -f origin devs
           # git push --delete origin $( git ls-remote --tags origin | awk '{print $2}' | grep -vE "$(echo -e ${TAG_NAME})")
           
       - name: Purge jsdelivr CDN
         run: |
           cd rules || exit 1
           for file in $(ls); do
-            curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
+            curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@devs/${file}"
           done
 
   Delete_Historical_Data:
@@ -138,8 +138,8 @@ jobs:
                 rules
                 conf
 
-        - name: Delete old tags and releases
-          uses: dev-drprasad/delete-older-releases@v0.3.4
+        - name: Delete old tags and devss
+          uses: dev-drprasad/delete-older-devss@v0.3.4
           with:
             keep_latest: 3
             delete_expired_data: 7
