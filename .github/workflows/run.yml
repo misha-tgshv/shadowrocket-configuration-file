@@ -62,7 +62,6 @@ jobs:
           [Rule]
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_custom.list,PROXY
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_antifilter.list,AUTO
-
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/geoip_antifilter.list,AUTO,no-resolve
           FINAL,AUTO
           
