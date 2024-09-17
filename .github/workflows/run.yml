@@ -108,7 +108,8 @@ jobs:
 
       - name: Upload artifact to "release" branch
         run: |
-          cd rules || exit 1
+          # cd rules || exit 1
+          cd rules
           git init
           git config --local user.name ${{ secrets.USER_NAME }}
           git config --local user.email ${{ secrets.USER_EMAIL }}
