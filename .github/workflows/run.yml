@@ -73,14 +73,14 @@ jobs:
 
       - name: Concatenate All configuration file
         run: |
-          cat ./conf.d/*.txt > ./conf.d/Shadowrocket.conf
-          sed -i "1s/^/# Built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/Shadowrocket.conf
+          cat ./conf.d/*.txt > ./conf.d/sr_ru_public_lists.conf
+          sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_ru_public_lists.conf
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: conf
-          path: ./conf.d/Shadowrocket.conf
+          path: ./conf.d/sr_ru_public_lists.conf
           retention-days: 1
 
   publish:
