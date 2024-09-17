@@ -61,11 +61,15 @@ jobs:
           cat <<EOF >> ./conf.d/General.txt
           [Rule]
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_custom.list,PROXY
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_antifilter.list,AUTO
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/geoip_antifilter.list,AUTO,no-resolve
-          FINAL,AUTO
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_antifilter.list,PROXY
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/geoip_antifilter.list,PROXY,no-resolve
+          FINAL,DIRECT
           
           EOF
+      - name: Generate HTTPS decrypted configuration file
+        run: |
+          sed -i 's/hostname = /hostname = *instagram.com,/' MITM.txt
+          cp MITM.txt ./conf.d
 
       - name: Concatenate All configuration file
         run: |
@@ -108,8 +112,7 @@ jobs:
 
       - name: Upload artifact to "release" branch
         run: |
-          # cd rules || exit 1
-          cd rules
+          cd rules || exit 1
           git init
           git config --local user.name ${{ secrets.USER_NAME }}
           git config --local user.email ${{ secrets.USER_EMAIL }}
