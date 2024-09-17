@@ -113,7 +113,7 @@ jobs:
           git init
           git config --local user.name ${{ secrets.USER_NAME }}
           git config --local user.email ${{ secrets.USER_EMAIL }}
-          git init -b release
+          git checkout -b release
           git add .
           git commit -m "${{ env.RELEASE_NAME }}"
           git remote add origin "https://${{ github.actor }}:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}"
