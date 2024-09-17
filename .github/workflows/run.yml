@@ -66,10 +66,11 @@ jobs:
           FINAL,DIRECT
           
           EOF
-      - name: Generate HTTPS decrypted configuration file
-        run: |
-          sed -i 's/hostname = /hostname = *instagram.com,/' MITM.txt
-          cp MITM.txt ./conf.d
+          
+      # - name: Generate HTTPS decrypted configuration file
+      #   run: |
+      #     sed -i 's/hostname = /hostname = *instagram.com,/' MITM.txt
+      #     cp MITM.txt ./conf.d
 
       - name: Concatenate All configuration file
         run: |
