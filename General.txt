@@ -73,7 +73,7 @@ udp-policy-not-supported-behaviour = REJECT
 # включения между конфигурациями для удовлетворения потребностей одновременного использования нескольких конфигураций.
 include =
 # URL-адрес обновления файла конфигурации
-update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/Shadowrocket.conf
+update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/sr_ru_public_lists.conf
 
 [Proxy Group]
 AUTO = url-test,interval=600,timeout=5,url=https://cp.cloudflare.com/generate_204,policy-regex-filter=*
