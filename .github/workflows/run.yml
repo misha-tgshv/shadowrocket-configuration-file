@@ -158,8 +158,3 @@ jobs:
             repository: ${{ github.repository }}
             retain_days: 7
             keep_minimum_runs: 3
-            repository: ${{ github.repository }}
-            retain_days: 2
-            keep_minimum_runs: 3
-          
-    
