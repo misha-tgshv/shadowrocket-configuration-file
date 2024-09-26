@@ -3,7 +3,7 @@ name: Generate shadowrocket rules
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 0 * * *"
   push:
     branches:
       - main
@@ -146,7 +146,7 @@ jobs:
           uses: dev-drprasad/delete-older-releases@v0.3.4
           with:
             keep_latest: 3
-            delete_expired_data: 2
+            delete_expired_data: 7
             delete_tags: true
           env:
               GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
@@ -155,6 +155,9 @@ jobs:
           uses: Mattraks/delete-workflow-runs@v2
           with:
             token: ${{ secrets.ACCESS_TOKEN }}
+            repository: ${{ github.repository }}
+            retain_days: 7
+            keep_minimum_runs: 3
             repository: ${{ github.repository }}
             retain_days: 2
             keep_minimum_runs: 3
