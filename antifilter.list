@@ -1,7 +1,7 @@
 # NAME: Antifilter
 # AUTHOR: @misha-tgshv, based https://community.antifilter.download
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 01-10-2024 06:00:11
+# UPDATED: 01-10-2024 07:00:12
 DOMAIN-SUFFIX,10minutemail.com
 DOMAIN-SUFFIX,1337x.to
 DOMAIN-SUFFIX,4pda.ru
@@ -74,6 +74,7 @@ DOMAIN-SUFFIX,chess.com
 DOMAIN-SUFFIX,cisco.com
 DOMAIN-SUFFIX,citrix.com
 DOMAIN-SUFFIX,clamav.net
+DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,cloud.mongodb.com
 DOMAIN-SUFFIX,cloudflare-dns.com
 DOMAIN-SUFFIX,colta.ru
@@ -219,7 +220,6 @@ DOMAIN-SUFFIX,omv-extras.org
 DOMAIN-SUFFIX,onlineradiobox.com
 DOMAIN-SUFFIX,onlinesim.ru
 DOMAIN-SUFFIX,open.spotify.com
-DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,openwrt.wk.cz
 DOMAIN-SUFFIX,os.mbed.com
 DOMAIN-SUFFIX,ovdinfo.org
@@ -759,7 +759,6 @@ IP-CIDR,103.4.96.0/22,Proxy,no-resolve
 IP-CIDR,103.20.92.0/22,Proxy,no-resolve
 IP-CIDR,103.102.166.0/24,Proxy,no-resolve
 IP-CIDR,103.252.112.0/22,Proxy,no-resolve
-IP-CIDR,104.18.33.45/32,Proxy,no-resolve
 IP-CIDR,104.21.52.72/32,Proxy,no-resolve
 IP-CIDR,104.21.65.143/32,Proxy,no-resolve
 IP-CIDR,104.21.90.161/32,Proxy,no-resolve
@@ -943,7 +942,6 @@ IP-CIDR,163.172.118.121/32,Proxy,no-resolve
 IP-CIDR,166.70.53.121/32,Proxy,no-resolve
 IP-CIDR,167.160.0.0/24,Proxy,no-resolve
 IP-CIDR,167.160.3.0/24,Proxy,no-resolve
-IP-CIDR,172.64.154.211/32,Proxy,no-resolve
 IP-CIDR,172.66.0.227/32,Proxy,no-resolve
 IP-CIDR,172.67.163.232/32,Proxy,no-resolve
 IP-CIDR,172.67.196.175/32,Proxy,no-resolve
