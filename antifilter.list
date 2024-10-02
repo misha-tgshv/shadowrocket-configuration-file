@@ -1,7 +1,7 @@
 # NAME: Antifilter
 # AUTHOR: @misha-tgshv, based https://community.antifilter.download
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 02-10-2024 08:00:08
+# UPDATED: 02-10-2024 09:00:09
 DOMAIN-SUFFIX,10minutemail.com
 DOMAIN-SUFFIX,1337x.to
 DOMAIN-SUFFIX,4pda.ru
@@ -334,6 +334,7 @@ DOMAIN-SUFFIX,unfiltered.adguard-dns.com
 DOMAIN-SUFFIX,unian.net
 DOMAIN-SUFFIX,uniongang.tv
 DOMAIN-SUFFIX,vectorworks.net
+DOMAIN-SUFFIX,veeam.com
 DOMAIN-SUFFIX,velocidrone.com
 DOMAIN-SUFFIX,veritas.com
 DOMAIN-SUFFIX,verstka.media
@@ -460,6 +461,7 @@ IP-CIDR,18.158.17.152/32,Proxy,no-resolve
 IP-CIDR,18.158.143.61/32,Proxy,no-resolve
 IP-CIDR,18.158.212.228/32,Proxy,no-resolve
 IP-CIDR,18.200.8.190/32,Proxy,no-resolve
+IP-CIDR,18.213.212.122/32,Proxy,no-resolve
 IP-CIDR,18.216.70.59/32,Proxy,no-resolve
 IP-CIDR,18.223.191.6/32,Proxy,no-resolve
 IP-CIDR,18.238.243.19/32,Proxy,no-resolve
@@ -564,6 +566,7 @@ IP-CIDR,34.68.230.202/32,Proxy,no-resolve
 IP-CIDR,34.78.67.165/32,Proxy,no-resolve
 IP-CIDR,34.117.44.137/32,Proxy,no-resolve
 IP-CIDR,34.120.127.130/32,Proxy,no-resolve
+IP-CIDR,34.196.49.137/32,Proxy,no-resolve
 IP-CIDR,34.197.179.74/32,Proxy,no-resolve
 IP-CIDR,34.225.223.38/32,Proxy,no-resolve
 IP-CIDR,34.252.45.205/32,Proxy,no-resolve
