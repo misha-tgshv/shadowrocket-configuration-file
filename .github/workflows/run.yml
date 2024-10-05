@@ -15,12 +15,12 @@ jobs:
       - name: Generate domain_custom.list file
         run: |
           curl -sSL https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/custom.list \
-          | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' | awk '!/www/' > domain_custom.list
+          | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_custom.list
           
       - name: Generate domain_antifilter.list file
         run: |
           curl -sSL https://community.antifilter.download/list/domains.lst \
-          | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_antifilter.list
+          | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' | sed -i '/www/d' > domain_antifilter.list
 
       - name: Generate geoip_antifilter.list file
         run: |
