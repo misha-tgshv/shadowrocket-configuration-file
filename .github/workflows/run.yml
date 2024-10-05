@@ -20,7 +20,8 @@ jobs:
       - name: Generate domain_antifilter.list file
         run: |
           curl -sSL https://community.antifilter.download/list/domains.lst \
-          | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' && sed -i '/www/d' > domain_antifilter.list
+          | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_antifilter.list
+          | sed -i '/www/d' domain_antifilter.list
 
       - name: Generate geoip_antifilter.list file
         run: |
