@@ -30,7 +30,7 @@ dns-direct-fallback-proxy = true
 # Используются Adguard DNS с блокировкой рекламы 
 dns-server = https://dns.adguard-dns.com/dns-query, tls://dns.adguard-dns.com, quic://dns.adguard-dns.com
 
-# Альтернативный DNS. Возврат к резервному DNS при сбое разрешения перезаписанного DNS. Если вам нужно указать несколько DNS, их можно разделить запятыми. system означает возврат к системному DNS
+# Альтернативный DNS. Возврат к резервному DNS при сбое разрешения перезаписанного DNS. Если вам нужно указать несколько DNS, их можно разделить запятыми. system означает возврат к системному DNS. Вы можете выбрать альтернативный DOH/DOT — https://github.com/curl/curl/wiki/DNS-over-HTTPS
 fallback-dns-server = https://8.8.8.8/dns-query,https://1.1.1.1/dns-query
 
 # Перезапись DNS. Некоторые устройства или программное обеспечение всегда 
