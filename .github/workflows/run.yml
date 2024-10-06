@@ -62,6 +62,7 @@ jobs:
       - name: Объеденяем правила и списки с файлом General
         run: |
           cat <<EOF >> ./conf.d/General.txt
+          
           [Rule]
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_custom.list,PROXY
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_antifilter.list,PROXY
