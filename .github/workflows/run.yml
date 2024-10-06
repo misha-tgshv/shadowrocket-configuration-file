@@ -62,10 +62,15 @@ jobs:
       - name: Добавляем списки правил в конец файла General
         run: |
           cat <<EOF >> ./conf.d/General.txt
+          # Пправила
           [Rule]
+          # Список доменов автора
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_custom.list,PROXY
+          # Список доменов antifilter
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_antifilter.list,PROXY
+          # Список ip-адресов antifilter
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/geoip_antifilter.list,PROXY,no-resolve
+          
           # Финальное правило маршрутизации
           FINAL,DIRECT
           
