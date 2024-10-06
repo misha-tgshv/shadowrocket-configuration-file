@@ -12,29 +12,29 @@ jobs:
   build_rules_list:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate domain_custom.list file
+      - name: Создаем файл domain_custom.list
         run: |
           curl -sSL https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/custom.list \
           | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_custom.list
           sed -i "1s/^/DOMAIN-KEYWORD,instagram\n/" domain_custom.list
           sed -i "1s/^/DOMAIN-KEYWORD,youtube\n/" domain_custom.list
           
-      - name: Generate domain_antifilter.list file
+      - name: Создаем файл domain_antifilter.list
         run: |
           curl -sSL https://community.antifilter.download/list/domains.lst \
           | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_antifilter.list
           sed -i '/www/d' domain_antifilter.list
 
-      - name: Generate geoip_antifilter.list file
+      - name: Создаем файл geoip_antifilter.list file
         run: |
           curl -sSL https://community.antifilter.download/list/community.lst | sed 's/^/IP-CIDR,/' > geoip_antifilter.list       
 
-      - name: Move files to rules directory
+      - name: Перемещаем файлы в директорю rules
         run: |
           mkdir -p rules.d
           cp *.list ./rules.d/
 
-      - name: Upload rule list artifact
+      - name: Загружаем список файлов rules через artifact
         uses: actions/upload-artifact@v4
         with:
           name: rules
@@ -44,11 +44,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build_rules_list
     steps:
-      - name: Creating Folders
+      - name: Создаем папку
         run: |
           mkdir -p conf.d
           
-      - name: Get common configuration files
+      - name: Получаем шаблон файла General
         uses: actions/checkout@v4
         with:
           repository: ${{ github.repository }}
@@ -59,7 +59,7 @@ jobs:
           sparse-checkout-cone-mode: false
           path: conf.d
 
-      - name: Concatenate rule configuration files
+      - name: Объеденяем правила и списки с файлом General
         run: |
           cat <<EOF >> ./conf.d/General.txt
           [Rule]
@@ -75,12 +75,12 @@ jobs:
       #     sed -i 's/hostname = /hostname = *instagram.com,/' MITM.txt
       #     cp MITM.txt ./conf.d
 
-      - name: Concatenate All configuration file
+      - name: Создаем конфиг sr_ru_public_lists.conf
         run: |
           cat ./conf.d/*.txt > ./conf.d/sr_ru_public_lists.conf
           sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_ru_public_lists.conf
 
-      - name: Upload artifact
+      - name: Загружаем artifact
         uses: actions/upload-artifact@v4
         with:
           name: conf
@@ -91,18 +91,18 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build_rules_list,build_Shadowrocket_conf_file]
     steps:     
-      - name: Configure variable names
+      - name: Настраиваем переменные
         run: |
           echo "RELEASE_NAME=Built on $(TZ="Asia/Novokuznetsk" date +%Y%m%d%H%M)" >> $GITHUB_ENV
           echo "TAG_NAME=$(TZ="Asia/Novokuznetsk" date +%Y%m%d%H%M)" >> $GITHUB_ENV
           mkdir -p rules
 
-      - name: Download artifact 
+      - name: Скачиваем artifact 
         uses: actions/download-artifact@v4
         with:
           path: ./rules
 
-      - name: Publish and upload artifacts
+      - name: Публикуем и загружаем artifacts
         uses: softprops/action-gh-release@v2
         with:
           name: ${{ env.RELEASE_NAME }}
@@ -114,7 +114,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
-      - name: Upload artifact to "release" branch
+      - name: Загружаем artifact в ветку "release"
         run: |
           cd rules || exit 1
           git init
@@ -127,7 +127,7 @@ jobs:
           git push -f origin release
           # git push --delete origin $( git ls-remote --tags origin | awk '{print $2}' | grep -vE "$(echo -e ${TAG_NAME})")
           
-      - name: Purge jsdelivr CDN
+      - name: Очищаем jsdelivr CDN
         run: |
           cd rules || exit 1
           for file in $(ls); do
@@ -145,7 +145,7 @@ jobs:
                 rules
                 conf
 
-        - name: Delete old tags and releases
+        - name: Удаляем старые теги и релизы
           uses: dev-drprasad/delete-older-releases@v0.3.4
           with:
             keep_latest: 3
@@ -154,7 +154,7 @@ jobs:
           env:
               GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
-        - name: Delete old workflow runs
+        - name: Удаляем старый workflow
           uses: Mattraks/delete-workflow-runs@v2
           with:
             token: ${{ secrets.ACCESS_TOKEN }}
