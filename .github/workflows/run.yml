@@ -59,14 +59,14 @@ jobs:
           sparse-checkout-cone-mode: false
           path: conf.d
 
-      - name: Объеденяем правила и списки с файлом General
+      - name: Добавляем списки правил в конец файла General
         run: |
           cat <<EOF >> ./conf.d/General.txt
-          
           [Rule]
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_custom.list,PROXY
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_antifilter.list,PROXY
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/geoip_antifilter.list,PROXY,no-resolve
+          
           FINAL,DIRECT
           
           EOF
