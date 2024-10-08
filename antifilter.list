@@ -1,7 +1,7 @@
 # NAME: Antifilter
 # AUTHOR: @misha-tgshv, based https://community.antifilter.download
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 08-10-2024 17:00:08
+# UPDATED: 08-10-2024 18:00:11
 DOMAIN-SUFFIX,10minutemail.com
 DOMAIN-SUFFIX,1337x.to
 DOMAIN-SUFFIX,4pda.ru
@@ -91,6 +91,8 @@ DOMAIN-SUFFIX,devops.com
 DOMAIN-SUFFIX,digitalocean.com
 DOMAIN-SUFFIX,discord.com
 DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,discord.media
+DOMAIN-SUFFIX,discordapp.com
 DOMAIN-SUFFIX,discordapp.io
 DOMAIN-SUFFIX,discordapp.org
 DOMAIN-SUFFIX,discordstatus.com
@@ -153,6 +155,7 @@ DOMAIN-SUFFIX,ichef.bbci.co.uk
 DOMAIN-SUFFIX,id.cisco.com
 DOMAIN-SUFFIX,iichan.hk
 DOMAIN-SUFFIX,image.tmdb.org
+DOMAIN-SUFFIX,images.discordapp.net
 DOMAIN-SUFFIX,instagram.com
 DOMAIN-SUFFIX,instagram.fhrk1-1.fna.fbcdn.net
 DOMAIN-SUFFIX,instagram.fkun2-1.fna.fbcdn.net
