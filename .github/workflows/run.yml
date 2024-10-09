@@ -18,6 +18,7 @@ jobs:
           | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_custom.list
           sed -i "1s/^/DOMAIN-KEYWORD,instagram\n/" domain_custom.list
           sed -i "1s/^/DOMAIN-KEYWORD,youtube\n/" domain_custom.list
+          sed -i "1s/^/DOMAIN-KEYWORD,discord\n/" domain_custom.list
           
       - name: Создаем файл domain_antifilter.list
         run: |
