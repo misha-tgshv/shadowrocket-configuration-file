@@ -62,7 +62,7 @@ jobs:
       - name: Добавляем списки правил в конец файла General
         run: |
           cat <<EOF >> ./conf.d/General.txt
-          # Пправила
+          # Выборочные правила маршрутизации
           [Rule]
           # Список доменов автора
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_custom.list,PROXY
