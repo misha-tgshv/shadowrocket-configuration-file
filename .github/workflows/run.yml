@@ -27,7 +27,7 @@ jobs:
 
       - name: Создаем файл domain_youtube.list
         run: |
-          curl -sSL https://raw.githubusercontent.com/dsvip/Quantumult-X/dec9019816ba55897c162c3dbd3ac997ac160f09/blackmatrix7/rule/Shadowrocket/YouTube.list 
+          curl -sSL https://raw.githubusercontent.com/dsvip/Quantumult-X/dec9019816ba55897c162c3dbd3ac997ac160f09/blackmatrix7/rule/Shadowrocket/YouTube.list \
           | sed -n '/DOMAIN-SUFFIX,/p' > domain_youtube.list
           sed -i "1s/^/DOMAIN-KEYWORD,youtube\n/" domain_youtube.list
 
