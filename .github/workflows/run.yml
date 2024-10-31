@@ -28,7 +28,8 @@ jobs:
 
       - name: Создаем файл domain_youtube.list
         run: |
-          curl -sSL hhttps://raw.githubusercontent.com/dsvip/Quantumult-X/dec9019816ba55897c162c3dbd3ac997ac160f09/blackmatrix7/rule/Shadowrocket/YouTube.list | sed -n 'DOMAIN-SUFFIX,$p' > domain_youtube.list         
+          curl -sSL hhttps://raw.githubusercontent.com/dsvip/Quantumult-X/dec9019816ba55897c162c3dbd3ac997ac160f09/blackmatrix7/rule/Shadowrocket/YouTube.list 
+          | sed -n '/DOMAIN-SUFFIX,/p' > domain_youtube.list         
 
       - name: Создаем файл geoip_antifilter.list
         run: |
