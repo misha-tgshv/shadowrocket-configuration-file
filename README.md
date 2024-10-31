@@ -1,7 +1,7 @@
 # Описание проекта
 Выборочная защита трафика на iOS, iPadOS, macOS через Shadowrocket для пользователей из России. Весь трафик будет идти напрямую через вашего оператора связи, а запросы к доменам из конфига будут идти через ваш сервер. 
 
-Основой конфиг [sr_ru_public_lists.conf](https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/sr_ru_public_lists.conf)(https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/conf/sr_ru_public_lists.conf). Он включает в себя три списка:
+Основой конфиг [sr_ru_public_lists.conf](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/conf/sr_ru_public_lists.conf). Он включает в себя три списка:
 * domain_custom.list — домены на усмотрение автора;
 * domain_antifilter.list — домены из списка сообщества [антифильтр](https://community.antifilter.download);
 * geoip_antifilter.list — IP-адреса из списка сообщества антифильтр.
