@@ -16,7 +16,6 @@ jobs:
         run: |
           curl -sSL https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/custom.list \
           | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_custom.list
-          sed -i "1s/^/DOMAIN-KEYWORD,discord\n/" domain_custom.list
           sed -i "1s/^/DOMAIN-KEYWORD,instagram\n/" domain_custom.list
           
       - name: Создаем файл domain_antifilter.list
@@ -31,6 +30,13 @@ jobs:
           | sed -n '/DOMAIN-SUFFIX,/p' > domain_youtube.list
           sed -i "1s/^/DOMAIN-KEYWORD,youtube\n/" domain_youtube.list
           sed -i "1s/^/DOMAIN-KEYWORD,googlevideo\n/" domain_youtube.list
+
+            - name: Создаем файл domain_discord.list
+        run: |
+          curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Discord/Discord.list \
+          | sed -n '/DOMAIN-SUFFIX,/p' > domain_discord.list
+          sed -i "1s/^/DOMAIN-KEYWORD,discord\n/" domain_discord.list
+          sed -i "1s/^/DOMAIN-KEYWORD,discordapp\n/" domain_discord.list
 
       - name: Создаем файл geoip_antifilter.list
         run: |
