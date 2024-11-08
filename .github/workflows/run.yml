@@ -81,6 +81,8 @@ jobs:
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_custom.list,PROXY
           # Список доменов Youtube
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_youtube.list,PROXY
+          # Список доменов Discrod
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_discord.list,PROXY
           # Список доменов antifilter
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_antifilter.list,PROXY
           # Список ip-адресов antifilter
