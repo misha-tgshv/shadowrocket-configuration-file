@@ -4,9 +4,10 @@
 Основой конфиг [sr_ru_public_lists.conf](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/conf/sr_ru_public_lists.conf). Он включает в себя три списка:
 * domain_custom.list — домены на усмотрение автора;
 * domain_antifilter.list — домены из списка сообщества [антифильтр](https://community.antifilter.download);
+* domain_refilter.list — домены из списка сообщества [re-filter](https://github.com/1andrevich/Re-filter-lists);
 * geoip_antifilter.list — IP-адреса из списка сообщества антифильтр.
 
-Последние два списка обновляются ежедневно. Все файлы можно найти в ветке release.
+Последние три списка обновляются ежедневно. Все файлы можно найти в ветке release.
 
 ## Инструкции
 Как настроить, как пользоваться и подключать разные функции читайте в [блоге](https://mishatugushev.ru/blog/?go=all/shadowrocket-seamless-ios/).
