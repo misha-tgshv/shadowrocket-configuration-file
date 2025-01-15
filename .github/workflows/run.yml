@@ -93,8 +93,10 @@ jobs:
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/geoip_antifilter.list,PROXY,no-resolve
           # Список доменов Youtube
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_youtube.list,PROXY
-          # Список доменов Discrod
+          # Список доменов Discord
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_discord.list,PROXY
+          # Список портов Discord
+          RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY
           
           # Финальное правило маршрутизации
           FINAL,DIRECT
