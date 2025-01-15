@@ -83,18 +83,18 @@ jobs:
           cat <<EOF >> ./conf.d/General.txt
           # Выборочные правила маршрутизации
           [Rule]
-          # Список доменов автора
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_custom.list,PROXY
-          # Список доменов Youtube
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_youtube.list,PROXY
-          # Список доменов Discrod
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_discord.list,PROXY
+          # Список доменов телеграм-чата «Про Shadowrocket на русском»
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_community.list,PROXY
           # Список доменов antifilter
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_antifilter.list,PROXY
           # Список доменов refilter
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_refilter.list,PROXY
           # Список ip-адресов antifilter
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/geoip_antifilter.list,PROXY,no-resolve
+          # Список доменов Youtube
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_youtube.list,PROXY
+          # Список доменов Discrod
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_discord.list,PROXY
           
           # Финальное правило маршрутизации
           FINAL,DIRECT
