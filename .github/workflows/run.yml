@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Создаем файл domain_community.list
         run: |
-          curl -sSL https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/custom.list \
+          curl -sSL https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list \
           | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_community.list
           sed -i "1s/^/DOMAIN-KEYWORD,instagram\n/" domain_community.list
           
