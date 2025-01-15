@@ -12,11 +12,11 @@ jobs:
   build_rules_list:
     runs-on: ubuntu-latest
     steps:
-      - name: Создаем файл domain_custom.list
+      - name: Создаем файл domain_community.list
         run: |
           curl -sSL https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/custom.list \
-          | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_custom.list
-          sed -i "1s/^/DOMAIN-KEYWORD,instagram\n/" domain_custom.list
+          | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_community.list
+          sed -i "1s/^/DOMAIN-KEYWORD,instagram\n/" domain_community.list
           
       - name: Создаем файл domain_antifilter.list
         run: |
