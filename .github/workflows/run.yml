@@ -16,7 +16,7 @@ jobs:
         run: |
           curl -sSL https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list \
           | sed -i '/^[^#].*./s/^/DOMAIN-SUFFIX,/' > domain_community.list
-          sed -i "2s/^/DOMAIN-KEYWORD,instagram\n/" domain_community.list
+          sed -i "1s/^/DOMAIN-KEYWORD,instagram\n/" domain_community.list
           
       - name: Создаем файл domain_antifilter.list
         run: |
