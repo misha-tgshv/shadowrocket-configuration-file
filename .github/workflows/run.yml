@@ -26,14 +26,14 @@ jobs:
           curl -sSL https://community.antifilter.download/list/domains.lst \
           | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_antifilter.list
           sed -i -E '/www|DOMAIN-SUFFIX,spotify.com/d' domain_antifilter.list
-          sed -E '/^$/d;G;/^\(.*\n\).*\n\1$/d;H;P;a\' domain_antifilter.list
+          awk '!seen[$0]++' domain_antifilter.list
 
       - name: Создаем файл domain_refilter.list
         run: |
           curl -sSL https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/community.lst \
           | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_refilter.list
           sed -i -E '/www|DOMAIN-SUFFIX,spotify.com/d' domain_refilter.list
-          sed -E '/^$/d;G;/^\(.*\n\).*\n\1$/d;H;P;a\' domain_refilter.list
+          awk '!seen[$0]++' domain_refilter.list
 
       - name: Создаем файл domain_youtube.list
         run: |
