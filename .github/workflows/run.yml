@@ -49,9 +49,9 @@ jobs:
           sed -i "1s/^/DOMAIN-KEYWORD,discord\n/" domain_discord.list
           sed -i "1s/^/DOMAIN-KEYWORD,discordapp\n/" domain_discord.list
 
-      - name: Создаем файл geoip_antifilter.list
+      - name: Создаем файл ip_refilter.list
         run: |
-          curl -sSL https://community.antifilter.download/list/community.lst | sed 's/^/IP-CIDR,/' > geoip_antifilter.list       
+          curl -sSL https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/ipsum.lst | sed 's/^/IP-CIDR,/' > ip_refilter.list       
 
       - name: Перемещаем файлы в директорю rules
         run: |
@@ -94,8 +94,8 @@ jobs:
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_antifilter.list,PROXY
           # Список доменов refilter
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_refilter.list,PROXY
-          # Список ip-адресов antifilter
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/geoip_antifilter.list,PROXY,no-resolve
+          # Список ip-адресов refilter
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/ip_refilter.list,PROXY,no-resolve
           # Список доменов Youtube
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/release/rules/domain_youtube.list,PROXY
           # Список доменов Discord
