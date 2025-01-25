@@ -14,12 +14,18 @@ jobs:
     steps:
       - name: Создаем файл domain_community.list
         run: |
-          curl -sSL https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list \
-          | sed -E '/^[^#].*./s/^/DOMAIN-SUFFIX,/' > domain_community.list
-          sed -i "1s/^/#special\n/" domain_community.list
-          sed -i "2s/^/DOMAIN-KEYWORD,instagram\n/" domain_community.list
-          sed -i "3s/^/DOMAIN-KEYWORD,4pda\n/" domain_community.list
-          sed -i "4s/^/DOMAIN,spotify.com\n/" domain_community.list
+          #curl -sSL https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list \
+          #| sed -E '/^[^#].*./s/^/DOMAIN-SUFFIX,/' > domain_community.list
+          #sed -i "1s/^/#special\n/" domain_community.list
+          #sed -i "2s/^/DOMAIN-KEYWORD,instagram\n/" domain_community.list
+          #sed -i "3s/^/DOMAIN-KEYWORD,4pda\n/" domain_community.list
+          #sed -i "4s/^/DOMAIN,spotify.com\n/" domain_community.list
+          curl -sSL https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list | \
+          sed 's/^/DOMAIN-SUFFIX,/' | \
+          sed 's/^DOMAIN-SUFFIX,www\.\(.*\)/DOMAIN-SUFFIX,\1/' | \
+          sort -u > domain_community.list && \ 
+          { echo "# NAME: Community"; echo "# AUTHOR: misha-tgshv"; echo "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file"; echo "# UPDATE: $(TZ='Asia/Krasnoyarsk' date +'%Y-%m-%d %H:%M:%S')"; echo "# DOMAIN-SUFFIX: $(grep -c 'DOMAIN-SUFFIX' domain_community.list)"; cat domain_community.list; } domain_community.list
+
               
       - name: Создаем файл domain_antifilter.list
         run: |
