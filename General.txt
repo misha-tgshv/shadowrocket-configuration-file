@@ -71,7 +71,8 @@ udp-policy-not-supported-behaviour = REJECT
 # конфигурация содержит содержимое другой конфигурации a.conf, и текущая конфигурация имеет 
 # более высокий приоритет, чем a.conf. Эта опция предназначена для установления связи 
 # включения между конфигурациями для удовлетворения потребностей одновременного использования нескольких конфигураций.
-include =
+include = sr_ru_extended.conf
+
 # URL-адрес обновления файла конфигурации
 update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/sr_ru_public_lists.conf
 
