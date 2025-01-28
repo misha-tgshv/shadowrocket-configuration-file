@@ -1,0 +1,59 @@
+#special
+DOMAIN-KEYWORD,instagram
+DOMAIN-KEYWORD,4pda
+DOMAIN,spotify.com
+
+# other
+DOMAIN-SUFFIX,aol.com
+DOMAIN-SUFFIX,canva.dev
+DOMAIN-SUFFIX,dyson.com
+DOMAIN-SUFFIX,hostinger.com
+DOMAIN-SUFFIX,skladchina.biz
+DOMAIN-SUFFIX,splunkcloud.com
+DOMAIN-SUFFIX,realguide.com
+DOMAIN-SUFFIX,x-minus.pro
+
+# ai
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,elevenlabs.io
+DOMAIN-SUFFIX,copilot.microsoft.com
+
+# games
+DOMAIN-SUFFIX,anzu-us.com
+DOMAIN-SUFFIX,gameloft.com
+DOMAIN-SUFFIX,clashofclans.com
+DOMAIN-SUFFIX,clashofclans.inbox.supercell.com
+DOMAIN-SUFFIX,game.clashofclans.com
+DOMAIN-SUFFIX,game-assets.clashofclans.com
+
+# noton
+DOMAIN-SUFFIX,notionusercontent.com
+
+# ip
+DOMAIN-SUFFIX,ifconfig.me
+DOMAIN-SUFFIX,ipinfo.io
+DOMAIN-SUFFIX,browserleaks.com
+DOMAIN-SUFFIX,maxmind.com
+
+# analytics
+DOMAIN-SUFFIX,datacamp.com
+DOMAIN-SUFFIX,redis.io
+DOMAIN-SUFFIX,tableau.com
+DOMAIN-SUFFIX,tableausoftware.com
+DOMAIN-SUFFIX,tableauusercontent.com
+
+# xbox
+DOMAIN-SUFFIX,user.auth.xboxlive.com
+DOMAIN-SUFFIX,xsts.auth.xboxlive.com
+
+# jetbrans
+DOMAIN-SUFFIX,jetbrans.com
+
+# ukrainian 
+DOMAIN-SUFFIX,semrush.com
+DOMAIN-SUFFIX,setapp.com
+DOMAIN-SUFFIX,netpeaksoftware.com
+
+# kahoot
+DOMAIN-SUFFIX,kahoot.it
+DOMAIN-SUFFIX,kahoot.com
