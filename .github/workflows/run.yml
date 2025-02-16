@@ -69,8 +69,7 @@ jobs:
     steps:
       - name: Создаем файл rewrite.youtube.response.preview.js
         run: |
-          curl -sSL https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js \
-          | sed -i 's/e!==\x22off\x22/e == \x22off\x22/' > rewrite.youtube.response.preview.js
+          curl -sSL https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js > rewrite.youtube.response.preview.js
 
       - name: Перемещаем файлы в директорю scripts
         run: |
