@@ -64,6 +64,25 @@ jobs:
           name: rules
           path: ./rules.d/
 
+  build_YT_premium_v1_module:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Создаем файл YT-Premium-V1-RU.module
+        run: |
+          curl -sSL https://raw.githubusercontent.com/YanbingJiang/Shadowrocket_diy_rules/9b86dfbca387fa69e8d4b02d3f8ba01250eaad16/Modules/YT-Premium-V1.module \
+          | sed -E 's/captionLang:zh-Hans/captionLang:off/g; s/lyricLang:zh-Hans/lyricLang:en/g' > YT-Premium-V1-RU.module
+
+      - name: Перемещаем файлы в директорю modules
+        run: |
+          mkdir -p modules.d
+          cp *.list ./modules.d/
+
+      - name: Загружаем список файлов rules через artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: modules
+          path: ./modules.d/
+         
   build_Shadowrocket_conf_file:
     runs-on: ubuntu-latest
     needs: build_rules_list
@@ -127,7 +146,7 @@ jobs:
 
   publish:
     runs-on: ubuntu-latest
-    needs: [build_rules_list,build_Shadowrocket_conf_file]
+    needs: [build_rules_list,build_YT_premium_v1_module,build_Shadowrocket_conf_file]
     steps:     
       - name: Настраиваем переменные
         run: |
@@ -181,6 +200,7 @@ jobs:
           with:
             name: |
                 rules
+                modules
                 conf
 
         - name: Удаляем старые теги и релизы
