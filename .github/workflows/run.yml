@@ -70,7 +70,7 @@ jobs:
       - name: Создаем файл rewrite.youtube.response.preview.js
         run: |
           curl -sSL https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js \
-          | sed -i 's/;e!/;e/g' > rewrite.youtube.response.preview.js          
+          | sed -i "" 's/;e!/;e/g' > rewrite.youtube.response.preview.js          
 
       - name: Перемещаем файлы в директорю scripts
         run: |
