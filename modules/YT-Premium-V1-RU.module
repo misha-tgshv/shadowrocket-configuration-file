@@ -1,0 +1,31 @@
+#!name=YouTube Premium
+#!desc=Youtube Ad Full blocker with PIP player
+#!arguments=blockUpload:true,blockImmersive:true,captionLang:off,lyricLang:ru-ru,scriptExecutionEngine:auto,debug:false
+# Origin Author: @DivineEngine, @app2smile, @Maasea, @VirgilClyne
+# Other hints: @Choler, @bai1zi
+# Merged and released by @ddgksf2013 in form of qx
+# Translated and refined for shadowrocket by @deezertidal
+
+[Rule]
+AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
+AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
+
+[Url Rewrite]
+# /Modules/YT-Adblocker.module
+# ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad - reject-img
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad _ reject-200
+# ======= Universal Ad Request ======= #
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads _ reject-200
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) _ reject-200
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext _ reject-200
+# ======= General Video Ad request ======= #
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
+
+[Script]
+# ======= Search|Play Page|Short Video ||| PiP|Background Play ======= #
+# youtube = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting),requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/scripts/rewrite.youtube.response.preview.js
+# youtube.request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine={{{scriptExecutionEngine}}},script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js
+youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine={{{scriptExecutionEngine}}},script-path=https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/scripts/rewrite.youtube.response.preview.js,argument="{"lyricLang":"{{{lyricLang}}}","captionLang":"{{{captionLang}}}","blockUpload":{{{blockUpload}}},"blockImmersive":{{{blockImmersive}}},"debug":{{{debug}}}}"
+
+[MITM]
+hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
