@@ -75,7 +75,7 @@ jobs:
       - name: Перемещаем файлы в директорю modules
         run: |
           mkdir -p modules.d
-          cp *.list ./modules.d/
+          cp *.module ./modules.d/
 
       - name: Загружаем список файлов rules через artifact
         uses: actions/upload-artifact@v4
