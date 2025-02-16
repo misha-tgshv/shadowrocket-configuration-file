@@ -64,20 +64,40 @@ jobs:
           name: rules
           path: ./rules.d/
 
+  build_scripts_js:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Создаем файл rewrite.youtube.response.preview.js
+        run: |
+          curl -sSL https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js \
+          | sed -i 's/e!==\x22off\x22/e == \x22off\x22/' > rewrite.youtube.response.preview.js
+
+      - name: Перемещаем файлы в директорю scripts
+        run: |
+          mkdir -p scripts.d
+          cp *.js ./scripts.d/
+
+      - name: Загружаем список файлов sctipts через artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: scripts
+          path: ./scripts.d/
+
   build_YT_premium_v1_module:
     runs-on: ubuntu-latest
     steps:
       - name: Создаем файл YT-Premium-V1-RU.module
         run: |
           curl -sSL https://raw.githubusercontent.com/YanbingJiang/Shadowrocket_diy_rules/9b86dfbca387fa69e8d4b02d3f8ba01250eaad16/Modules/YT-Premium-V1.module \
-          | sed -E 's/captionLang:zh-Hans/captionLang:off/g; s/lyricLang:zh-Hans/lyricLang:en/g' > YT-Premium-V1-RU.module
+          | sed -E 's/captionLang:zh-Hans/captionLang:off/g; s/lyricLang:zh-Hans/lyricLang:ru-ru/g' > YT-Premium-V1-RU.module
+          | sed -i 's/https:\/\/raw\.githubusercontent\.com\/Maasea\/sgmodule\/master\/Script\/Youtube\/dist\/youtube\.response\.preview\.js/https:\/\/raw\.githubusercontent\.com\/misha-tgshv\/shadowrocket-configuration-file\/refs\/heads\/release\/scripts\/rewrite\.youtube\.response\.preview\.js/g' > YT-Premium-V1-RU.module
 
       - name: Перемещаем файлы в директорю modules
         run: |
           mkdir -p modules.d
           cp *.module ./modules.d/
 
-      - name: Загружаем список файлов rules через artifact
+      - name: Загружаем список файлов modules через artifact
         uses: actions/upload-artifact@v4
         with:
           name: modules
@@ -146,7 +166,7 @@ jobs:
 
   publish:
     runs-on: ubuntu-latest
-    needs: [build_rules_list,build_YT_premium_v1_module,build_Shadowrocket_conf_file]
+    needs: [build_rules_list,build_scripts_js,build_YT_premium_v1_module,build_Shadowrocket_conf_file]
     steps:     
       - name: Настраиваем переменные
         run: |
