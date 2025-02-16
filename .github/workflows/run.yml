@@ -21,12 +21,12 @@ jobs:
            sed -i "3s/^/DOMAIN-KEYWORD,4pda\n/" domain_community.list
            sed -i "4s/^/DOMAIN,spotify.com\n/" domain_community.list
               
-      - name: Создаем файл domain_antifilter.list
-        run: |
-          curl -sSL https://community.antifilter.download/list/domains.lst \
-          | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_antifilter.list
-          sed -i -E '/www|DOMAIN-SUFFIX,spotify.com/d' domain_antifilter.list
-          awk '!seen[$0]++' domain_antifilter.list
+      # - name: Создаем файл domain_antifilter.list
+      #   run: |
+      #     curl -sSL https://community.antifilter.download/list/domains.lst \
+      #     | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_antifilter.list
+      #     sed -i -E '/www|DOMAIN-SUFFIX,spotify.com/d' domain_antifilter.list
+      #     awk '!seen[$0]++' domain_antifilter.list
 
       - name: Создаем файл domain_refilter.list
         run: |
