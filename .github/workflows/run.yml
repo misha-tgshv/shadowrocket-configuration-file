@@ -36,6 +36,15 @@ jobs:
           sed -i -E '/www|DOMAIN-SUFFIX,spotify.com/d' domains_antifilter.list
           awk '!seen[$0]++' domains_antifilter.list
 
+      - name: Создаем файл ips_antifilter.list
+        run: |
+          curl -s https://community.antifilter.download/list/community.lst \
+            | sed 's/^/IP-CIDR,/g' \
+            | sort -u > temp_aips.txt \
+            && echo "# Количество IP-адресов: $(wc -l < temp_aips.txt)" > ips_antifilter.list \
+            && cat temp_aips.txt >> ips_antifilter.list \
+            && rm temp_aips.txt
+
       - name: Создаем файл domains_refilter.list
         run: |
           # curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst > domains1.txt \
@@ -48,9 +57,6 @@ jobs:
           && echo "# Количество доменов в списке: $(wc -l < temp_refilter.list)" > domains_refilter.list \
           && cat temp_refilter.list >> domains_refilter.list \
           && rm domains1.txt temp_refilter.list
-
-
-
           
       - name: Создаем файл domains_youtube.list
         run: |
@@ -155,6 +161,8 @@ jobs:
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_community.list,PROXY
           # Список доменов antifilter
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_antifilter.list,PROXY
+          # Список ip-адресов antifilter
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_antifilter.list,PROXY
           # Список ip-адресов refilter
           # RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve
           # Список доменов Youtube
