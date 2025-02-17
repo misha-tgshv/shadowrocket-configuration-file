@@ -28,16 +28,13 @@ jobs:
                 !/^#/ && NF>0 {print "DOMAIN-SUFFIX," $0}
                 /^#/ || NF==0 {print $0} # Добавляем это условие для пустых строк и строк с #
               ' > domains_community.list
-
-
-
               
-      # - name: Создаем файл domain_antifilter.list
-      #   run: |
-      #     curl -sSL https://community.antifilter.download/list/domains.lst \
-      #     | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_antifilter.list
-      #     sed -i -E '/www|DOMAIN-SUFFIX,spotify.com/d' domain_antifilter.list
-      #     awk '!seen[$0]++' domain_antifilter.list
+      - name: Создаем файл domains_antifilter.list
+        run: |
+          curl -sSL https://community.antifilter.download/list/domains.lst \
+          | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domains_antifilter.list
+          sed -i -E '/www|DOMAIN-SUFFIX,spotify.com/d' domains_antifilter.list
+          awk '!seen[$0]++' domains_antifilter.list
 
       - name: Создаем файл domains_refilter.list
         run: |
@@ -155,6 +152,8 @@ jobs:
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_community.list,PROXY
           # Список доменов refilter
           # RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY
+          # Список доменов antifilter
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_antifilter.list,PROXY
           # Список ip-адресов refilter
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve
           # Список доменов Youtube
