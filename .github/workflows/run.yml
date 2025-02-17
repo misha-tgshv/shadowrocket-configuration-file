@@ -51,12 +51,19 @@ jobs:
           # && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst >> domains1.txt \
           # && sed 's/^www\.//; s/^/DOMAIN-SUFFIX,/g' domains1.txt | sort -u > domains_refilter.list \
           # && rm domains1.txt
+          # curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst > domains1.txt \
+          # && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst >> domains1.txt \
+          # && sed 's/^www\.//; s/^/DOMAIN-SUFFIX,/g' domains1.txt | sort -u > temp_refilter.list \
+          # && echo "# Количество доменов в списке: $(wc -l < temp_refilter.list)" > domains_refilter.list \
+          # && cat temp_refilter.list >> domains_refilter.list \
+          # && rm domains1.txt temp_refilter.list
           curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst > domains1.txt \
           && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst >> domains1.txt \
-          && sed 's/^www\.//; s/^/DOMAIN-SUFFIX,/g' domains1.txt | sort -u > temp_refilter.list \
+          && sed 's/^www\.//; s/^/DOMAIN-SUFFIX,/g; /ww.*ww/d' domains1.txt | sort -u > temp_refilter.list \
           && echo "# Количество доменов в списке: $(wc -l < temp_refilter.list)" > domains_refilter.list \
           && cat temp_refilter.list >> domains_refilter.list \
           && rm domains1.txt temp_refilter.list
+
           
       - name: Создаем файл domains_youtube.list
         run: |
@@ -72,7 +79,7 @@ jobs:
           sed -i "1s/^/DOMAIN-KEYWORD,discord\n/" domains_discord.list
           sed -i "1s/^/DOMAIN-KEYWORD,discordapp\n/" domains_discord.list
 
-      - name: Создаем файл ip_refilter.list
+      - name: Создаем файл ips_refilter.list
         run: |
           # curl -sSL https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/ipsum.lst | sed 's/^/IP-CIDR,/' > ip_refilter.list
             curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/community_ips.lst > ips1.txt \
