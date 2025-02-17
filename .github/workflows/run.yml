@@ -20,10 +20,11 @@ jobs:
           #  sed -i "2s/^/DOMAIN-KEYWORD,instagram\n/" domain_community.list
           #  sed -i "3s/^/DOMAIN-KEYWORD,4pda\n/" domain_community.list
           #  sed -i "4s/^/DOMAIN,spotify.com\n/" domain_community.list
-          curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list \
-          | awk 'NR==2||NR==3 {print "DOMAIN-KEYWORD," $0}' \
-          | awk 'NR==4 {print "DOMAIN," $0}' \
-          | awk '!/^#/ && NF>0 {print "DOMAIN-SUFFIX," $0}' > domains_community.list
+            curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list \
+              | awk 'NR==2||NR==3 {print "DOMAIN-KEYWORD," $0}' \
+              | awk 'NR==4 {print "DOMAIN," $0}' \
+              | awk '!/^#/ && NF>0 {print "DOMAIN-SUFFIX," $0}' > domains_community.list
+
 
               
       # - name: Создаем файл domain_antifilter.list
