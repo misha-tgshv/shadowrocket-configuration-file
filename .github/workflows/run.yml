@@ -68,7 +68,12 @@ jobs:
 
       - name: Создаем файл ip_refilter.list
         run: |
-          curl -sSL https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/ipsum.lst | sed 's/^/IP-CIDR,/' > ip_refilter.list       
+          # curl -sSL https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/ipsum.lst | sed 's/^/IP-CIDR,/' > ip_refilter.list
+          curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/community_ips.lst > ips1.txt \
+          && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/discord_ips.lst >> ips1.txt \
+          && curl -s https://github.com/1andrevich/Re-filter-lists/blob/main/ipsum.lst >> ips1.txt \
+          && sed 's/^/IP-CIDR,/g' ips1.txt | sort -u > ips_refilter.list \
+          && rm ips1.txt
 
       - name: Перемещаем файлы в директорю rules
         run: |
@@ -148,7 +153,7 @@ jobs:
           # Список доменов refilter
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY
           # Список ip-адресов refilter
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ip_refilter.list,PROXY,no-resolve
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve
           # Список доменов Youtube
           # RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_youtube.list,PROXY
           # Список доменов Discord
