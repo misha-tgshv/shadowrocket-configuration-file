@@ -33,12 +33,12 @@ dns-server = https://dns.adguard-dns.com/dns-query, tls://p0.freedns.controld.co
 # Альтернативный DNS. Возврат к резервному DNS при сбое разрешения перезаписанного DNS. 
 # Если вам нужно указать несколько DNS, их можно разделить запятыми. system означает возврат к системному DNS. 
 # Вы можете выбрать альтернативный DOH/DOT — https://github.com/curl/curl/wiki/DNS-over-HTTPS
-fallback-dns-server = 8.8.8.8, 8.8.4.4, https://dns.quad9.net/dns-query
+fallback-dns-server = https://cloudflare-dns.com/dns-query, https://unfiltered.adguard-dns.com/dns-query
 
 # Перезапись DNS. Некоторые устройства или программное обеспечение всегда 
 # используют жестко запрограммированные DNS-серверы, например Netflix отправляет 
 # запросы через Google DNS (8.8.8.8 или 8.8.4.4). Вы можете использовать эту опцию для перехвата запросов.
-hijack-dns = :53
+hijack-dns = 8.8.8.8:53, 8.8.4.4:53
 
 # Пропустить прокси. Эта опция заставляет диапазоны подключений для этих доменных
 # имен или IP-адресов обрабатываться интерфейсом Shadowrocket TUN, а не прокси-сервером 
