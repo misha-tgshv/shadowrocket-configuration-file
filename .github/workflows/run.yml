@@ -30,11 +30,16 @@ jobs:
 
       - name: Создаем файл domain_refilter.list
         run: |
-          curl -sSL https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/community.lst \
-          | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_refilter.list
-          sed -i -E '/www|DOMAIN-SUFFIX,spotify.com/d' domain_refilter.list
-          awk '!seen[$0]++' domain_refilter.list
+          # curl -sSL https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/community.lst \
+          # | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domain_refilter.list
+          # sed -i -E '/www|DOMAIN-SUFFIX,spotify.com/d' domain_refilter.list
+          # awk '!seen[$0]++' domain_refilter.list
+          curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst > domains1.txt \
+          && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst >> domains1.txt \
+          && sed 's/^www\.//' domains1.txt | sort -u > domain_refilter.list \
+          && rm domains1.txt
 
+          
       - name: Создаем файл domain_youtube.list
         run: |
           curl -sSL https://raw.githubusercontent.com/dsvip/Quantumult-X/dec9019816ba55897c162c3dbd3ac997ac160f09/blackmatrix7/rule/Shadowrocket/YouTube.list \
