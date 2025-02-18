@@ -14,12 +14,6 @@ jobs:
     steps:
       - name: Создаем файл domains_community.list
         run: |
-          # curl -sSL https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list \
-          # | sed -E '/^[^#].*./s/^/DOMAIN-SUFFIX,/' > domains_community.list
-          #  sed -i "1s/^/#special\n/" domain_community.list
-          #  sed -i "2s/^/DOMAIN-KEYWORD,instagram\n/" domain_community.list
-          #  sed -i "3s/^/DOMAIN-KEYWORD,4pda\n/" domain_community.list
-          #  sed -i "4s/^/DOMAIN,spotify.com\n/" domain_community.list
             curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list \
               | awk '
                 NR==2 {print "DOMAIN-KEYWORD," $0; next}
@@ -31,10 +25,6 @@ jobs:
               
       - name: Создаем файл domains_antifilter.list
         run: |
-          # curl -sSL https://community.antifilter.download/list/domains.lst \
-          # | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domains_antifilter.list
-          # sed -i -E '/www|DOMAIN-SUFFIX,spotify.com/d' domains_antifilter.list
-          # awk '!seen[$0]++' domains_antifilter.list
           curl -sSL https://community.antifilter.download/list/domains.lst \
             | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' \
             | sed '/www|spotify.com/d' \
@@ -57,36 +47,14 @@ jobs:
             curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt \
             && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst >> temp.txt \
             && grep -v "mega555" temp.txt > temp2.txt \
-            && echo "# Дата создания (Москва): $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S')" > domains_refilter.list \
+            && echo "# NAME: domains refilter list" > domains_refilter.list \
+            && echo "# AUTHOR: misha-tgshv" > domains_refilter.list \
+            && echo "# REPO: domains_refilter.list" > domains_refilter.list \
+            && echo "# UPDATED: $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S') MSK" > domains_refilter.list \
+            && echo "# SOURCE: https://github.com/1andrevich/Re-filter-lists" >> domains_refilter.list \
             && sed 's/^/DOMAIN-SUFFIX,/g' temp2.txt > domains_refilter.list.tmp \
-            && wc -l < domains_refilter.list.tmp | awk '{print "# Количество доменов: " $1}' >> domains_refilter.list \
-            && cat domains_refilter.list.tmp >> domains_refilter.list \
-            && echo "# Источник: https://github.com/1andrevich/Re-filter-lists" >> domains_refilter.list \
-            && rm temp.txt temp2.txt domains_refilter.list.tmp
-
-          # curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst > domains1.txt \
-          # && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst >> domains1.txt \
-          # && sed 's/^www\.//; s/^/DOMAIN-SUFFIX,/g; /ww.*ww/d' domains1.txt | sort -u > temp_refilter.list \
-          # && echo "# Количество доменов в списке: $(wc -l < temp_refilter.list)" > domains_refilter.list \
-          # && cat temp_refilter.list >> domains_refilter.list \
-          # && rm domains1.txt temp_refilter.list
-          # curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst > domains1.txt \
-          #   && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst >> domains1.txt \
-          #   && sed '
-          #     s/^/DOMAIN-SUFFIX,/g;
-          #     /http\|https/d;
-          #     /[wW]\{3,\}[[:alnum:]]*/d;
-          #     /vvv\|vvvv\|vwv\|vwvv\|vwvw\|vww\|vwwv/d
-          #   ' domains1.txt | sort -u > temp_refilter.list \
-          #   && echo "# Количество доменов в списке: $(wc -l < temp_refilter.list)" > domains_refilter.list \
-          #   && cat temp_refilter.list >> domains_refilter.list \
-          #   && rm domains1.txt temp_refilter.list
-          # curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt \
-          # && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst >> temp.txt \
-          # && sed 's/^/DOMAIN-SUFFIX,/g' temp.txt > processed_temp.txt \
-          # && split -l 20000 processed_temp.txt domains_refilter_ \
-          # && for file in domains_refilter_*; do mv "$file" "${file}.list"; done && rm temp.txt processed_temp.txt
-
+            && echo "# TOTAL: $(wc -l < domains_refilter.list.tmp | awk '{print $1}')" >> domains_refilter.list \
+            && cat domains_refilter.list.tmp >> domains_refilter.list && rm temp.txt temp2.txt
           
       - name: Создаем файл domains_youtube.list
         run: |
@@ -112,7 +80,6 @@ jobs:
             && echo "# Количество IP-адресов: $(wc -l < temp_ips.list)" > ips_refilter.list \
             && cat temp_ips.list >> ips_refilter.list \
             && rm ips1.txt temp_ips.list
-
 
       - name: Перемещаем файлы в директорю rules
         run: |
@@ -189,16 +156,10 @@ jobs:
           [Rule]
           # Список доменов телеграм-чата «Про Shadowrocket на русском»
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_community.list,PROXY
-          # Список доменов antifilter
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_antifilter.list,PROXY
           # Список доменов refilter
-          # RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY
-          # Список ip-адресов antifilter
-          # RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_antifilter.list,PROXY
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY
           # Список ip-адресов refilter
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve
-          # Список доменов Youtube
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_youtube.list,PROXY
           # Список доменов Discord
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_discord.list,PROXY
           # Список портов Discord
