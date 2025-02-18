@@ -73,8 +73,10 @@ jobs:
           #   && rm domains1.txt temp_refilter.list
             curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt \
             && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst >> temp.txt \
-            && sed 's/^/DOMAIN-SUFFIX,/g' temp.txt | split -l 1000 domains_file_ \
-            && for file in domains_file_*; do mv "$file" "${file}.list"; done && rm temp.txt
+            && sed 's/^/DOMAIN-SUFFIX,/g' temp.txt > processed_temp.txt \
+            && split -l 1000 processed_temp.txt domains_file_ \
+            && for file in domains_file_*; do mv "$file" "${file}.list"; done && rm temp.txt processed_temp.txt
+
 
 
 
