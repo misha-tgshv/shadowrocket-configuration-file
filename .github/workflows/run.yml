@@ -35,13 +35,19 @@ jobs:
           # | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' > domains_antifilter.list
           # sed -i -E '/www|DOMAIN-SUFFIX,spotify.com/d' domains_antifilter.list
           # awk '!seen[$0]++' domains_antifilter.list
-          curl -sSL https://community.antifilter.download/list/domains.lst \
-            | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' \
-            | sed '/www|spotify.com/d' \
-            | awk '!seen[$0]++' > temp_list.txt \
-          && echo "# Количество доменов: $(wc -l < temp_list.txt)" > domains_antifilter.list \
-          && cat temp_list.txt >> domains_antifilter.list \
-          && rm temp_list.txt
+          # curl -sSL https://community.antifilter.download/list/domains.lst \
+          #   | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' \
+          #   | sed '/www|spotify.com/d' \
+          #   | awk '!seen[$0]++' > temp_list.txt \
+          # && echo "# Количество доменов: $(wc -l < temp_list.txt)" > domains_antifilter.list \
+          # && cat temp_list.txt >> domains_antifilter.list \
+          # && rm temp_list.txt
+          curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt \
+          && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst >> temp.txt \
+          && sed 's/^/DOMAIN-SUFFIX,/g' temp.txt > processed_temp.txt \
+          && split -l 10000 processed_temp.txt domains_file_ \
+          && for file in domains_file_*; do mv "$file" "${file}.list"; done && rm temp.txt processed_temp.txt
+
 
       - name: Создаем файл ips_antifilter.list
         run: |
