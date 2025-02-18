@@ -44,20 +44,22 @@ jobs:
 
       - name: Создаем файл domains_refilter.list
         run: |
-            curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt &&
-            curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst >> temp.txt &&
-            grep -v "mega555" temp.txt > temp2.txt && rm temp.txt
-            
-            echo "# NAME: domains_refilter.list" > domains_refilter.list &&
-            echo "# AUTHOR: misha-tgshv" >> domains_refilter.list &&
-            echo "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file" >> domains_refilter.list &&
-            echo "# UPDATED: $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S') MSK" >> domains_refilter.list &&
-            echo "# SOURCE: https://github.com/1andrevich/Re-filter-lists" >> domains_refilter.list
-            
-            sed 's/^/DOMAIN-SUFFIX,/g' temp2.txt | tee domaintmp
-            wc -l < domaintmp | awk '{print "# TOTAL:", $1}' >> domains_refilter.list
-            cat domaintmp >> domains_refilter.list && rm domaintmp temp2.txt
+          curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt &&
+          curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst >> temp.txt &&
+          grep -v "mega555" temp.txt > temp2.txt &&
+          grep -v "spotify.com" temp2.txt > temp3.txt &&
+          rm temp.txt temp2.txt
           
+          echo "# NAME: domains_refilter.list" > domains_refilter.list &&
+          echo "# AUTHOR: misha-tgshv" >> domains_refilter.list &&
+          echo "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file" >> domains_refilter.list &&
+          echo "# UPDATED: $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S') MSK" >> domains_refilter.list &&
+          echo "# SOURCE: https://github.com/1andrevich/Re-filter-lists" >> domains_refilter.list
+          
+          sed 's/^/DOMAIN-SUFFIX,/g' temp3.txt | tee domaintmp
+          wc -l < domaintmp | awk '{print "# TOTAL:", $1}' >> domains_refilter.list
+          cat domaintmp >> domains_refilter.list && rm domaintmp temp3.txt
+
       - name: Создаем файл domains_youtube.list
         run: |
           curl -sSL https://raw.githubusercontent.com/dsvip/Quantumult-X/dec9019816ba55897c162c3dbd3ac997ac160f09/blackmatrix7/rule/Shadowrocket/YouTube.list \
