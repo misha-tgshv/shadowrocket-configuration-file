@@ -56,13 +56,17 @@ jobs:
         run: |
             curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt \
             && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst >> temp.txt \
-            && echo "# NAME: domains_refilter.list" > domains_refilter.list \
-            && echo "# AUTHOR: misha-tgshv" > domains_refilter.list \
-            && echo "# REPO: domains_refilter.list" > domains_refilter.list \
-            && echo "# UPDATED: $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S') MSK" > domains_refilter.list \
-            && echo "# SOURCE: https://github.com/1andrevich/Re-filter-lists" >> domains_refilter.list \
-            && echo "# TOTAL: $(wc -l < temp.txt)" >> domains_refilter.list \
-            && sed 's/^/DOMAIN-SUFFIX,/g' temp.txt >> domains_refilter.list && rm temp.txt
+            && sed 's/^/DOMAIN-SUFFIX,/g' temp.txt > domains_refilter.list \
+            && rm temp.txt
+            # curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt \
+            # && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst >> temp.txt \
+            # && echo "# NAME: domains refilter list" > domains_refilter.list \
+            # && echo "# AUTHOR: misha-tgshv" > domains_refilter.list \
+            # && echo "# REPO: domains_refilter.list" > domains_refilter.list \
+            # && echo "# UPDATED: $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S') MSK" > domains_refilter.list \
+            # && echo "# SOURCE: https://github.com/1andrevich/Re-filter-lists" >> domains_refilter.list \
+            # && echo "# TOTAL: $(wc -l < temp.txt)" >> domains_refilter.list \
+            # && sed 's/^/DOMAIN-SUFFIX,/g' temp.txt >> domains_refilter.list && rm temp.txt
           # curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst > domains1.txt \
           # && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst >> domains1.txt \
           # && sed 's/^www\.//; s/^/DOMAIN-SUFFIX,/g; /ww.*ww/d' domains1.txt | sort -u > temp_refilter.list \
@@ -85,14 +89,6 @@ jobs:
           # && sed 's/^/DOMAIN-SUFFIX,/g' temp.txt > processed_temp.txt \
           # && split -l 20000 processed_temp.txt domains_refilter_ \
           # && for file in domains_refilter_*; do mv "$file" "${file}.list"; done && rm temp.txt processed_temp.txt
-          # curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt \
-          # && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst >> temp.txt \
-          # && sed 's/^/DOMAIN-SUFFIX,/g' temp.txt > domains_refilter.list \
-          # && rm temp.txt
-
-
-
-
 
           
       - name: Создаем файл domains_youtube.list
