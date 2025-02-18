@@ -60,12 +60,18 @@ jobs:
           # && echo "# Количество доменов в списке: $(wc -l < temp_refilter.list)" > domains_refilter.list \
           # && cat temp_refilter.list >> domains_refilter.list \
           # && rm domains1.txt temp_refilter.list
-          curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst > domains1.txt \
-            && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst >> domains1.txt \
-            && sed 's/^/DOMAIN-SUFFIX,/g; /[wW]\{3,\}[[:alnum:]]*/d' domains1.txt | sort -u > temp_refilter.list \
-            && echo "# Количество доменов в списке: $(wc -l < temp_refilter.list)" > domains_refilter.list \
-            && cat temp_refilter.list >> domains_refilter.list \
-            && rm domains1.txt temp_refilter.list
+            curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst > domains1.txt \
+              && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst >> domains1.txt \
+              && sed '
+                s/^/DOMAIN-SUFFIX,/g;
+                /http\|https/d;
+                /[wW]\{3,\}[[:alnum:]]*/d;
+                /vvv\|vvvv\|vwv\|vwvv\|vwvw\|vww\|vwwv/d
+              ' domains1.txt | sort -u > temp_refilter.list \
+              && echo "# Количество доменов в списке: $(wc -l < temp_refilter.list)" > domains_refilter.list \
+              && cat temp_refilter.list >> domains_refilter.list \
+              && rm domains1.txt temp_refilter.list
+
 
 
 
