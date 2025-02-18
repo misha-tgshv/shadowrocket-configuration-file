@@ -56,9 +56,9 @@ jobs:
         run: |
             curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt \
             && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst >> temp.txt \
-            && echo "# Дата создания МСК: $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S')" > domains_refilter.list \
-            && echo "# Количество доменов: $(wc -l < temp.txt)" >> domains_refilter.list \
-            && echo "# Источник: https://github.com/1andrevich/Re-filter-lists" >> domains_refilter.list \
+            && echo "# Дата создания МСК $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S')" > domains_refilter.list \
+            && echo "# Количество доменов $(wc -l < temp.txt)" >> domains_refilter.list \
+            && echo "# Источник https://github.com/1andrevich/Re-filter-lists" >> domains_refilter.list \
             && sed 's/^/DOMAIN-SUFFIX,/g' temp.txt >> domains_refilter.list && rm temp.txt
           # curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst > domains1.txt \
           # && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst >> domains1.txt \
