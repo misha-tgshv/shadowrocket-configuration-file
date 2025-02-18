@@ -71,11 +71,16 @@ jobs:
           #   && echo "# Количество доменов в списке: $(wc -l < temp_refilter.list)" > domains_refilter.list \
           #   && cat temp_refilter.list >> domains_refilter.list \
           #   && rm domains1.txt temp_refilter.list
-            curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt \
-            && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst >> temp.txt \
-            && sed 's/^/DOMAIN-SUFFIX,/g' temp.txt > processed_temp.txt \
-            && split -l 20000 processed_temp.txt domains_refilter_ \
-            && for file in domains_refilter_*; do mv "$file" "${file}.list"; done && rm temp.txt processed_temp.txt
+          # curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt \
+          # && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst >> temp.txt \
+          # && sed 's/^/DOMAIN-SUFFIX,/g' temp.txt > processed_temp.txt \
+          # && split -l 20000 processed_temp.txt domains_refilter_ \
+          # && for file in domains_refilter_*; do mv "$file" "${file}.list"; done && rm temp.txt processed_temp.txt
+          curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt \
+          && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst >> temp.txt \
+          && sed 's/^/DOMAIN-SUFFIX,/g' temp.txt > domains_refilter.list \
+          && rm temp.txt
+
 
 
 
