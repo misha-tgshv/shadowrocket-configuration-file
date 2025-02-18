@@ -54,7 +54,7 @@ jobs:
             echo "# UPDATED: $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S') MSK" >> domains_refilter.list &&
             echo "# SOURCE: https://github.com/1andrevich/Re-filter-lists" >> domains_refilter.list
             
-            sed 's/^./DOMAIN-SUFFIX,/' temp2.txt | tee domaintmp
+            sed 's/^/DOMAIN-SUFFIX,/g' temp2.txt | tee domaintmp
             wc -l < domaintmp | awk '{print "# TOTAL:", $1}' >> domains_refilter.list
             cat domaintmp >> domains_refilter.list && rm domaintmp temp2.txt
           
