@@ -60,21 +60,18 @@ jobs:
           # && echo "# Количество доменов в списке: $(wc -l < temp_refilter.list)" > domains_refilter.list \
           # && cat temp_refilter.list >> domains_refilter.list \
           # && rm domains1.txt temp_refilter.list
-            curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst > domains1.txt \
-              && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst >> domains1.txt \
-              && sed '
-                s/^/DOMAIN-SUFFIX,/g;
-                /http\|https/d;
-                /[wW]\{3,\}[[:alnum:]]*/d;
-                /vvv\|vvvv\|vwv\|vwvv\|vwvw\|vww\|vwwv/d
-              ' domains1.txt | sort -u > temp_refilter.list \
-              && echo "# Количество доменов в списке: $(wc -l < temp_refilter.list)" > domains_refilter.list \
-              && cat temp_refilter.list >> domains_refilter.list \
-              && rm domains1.txt temp_refilter.list
-
-
-
-
+          # curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst > domains1.txt \
+          #   && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst >> domains1.txt \
+          #   && sed '
+          #     s/^/DOMAIN-SUFFIX,/g;
+          #     /http\|https/d;
+          #     /[wW]\{3,\}[[:alnum:]]*/d;
+          #     /vvv\|vvvv\|vwv\|vwvv\|vwvw\|vww\|vwwv/d
+          #   ' domains1.txt | sort -u > temp_refilter.list \
+          #   && echo "# Количество доменов в списке: $(wc -l < temp_refilter.list)" > domains_refilter.list \
+          #   && cat temp_refilter.list >> domains_refilter.list \
+          #   && rm domains1.txt temp_refilter.list
+          curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst >> temp.txt && sed 's/^/DOMAIN-SUFFIX,/g' temp.txt | split -l 1000 - domains_file_ && for i in domains_file_*; do mv "$i" "${i/_/.}.txt"; done && rm temp.txt
           
       - name: Создаем файл domains_youtube.list
         run: |
