@@ -87,22 +87,18 @@ jobs:
 
       - name: Создаем файл domains_banking.list
         run: |          
-            # Скачиваем HTML-страницу и извлекаем ссылки
-            curl -s https://www.cbr.ru/banking_sector/credit/cowebsites/ | \
-            grep -oP 'href="\K[^"]+' | \
-            grep '^http' | \
-            # Удаляем нежелательные строки
-            sed -E '/(t\.me|vk\.com|ok\.ru|telegram|dzen|twitter|youtube|zen\.yandex\.ru|rutube\.ru|linkedin)/d' | \
-            # Удаляем http:// или https:// в начале строки
-            sed 's/^https\?:\/\///' | \
-            # Удаляем все после названия домена, включая /
-            sed 's/\/.*//' | \
-            # Добавляем DOMAIN-SUFFIX в начало строки
-            sed 's/^/DOMAIN-SUFFIX,/' > domains_banking.list
-            
-
-
-
+          # Скачиваем HTML-страницу и извлекаем ссылки
+          curl -s https://www.cbr.ru/banking_sector/credit/cowebsites/ | \
+          grep -oP 'href="\K[^"]+' | \
+          grep '^http' | \
+          # Удаляем нежелательные строки
+          sed -E '/(t\.me|vk\.com|ok\.ru|telegram|dzen|twitter|youtube|zen\.yandex\.ru|rutube\.ru|linkedin)/d' | \
+          # Удаляем http:// или https:// в начале строки
+          sed 's/^https\?:\/\///' | \
+          # Удаляем все после названия домена, включая /
+          sed 's/\/.*//' | \
+          # Удаляем дубликаты и добавляем DOMAIN-SUFFIX в начало строки
+          sort -u | sed 's/^/DOMAIN-SUFFIX,/' > domains_banking.list
 
       - name: Перемещаем файлы в директорю rules
         run: |
