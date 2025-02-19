@@ -92,11 +92,14 @@ jobs:
             grep -oP 'href="\K[^"]+' | \
             grep '^http' | \
             # Удаляем нежелательные строки
-            sed -E '/(t\.me|vk\.com|ok\.ru|telegram|dzen|twitter|youtube|zen\.yandex\.ru|rutube\.ru)/d' | \
+            sed -E '/(t\.me|vk\.com|ok\.ru|telegram|dzen|twitter|youtube|zen\.yandex\.ru|rutube\.ru|linkedin)/d' | \
             # Удаляем http:// или https:// в начале строки
             sed 's/^https\?:\/\///' | \
+            # Удаляем все после названия домена, включая /
+            sed 's/\/.*//' | \
             # Добавляем DOMAIN-SUFFIX в начало строки
             sed 's/^/DOMAIN-SUFFIX,/' > domains_banking.list
+            
 
 
 
