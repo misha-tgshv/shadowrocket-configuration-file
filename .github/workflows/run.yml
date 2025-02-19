@@ -87,16 +87,17 @@ jobs:
 
       - name: Создаем файл domains_banking.list
         run: |          
-          # Скачиваем HTML-страницу и извлекаем ссылки
-          curl -s https://www.cbr.ru/banking_sector/credit/cowebsites/ | \
-          grep -oP 'href="\K[^"]+' | \
-          grep '^http' | \
-          # Удаляем нежелательные строки
-          sed -E '/(t\.me|vk\.com|ok\.ru|telegram|dzen|twitter|youtube|zen\.yandex\.ru)/d' | \
-          # Удаляем http:// или https:// в начале строки
-          sed 's/^https\?:\/\///' | \
-          # Добавляем DOMAIN-SUFFIX в начало строки
-          sed 's/^/DOMAIN-SUFFIX,/' > domains_banking.list
+            # Скачиваем HTML-страницу и извлекаем ссылки
+            curl -s https://www.cbr.ru/banking_sector/credit/cowebsites/ | \
+            grep -oP 'href="\K[^"]+' | \
+            grep '^http' | \
+            # Удаляем нежелательные строки
+            sed -E '/(t\.me|vk\.com|ok\.ru|telegram|dzen|twitter|youtube|zen\.yandex\.ru|rutube\.ru)/d' | \
+            # Удаляем http:// или https:// в начале строки
+            sed 's/^https\?:\/\///' | \
+            # Добавляем DOMAIN-SUFFIX в начало строки
+            sed 's/^/DOMAIN-SUFFIX,/' > domains_banking.list
+
 
 
 
