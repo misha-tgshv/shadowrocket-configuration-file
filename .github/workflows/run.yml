@@ -85,6 +85,10 @@ jobs:
             && cat temp_ips.list >> ips_refilter.list \
             && rm ips1.txt temp_ips.list
 
+      - name: Создаем файл domains_banking.list
+        run: |
+          curl -s https://www.cbr.ru/banking_sector/credit/cowebsites/ | grep -oP 'href="\K[^"]+' | grep '^http' > domains_banking.list
+
       - name: Перемещаем файлы в директорю rules
         run: |
           mkdir -p rules.d
