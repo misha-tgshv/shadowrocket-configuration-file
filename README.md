@@ -17,7 +17,7 @@
 
 ## Списки
 * domain_antifilter.list — домены из списка сообщества [Антифильтр](https://community.antifilter.download);
-* domain_banking.list — домены банков из списка [ЦБ РФ]([https://community.antifilter.download](https://www.cbr.ru/banking_sector/credit/cowebsites/);
+* domain_banking.list — домены банков из списка [ЦБ РФ](https://www.cbr.ru/banking_sector/credit/cowebsites/);
 * domain_youtube.list — домены из списка [@blackmatrix7](https://raw.githubusercontent.com/dsvip/Quantumult-X/dec9019816ba55897c162c3dbd3ac997ac160f09/blackmatrix7/rule/Shadowrocket/YouTube.list)
 * domain_discord.list — домены из списка [@blackmatrix7](https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Discord/Discord.list)
 
