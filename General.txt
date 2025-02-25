@@ -56,7 +56,7 @@ tun-excluded-routes = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16
 tun-included-routes = 
 # Всегда используйте реальный IP-адрес, эта опция требует, чтобы Shadowrocket 
 # обрабатывал DNS-запросы в TUN и возвращал реальный IP-адрес вместо поддельного IP-адреса.
-always-real-ip=time.*.com,ntp.*.com,*.cloudflareclient.com,localhost.sec.qq.com,localhost.ptlogin2.qq.com,localhost.work.weixin.qq.com
+always-real-ip=time.*.com,ntp.*.com,*.cloudflareclient.com
 
 # Пакеты Ping автоматически отвечают
 icmp-auto-reply = true
