@@ -78,8 +78,9 @@ include = sr_ru_extended.conf
 # URL-адрес обновления файла конфигурации
 update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/sr_ru_public_lists.conf
 
-[Proxy Group]
-AUTO = url-test,interval=600,timeout=5,url=https://cp.cloudflare.com/generate_204,policy-regex-filter=*
+# Выбираем наиболее быстрый сервера для прокси
+# [Proxy Group]
+# AUTO = url-test,interval=600,timeout=5,url=https://cp.cloudflare.com/generate_204,policy-regex-filter=*
 
 # Опционально. Добавьте эти адреса в настройках программы Settings → GeoLite2 Database
 # Если у вас нет аккаунта на Maxmind и вы испольузуете финальное правило Proxy или Auto
