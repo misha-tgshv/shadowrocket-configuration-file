@@ -150,7 +150,7 @@ jobs:
       - name: Создаем папку
         run: |
           mkdir -p conf.d
-          
+
       - name: Получаем шаблон файла General
         uses: actions/checkout@v4
         with:
@@ -162,7 +162,7 @@ jobs:
           sparse-checkout-cone-mode: false
           path: conf.d
 
-      - name: Добавляем списки правил в конец файла General
+      - name: Создаем конфиг sr_ru_public_lists.conf
         run: |
           cat <<EOF >> ./conf.d/General.txt
           # Выборочные правила маршрутизации
@@ -182,19 +182,18 @@ jobs:
           FINAL,DIRECT
           EOF
 
-      - name: Создаем конфиг sr_ru_public_lists.conf
-        run: |
-          cat ./conf.d/*.txt > ./conf.d/sr_ru_public_lists.conf
+          # Создаем основной конфиг
+          cat ./conf.d/General.txt > ./conf.d/sr_ru_public_lists.conf
           sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_ru_public_lists.conf
 
       - name: Создаем конфиг nonru.conf
         run: |
-          cat <<EOF > ./conf.d/nonru.conf
-          # @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)
-          # Конфиг для пользователей за пределами России
-          # Российские домены идут через прокси, остальное напрямую
+          # Копируем General.txt в nonru.conf
+          cp ./conf.d/General.txt ./conf.d/nonru.conf
 
-          [Rule]
+          # Добавляем правила для российских доменов в nonru.conf
+          cat <<EOF >> ./conf.d/nonru.conf
+
           # Российские домены через прокси
           DOMAIN-SUFFIX,ru,PROXY
           DOMAIN-SUFFIX,su,PROXY
