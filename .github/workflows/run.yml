@@ -214,11 +214,20 @@ jobs:
           # Добавляем дату сборки
           sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_basic_nonru.conf
 
-      - name: Загружаем artifact
+      - name: Заменяем update-url в sr_basic_nonru.conf
+        run: |
+          sed -i 's/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_public_lists\.conf/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_basic_nonru\.conf/g' ./conf.d/sr_basic_nonru.conf
+
+      - name: Удаляем временный General.txt
+        run: rm -f ./conf.d/General.txt
+
+      - name: Загружаем конфиги в artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: conf
-          path: ./conf.d/
+          name: shadowrocket-configs
+          path: |
+            ./conf.d/sr_ru_public_lists.conf
+            ./conf.d/sr_basic_nonru.conf
           retention-days: 1
 
   publish:
