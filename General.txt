@@ -28,7 +28,7 @@ dns-direct-fallback-proxy = true
 # Некоторые DNS через https поддерживают http3, поэтому попробуйте выполнить запрос и переключиться 
 # на http3, если он поддерживается. Вы можете добавить #no-h3 после ссылки doh, чтобы закрыть ее. 
 # Используются Adguard DNS с блокировкой рекламы 
-dns-server = https://dns.adguard-dns.com/dns-query, tls://p0.freedns.controld.com
+dns-server = https://dns.adguard-dns.com/dns-query, https://freedns.controld.com/p3
 
 # Альтернативный DNS. Возврат к резервному DNS при сбое разрешения перезаписанного DNS. 
 # Если вам нужно указать несколько DNS, их можно разделить запятыми. system означает возврат к системному DNS. 
