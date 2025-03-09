@@ -148,63 +148,131 @@ jobs:
         with:
           name: modules
           path: ./modules.d/
-         
-  build_Shadowrocket_conf_file:
-    runs-on: ubuntu-latest
-    needs: build_rules_list
-    steps:
-      - name: Создаем папку
-        run: |
-          mkdir -p conf.d
-          
-      - name: Получаем шаблон файла General
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ github.repository }}
-          ref: 'Custom'
-          token: ${{ secrets.ACCESS_TOKEN }}
-          sparse-checkout: |
-            General.txt
-          sparse-checkout-cone-mode: false
-          path: conf.d
 
-      - name: Добавляем списки правил в конец файла General
-        run: |
-          cat <<EOF >> ./conf.d/General.txt
-          # Выборочные правила маршрутизации
-          [Rule]
-          # Список доменов телеграм-чата «Про Shadowrocket на русском»
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_community.list,PROXY
-          # Список доменов refilter
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY
-          # Список ip-адресов refilter
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve
-          # Список доменов Discord
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_discord.list,PROXY
-          # Список портов Discord
-          RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY
+    build_Shadowrocket_conf_file:
+  runs-on: ubuntu-latest
+  needs: build_rules_list
+  steps:
+    - name: Создаем папку
+      run: |
+        mkdir -p conf.d
+
+    - name: Получаем шаблон файла General
+      uses: actions/checkout@v4
+      with:
+        repository: ${{ github.repository }}
+        ref: 'Custom'
+        token: ${{ secrets.ACCESS_TOKEN }}
+        sparse-checkout: |
+          General.txt
+        sparse-checkout-cone-mode: false
+        path: conf.d
+
+    - name: Добавляем списки правил в конец файла General
+      run: |
+        cat <<EOF >> ./conf.d/General.txt
+        # Выборочные правила маршрутизации
+        [Rule]
+        # Список доменов телеграм-чата «Про Shadowrocket на русском»
+        RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_community.list,PROXY
+        # Список доменов refilter
+        RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY
+        # Список ip-адресов refilter
+        RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve
+        # Список доменов Discord
+        RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_discord.list,PROXY
+        # Список портов Discord
+        RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY
+
+        # Финальное правило маршрутизации
+        FINAL,DIRECT
+        EOF
+
+    - name: Создаем конфиг sr_ru_public_lists.conf
+      run: |
+        cat ./conf.d/*.txt > ./conf.d/sr_ru_public_lists.conf
+        sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_ru_public_lists.conf
+
+    - name: Создаем конфиг nonru.conf
+      run: |
+        # Копируем основной конфиг
+        cp ./conf.d/sr_ru_public_lists.conf ./conf.d/nonru.conf
+
+        # Добавляем правила для исключения российских доменов
+        cat <<EOF >> ./conf.d/nonru.conf
+
+        # Исключение российских доменов
+        DOMAIN-SUFFIX,ru,DIRECT
+        DOMAIN-SUFFIX,su,DIRECT
+        DOMAIN-SUFFIX,рф,DIRECT
+        DOMAIN-KEYWORD,.ru,DIRECT
+        DOMAIN-KEYWORD,.su,DIRECT
+        DOMAIN-KEYWORD,.рф,DIRECT
+        EOF
+
+    - name: Загружаем artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: conf
+        path: ./conf.d/
+        retention-days: 1
+         
+  # build_Shadowrocket_conf_file:
+  #   runs-on: ubuntu-latest
+  #   needs: build_rules_list
+  #   steps:
+  #     - name: Создаем папку
+  #       run: |
+  #         mkdir -p conf.d
           
-          # Финальное правило маршрутизации
-          FINAL,DIRECT
+  #     - name: Получаем шаблон файла General
+  #       uses: actions/checkout@v4
+  #       with:
+  #         repository: ${{ github.repository }}
+  #         ref: 'Custom'
+  #         token: ${{ secrets.ACCESS_TOKEN }}
+  #         sparse-checkout: |
+  #           General.txt
+  #         sparse-checkout-cone-mode: false
+  #         path: conf.d
+
+  #     - name: Добавляем списки правил в конец файла General
+  #       run: |
+  #         cat <<EOF >> ./conf.d/General.txt
+  #         # Выборочные правила маршрутизации
+  #         [Rule]
+  #         # Список доменов телеграм-чата «Про Shadowrocket на русском»
+  #         RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_community.list,PROXY
+  #         # Список доменов refilter
+  #         RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY
+  #         # Список ip-адресов refilter
+  #         RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve
+  #         # Список доменов Discord
+  #         RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_discord.list,PROXY
+  #         # Список портов Discord
+  #         RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY
           
-          EOF
+  #         # Финальное правило маршрутизации
+  #         FINAL,DIRECT
+          
+  #         EOF
           
       # - name: Generate HTTPS decrypted configuration file
       #   run: |
       #     sed -i 's/hostname = /hostname = *instagram.com,/' MITM.txt
       #     cp MITM.txt ./conf.d
 
-      - name: Создаем конфиг sr_ru_public_lists.conf
-        run: |
-          cat ./conf.d/*.txt > ./conf.d/sr_ru_public_lists.conf
-          sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_ru_public_lists.conf
+      # - name: Создаем конфиг sr_ru_public_lists.conf
+      #   run: |
+      #     cat ./conf.d/*.txt > ./conf.d/sr_ru_public_lists.conf
+      #     sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_ru_public_lists.conf
 
-      - name: Загружаем artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: conf
-          path: ./conf.d/sr_ru_public_lists.conf
-          retention-days: 1
+      # - name: Загружаем artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: conf
+      #     path: ./conf.d/sr_ru_public_lists.conf
+      #     retention-days: 1
 
   publish:
     runs-on: ubuntu-latest
