@@ -226,7 +226,7 @@ jobs:
       - name: Загружаем конфиги в artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: shadowrocket-configs
+          name: conf
           path: |
             ./conf.d/sr_ru_public_lists.conf
             ./conf.d/sr_basic_nonru.conf
