@@ -246,10 +246,29 @@ jobs:
           git push -f origin release
           # git push --delete origin $( git ls-remote --tags origin | awk '{print $2}' | grep -vE "$(echo -e ${TAG_NAME})")
           
+      # - name: Очищаем jsdelivr CDN
+      #   run: |
+      #     cd rules || exit 1
+      #     for file in $(ls); do
+      #       curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
+      #     done
       - name: Очищаем jsdelivr CDN
         run: |
           cd rules || exit 1
+      
+          # Первая очистка кэша
           for file in $(ls); do
+            echo "Очищаем кэш для файла: $file"
+            curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
+          done
+      
+          # Ждем 5 минут перед повторной очисткой
+          echo "Ожидание 5 минут перед повторной очисткой кэша..."
+          sleep 300
+      
+          # Повторная очистка кэша
+          for file in $(ls); do
+            echo "Повторная очистка кэша для файла: $file"
             curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
           done
 
