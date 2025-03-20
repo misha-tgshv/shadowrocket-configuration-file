@@ -18,7 +18,8 @@ jobs:
               | awk '
                 NR==2 {print "DOMAIN-KEYWORD," $0; next}
                 NR==3 {print "DOMAIN-KEYWORD," $0; next}
-                NR==4 {print "DOMAIN," $0; next}
+                NR==4 {print "DOMAIN-KEYWORD," $0; next}
+                NR==5 {print "DOMAIN," $0; next}
                 !/^#/ && NF>0 {print "DOMAIN-SUFFIX," $0}
                 /^#/ || NF==0 {print $0} # Добавляем это условие для пустых строк и строк с #
               ' > domains_community.list
