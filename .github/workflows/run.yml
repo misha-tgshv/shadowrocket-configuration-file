@@ -80,10 +80,11 @@ jobs:
           curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/community_ips.lst > ips1.txt \
           && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/discord_ips.lst >> ips1.txt \
           && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/ipsum.lst >> ips1.txt \
-          && grep -vE '([0-9]+\.[0-9]+)\.0\.0/[0-9]+' ips1.txt | sed 's/^/IP-CIDR,/g' | sort -u > temp_ips.list \
+          && grep -vE '([0-9]+\.[0-9]+\.[0-9]+)\.0/[0-9]+' ips1.txt | sed 's/^/IP-CIDR,/g' | sort -u > temp_ips.list \
           && echo "# Количество IP-адресов: $(wc -l < temp_ips.list)" > ips_refilter.list \
           && cat temp_ips.list >> ips_refilter.list \
           && rm ips1.txt temp_ips.list
+
 
 
       # - name: Создаем файл ips_refilter.list
