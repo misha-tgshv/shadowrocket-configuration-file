@@ -250,7 +250,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}  # Используйте GITHUB_TOKEN
-          fetch-depth: 0 # Добавьте fetch-depth: 0 для получения полной истории
+          fetch-depth: 0
 
       - name: Настраиваем переменные
         run: |
@@ -270,7 +270,7 @@ jobs:
           git config --global user.email "<>"
           git add -A
           git commit -m "Update rules [$(date '+%Y-%m-%d %H:%M:%S')]"
-          git push origin main
+          git push origin main -f
 
       - name: Создаем и публикуем релиз
         uses: softprops/action-gh-release@v2
