@@ -1,4 +1,4 @@
-name: Generate Shadowrocket Rules
+name: Generate shadowrocket rules
 
 on:
   workflow_dispatch:
@@ -59,12 +59,7 @@ jobs:
           done
 
           echo "Резолвинг и преобразование завершены. Результаты сохранены в $output_file"
-
-      - name: Загружаем список файлов rules через artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: rules
-          path: ./ips_resolved_cidr.list
+          cat "$output_file"
 
       - name: Создаем файл domains_community.list
         run: |
@@ -133,15 +128,6 @@ jobs:
           && echo "# Количество IP-адресов: $(wc -l < temp_ips.list)" > ips_refilter.list \
           && cat temp_ips.list >> ips_refilter.list \
           && rm ips1.txt temp_ips.list
-      # - name: Создаем файл ips_refilter.list
-      #   run: |
-      #     curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/community_ips.lst > ips1.txt \
-      #     && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/discord_ips.lst >> ips1.txt \
-      #     && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/ipsum.lst >> ips1.txt \
-      #     && sed 's/^/IP-CIDR,/g' ips1.txt | sort -u > temp_ips.list \
-      #     && echo "# Количество IP-адресов: $(wc -l < temp_ips.list)" > ips_refilter.list \
-      #     && cat temp_ips.list >> ips_refilter.list \
-      #     && rm ips1.txt temp_ips.list
 
       - name: Создаем файл domains_banking.list
         run: |          
@@ -157,11 +143,17 @@ jobs:
           mkdir -p rules.d
           cp *.list ./rules.d/
 
-      - name: Сохраняем правила как artifact
+      - name: Загружаем список файлов rules через artifact
         uses: actions/upload-artifact@v4
         with:
           name: rules
           path: ./rules.d/
+
+      - name: Загружаем ip resovled list как artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ip_resolved
+          path: ./ips_resolved_cidr.list
 
   build_scripts_js:
     runs-on: ubuntu-latest
@@ -216,6 +208,12 @@ jobs:
           sparse-checkout-cone-mode: false
           path: conf.d
 
+      - name: Загружаем artifact ip resolved
+        uses: actions/download-artifact@v4
+        with:
+          name: ip_resolved
+          path: ./
+
       - name: Создаем конфиг sr_ru_public_lists.conf
         run: |
           # Копируем General.txt в sr_ru_public_lists.conf
@@ -230,6 +228,8 @@ jobs:
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY
           # Список ip-адресов refilter
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve
+          # Список IP-адресов, разрешенных из доменов
+          RULE-SET,ips_resolved_cidr.list,PROXY,no-resolve
           # Список доменов Discord
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_discord.list,PROXY
           # Список портов Discord
@@ -277,7 +277,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     needs: [build_rules_list, build_scripts_js, build_YT_premium_v1_module, build_Shadowrocket_conf_file]
-    steps:     
+    steps:
       - name: Настраиваем переменные
         run: |
           echo "RELEASE_NAME=Built on $(TZ="Asia/Novokuznetsk" date +%Y%m%d%H%M)" >> $GITHUB_ENV
