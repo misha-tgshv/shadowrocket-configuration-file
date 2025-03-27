@@ -138,21 +138,16 @@ jobs:
           sed 's/^https\?:\/\///' | \
           sed 's/\/.*//' | \
           sort -u | sed 's/^/DOMAIN-SUFFIX,/' > domains_banking.list
-      - name: Перемещаем файлы в директорию rules
+
+      - name: Сохраняем все листы правил как артефакты
         run: |
-          mkdir -p rules.d
-          cp *.list ./rules.d/
-      - name: Загружаем список файлов rules через artifact
+          mkdir -p rules
+          mv *.list ./rules/
+      - name: Сохраняем список файлов rules через artifact
         uses: actions/upload-artifact@v4
         with:
           name: rules
-          path: ./rules.d/
-          
-      - name: Загружаем ip resovled list как artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ip_resolved
-          path: ./ips_resolved_cidr.list
+          path: ./rules
 
   build_scripts_js:
     runs-on: ubuntu-latest
@@ -160,7 +155,7 @@ jobs:
       - name: Создаем файл rewrite.youtube.response.preview.js
         run: |
           curl -sSL "https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js" > temp.txt && sed 's/;e!/;e/g' temp.txt > rewrite.youtube.response.preview.js && rm temp.txt
-          
+
       - name: Перемещаем файлы в директорию scripts
         run: |
           mkdir -p scripts.d
@@ -197,21 +192,18 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-        
+
       - name: Устанавливаем необходимые утилиты
         run: |
           sudo apt-get update
           sudo apt-get install -y dnsutils
-      - name: Скачиваем artifact
+
+      - name: Скачиваем все листы правил
         uses: actions/download-artifact@v4
         with:
           name: rules
-          path: ./rules.d/
-      - name: Скачиваем artifact ip resolved
-        uses: actions/download-artifact@v4
-        with:
-          name: ip_resolved
-          path: ./
+          path: ./rules
+
       - name: Создаем папку
         run: |
           mkdir -p conf.d
@@ -231,12 +223,12 @@ jobs:
           # Копируем General.txt в sr_ru_public_lists.conf
           cp ./conf.d/General.txt ./conf.d/sr_ru_public_lists.conf
           # Добавляем правила в sr_ru_public_lists.conf
-          echo >> ./conf.d/sr_ru_public_lists.conf
+          echo "" >> ./conf.d/sr_ru_public_lists.conf
           echo "[Rule]" >> ./conf.d/sr_ru_public_lists.conf
           echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_community.list,PROXY" >> ./conf.d/sr_ru_public_lists.conf
           echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY" >> ./conf.d/sr_ru_public_lists.conf
           echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve" >> ./conf.d/sr_ru_public_lists.conf
-          echo "RULE-SET,./ips_resolved_cidr.list,PROXY,no-resolve" >> ./conf.d/sr_ru_public_lists.conf
+          echo "RULE-SET,./rules/ips_resolved_cidr.list,PROXY,no-resolve" >> ./conf.d/sr_ru_public_lists.conf
           echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_discord.list,PROXY" >> ./conf.d/sr_ru_public_lists.conf
           echo "FINAL,DIRECT" >> ./conf.d/sr_ru_public_lists.conf
           # Добавляем дату сборки
@@ -288,7 +280,8 @@ jobs:
       - name: Скачиваем artifact
         uses: actions/download-artifact@v4
         with:
-          path: ./rules.d/
+          path: ./rules
+
       - name: Публикуем и загружаем artifacts
         uses: softprops/action-gh-release@v2
         with:
@@ -303,8 +296,10 @@ jobs:
 
       - name: Загружаем artifact в ветку "release"
         run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "<>"
+          cd rules || exit 1
+          git init
+          git config --local user.name ${{ secrets.USER_NAME }}
+          git config --local user.email ${{ secrets.USER_EMAIL }}
           git checkout -b release
           git add .
           git commit -m "${{ env.RELEASE_NAME }}"
