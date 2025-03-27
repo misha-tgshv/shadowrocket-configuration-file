@@ -60,6 +60,7 @@ jobs:
 
           echo "Резолвинг и преобразование завершены. Результаты сохранены в $output_file"
           cat "$output_file"
+
       - name: Создаем файл domains_community.list
         run: |
             curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list \
@@ -141,14 +142,13 @@ jobs:
         run: |
           mkdir -p rules.d
           cp *.list ./rules.d/
-
-      - name: Сохраняем правила как artifact
+      - name: Загружаем список файлов rules через artifact
         uses: actions/upload-artifact@v4
         with:
           name: rules
           path: ./rules.d/
           
-        - name: Сохраняем ips resolved как artifact
+      - name: Загружаем ip resovled list как artifact
         uses: actions/upload-artifact@v4
         with:
           name: ip_resolved
@@ -160,12 +160,11 @@ jobs:
       - name: Создаем файл rewrite.youtube.response.preview.js
         run: |
           curl -sSL "https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js" > temp.txt && sed 's/;e!/;e/g' temp.txt > rewrite.youtube.response.preview.js && rm temp.txt
-
+          
       - name: Перемещаем файлы в директорию scripts
         run: |
           mkdir -p scripts.d
           cp *.js ./scripts.d/
-
       - name: Загружаем список файлов sctipts через artifact
         uses: actions/upload-artifact@v4
         with:
@@ -179,15 +178,13 @@ jobs:
         run: |
           # Скачиваем исходный модуль
           curl -sSL https://raw.githubusercontent.com/YanbingJiang/Shadowrocket_diy_rules/9b86dfbca387fa69e8d4b02d3f8ba01250eaad16/Modules/YT-Premium-V1.module \
-            | sed -E 's/captionLang:zh-Hans/captionLang:off/g; s/lyricLang:zh-Hans/lyricLang:ru-ru/g' > YT-Premium-V1-RU.module
+          | sed -E 's/captionLang:zh-Hans/captionLang:off/g; s/lyricLang:zh-Hans/lyricLang:ru-ru/g' > YT-Premium-V1-RU.module
           # Заменяем URL в строке youtube.response
           sed -i 's|https://raw\.githubusercontent\.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube\.response\.preview\.js|https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/scripts/rewrite.youtube.response.preview.js|g' YT-Premium-V1-RU.module
-
       - name: Перемещаем файлы в директорию modules
         run: |
           mkdir -p modules.d
           cp *.module ./modules.d/
-
       - name: Загружаем список файлов modules через artifact
         uses: actions/upload-artifact@v4
         with:
@@ -200,7 +197,12 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-      - name: Скачиваем artifact 
+        
+      - name: Устанавливаем необходимые утилиты
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dnsutils
+      - name: Скачиваем artifact
         uses: actions/download-artifact@v4
         with:
           name: rules
@@ -229,24 +231,14 @@ jobs:
           # Копируем General.txt в sr_ru_public_lists.conf
           cp ./conf.d/General.txt ./conf.d/sr_ru_public_lists.conf
           # Добавляем правила в sr_ru_public_lists.conf
-          cat <<EOF >> ./conf.d/sr_ru_public_lists.conf
-          # Выборочные правила маршрутизации
-          [Rule]
-          # Список доменов телеграм-чата «Про Shadowrocket на русском»
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_community.list,PROXY
-          # Список доменов refilter
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY
-          # Список ip-адресов refilter
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve
-          # Список IP-адресов, разрешенных из доменов
-          RULE-SET,./ips_resolved_cidr.list,PROXY,no-resolve
-          # Список доменов Discord
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_discord.list,PROXY
-          # Список портов Discord
-          # RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY
-          # Финальное правило маршрутизации
-          FINAL,DIRECT
-          EOF
+          echo >> ./conf.d/sr_ru_public_lists.conf
+          echo "[Rule]" >> ./conf.d/sr_ru_public_lists.conf
+          echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_community.list,PROXY" >> ./conf.d/sr_ru_public_lists.conf
+          echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY" >> ./conf.d/sr_ru_public_lists.conf
+          echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve" >> ./conf.d/sr_ru_public_lists.conf
+          echo "RULE-SET,./ips_resolved_cidr.list,PROXY,no-resolve" >> ./conf.d/sr_ru_public_lists.conf
+          echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_discord.list,PROXY" >> ./conf.d/sr_ru_public_lists.conf
+          echo "FINAL,DIRECT" >> ./conf.d/sr_ru_public_lists.conf
           # Добавляем дату сборки
           sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_ru_public_lists.conf
       - name: Создаем конфиг sr_basic_nonru.conf
@@ -296,12 +288,7 @@ jobs:
       - name: Скачиваем artifact
         uses: actions/download-artifact@v4
         with:
-          path: ./rules
-      - name: Скачиваем artifact conf
-        uses: actions/download-artifact@v4
-        with:
-          path: ./conf.d
-
+          path: ./rules.d/
       - name: Публикуем и загружаем artifacts
         uses: softprops/action-gh-release@v2
         with:
@@ -316,10 +303,8 @@ jobs:
 
       - name: Загружаем artifact в ветку "release"
         run: |
-          cd rules || exit 1
-          git init
-          git config --local user.name ${{ secrets.USER_NAME }}
-          git config --local user.email ${{ secrets.USER_EMAIL }}
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "<>"
           git checkout -b release
           git add .
           git commit -m "${{ env.RELEASE_NAME }}"
