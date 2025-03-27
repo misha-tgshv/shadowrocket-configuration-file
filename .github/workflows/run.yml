@@ -12,6 +12,56 @@ jobs:
   build_rules_list:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Устанавливаем необходимые утилиты
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dnsutils prips
+
+      - name: Резолвим домены и преобразуем в IP-CIDR
+        run: |
+          # Список доменов для резолвинга
+          domains=(
+            "deepmind.com"
+            "deepmind.google"
+            "geller-pa.googleapis.com"
+            "generativelanguage.googleapis.com"
+            "proactivebackend-pa.googleapis.com"
+            "ai.google.dev"
+            "alkalicore-pa.clients6.google.com"
+            "alkalimakersuite-pa.clients6.google.com"
+            "generativeai.google"
+            "makersuite.google.com"
+            "aistudio.google.com"
+            "bard.google.com"
+            "emini.google.com"
+          )
+
+          # Файл для сохранения результата
+          output_file="ips_resolved_cidr.list"
+
+          # Очистка файла перед началом
+          echo "# Список IP-CIDR, разрешенных из доменов" > "$output_file"
+
+          # Резолвинг доменов и преобразование в CIDR
+          for domain in "${domains[@]}"; do
+              ips=$(dig +short "$domain" | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}')
+              if [ -n "$ips" ]; then
+                  for ip in $ips; do
+                      # Преобразуем IP в CIDR (/32 для одиночного IP)
+                      cidr=$(prips "$ip" | cidr)
+                      echo "IP-CIDR,$cidr" >> "$output_file"
+                  done
+              else
+                  echo "# $domain: Не удалось разрешить IP" >> "$output_file"
+              fi
+          done
+
+          echo "Резолвинг и преобразование завершены. Результаты сохранены в $output_file"
+          cat "$output_file"
+
       - name: Создаем файл domains_community.list
         run: |
             curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list \
@@ -33,7 +83,6 @@ jobs:
           && echo "# Количество доменов: $(wc -l < temp_list.txt)" > domains_antifilter.list \
           && cat temp_list.txt >> domains_antifilter.list \
           && rm temp_list.txt
-
       - name: Создаем файл ips_antifilter.list
         run: |
           curl -s https://community.antifilter.download/list/community.lst \
@@ -42,7 +91,6 @@ jobs:
           && echo "# Количество IP-адресов: $(wc -l < temp_aips.txt)" > ips_antifilter.list \
           && cat temp_aips.txt >> ips_antifilter.list \
           && rm temp_aips.txt
-
       - name: Создаем файл domains_refilter.list
         run: |
           curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt &&
@@ -54,27 +102,24 @@ jobs:
           echo "# NAME: domains_refilter.list" > domains_refilter.list &&
           echo "# AUTHOR: misha-tgshv" >> domains_refilter.list &&
           echo "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file" >> domains_refilter.list &&
-          echo "# UPDATED: $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S') MSK" >> domains_refilter.list &&
+          echo "# UPDATED: $(TZ="Asia/Novokuznetsk" date '+%Y-%m-%d %H:%M:%S') MSK" >> domains_refilter.list &&
           echo "# SOURCE: https://github.com/1andrevich/Re-filter-lists" >> domains_refilter.list
           
           sed 's/^/DOMAIN-SUFFIX,/g' temp3.txt | tee domaintmp
           wc -l < domaintmp | awk '{print "# TOTAL:", $1}' >> domains_refilter.list
           cat domaintmp >> domains_refilter.list && rm domaintmp temp3.txt
-
       - name: Создаем файл domains_youtube.list
         run: |
           curl -sSL https://raw.githubusercontent.com/dsvip/Quantumult-X/dec9019816ba55897c162c3dbd3ac997ac160f09/blackmatrix7/rule/Shadowrocket/YouTube.list \
           | sed -n '/DOMAIN-SUFFIX,/p' > domains_youtube.list
           sed -i "1s/^/DOMAIN-KEYWORD,youtube\n/" domains_youtube.list
           sed -i "1s/^/DOMAIN-KEYWORD,googlevideo\n/" domains_youtube.list
-
       - name: Создаем файл domains_discord.list
         run: |
           curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Discord/Discord.list \
           | sed -n '/DOMAIN-SUFFIX,/p' > domains_discord.list
           sed -i "1s/^/DOMAIN-KEYWORD,discord\n/" domains_discord.list
           sed -i "1s/^/DOMAIN-KEYWORD,discordapp\n/" domains_discord.list
-
       - name: Создаем файл ips_refilter.list
         run: |
           curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/community_ips.lst > ips1.txt \
@@ -84,9 +129,6 @@ jobs:
           && echo "# Количество IP-адресов: $(wc -l < temp_ips.list)" > ips_refilter.list \
           && cat temp_ips.list >> ips_refilter.list \
           && rm ips1.txt temp_ips.list
-
-
-
       # - name: Создаем файл ips_refilter.list
       #   run: |
       #     curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/community_ips.lst > ips1.txt \
@@ -106,11 +148,18 @@ jobs:
           sed 's/^https\?:\/\///' | \
           sed 's/\/.*//' | \
           sort -u | sed 's/^/DOMAIN-SUFFIX,/' > domains_banking.list
-
-      - name: Перемещаем файлы в директорю rules
+      - name: Перемещаем файлы в директорию rules
         run: |
           mkdir -p rules.d
           cp *.list ./rules.d/
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "<>"
+          git add ips_resolved_cidr.list
+          git commit -m "Обновление IP-CIDR списка из доменов [$(date '+%Y-%m-%d %H:%M:%S')]"
+          git push
 
       - name: Загружаем список файлов rules через artifact
         uses: actions/upload-artifact@v4
@@ -125,19 +174,15 @@ jobs:
         run: |
           curl -sSL "https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js" > temp.txt && sed 's/;e!/;e/g' temp.txt > rewrite.youtube.response.preview.js && rm temp.txt
           
-
-      - name: Перемещаем файлы в директорю scripts
+      - name: Перемещаем файлы в директорию scripts
         run: |
           mkdir -p scripts.d
           cp *.js ./scripts.d/
-
       - name: Загружаем список файлов sctipts через artifact
         uses: actions/upload-artifact@v4
         with:
           name: scripts
-          path: ./scripts.d/
-
-  build_YT_premium_v1_module:
+          path: ./scripts.d/... build_YT_premium_v1_module:
     runs-on: ubuntu-latest
     steps:
       - name: Создаем файл YT-Premium-V1-RU.module
@@ -145,14 +190,12 @@ jobs:
           # Скачиваем исходный модуль
           curl -sSL https://raw.githubusercontent.com/YanbingJiang/Shadowrocket_diy_rules/9b86dfbca387fa69e8d4b02d3f8ba01250eaad16/Modules/YT-Premium-V1.module \
           | sed -E 's/captionLang:zh-Hans/captionLang:off/g; s/lyricLang:zh-Hans/lyricLang:ru-ru/g' > YT-Premium-V1-RU.module
-
           # Заменяем URL в строке youtube.response
           sed -i 's|https://raw\.githubusercontent\.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube\.response\.preview\.js|https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/scripts/rewrite.youtube.response.preview.js|g' YT-Premium-V1-RU.module
-      - name: Перемещаем файлы в директорю modules
+      - name: Перемещаем файлы в директорию modules
         run: |
           mkdir -p modules.d
           cp *.module ./modules.d/
-
       - name: Загружаем список файлов modules через artifact
         uses: actions/upload-artifact@v4
         with:
@@ -166,7 +209,6 @@ jobs:
       - name: Создаем папку
         run: |
           mkdir -p conf.d
-
       - name: Получаем шаблон файла General
         uses: actions/checkout@v4
         with:
@@ -182,10 +224,8 @@ jobs:
         run: |
           # Копируем General.txt в sr_ru_public_lists.conf
           cp ./conf.d/General.txt ./conf.d/sr_ru_public_lists.conf
-
           # Добавляем правила в sr_ru_public_lists.conf
           cat <<EOF >> ./conf.d/sr_ru_public_lists.conf
-
           # Выборочные правила маршрутизации
           [Rule]
           # Список доменов телеграм-чата «Про Shadowrocket на русском»
@@ -194,23 +234,21 @@ jobs:
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY
           # Список ip-адресов refilter
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve
+          # Список IP-адресов, разрешенных из доменов
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/ips_resolved_cidr.list,PROXY,no-resolve
           # Список доменов Discord
           RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_discord.list,PROXY
           # Список портов Discord
           # RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY
-
           # Финальное правило маршрутизации
           FINAL,DIRECT
           EOF
-
           # Добавляем дату сборки
           sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_ru_public_lists.conf
-
       - name: Создаем конфиг sr_basic_nonru.conf
         run: |
           # Копируем General.txt в sr_basic_nonru.conf
           cp ./conf.d/General.txt ./conf.d/sr_basic_nonru.conf
-
           # Добавляем правила для российских доменов в sr_basic_nonru.conf
           cat <<EOF >> ./conf.d/sr_basic_nonru.conf
           # Выборочные правила маршрутизации
@@ -222,18 +260,14 @@ jobs:
           DOMAIN-KEYWORD,.ru,PROXY
           DOMAIN-KEYWORD,.su,PROXY
           DOMAIN-KEYWORD,.рф,PROXY
-
           # Финальное правило: все остальное напрямую
           FINAL,DIRECT
           EOF
-
           # Добавляем дату сборки
           sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_basic_nonru.conf
-
       - name: Заменяем update-url в sr_basic_nonru.conf
         run: |
           sed -i 's/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_public_lists\.conf/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_basic_nonru\.conf/g' ./conf.d/sr_basic_nonru.conf
-
       - name: Удаляем временный General.txt
         run: rm -f ./conf.d/General.txt
 
@@ -255,7 +289,6 @@ jobs:
           echo "RELEASE_NAME=Built on $(TZ="Asia/Novokuznetsk" date +%Y%m%d%H%M)" >> $GITHUB_ENV
           echo "TAG_NAME=$(TZ="Asia/Novokuznetsk" date +%Y%m%d%H%M)" >> $GITHUB_ENV
           mkdir -p rules
-
       - name: Скачиваем artifact 
         uses: actions/download-artifact@v4
         with:
@@ -284,7 +317,6 @@ jobs:
           git commit -m "${{ env.RELEASE_NAME }}"
           git remote add origin "https://${{ github.actor }}:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}"
           git push -f origin release
-
       - name: Очищаем jsdelivr CDN
         run: |
           cd rules || exit 1
@@ -292,17 +324,14 @@ jobs:
             echo "Очищаем кэш для файла: $file"
             curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
           done
-
           # Ждем 5 минут перед повторной очисткой
           echo "Ожидание 5 минут перед повторной очисткой кэша..."
           sleep 300
-
           # Повторная очистка кэша
           for file in $(ls); do
             echo "Повторная очистка кэша для файла: $file"
             curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
           done
-
   Delete_Historical_Data:
     runs-on: ubuntu-latest
     needs: publish
@@ -313,7 +342,6 @@ jobs:
             name: |
                 rules
                 conf
-
         - name: Удаляем старые теги и релизы
           uses: dev-drprasad/delete-older-releases@v0.3.4
           with:
