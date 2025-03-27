@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  resolve_domains:
+  build_rules_list:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -18,7 +18,7 @@ jobs:
       - name: Устанавливаем необходимые утилиты
         run: |
           sudo apt-get update
-          sudo apt-get install -y dnsutils prips
+          sudo apt-get install -y dnsutils
 
       - name: Резолвим домены и преобразуем в IP-CIDR
         run: |
@@ -51,8 +51,7 @@ jobs:
             if [ -n "$ips" ]; then
               for ip in $ips; do
                 # Преобразуем IP в CIDR (/32 для одиночного IP)
-                cidr=$(prips "$ip" | cidr)
-                echo "IP-CIDR,$cidr" >> "$output_file"
+                echo "IP-CIDR,$ip/32" >> "$output_file"
               done
             else
               echo "# $domain: Не удалось разрешить IP" >> "$output_file"
@@ -60,41 +59,27 @@ jobs:
           done
 
           echo "Резолвинг и преобразование завершены. Результаты сохранены в $output_file"
-          cat "$output_file"
 
-      - name: Сохраняем ips_resolved_cidr.list как artifact
+      - name: Загружаем список файлов rules через artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ips_resolved_cidr
-          path: ips_resolved_cidr.list
+          name: rules
+          path: ./ips_resolved_cidr.list
 
-  build_all_rules:
-    needs: resolve_domains
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Скачиваем ips_resolved_cidr.list
-        uses: actions/download-artifact@v4
-        with:
-          name: ips_resolved_cidr
-          path: .
-
-      - name: Создаем остальные rule-файлы
+      - name: Создаем файл domains_community.list
         run: |
-          # Создаем domains_community.list
-          curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list \
-            | awk '
-              NR==2 {print "DOMAIN-KEYWORD," $0; next}
-              NR==3 {print "DOMAIN-KEYWORD," $0; next}
-              NR==4 {print "DOMAIN-KEYWORD," $0; next}
-              NR==5 {print "DOMAIN," $0; next}
-              !/^#/ && NF>0 {print "DOMAIN-SUFFIX," $0}
-              /^#/ || NF==0 {print $0}
-            ' > domains_community.list
-
-          # Создаем domains_antifilter.list
+            curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list \
+              | awk '
+                NR==2 {print "DOMAIN-KEYWORD," $0; next}
+                NR==3 {print "DOMAIN-KEYWORD," $0; next}
+                NR==4 {print "DOMAIN-KEYWORD," $0; next}
+                NR==5 {print "DOMAIN," $0; next}
+                !/^#/ && NF>0 {print "DOMAIN-SUFFIX," $0}
+                /^#/ || NF==0 {print $0} # Добавляем это условие для пустых строк и строк с #
+              ' > domains_community.list
+              
+      - name: Создаем файл domains_antifilter.list
+        run: |
           curl -sSL https://community.antifilter.download/list/domains.lst \
             | sed -E 's/^\+\./DOMAIN-SUFFIX,/; s/^[^D]/DOMAIN-SUFFIX,&/' \
             | sed '/www|spotify.com/d' \
@@ -102,68 +87,77 @@ jobs:
           && echo "# Количество доменов: $(wc -l < temp_list.txt)" > domains_antifilter.list \
           && cat temp_list.txt >> domains_antifilter.list \
           && rm temp_list.txt
-
-          # Создаем ips_antifilter.list
+      - name: Создаем файл ips_antifilter.list
+        run: |
           curl -s https://community.antifilter.download/list/community.lst \
             | sed 's/^/IP-CIDR,/g' \
             | sort -u > temp_aips.txt \
           && echo "# Количество IP-адресов: $(wc -l < temp_aips.txt)" > ips_antifilter.list \
           && cat temp_aips.txt >> ips_antifilter.list \
           && rm temp_aips.txt
-
-          # Создаем domains_refilter.list
+      - name: Создаем файл domains_refilter.list
+        run: |
           curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt &&
           curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/domains_all.lst >> temp.txt &&
           grep -v "mega555" temp.txt > temp2.txt &&
           grep -v "spotify.com" temp2.txt > temp3.txt &&
           rm temp.txt temp2.txt
-
+          
           echo "# NAME: domains_refilter.list" > domains_refilter.list &&
           echo "# AUTHOR: misha-tgshv" >> domains_refilter.list &&
           echo "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file" >> domains_refilter.list &&
           echo "# UPDATED: $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S') MSK" >> domains_refilter.list &&
           echo "# SOURCE: https://github.com/1andrevich/Re-filter-lists" >> domains_refilter.list
-
+          
           sed 's/^/DOMAIN-SUFFIX,/g' temp3.txt | tee domaintmp
           wc -l < domaintmp | awk '{print "# TOTAL:", $1}' >> domains_refilter.list
           cat domaintmp >> domains_refilter.list && rm domaintmp temp3.txt
-
-          # Создаем domains_youtube.list
+      - name: Создаем файл domains_youtube.list
+        run: |
           curl -sSL https://raw.githubusercontent.com/dsvip/Quantumult-X/dec9019816ba55897c162c3dbd3ac997ac160f09/blackmatrix7/rule/Shadowrocket/YouTube.list \
-            | sed -n '/DOMAIN-SUFFIX,/p' > domains_youtube.list
+          | sed -n '/DOMAIN-SUFFIX,/p' > domains_youtube.list
           sed -i "1s/^/DOMAIN-KEYWORD,youtube\n/" domains_youtube.list
           sed -i "1s/^/DOMAIN-KEYWORD,googlevideo\n/" domains_youtube.list
-
-          # Создаем domains_discord.list
+      - name: Создаем файл domains_discord.list
+        run: |
           curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Discord/Discord.list \
-            | sed -n '/DOMAIN-SUFFIX,/p' > domains_discord.list
+          | sed -n '/DOMAIN-SUFFIX,/p' > domains_discord.list
           sed -i "1s/^/DOMAIN-KEYWORD,discord\n/" domains_discord.list
           sed -i "1s/^/DOMAIN-KEYWORD,discordapp\n/" domains_discord.list
+      - name: Создаем файл ips_refilter.list
+        run: |
+          curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/community_ips.lst > ips1.txt \
+          && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/discord_ips.lst >> ips1.txt \
+          && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/ipsum.lst >> ips1.txt \
+          && grep -vE '([0-9]+\.[0-9]+\.[0-9]+)\.0/[0-9]+' ips1.txt | sed 's/^/IP-CIDR,/g' | sort -u > temp_ips.list \
+          && echo "# Количество IP-адресов: $(wc -l < temp_ips.list)" > ips_refilter.list \
+          && cat temp_ips.list >> ips_refilter.list \
+          && rm ips1.txt temp_ips.list
+      # - name: Создаем файл ips_refilter.list
+      #   run: |
+      #     curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/community_ips.lst > ips1.txt \
+      #     && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/discord_ips.lst >> ips1.txt \
+      #     && curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/ipsum.lst >> ips1.txt \
+      #     && sed 's/^/IP-CIDR,/g' ips1.txt | sort -u > temp_ips.list \
+      #     && echo "# Количество IP-адресов: $(wc -l < temp_ips.list)" > ips_refilter.list \
+      #     && cat temp_ips.list >> ips_refilter.list \
+      #     && rm ips1.txt temp_ips.list
 
-          # Создаем ips_refilter.list
-          curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/community_ips.lst > ips1.txt &&
-          curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/discord_ips.lst >> ips1.txt &&
-          curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/ipsum.lst >> ips1.txt &&
-          grep -vE '([0-9]+\.[0-9]+\.[0-9]+)\.0/[0-9]+' ips1.txt | sed 's/^/IP-CIDR,/g' | sort -u > temp_ips.list &&
-          echo "# Количество IP-адресов: $(wc -l < temp_ips.list)" > ips_refilter.list &&
-          cat temp_ips.list >> ips_refilter.list &&
-          rm ips1.txt temp_ips.list
-
-          # Создаем domains_banking.list
+      - name: Создаем файл domains_banking.list
+        run: |          
           curl -s https://www.cbr.ru/banking_sector/credit/cowebsites/ | \
-            grep -oP 'href="\K[^"]+' | \
-            grep '^http' | \
-            sed -E '/(t\.me|vk\.com|ok\.ru|telegram|dzen|twitter|youtube|zen\.yandex\.ru|rutube\.ru|linkedin)/d' | \
-            sed 's/^https\?:\/\///' | \
-            sed 's/\/.*//' | \
-            sort -u | sed 's/^/DOMAIN-SUFFIX,/' > domains_banking.list
-
+          grep -oP 'href="\K[^"]+' | \
+          grep '^http' | \
+          sed -E '/(t\.me|vk\.com|ok\.ru|telegram|dzen|twitter|youtube|zen\.yandex\.ru|rutube\.ru|linkedin)/d' | \
+          sed 's/^https\?:\/\///' | \
+          sed 's/\/.*//' | \
+          sort -u | sed 's/^/DOMAIN-SUFFIX,/' > domains_banking.list
       - name: Перемещаем файлы в директорию rules
         run: |
           mkdir -p rules.d
-          mv *.list ./rules.d/
+          cp *.list ./rules.d/
 
-      - name: Сохраняем rules как artifact
+      - name: Сохраняем правила как artifact
         uses: actions/upload-artifact@v4
         with:
           name: rules
@@ -175,63 +169,42 @@ jobs:
       - name: Создаем файл rewrite.youtube.response.preview.js
         run: |
           curl -sSL "https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js" > temp.txt && sed 's/;e!/;e/g' temp.txt > rewrite.youtube.response.preview.js && rm temp.txt
-
+          
       - name: Перемещаем файлы в директорию scripts
         run: |
           mkdir -p scripts.d
           cp *.js ./scripts.d/
-
-      - name: Сохраняем scripts как artifact
+      - name: Загружаем список файлов sctipts через artifact
         uses: actions/upload-artifact@v4
         with:
           name: scripts
-          path: ./scripts.d/
-
-  build_YT_premium_v1_module:
+          path: ./scripts.d/... build_YT_premium_v1_module:
     runs-on: ubuntu-latest
     steps:
       - name: Создаем файл YT-Premium-V1-RU.module
         run: |
           # Скачиваем исходный модуль
           curl -sSL https://raw.githubusercontent.com/YanbingJiang/Shadowrocket_diy_rules/9b86dfbca387fa69e8d4b02d3f8ba01250eaad16/Modules/YT-Premium-V1.module \
-            | sed -E 's/captionLang:zh-Hans/captionLang:off/g; s/lyricLang:zh-Hans/lyricLang:ru-ru/g' > YT-Premium-V1-RU.module
+          | sed -E 's/captionLang:zh-Hans/captionLang:off/g; s/lyricLang:zh-Hans/lyricLang:ru-ru/g' > YT-Premium-V1-RU.module
           # Заменяем URL в строке youtube.response
           sed -i 's|https://raw\.githubusercontent\.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube\.response\.preview\.js|https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/scripts/rewrite.youtube.response.preview.js|g' YT-Premium-V1-RU.module
-
       - name: Перемещаем файлы в директорию modules
         run: |
           mkdir -p modules.d
           cp *.module ./modules.d/
-
-      - name: Сохраняем modules как artifact
+      - name: Загружаем список файлов modules через artifact
         uses: actions/upload-artifact@v4
         with:
           name: modules
           path: ./modules.d/
 
   build_Shadowrocket_conf_file:
-    needs: [resolve_domains, build_all_rules]
     runs-on: ubuntu-latest
+    needs: build_rules_list
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Скачиваем artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: rules
-          path: rules.d
-
-      - name: Скачиваем ips_resolved_cidr.list
-        uses: actions/download-artifact@v4
-        with:
-          name: ips_resolved_cidr
-          path: .
-
-      - name: Создаем папку для конфигов
+      - name: Создаем папку
         run: |
           mkdir -p conf.d
-
       - name: Получаем шаблон файла General
         uses: actions/checkout@v4
         with:
@@ -248,31 +221,42 @@ jobs:
           # Копируем General.txt в sr_ru_public_lists.conf
           cp ./conf.d/General.txt ./conf.d/sr_ru_public_lists.conf
           # Добавляем правила в sr_ru_public_lists.conf
-          echo >> ./conf.d/sr_ru_public_lists.conf
-          echo "[Rule]" >> ./conf.d/sr_ru_public_lists.conf
-          echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_community.list,PROXY" >> ./conf.d/sr_ru_public_lists.conf
-          echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY" >> ./conf.d/sr_ru_public_lists.conf
-          echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve" >> ./conf.d/sr_ru_public_lists.conf
-          echo "RULE-SET,ips_resolved_cidr.list,PROXY,no-resolve" >> ./conf.d/sr_ru_public_lists.conf
-          echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_discord.list,PROXY" >> ./conf.d/sr_ru_public_lists.conf
-          echo "FINAL,DIRECT" >> ./conf.d/sr_ru_public_lists.conf
+          cat <<EOF >> ./conf.d/sr_ru_public_lists.conf
+          # Выборочные правила маршрутизации
+          [Rule]
+          # Список доменов телеграм-чата «Про Shadowrocket на русском»
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_community.list,PROXY
+          # Список доменов refilter
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY
+          # Список ip-адресов refilter
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve
+          # Список доменов Discord
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_discord.list,PROXY
+          # Список портов Discord
+          # RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY
+          # Финальное правило маршрутизации
+          FINAL,DIRECT
+          EOF
           # Добавляем дату сборки
           sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_ru_public_lists.conf
-
       - name: Создаем конфиг sr_basic_nonru.conf
         run: |
           # Копируем General.txt в sr_basic_nonru.conf
           cp ./conf.d/General.txt ./conf.d/sr_basic_nonru.conf
           # Добавляем правила для российских доменов в sr_basic_nonru.conf
-          echo >> ./conf.d/sr_basic_nonru.conf
-          echo "[Rule]" >> ./conf.d/sr_basic_nonru.conf
-          echo "DOMAIN-SUFFIX,ru,PROXY" >> ./conf.d/sr_basic_nonru.conf
-          echo "DOMAIN-SUFFIX,su,PROXY" >> ./conf.d/sr_basic_nonru.conf
-          echo "DOMAIN-SUFFIX,рф,PROXY" >> ./conf.d/sr_basic_nonru.conf
-          echo "DOMAIN-KEYWORD,.ru,PROXY" >> ./conf.d/sr_basic_nonru.conf
-          echo "DOMAIN-KEYWORD,.su,PROXY" >> ./conf.d/sr_basic_nonru.conf
-          echo "DOMAIN-KEYWORD,.рф,PROXY" >> ./conf.d/sr_basic_nonru.conf
-          echo "FINAL,DIRECT" >> ./conf.d/sr_basic_nonru.conf
+          cat <<EOF >> ./conf.d/sr_basic_nonru.conf
+          # Выборочные правила маршрутизации
+          [Rule]
+          # Российские домены через прокси
+          DOMAIN-SUFFIX,ru,PROXY
+          DOMAIN-SUFFIX,su,PROXY
+          DOMAIN-SUFFIX,рф,PROXY
+          DOMAIN-KEYWORD,.ru,PROXY
+          DOMAIN-KEYWORD,.su,PROXY
+          DOMAIN-KEYWORD,.рф,PROXY
+          # Финальное правило: все остальное напрямую
+          FINAL,DIRECT
+          EOF
           # Добавляем дату сборки
           sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_basic_nonru.conf
       - name: Заменяем update-url в sr_basic_nonru.conf
@@ -281,7 +265,7 @@ jobs:
       - name: Удаляем временный General.txt
         run: rm -f ./conf.d/General.txt
 
-      - name: Сохраняем конфиги как artifact
+      - name: Загружаем конфиги в artifacts
         uses: actions/upload-artifact@v4
         with:
           name: conf
@@ -291,11 +275,9 @@ jobs:
           retention-days: 1
 
   publish:
-    needs: [build_all_rules, build_scripts_js, build_YT_premium_v1_module, build_Shadowrocket_conf_file]
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+    needs: [build_rules_list, build_scripts_js, build_YT_premium_v1_module, build_Shadowrocket_conf_file]
+    steps:     
       - name: Настраиваем переменные
         run: |
           echo "RELEASE_NAME=Built on $(TZ="Asia/Novokuznetsk" date +%Y%m%d%H%M)" >> $GITHUB_ENV
@@ -306,11 +288,6 @@ jobs:
         with:
           path: ./rules
 
-      - name: Скачиваем artifact conf
-        uses: actions/download-artifact@v4
-        with:
-          path: ./conf.d
-
       - name: Публикуем и загружаем artifacts
         uses: softprops/action-gh-release@v2
         with:
@@ -320,14 +297,15 @@ jobs:
           prerelease: false
           files: |
             ./rules/*
-            ./conf.d/*
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Загружаем artifact в ветку "release"
         run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "<>"
+          cd rules || exit 1
+          git init
+          git config --local user.name ${{ secrets.USER_NAME }}
+          git config --local user.email ${{ secrets.USER_EMAIL }}
           git checkout -b release
           git add .
           git commit -m "${{ env.RELEASE_NAME }}"
@@ -352,26 +330,25 @@ jobs:
     runs-on: ubuntu-latest
     needs: publish
     steps:
-      - name: Delete old artifacts
-        uses: geekyeggo/delete-artifact@v5
-        with:
-          name: |
-            rules
-            conf
-            ips_resolved_cidr
-      - name: Удаляем старые теги и релизы
-        uses: dev-drprasad/delete-older-releases@v0.3.4
-        with:
-          keep_latest: 3
-          delete_expired_data: 7
-          delete_tags: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        - name: Delete old artifacts
+          uses: geekyeggo/delete-artifact@v5
+          with:
+            name: |
+                rules
+                conf
+        - name: Удаляем старые теги и релизы
+          uses: dev-drprasad/delete-older-releases@v0.3.4
+          with:
+            keep_latest: 3
+            delete_expired_data: 7
+            delete_tags: true
+          env:
+              GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
-      - name: Удаляем старый workflow
-        uses: Mattraks/delete-workflow-runs@v2
-        with:
-          token: ${{ secrets.ACCESS_TOKEN }}
-          repository: ${{ github.repository }}
-          retain_days: 7
-          keep_minimum_runs: 3
+        - name: Удаляем старый workflow
+          uses: Mattraks/delete-workflow-runs@v2
+          with:
+            token: ${{ secrets.ACCESS_TOKEN }}
+            repository: ${{ github.repository }}
+            retain_days: 7
+            keep_minimum_runs: 3
