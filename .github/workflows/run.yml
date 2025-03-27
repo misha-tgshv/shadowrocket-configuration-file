@@ -14,7 +14,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}  # Добавьте токен для аутентификации
+          repository: ${{ github.repository }}
       - name: Устанавливаем необходимые утилиты
         run: |
           sudo apt-get update
@@ -108,12 +110,12 @@ jobs:
         run: |
           mkdir -p rules
           mv *.list ./rules/
+
       - name: Загружаем список файлов rules через artifact
         uses: actions/upload-artifact@v4
         with:
           name: rules
           path: ./rules
-          retention-days: 1
 
   build_scripts_js:
     runs-on: ubuntu-latest
@@ -159,6 +161,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}  # Добавьте токен для аутентификации
+          repository: ${{ github.repository }}
 
       - name: Устанавливаем необходимые утилиты
         run: |
@@ -241,17 +246,22 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}  # Добавьте токен для аутентификации
+          repository: ${{ github.repository }}
 
       - name: Настраиваем переменные
         run: |
           echo "RELEASE_NAME=Built on $(TZ="Asia/Novokuznetsk" date +%Y%m%d%H%M)" >> $GITHUB_ENV
           echo "TAG_NAME=$(TZ="Asia/Novokuznetsk" date +%Y%m%d%H%M)" >> $GITHUB_ENV
           mkdir -p rules
+
       - name: Скачиваем artifact
         uses: actions/download-artifact@v4
         with:
           name: rules
           path: ./rules
+
       - name: Коммит и пуш изменений
         run: |
           git config --global user.name "GitHub Actions Bot"
@@ -260,7 +270,8 @@ jobs:
           git commit -m "Update rules [$(date '+%Y-%m-%d %H:%M:%S')]"
           git remote add origin "https://${{ github.actor }}:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}"
           git push -f origin main
-      - name: Публикуем и загружаем artifacts
+
+      - name: Создаем и публикуем релиз
         uses: softprops/action-gh-release@v2
         with:
           name: ${{ env.RELEASE_NAME }}
@@ -272,15 +283,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
-      - name: Загружаем artifact в ветку "release"
-        run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "<>"
-          git checkout -b release
-          git add .
-          git commit -m "${{ env.RELEASE_NAME }}"
-          git remote add origin "https://${{ github.actor }}:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}"
-          git push -f origin release
       - name: Очищаем jsdelivr CDN
         run: |
           cd rules || exit 1
@@ -293,7 +295,7 @@ jobs:
           sleep 300
           # Повторная очистка кэша
           for file in $(ls); do
-            echo "Повторная очистка кэша для файла: $file"
+            echo "Очищаем кэш для файла: $file"
             curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
           done
   Delete_Historical_Data:
