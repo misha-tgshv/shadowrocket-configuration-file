@@ -264,6 +264,10 @@ jobs:
           name: rules
           path: ./rules
 
+      - name: Pull latest changes
+        run: |
+          git pull --rebase origin main
+
       - name: Коммит и пуш изменений
         run: |
           git config --global user.name "GitHub Actions Bot"
