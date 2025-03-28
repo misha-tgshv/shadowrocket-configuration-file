@@ -298,6 +298,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
+          ref: release # Check out the release branch
 
       - name: Настраиваем переменные
         run: |
@@ -317,7 +318,7 @@ jobs:
           git config --global user.email "actions@github.com"
           git add -A
           git commit -m "Update rules [$(date '+%Y-%m-%d %H:%M:%S')]"
-          git push origin main -f
+          git push origin release -f # Push to the release branch
 
       - name: Создаем и публикуем релиз
         uses: softprops/action-gh-release@v2
