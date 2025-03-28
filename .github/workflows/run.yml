@@ -152,7 +152,6 @@ jobs:
         run: |
           mkdir -p rules
           mv *.list ./rules/
-          echo "FILES=$(ls -A rules)" >> $GITHUB_ENV
 
       - name: Загружаем список файлов rules через artifact
         uses: actions/upload-artifact@v4
@@ -292,6 +291,7 @@ jobs:
     permissions:
       contents: write
       packages: write
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
