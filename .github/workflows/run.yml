@@ -39,7 +39,7 @@ jobs:
             "makersuite.google.com"
             "aistudio.google.com"
             "bard.google.com"
-            "emini.google.com"
+            "gemini.google.com"
           )
 
           # Файл для сохранения результата
