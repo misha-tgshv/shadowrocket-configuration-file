@@ -33,7 +33,8 @@ dns-server = https://dns.google/dns-query, https://dns.adguard-dns.com/dns-query
 # Альтернативный DNS. Возврат к резервному DNS при сбое разрешения перезаписанного DNS. 
 # Если вам нужно указать несколько DNS, их можно разделить запятыми. system означает возврат к системному DNS. 
 # Вы можете выбрать альтернативный DOH/DOT — https://github.com/curl/curl/wiki/DNS-over-HTTPS
-fallback-dns-server = https://cloudflare-dns.com/dns-query, https://freedns.controld.com/p3
+# fallback-dns-server = https://cloudflare-dns.com/dns-query, https://freedns.controld.com/p3
+fallback-dns-server = system
 
 # Перезапись DNS. Некоторые устройства или программное обеспечение всегда 
 # используют жестко запрограммированные DNS-серверы, например Netflix отправляет 
