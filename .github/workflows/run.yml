@@ -14,15 +14,47 @@ jobs:
     steps:
       - name: Создаем файл domains_community.list
         run: |
-            curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list \
-              | awk '
-                NR==2 {print "DOMAIN-KEYWORD," $0; next}
-                NR==3 {print "DOMAIN-KEYWORD," $0; next}
-                NR==4 {print "DOMAIN-KEYWORD," $0; next}
-                NR==5 {print "DOMAIN," $0; next}
-                !/^#/ && NF>0 {print "DOMAIN-SUFFIX," $0}
-                /^#/ || NF==0 {print $0} # Добавляем это условие для пустых строк и строк с #
-              ' > domains_community.list
+          curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list \
+            | awk '
+              # Добавляем заголовки
+              NR==1 {print "# NAME: domains_community.list"}
+              NR==2 {print "# AUTHOR: misha-tgshv"}
+              NR==3 {print "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file"}
+              NR==4 {print "# UPDATED: " strftime("%Y-%m-%d %H:%M:%S", systime(), 1) " MSK"}
+              NR==5 {print "# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list"}
+              
+              # Обрабатываем строки, начиная с 6-й
+              NR>5 {
+                # Добавляем DOMAIN-KEYWORD к строкам, содержащим #gemini
+                if ($0 ~ /#gemini/) {
+                  print "DOMAIN-KEYWORD," $0
+                  next
+                }
+                
+                # Добавляем DOMAIN-KEYWORD к строкам 2, 3 и 4
+                if (NR==2 || NR==3 || NR==4) {
+                  print "DOMAIN-KEYWORD," $0
+                  next
+                }
+                
+                # Добавляем DOMAIN к строке 5
+                if (NR==5) {
+                  print "DOMAIN," $0
+                  next
+                }
+                
+                # Добавляем DOMAIN-SUFFIX к строкам, которые не комментарии и не пустые
+                if (!/^#/ && NF>0) {
+                  print "DOMAIN-SUFFIX," $0
+                  next
+                }
+                
+                # Выводим строки с комментариями или пустые строки без изменений
+                if (/^#/ || NF==0) {
+                  print $0
+                }
+              }
+            ' > domains_community.list
               
       - name: Создаем файл domains_antifilter.list
         run: |
