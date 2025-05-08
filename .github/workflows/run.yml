@@ -152,9 +152,13 @@ jobs:
     steps:
       - name: Создаем файл YT-Premium-V1-RU.module
         run: |
-          # Скачиваем исходный модуль
+          # Получаем дату последнего изменения исходного файла через GitHub API
+          LAST_MODIFIED=$(curl -s "https://api.github.com/repos/YanbingJiang/Shadowrocket_diy_rules/commits?path=Modules/YT-Premium-V1.module&page=1&per_page=1" | jq -r '.[0].commit.committer.date' | cut -d'T' -f1)
+          
+          # Скачиваем и модифицируем модуль
           curl -sSL https://raw.githubusercontent.com/YanbingJiang/Shadowrocket_diy_rules/refs/heads/main/Modules/YT-Premium-V1.module \
-          | sed -E 's/captionLang:zh-Hans/captionLang:off/g; s/lyricLang:zh-Hans/lyricLang:off/g' > YT-Premium-V1-RU.module
+          | sed -E 's/captionLang:zh-Hans/captionLang:off/g; s/lyricLang:zh-Hans/lyricLang:off/g' \
+          | sed "1i# Last modified: $LAST_MODIFIED" > YT-Premium-V1-RU.module
   
       - name: Перемещаем файлы в директорию modules
         run: |
@@ -166,6 +170,26 @@ jobs:
         with:
           name: modules
           path: ./modules.d/
+
+  # build_YT_premium_v1_module:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Создаем файл YT-Premium-V1-RU.module
+  #       run: |
+  #         # Скачиваем исходный модуль
+  #         curl -sSL https://raw.githubusercontent.com/YanbingJiang/Shadowrocket_diy_rules/refs/heads/main/Modules/YT-Premium-V1.module \
+  #         | sed -E 's/captionLang:zh-Hans/captionLang:off/g; s/lyricLang:zh-Hans/lyricLang:off/g' > YT-Premium-V1-RU.module
+  
+  #     - name: Перемещаем файлы в директорию modules
+  #       run: |
+  #         mkdir -p modules.d
+  #         cp YT-Premium-V1-RU.module ./modules.d/
+  
+  #     - name: Загружаем список файлов modules через artifact
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: modules
+  #         path: ./modules.d/
 
   # build_YT_premium_v1_module:
   #   runs-on: ubuntu-latest
