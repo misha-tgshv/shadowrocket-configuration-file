@@ -150,22 +150,30 @@ jobs:
   build_YT_premium_v1_module:
     runs-on: ubuntu-latest
     steps:
+      - name: Получаем даты последних изменений
+        run: |
+          # Для YT-Premium-V1.module
+          YT_MODULE_DATE=$(curl -s "https://api.github.com/repos/YanbingJiang/Shadowrocket_diy_rules/commits?path=Modules/YT-Premium-V1.module&page=1&per_page=1" | jq -r '.[0].commit.committer.date' | cut -d'T' -f1)
+          
+          # Для youtube.response.js
+          YT_SCRIPT_DATE=$(curl -s "https://api.github.com/repos/Maasea/sgmodule/commits?path=Script/Youtube/youtube.response.js&page=1&per_page=1" | jq -r '.[0].commit.committer.date' | cut -d'T' -f1)
+  
+          echo "YT_MODULE_DATE=$YT_MODULE_DATE" >> $GITHUB_ENV
+          echo "YT_SCRIPT_DATE=$YT_SCRIPT_DATE" >> $GITHUB_ENV
+  
       - name: Создаем файл YT-Premium-V1-RU.module
         run: |
-          # Получаем дату последнего изменения исходного файла через GitHub API
-          LAST_MODIFIED=$(curl -s "https://api.github.com/repos/YanbingJiang/Shadowrocket_diy_rules/commits?path=Modules/YT-Premium-V1.module&page=1&per_page=1" | jq -r '.[0].commit.committer.date' | cut -d'T' -f1)
-          
-          # Скачиваем и модифицируем модуль
           curl -sSL https://raw.githubusercontent.com/YanbingJiang/Shadowrocket_diy_rules/refs/heads/main/Modules/YT-Premium-V1.module \
           | sed -E 's/captionLang:zh-Hans/captionLang:off/g; s/lyricLang:zh-Hans/lyricLang:off/g' \
-          | sed "1i# Last modified: $LAST_MODIFIED" > YT-Premium-V1-RU.module
+          | sed "1i# Last modified youtube.response.js: ${{ env.YT_SCRIPT_DATE }}" \
+          | sed "1i# Last modified YT-Premium-V1: ${{ env.YT_MODULE_DATE }}" > YT-Premium-V1-RU.module
   
-      - name: Перемещаем файлы в директорию modules
+      - name: Перемещаем файлы
         run: |
           mkdir -p modules.d
           cp YT-Premium-V1-RU.module ./modules.d/
   
-      - name: Загружаем список файлов modules через artifact
+      - name: Загружаем артефакты
         uses: actions/upload-artifact@v4
         with:
           name: modules
