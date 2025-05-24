@@ -26,11 +26,14 @@ proactivebackend-pa.googleapis.com #gemini
 
 # games
 anzu-us.com
-gameloft.com
+cdn.id.supercell.com
 clashofclans.com
 clashofclans.inbox.supercell.com
-game.clashofclans.com
 game-assets.clashofclans.com
+game.boombeachgame.com
+game.clashofclans.com
+gameloft.com
+security.id.supercell.com
 
 # notion
 notion.so
