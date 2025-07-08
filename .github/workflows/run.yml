@@ -16,46 +16,34 @@ jobs:
         run: |
           curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/community.list \
             | awk '
-              # Добавляем заголовки
               NR==1 {print "# NAME: domains_community.list"}
               NR==2 {print "# AUTHOR: misha-tgshv"}
               NR==3 {print "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file"}
               NR==4 {print "# UPDATED: " strftime("%Y-%m-%d %H:%M:%S", systime(), 1) " MSK"}
               NR==5 {print "# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list"}
-              
-              # Обрабатываем строки, начиная с 6-й
               NR>5 {
-                # Добавляем DOMAIN-KEYWORD к строкам, содержащим #gemini
                 if ($0 ~ /#gemini/) {
                   print "DOMAIN-KEYWORD," $0
                   next
                 }
-                
-                # Добавляем DOMAIN-KEYWORD к строкам 2, 3 и 4
                 if (NR==2 || NR==3 || NR==4) {
                   print "DOMAIN-KEYWORD," $0
                   next
                 }
-                
-                # Добавляем DOMAIN к строке 5
                 if (NR==5) {
                   print "DOMAIN," $0
                   next
                 }
-                
-                # Добавляем DOMAIN-SUFFIX к строкам, которые не комментарии и не пустые
                 if (!/^#/ && NF>0) {
                   print "DOMAIN-SUFFIX," $0
                   next
                 }
-                
-                # Выводим строки с комментариями или пустые строки без изменений
                 if (/^#/ || NF==0) {
                   print $0
                 }
               }
             ' > domains_community.list
-              
+
       - name: Создаем файл domains_antifilter.list
         run: |
           curl -sSL https://community.antifilter.download/list/domains.lst \
@@ -65,6 +53,7 @@ jobs:
           && echo "# Количество доменов: $(wc -l < temp_list.txt)" > domains_antifilter.list \
           && cat temp_list.txt >> domains_antifilter.list \
           && rm temp_list.txt
+
       - name: Создаем файл ips_antifilter.list
         run: |
           curl -s https://community.antifilter.download/list/community.lst \
@@ -73,6 +62,7 @@ jobs:
           && echo "# Количество IP-адресов: $(wc -l < temp_aips.txt)" > ips_antifilter.list \
           && cat temp_aips.txt >> ips_antifilter.list \
           && rm temp_aips.txt
+
       - name: Создаем файл domains_refilter.list
         run: |
           curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community.lst > temp.txt &&
@@ -80,28 +70,29 @@ jobs:
           grep -v "mega555" temp.txt > temp2.txt &&
           grep -v "spotify.com" temp2.txt > temp3.txt &&
           rm temp.txt temp2.txt
-          
           echo "# NAME: domains_refilter.list" > domains_refilter.list &&
           echo "# AUTHOR: misha-tgshv" >> domains_refilter.list &&
           echo "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file" >> domains_refilter.list &&
           echo "# UPDATED: $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S') MSK" >> domains_refilter.list &&
           echo "# SOURCE: https://github.com/1andrevich/Re-filter-lists" >> domains_refilter.list
-          
           sed 's/^/DOMAIN-SUFFIX,/g' temp3.txt | tee domaintmp
           wc -l < domaintmp | awk '{print "# TOTAL:", $1}' >> domains_refilter.list
           cat domaintmp >> domains_refilter.list && rm domaintmp temp3.txt
+
       - name: Создаем файл domains_youtube.list
         run: |
           curl -sSL https://raw.githubusercontent.com/dsvip/Quantumult-X/dec9019816ba55897c162c3dbd3ac997ac160f09/blackmatrix7/rule/Shadowrocket/YouTube.list \
           | sed -n '/DOMAIN-SUFFIX,/p' > domains_youtube.list
           sed -i "1s/^/DOMAIN-KEYWORD,youtube\n/" domains_youtube.list
           sed -i "1s/^/DOMAIN-KEYWORD,googlevideo\n/" domains_youtube.list
+
       - name: Создаем файл domains_discord.list
         run: |
           curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Discord/Discord.list \
           | sed -n '/DOMAIN-SUFFIX,/p' > domains_discord.list
           sed -i "1s/^/DOMAIN-KEYWORD,discord\n/" domains_discord.list
           sed -i "1s/^/DOMAIN-KEYWORD,discordapp\n/" domains_discord.list
+
       - name: Создаем файл ips_refilter.list
         run: |
           curl -s https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/community_ips.lst > ips1.txt \
@@ -111,8 +102,9 @@ jobs:
           && echo "# Количество IP-адресов: $(wc -l < temp_ips.list)" > ips_refilter.list \
           && cat temp_ips.list >> ips_refilter.list \
           && rm ips1.txt temp_ips.list
+
       - name: Создаем файл domains_banking.list
-        run: |          
+        run: |
           curl -s https://www.cbr.ru/banking_sector/credit/cowebsites/ | \
           grep -oP 'href="\K[^"]+' | \
           grep '^http' | \
@@ -120,10 +112,43 @@ jobs:
           sed 's/^https\?:\/\///' | \
           sed 's/\/.*//' | \
           sort -u | sed 's/^/DOMAIN-SUFFIX,/' > domains_banking.list
-      - name: Перемещаем файлы в директорю rules
+
+      - name: Генерируем мини-конфиг с индивидуальными правилами
+        run: |
+          cat <<EOF > mini_rules.conf
+          # Мини-конфиг для Shadowrocket
+          [Rule]
+          DOMAIN-SUFFIX,gfycat.com,PROXY
+          DOMAIN-KEYWORD,hqporner,PROXY
+          DOMAIN-KEYWORD,instagram,PROXY
+          DOMAIN-KEYWORD,facebook,PROXY
+          DOMAIN-KEYWORD,twitter,PROXY
+          DOMAIN-KEYWORD,4pda,PROXY
+          DOMAIN-SUFFIX,meta.com,PROXY
+          DOMAIN-SUFFIX,twimg.com,PROXY
+          DOMAIN-SUFFIX,fbcdn.net,PROXY
+          DOMAIN-SUFFIX,fbsbx.com,PROXY
+          DOMAIN-SUFFIX,x.com,PROXY
+          DOMAIN-SUFFIX,notion,PROXY
+          DOMAIN-SUFFIX,apple-relay.apple.com,PROXY
+          DOMAIN-SUFFIX,copilot.microsoft.com,PROXY
+          DOMAIN-SUFFIX,elevenlabs.io,PROXY
+          DOMAIN-SUFFIX,grok.com,PROXY
+          DOMAIN-SUFFIX,x.ai,PROXY
+          DOMAIN-SUFFIX,sora.com,PROXY
+          DOMAIN-KEYWORD,proactivebackend-pa.googleapis.com,PROXY
+          DOMAIN-SUFFIX,composer.opera-api.com,PROXY
+          DOMAIN-SUFFIX,user.auth.xboxlive.com,PROXY
+          DOMAIN-SUFFIX,xsts.auth.xboxlive.com,PROXY
+          FINAL,DIRECT
+          EOF
+
+      - name: Перемещаем файлы в директорию rules
         run: |
           mkdir -p rules.d
           cp *.list ./rules.d/
+          cp mini_rules.conf ./rules.d/
+
       - name: Загружаем список файлов rules через artifact
         uses: actions/upload-artifact@v4
         with:
@@ -136,12 +161,11 @@ jobs:
       - name: Создаем файл rewrite.youtube.response.preview.js
         run: |
           curl -sSL "https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js" > temp.txt && sed 's/;e!/;e/g' temp.txt > rewrite.youtube.response.preview.js && rm temp.txt
-          
-      - name: Перемещаем файлы в директорю scripts
+      - name: Перемещаем файлы в директорию scripts
         run: |
           mkdir -p scripts.d
           cp *.js ./scripts.d/
-      - name: Загружаем список файлов sctipts через artifact
+      - name: Загружаем список файлов scripts через artifact
         uses: actions/upload-artifact@v4
         with:
           name: scripts
@@ -152,72 +176,28 @@ jobs:
     steps:
       - name: Получаем даты последних изменений
         run: |
-          # Для YT-Premium-V1.module
           YT_MODULE_DATE=$(curl -s "https://api.github.com/repos/YanbingJiang/Shadowrocket_diy_rules/commits?path=Modules/YT-Premium-V1.module&page=1&per_page=1" | jq -r '.[0].commit.committer.date' | cut -d'T' -f1)
-          
-          # Для youtube.response.js
           YT_SCRIPT_DATE=$(curl -s "https://api.github.com/repos/Maasea/sgmodule/commits?path=Script/Youtube/youtube.response.js&page=1&per_page=1" | jq -r '.[0].commit.committer.date' | cut -d'T' -f1)
-  
           echo "YT_MODULE_DATE=$YT_MODULE_DATE" >> $GITHUB_ENV
           echo "YT_SCRIPT_DATE=$YT_SCRIPT_DATE" >> $GITHUB_ENV
-  
+
       - name: Создаем файл YT-Premium-V1-RU.module
         run: |
           curl -sSL https://raw.githubusercontent.com/YanbingJiang/Shadowrocket_diy_rules/refs/heads/main/Modules/YT-Premium-V1.module \
           | sed -E 's/captionLang:zh-Hans/captionLang:off/g; s/lyricLang:zh-Hans/lyricLang:off/g' \
           | sed "1i# Last modified youtube.response.js: ${{ env.YT_SCRIPT_DATE }}" \
           | sed "1i# Last modified YT-Premium-V1: ${{ env.YT_MODULE_DATE }}" > YT-Premium-V1-RU.module
-  
+
       - name: Перемещаем файлы
         run: |
           mkdir -p modules.d
           cp YT-Premium-V1-RU.module ./modules.d/
-  
+
       - name: Загружаем артефакты
         uses: actions/upload-artifact@v4
         with:
           name: modules
           path: ./modules.d/
-
-  # build_YT_premium_v1_module:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Создаем файл YT-Premium-V1-RU.module
-  #       run: |
-  #         # Скачиваем исходный модуль
-  #         curl -sSL https://raw.githubusercontent.com/YanbingJiang/Shadowrocket_diy_rules/refs/heads/main/Modules/YT-Premium-V1.module \
-  #         | sed -E 's/captionLang:zh-Hans/captionLang:off/g; s/lyricLang:zh-Hans/lyricLang:off/g' > YT-Premium-V1-RU.module
-  
-  #     - name: Перемещаем файлы в директорию modules
-  #       run: |
-  #         mkdir -p modules.d
-  #         cp YT-Premium-V1-RU.module ./modules.d/
-  
-  #     - name: Загружаем список файлов modules через artifact
-  #       uses: actions/upload-artifact@v4
-  #       with:
-  #         name: modules
-  #         path: ./modules.d/
-
-  # build_YT_premium_v1_module:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Создаем файл YT-Premium-V1-RU.module
-  #       run: |
-  #         # Скачиваем исходный модуль
-  #         curl -sSL https://raw.githubusercontent.com/YanbingJiang/Shadowrocket_diy_rules/9b86dfbca387fa69e8d4b02d3f8ba01250eaad16/Modules/YT-Premium-V1.module \
-  #         | sed -E 's/captionLang:zh-Hans/captionLang:off/g; s/lyricLang:zh-Hans/lyricLang:ru-ru/g' > YT-Premium-V1-RU.module
-  #         # Заменяем URL в строке youtube.response
-  #         sed -i 's|https://raw\.githubusercontent\.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube\.response\.preview\.js|https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/scripts/rewrite.youtube.response.preview.js|g' YT-Premium-V1-RU.module
-  #     - name: Перемещаем файлы в директорю modules
-  #       run: |
-  #         mkdir -p modules.d
-  #         cp *.module ./modules.d/
-  #     - name: Загружаем список файлов modules через artifact
-  #       uses: actions/upload-artifact@v4
-  #       with:
-  #         name: modules
-  #         path: ./modules.d/
 
   build_Shadowrocket_conf_file:
     runs-on: ubuntu-latest
@@ -239,9 +219,7 @@ jobs:
 
       - name: Создаем конфиг sr_ru_public_lists.conf
         run: |
-          # Копируем General.txt в sr_ru_public_lists.conf
           cp ./conf.d/General.txt ./conf.d/sr_ru_public_lists.conf
-          # Добавляем правила в sr_ru_public_lists.conf
           cat <<EOF >> ./conf.d/sr_ru_public_lists.conf
           # Выборочные правила маршрутизации
           [Rule]
@@ -258,13 +236,11 @@ jobs:
           # Финальное правило маршрутизации
           FINAL,DIRECT
           EOF
-          # Добавляем дату сборки
           sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_ru_public_lists.conf
+
       - name: Создаем конфиг sr_basic_nonru.conf
         run: |
-          # Копируем General.txt в sr_basic_nonru.conf
           cp ./conf.d/General.txt ./conf.d/sr_basic_nonru.conf
-          # Добавляем правила для российских доменов в sr_basic_nonru.conf
           cat <<EOF >> ./conf.d/sr_basic_nonru.conf
           # Выборочные правила маршрутизации
           [Rule]
@@ -278,11 +254,12 @@ jobs:
           # Финальное правило: все остальное напрямую
           FINAL,DIRECT
           EOF
-          # Добавляем дату сборки
           sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_basic_nonru.conf
+
       - name: Заменяем update-url в sr_basic_nonru.conf
         run: |
           sed -i 's/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_public_lists\.conf/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_basic_nonru\.conf/g' ./conf.d/sr_basic_nonru.conf
+
       - name: Удаляем временный General.txt
         run: rm -f ./conf.d/General.txt
 
@@ -293,18 +270,18 @@ jobs:
           path: |
             ./conf.d/sr_ru_public_lists.conf
             ./conf.d/sr_basic_nonru.conf
-          retention-days: 1
+        retention-days: 1
 
   publish:
     runs-on: ubuntu-latest
     needs: [build_rules_list, build_scripts_js, build_YT_premium_v1_module, build_Shadowrocket_conf_file]
-    steps:     
+    steps:
       - name: Настраиваем переменные
         run: |
           echo "RELEASE_NAME=Built on $(TZ="Asia/Novokuznetsk" date +%Y%m%d%H%M)" >> $GITHUB_ENV
           echo "TAG_NAME=$(TZ="Asia/Novokuznetsk" date +%Y%m%d%H%M)" >> $GITHUB_ENV
           mkdir -p rules
-      - name: Скачиваем artifact 
+      - name: Скачиваем artifact
         uses: actions/download-artifact@v4
         with:
           path: ./rules
@@ -332,6 +309,7 @@ jobs:
           git commit -m "${{ env.RELEASE_NAME }}"
           git remote add origin "https://${{ github.actor }}:${{ secrets.ACCESS_TOKEN }}@github.com/${{ github.repository }}"
           git push -f origin release
+
       - name: Очищаем jsdelivr CDN
         run: |
           cd rules || exit 1
@@ -339,37 +317,35 @@ jobs:
             echo "Очищаем кэш для файла: $file"
             curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
           done
-          # Ждем 5 минут перед повторной очисткой
           echo "Ожидание 5 минут перед повторной очисткой кэша..."
           sleep 300
-          # Повторная очистка кэша
           for file in $(ls); do
             echo "Повторная очистка кэша для файла: $file"
             curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
           done
+
   Delete_Historical_Data:
     runs-on: ubuntu-latest
     needs: publish
     steps:
-        - name: Delete old artifacts
-          uses: geekyeggo/delete-artifact@v5
-          with:
-            name: |
-                rules
-                conf
-        - name: Удаляем старые теги и релизы
-          uses: dev-drprasad/delete-older-releases@v0.3.4
-          with:
-            keep_latest: 3
-            delete_expired_data: 7
-            delete_tags: true
-          env:
-              GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-
-        - name: Удаляем старый workflow
-          uses: Mattraks/delete-workflow-runs@v2
-          with:
-            token: ${{ secrets.ACCESS_TOKEN }}
-            repository: ${{ github.repository }}
-            retain_days: 7
-            keep_minimum_runs: 3
+      - name: Delete old artifacts
+        uses: geekyeggo/delete-artifact@v5
+        with:
+          name: |
+            rules
+            conf
+      - name: Удаляем старые теги и релизы
+        uses: dev-drprasad/delete-older-releases@v0.3.4
+        with:
+          keep_latest: 3
+          delete_expired_data: 7
+          delete_tags: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      - name: Удаляем старый workflow
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          repository: ${{ github.repository }}
+          retain_days: 7
+          keep_minimum_runs: 3
