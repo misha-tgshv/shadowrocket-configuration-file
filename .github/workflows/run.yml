@@ -126,37 +126,37 @@ jobs:
 
       - name: Генерируем мини-конфиг на базе General.txt с индивидуальными правилами
         run: |
-          cp ./conf.d/General.txt ./conf.d/sr_ru_mini
+          cp ./conf.d/General.txt ./conf.d/sr_ru_mini.conf
           echo "[Rule]" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,gfycat.com,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-KEYWORD,hqporner,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-KEYWORD,instagram,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-KEYWORD,facebook,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-KEYWORD,twitter,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-KEYWORD,4pda,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,meta.com,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,twimg.com,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,fbcdn.net,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,fbsbx.com,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,x.com,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,notion,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,apple-relay.apple.com,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,copilot.microsoft.com,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,elevenlabs.io,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,grok.com,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,x.ai,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,sora.com,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-KEYWORD,proactivebackend-pa.googleapis.com,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,composer.opera-api.com,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,user.auth.xboxlive.com,PROXY" >> ./conf.d/sr_ru_mini
-          echo "DOMAIN-SUFFIX,xsts.auth.xboxlive.com,PROXY" >> ./conf.d/sr_ru_mini
-          echo "FINAL,DIRECT" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,gfycat.com,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-KEYWORD,hqporner,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-KEYWORD,instagram,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-KEYWORD,facebook,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-KEYWORD,twitter,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-KEYWORD,4pda,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-SUFFIX,meta.com,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-SUFFIX,twimg.com,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-SUFFIX,fbcdn.net,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-SUFFIX,fbsbx.com,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-SUFFIX,x.com,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-SUFFIX,notion,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-SUFFIX,apple-relay.apple.com,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-SUFFIX,copilot.microsoft.com,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-SUFFIX,elevenlabs.io,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-SUFFIX,grok.com,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-SUFFIX,x.ai,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-SUFFIX,sora.com,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-KEYWORD,proactivebackend-pa.googleapis.com,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-SUFFIX,composer.opera-api.com,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-SUFFIX,user.auth.xboxlive.com,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "DOMAIN-SUFFIX,xsts.auth.xboxlive.com,PROXY" >> ./conf.d/sr_ru_mini.conf
+          echo "FINAL,DIRECT" >> ./conf.d/sr_ru_mini.conf
 
       - name: Перемещаем файлы в директорию rules
         run: |
           mkdir -p rules.d
           cp *.list ./rules.d/
-          cp ./conf.d/sr_ru_mini ./rules.d/
+          cp ./conf.d/sr_ru_mini.conf ./rules.d/
 
       - name: Загружаем список файлов rules через artifact
         uses: actions/upload-artifact@v4
