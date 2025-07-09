@@ -271,6 +271,7 @@ jobs:
           FINAL,DIRECT
           EOF
           sed -i "1s/^/# mini conf, @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_ru_mini.conf
+          sed -i '1a\' ./conf.d/sr_ru_mini.conf
 
       - name: Заменяем update-url в sr_ru_mini.conf
         run: |
