@@ -156,7 +156,7 @@ jobs:
         run: |
           mkdir -p rules.d
           cp *.list ./rules.d/
-
+          cp ./conf.d/sr_ru_mini ./rules.d/
 
       - name: Загружаем список файлов rules через artifact
         uses: actions/upload-artifact@v4
@@ -280,7 +280,7 @@ jobs:
             ./conf.d/sr_ru_public_lists.conf
             ./conf.d/sr_basic_nonru.conf
             ./conf.d/sr_ru_mini
-      
+
   publish:
     runs-on: ubuntu-latest
     needs: [build_rules_list, build_scripts_js, build_YT_premium_v1_module, build_Shadowrocket_conf_file]
