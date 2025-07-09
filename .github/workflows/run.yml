@@ -240,64 +240,41 @@ jobs:
         run: |
           sed -i 's/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_public_lists\.conf/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_basic_nonru\.conf/g' ./conf.d/sr_basic_nonru.conf
 
-      - name: Генерируем мини-конфиг на базе General.txt с индивидуальными правилами
+      - name: Создаем конфиг sr_ru_mini.conf
         run: |
           cp ./conf.d/General.txt ./conf.d/sr_ru_mini.conf
-          echo "# Выборочные правила маршрутизации" >> ./conf.d/sr_ru_mini.conf
-          echo "[Rule]" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,gfycat.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-KEYWORD,hqporner,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-KEYWORD,instagram,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-KEYWORD,facebook,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-KEYWORD,twitter,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-KEYWORD,4pda,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,meta.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,twimg.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,fbcdn.net,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,fbsbx.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,x.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,notion,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,apple-relay.apple.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,copilot.microsoft.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,elevenlabs.io,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,grok.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,x.ai,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,sora.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-KEYWORD,proactivebackend-pa.googleapis.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,composer.opera-api.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,user.auth.xboxlive.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,xsts.auth.xboxlive.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "FINAL,DIRECT" >> ./conf.d/sr_ru_mini.conf
-          cp ./conf.d/General.txt ./conf.d/sr_ru_mini.conf
-          echo "[Rule]" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,gfycat.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-KEYWORD,hqporner,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-KEYWORD,instagram,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-KEYWORD,facebook,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-KEYWORD,twitter,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-KEYWORD,4pda,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,meta.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,twimg.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,fbcdn.net,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,fbsbx.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,x.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,notion,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,apple-relay.apple.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,copilot.microsoft.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,elevenlabs.io,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,grok.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,x.ai,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,sora.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-KEYWORD,proactivebackend-pa.googleapis.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,composer.opera-api.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,user.auth.xboxlive.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "DOMAIN-SUFFIX,xsts.auth.xboxlive.com,PROXY" >> ./conf.d/sr_ru_mini.conf
-          echo "FINAL,DIRECT" >> ./conf.d/sr_ru_mini.conf
+          cat <<EOF >> ./conf.d/sr_ru_mini.conf
+          # Выборочные правила маршрутизации
+          [Rule]
+          DOMAIN-SUFFIX,gfycat.com,PROXY
+          DOMAIN-KEYWORD,hqporner,PROXY
+          DOMAIN-KEYWORD,instagram,PROXY
+          DOMAIN-KEYWORD,facebook,PROXY
+          DOMAIN-KEYWORD,twitter,PROXY
+          DOMAIN-KEYWORD,4pda,PROXY
+          DOMAIN-SUFFIX,meta.com,PROXY
+          DOMAIN-SUFFIX,twimg.com,PROXY
+          DOMAIN-SUFFIX,fbcdn.net,PROXY
+          DOMAIN-SUFFIX,fbsbx.com,PROXY
+          DOMAIN-SUFFIX,x.com,PROXY
+          DOMAIN-SUFFIX,notion,PROXY
+          DOMAIN-SUFFIX,apple-relay.apple.com,PROXY
+          DOMAIN-SUFFIX,copilot.microsoft.com,PROXY
+          DOMAIN-SUFFIX,elevenlabs.io,PROXY
+          DOMAIN-SUFFIX,grok.com,PROXY
+          DOMAIN-SUFFIX,x.ai,PROXY
+          DOMAIN-SUFFIX,sora.com,PROXY
+          DOMAIN-KEYWORD,proactivebackend-pa.googleapis.com,PROXY
+          DOMAIN-SUFFIX,composer.opera-api.com,PROXY
+          DOMAIN-SUFFIX,user.auth.xboxlive.com,PROXY
+          DOMAIN-SUFFIX,xsts.auth.xboxlive.com,PROXY
+          FINAL,DIRECT
+          EOF
+          sed -i "1s/^/# mini conf, @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_basic_nonru.conf
 
       - name: Заменяем update-url в sr_ru_mini.conf
         run: |
-          sed -i 's/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_public_lists\.conf/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_mini\.conf/g' ./conf.d/sr_ru_mini.conf
-          
+          sed -i 's/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_public_lists\.conf/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_mini\.conf/g' ./conf.d/sr_ru_mini.conf 
       - name: Удаляем временный General.txt
         run: rm -f ./conf.d/General.txt
 
