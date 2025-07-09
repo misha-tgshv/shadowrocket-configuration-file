@@ -232,39 +232,39 @@ jobs:
         run: |
           cp ./conf.d/General.txt ./conf.d/sr_ru_public_lists.conf
           cat <<EOF >> ./conf.d/sr_ru_public_lists.conf
-# Выборочные правила маршрутизации
-[Rule]
-# Список доменов телеграм-чата «Про Shadowrocket на русском»
-RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_community.list,PROXY
-# Список доменов refilter
-RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY
-# Список ip-адресов refilter
-RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve
-# Список доменов Discord
-RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_discord.list,PROXY
-# Список портов Discord
-RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY
-# Финальное правило маршрутизации
-FINAL,DIRECT
-EOF
+          # Выборочные правила маршрутизации
+          [Rule]
+          # Список доменов телеграм-чата «Про Shadowrocket на русском»
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_community.list,PROXY
+          # Список доменов refilter
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY
+          # Список ip-адресов refilter
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve
+          # Список доменов Discord
+          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_discord.list,PROXY
+          # Список портов Discord
+          RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY
+          # Финальное правило маршрутизации
+          FINAL,DIRECT
+          EOF
           sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_ru_public_lists.conf
 
       - name: Создаем конфиг sr_basic_nonru.conf
         run: |
           cp ./conf.d/General.txt ./conf.d/sr_basic_nonru.conf
           cat <<EOF >> ./conf.d/sr_basic_nonru.conf
-# Выборочные правила маршрутизации
-[Rule]
-# Российские домены через прокси
-DOMAIN-SUFFIX,ru,PROXY
-DOMAIN-SUFFIX,su,PROXY
-DOMAIN-SUFFIX,рф,PROXY
-DOMAIN-KEYWORD,.ru,PROXY
-DOMAIN-KEYWORD,.su,PROXY
-DOMAIN-KEYWORD,.рф,PROXY
-# Финальное правило: все остальное напрямую
-FINAL,DIRECT
-EOF
+          # Выборочные правила маршрутизации
+          [Rule]
+          # Российские домены через прокси
+          DOMAIN-SUFFIX,ru,PROXY
+          DOMAIN-SUFFIX,su,PROXY
+          DOMAIN-SUFFIX,рф,PROXY
+          DOMAIN-KEYWORD,.ru,PROXY
+          DOMAIN-KEYWORD,.su,PROXY
+          DOMAIN-KEYWORD,.рф,PROXY
+          # Финальное правило: все остальное напрямую
+          FINAL,DIRECT
+          EOF
           sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_basic_nonru.conf
 
       - name: Заменяем update-url в sr_basic_nonru.conf
