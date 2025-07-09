@@ -126,33 +126,31 @@ jobs:
 
       - name: Генерируем мини-конфиг на базе General.txt с индивидуальными правилами
         run: |
-          cp ./conf.d/General.txt ./mini_rules.conf
-          cat <<EOF >> ./mini_rules.conf
-          [Rule]
-          DOMAIN-SUFFIX,gfycat.com,PROXY
-          DOMAIN-KEYWORD,hqporner,PROXY
-          DOMAIN-KEYWORD,instagram,PROXY
-          DOMAIN-KEYWORD,facebook,PROXY
-          DOMAIN-KEYWORD,twitter,PROXY
-          DOMAIN-KEYWORD,4pda,PROXY
-          DOMAIN-SUFFIX,meta.com,PROXY
-          DOMAIN-SUFFIX,twimg.com,PROXY
-          DOMAIN-SUFFIX,fbcdn.net,PROXY
-          DOMAIN-SUFFIX,fbsbx.com,PROXY
-          DOMAIN-SUFFIX,x.com,PROXY
-          DOMAIN-SUFFIX,notion,PROXY
-          DOMAIN-SUFFIX,apple-relay.apple.com,PROXY
-          DOMAIN-SUFFIX,copilot.microsoft.com,PROXY
-          DOMAIN-SUFFIX,elevenlabs.io,PROXY
-          DOMAIN-SUFFIX,grok.com,PROXY
-          DOMAIN-SUFFIX,x.ai,PROXY
-          DOMAIN-SUFFIX,sora.com,PROXY
-          DOMAIN-KEYWORD,proactivebackend-pa.googleapis.com,PROXY
-          DOMAIN-SUFFIX,composer.opera-api.com,PROXY
-          DOMAIN-SUFFIX,user.auth.xboxlive.com,PROXY
-          DOMAIN-SUFFIX,xsts.auth.xboxlive.com,PROXY
-          FINAL,DIRECT
-          EOF
+          cp ./conf.d/General.txt ./conf.d/sr_ru_mini
+          echo "[Rule]" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,gfycat.com,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-KEYWORD,hqporner,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-KEYWORD,instagram,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-KEYWORD,facebook,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-KEYWORD,twitter,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-KEYWORD,4pda,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,meta.com,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,twimg.com,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,fbcdn.net,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,fbsbx.com,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,x.com,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,notion,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,apple-relay.apple.com,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,copilot.microsoft.com,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,elevenlabs.io,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,grok.com,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,x.ai,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,sora.com,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-KEYWORD,proactivebackend-pa.googleapis.com,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,composer.opera-api.com,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,user.auth.xboxlive.com,PROXY" >> ./conf.d/sr_ru_mini
+          echo "DOMAIN-SUFFIX,xsts.auth.xboxlive.com,PROXY" >> ./conf.d/sr_ru_mini
+          echo "FINAL,DIRECT" >> ./conf.d/sr_ru_mini
 
       - name: Перемещаем файлы в директорию rules
         run: |
@@ -281,7 +279,8 @@ jobs:
           path: |
             ./conf.d/sr_ru_public_lists.conf
             ./conf.d/sr_basic_nonru.conf
-
+            ./conf.d/sr_ru_mini
+      
   publish:
     runs-on: ubuntu-latest
     needs: [build_rules_list, build_scripts_js, build_YT_premium_v1_module, build_Shadowrocket_conf_file]
