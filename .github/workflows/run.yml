@@ -156,7 +156,6 @@ jobs:
         run: |
           mkdir -p rules.d
           cp *.list ./rules.d/
-          cp ./conf.d/sr_ru_mini.conf ./rules.d/
 
       - name: Загружаем список файлов rules через artifact
         uses: actions/upload-artifact@v4
@@ -279,7 +278,7 @@ jobs:
           path: |
             ./conf.d/sr_ru_public_lists.conf
             ./conf.d/sr_basic_nonru.conf
-            ./conf.d/sr_ru_mini
+            ./conf.d/sr_ru_mini.conf
 
   publish:
     runs-on: ubuntu-latest
