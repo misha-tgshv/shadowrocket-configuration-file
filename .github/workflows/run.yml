@@ -113,35 +113,46 @@ jobs:
           sed 's/\/.*//' | \
           sort -u | sed 's/^/DOMAIN-SUFFIX,/' > domains_banking.list
 
-      - name: Генерируем мини-конфиг с индивидуальными правилами
+      - name: Получаем шаблон General.txt
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}
+          ref: 'Custom'
+          token: ${{ secrets.ACCESS_TOKEN }}
+          sparse-checkout: |
+            General.txt
+          sparse-checkout-cone-mode: false
+          path: conf.d
+
+      - name: Генерируем мини-конфиг на базе General.txt с индивидуальными правилами
         run: |
-          cat <<EOF > mini_rules.conf
-          # Мини-конфиг для Shadowrocket
-          [Rule]
-          DOMAIN-SUFFIX,gfycat.com,PROXY
-          DOMAIN-KEYWORD,hqporner,PROXY
-          DOMAIN-KEYWORD,instagram,PROXY
-          DOMAIN-KEYWORD,facebook,PROXY
-          DOMAIN-KEYWORD,twitter,PROXY
-          DOMAIN-KEYWORD,4pda,PROXY
-          DOMAIN-SUFFIX,meta.com,PROXY
-          DOMAIN-SUFFIX,twimg.com,PROXY
-          DOMAIN-SUFFIX,fbcdn.net,PROXY
-          DOMAIN-SUFFIX,fbsbx.com,PROXY
-          DOMAIN-SUFFIX,x.com,PROXY
-          DOMAIN-SUFFIX,notion,PROXY
-          DOMAIN-SUFFIX,apple-relay.apple.com,PROXY
-          DOMAIN-SUFFIX,copilot.microsoft.com,PROXY
-          DOMAIN-SUFFIX,elevenlabs.io,PROXY
-          DOMAIN-SUFFIX,grok.com,PROXY
-          DOMAIN-SUFFIX,x.ai,PROXY
-          DOMAIN-SUFFIX,sora.com,PROXY
-          DOMAIN-KEYWORD,proactivebackend-pa.googleapis.com,PROXY
-          DOMAIN-SUFFIX,composer.opera-api.com,PROXY
-          DOMAIN-SUFFIX,user.auth.xboxlive.com,PROXY
-          DOMAIN-SUFFIX,xsts.auth.xboxlive.com,PROXY
-          FINAL,DIRECT
-          EOF
+          cp ./conf.d/General.txt ./mini_rules.conf
+          cat <<EOF >> ./mini_rules.conf
+[Rule]
+DOMAIN-SUFFIX,gfycat.com,PROXY
+DOMAIN-KEYWORD,hqporner,PROXY
+DOMAIN-KEYWORD,instagram,PROXY
+DOMAIN-KEYWORD,facebook,PROXY
+DOMAIN-KEYWORD,twitter,PROXY
+DOMAIN-KEYWORD,4pda,PROXY
+DOMAIN-SUFFIX,meta.com,PROXY
+DOMAIN-SUFFIX,twimg.com,PROXY
+DOMAIN-SUFFIX,fbcdn.net,PROXY
+DOMAIN-SUFFIX,fbsbx.com,PROXY
+DOMAIN-SUFFIX,x.com,PROXY
+DOMAIN-SUFFIX,notion,PROXY
+DOMAIN-SUFFIX,apple-relay.apple.com,PROXY
+DOMAIN-SUFFIX,copilot.microsoft.com,PROXY
+DOMAIN-SUFFIX,elevenlabs.io,PROXY
+DOMAIN-SUFFIX,grok.com,PROXY
+DOMAIN-SUFFIX,x.ai,PROXY
+DOMAIN-SUFFIX,sora.com,PROXY
+DOMAIN-KEYWORD,proactivebackend-pa.googleapis.com,PROXY
+DOMAIN-SUFFIX,composer.opera-api.com,PROXY
+DOMAIN-SUFFIX,user.auth.xboxlive.com,PROXY
+DOMAIN-SUFFIX,xsts.auth.xboxlive.com,PROXY
+FINAL,DIRECT
+EOF
 
       - name: Перемещаем файлы в директорию rules
         run: |
@@ -221,39 +232,39 @@ jobs:
         run: |
           cp ./conf.d/General.txt ./conf.d/sr_ru_public_lists.conf
           cat <<EOF >> ./conf.d/sr_ru_public_lists.conf
-          # Выборочные правила маршрутизации
-          [Rule]
-          # Список доменов телеграм-чата «Про Shadowrocket на русском»
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_community.list,PROXY
-          # Список доменов refilter
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY
-          # Список ip-адресов refilter
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve
-          # Список доменов Discord
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_discord.list,PROXY
-          # Список портов Discord
-          RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY
-          # Финальное правило маршрутизации
-          FINAL,DIRECT
-          EOF
+# Выборочные правила маршрутизации
+[Rule]
+# Список доменов телеграм-чата «Про Shadowrocket на русском»
+RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_community.list,PROXY
+# Список доменов refilter
+RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_refilter.list,PROXY
+# Список ip-адресов refilter
+RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/ips_refilter.list,PROXY,no-resolve
+# Список доменов Discord
+RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/rules/domains_discord.list,PROXY
+# Список портов Discord
+RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY
+# Финальное правило маршрутизации
+FINAL,DIRECT
+EOF
           sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_ru_public_lists.conf
 
       - name: Создаем конфиг sr_basic_nonru.conf
         run: |
           cp ./conf.d/General.txt ./conf.d/sr_basic_nonru.conf
           cat <<EOF >> ./conf.d/sr_basic_nonru.conf
-          # Выборочные правила маршрутизации
-          [Rule]
-          # Российские домены через прокси
-          DOMAIN-SUFFIX,ru,PROXY
-          DOMAIN-SUFFIX,su,PROXY
-          DOMAIN-SUFFIX,рф,PROXY
-          DOMAIN-KEYWORD,.ru,PROXY
-          DOMAIN-KEYWORD,.su,PROXY
-          DOMAIN-KEYWORD,.рф,PROXY
-          # Финальное правило: все остальное напрямую
-          FINAL,DIRECT
-          EOF
+# Выборочные правила маршрутизации
+[Rule]
+# Российские домены через прокси
+DOMAIN-SUFFIX,ru,PROXY
+DOMAIN-SUFFIX,su,PROXY
+DOMAIN-SUFFIX,рф,PROXY
+DOMAIN-KEYWORD,.ru,PROXY
+DOMAIN-KEYWORD,.su,PROXY
+DOMAIN-KEYWORD,.рф,PROXY
+# Финальное правило: все остальное напрямую
+FINAL,DIRECT
+EOF
           sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_basic_nonru.conf
 
       - name: Заменяем update-url в sr_basic_nonru.conf
