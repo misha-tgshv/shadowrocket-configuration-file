@@ -270,7 +270,7 @@ jobs:
           DOMAIN-SUFFIX,xsts.auth.xboxlive.com,PROXY
           FINAL,DIRECT
           EOF
-          sed -i "1s/^/# mini conf, @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_basic_nonru.conf
+          sed -i "1s/^/# mini conf, @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_ru_mini.conf
 
       - name: Заменяем update-url в sr_ru_mini.conf
         run: |
