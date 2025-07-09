@@ -293,6 +293,10 @@ jobs:
           echo "DOMAIN-SUFFIX,xsts.auth.xboxlive.com,PROXY" >> ./conf.d/sr_ru_mini.conf
           echo "FINAL,DIRECT" >> ./conf.d/sr_ru_mini.conf
 
+      - name: Заменяем update-url в sr_ru_mini.conf
+        run: |
+          sed -i 's/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_public_lists\.conf/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_mini.conf\.conf/g' ./conf.d/sr_ru_mini.conf
+          
       - name: Удаляем временный General.txt
         run: rm -f ./conf.d/General.txt
 
