@@ -243,6 +243,7 @@ jobs:
       - name: Генерируем мини-конфиг на базе General.txt с индивидуальными правилами
         run: |
           cp ./conf.d/General.txt ./conf.d/sr_ru_mini.conf
+          echo "# Выборочные правила маршрутизации" >> ./conf.d/sr_ru_mini.conf
           echo "[Rule]" >> ./conf.d/sr_ru_mini.conf
           echo "DOMAIN-SUFFIX,gfycat.com,PROXY" >> ./conf.d/sr_ru_mini.conf
           echo "DOMAIN-KEYWORD,hqporner,PROXY" >> ./conf.d/sr_ru_mini.conf
