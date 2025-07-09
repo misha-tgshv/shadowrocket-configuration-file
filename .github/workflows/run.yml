@@ -128,31 +128,31 @@ jobs:
         run: |
           cp ./conf.d/General.txt ./mini_rules.conf
           cat <<EOF >> ./mini_rules.conf
-[Rule]
-DOMAIN-SUFFIX,gfycat.com,PROXY
-DOMAIN-KEYWORD,hqporner,PROXY
-DOMAIN-KEYWORD,instagram,PROXY
-DOMAIN-KEYWORD,facebook,PROXY
-DOMAIN-KEYWORD,twitter,PROXY
-DOMAIN-KEYWORD,4pda,PROXY
-DOMAIN-SUFFIX,meta.com,PROXY
-DOMAIN-SUFFIX,twimg.com,PROXY
-DOMAIN-SUFFIX,fbcdn.net,PROXY
-DOMAIN-SUFFIX,fbsbx.com,PROXY
-DOMAIN-SUFFIX,x.com,PROXY
-DOMAIN-SUFFIX,notion,PROXY
-DOMAIN-SUFFIX,apple-relay.apple.com,PROXY
-DOMAIN-SUFFIX,copilot.microsoft.com,PROXY
-DOMAIN-SUFFIX,elevenlabs.io,PROXY
-DOMAIN-SUFFIX,grok.com,PROXY
-DOMAIN-SUFFIX,x.ai,PROXY
-DOMAIN-SUFFIX,sora.com,PROXY
-DOMAIN-KEYWORD,proactivebackend-pa.googleapis.com,PROXY
-DOMAIN-SUFFIX,composer.opera-api.com,PROXY
-DOMAIN-SUFFIX,user.auth.xboxlive.com,PROXY
-DOMAIN-SUFFIX,xsts.auth.xboxlive.com,PROXY
-FINAL,DIRECT
-EOF
+          [Rule]
+          DOMAIN-SUFFIX,gfycat.com,PROXY
+          DOMAIN-KEYWORD,hqporner,PROXY
+          DOMAIN-KEYWORD,instagram,PROXY
+          DOMAIN-KEYWORD,facebook,PROXY
+          DOMAIN-KEYWORD,twitter,PROXY
+          DOMAIN-KEYWORD,4pda,PROXY
+          DOMAIN-SUFFIX,meta.com,PROXY
+          DOMAIN-SUFFIX,twimg.com,PROXY
+          DOMAIN-SUFFIX,fbcdn.net,PROXY
+          DOMAIN-SUFFIX,fbsbx.com,PROXY
+          DOMAIN-SUFFIX,x.com,PROXY
+          DOMAIN-SUFFIX,notion,PROXY
+          DOMAIN-SUFFIX,apple-relay.apple.com,PROXY
+          DOMAIN-SUFFIX,copilot.microsoft.com,PROXY
+          DOMAIN-SUFFIX,elevenlabs.io,PROXY
+          DOMAIN-SUFFIX,grok.com,PROXY
+          DOMAIN-SUFFIX,x.ai,PROXY
+          DOMAIN-SUFFIX,sora.com,PROXY
+          DOMAIN-KEYWORD,proactivebackend-pa.googleapis.com,PROXY
+          DOMAIN-SUFFIX,composer.opera-api.com,PROXY
+          DOMAIN-SUFFIX,user.auth.xboxlive.com,PROXY
+          DOMAIN-SUFFIX,xsts.auth.xboxlive.com,PROXY
+          FINAL,DIRECT
+          EOF
 
       - name: Перемещаем файлы в директорию rules
         run: |
