@@ -270,7 +270,6 @@ jobs:
           path: |
             ./conf.d/sr_ru_public_lists.conf
             ./conf.d/sr_basic_nonru.conf
-        retention-days: 1
 
   publish:
     runs-on: ubuntu-latest
