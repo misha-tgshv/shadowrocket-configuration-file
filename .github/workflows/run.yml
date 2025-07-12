@@ -133,8 +133,8 @@ jobs:
             | sed "1i# Last modified YT-Premium-V1: ${{ env.YT_MODULE_DATE }}" > modules/YT-Premium-V1-RU.module
 
       # --- Генерация конфигов ---
-      - name: Копируем шаблон General.txt
-        run: cp source/General.txt conf/General.txt
+      # - name: Копируем шаблон General.txt
+      #   run: cp source/General.txt conf/General.txt
 
       - name: Создаем sr_ru_public_lists.conf
         run: |
