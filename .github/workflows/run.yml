@@ -190,7 +190,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ${{ github.repository }}
-          ref: 'Custom'
+          ref: 'main'
           token: ${{ secrets.ACCESS_TOKEN }}
           sparse-checkout: |
             source/General.txt
