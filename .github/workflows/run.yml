@@ -295,11 +295,11 @@ jobs:
       #     sed -i "1s/^/# mini conf, @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" ./conf.d/sr_ru_mini.conf
       #     sed -i '1G' ./conf.d/sr_ru_mini.conf
 
-      # - name: Заменяем update-url в sr_ru_mini.conf
-      #   run: |
-      #     sed -i 's/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_public_lists\.conf/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_mini\.conf/g' ./conf.d/sr_ru_mini.conf 
-      # - name: Удаляем временный General.txt
-      #   run: rm -f ./conf.d/General.txt
+      - name: Заменяем update-url в sr_ru_mini.conf
+        run: |
+          sed -i 's/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_public_lists\.conf/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_mini\.conf/g' ./conf.d/sr_ru_mini.conf 
+      - name: Удаляем временный General.txt
+        run: rm -f ./conf.d/General.txt
 
       - name: Загружаем конфиги в artifacts
         uses: actions/upload-artifact@v4
