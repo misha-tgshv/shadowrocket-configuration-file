@@ -250,7 +250,7 @@ jobs:
             /^#/ { next }
             NF==0 { next }
             {
-              if (special_count < 3) {
+              if (special_count < 4) {
                 print "DOMAIN-KEYWORD," $1 ",PROXY"
                 special_count++
               } else {
