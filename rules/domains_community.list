@@ -1,0 +1,86 @@
+# NAME: domains_community.list
+# AUTHOR: misha-tgshv
+# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
+# UPDATED: 2025-07-12 11:02:17 MSK
+# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list
+DOMAIN-SUFFIX,spotify.com
+
+# social
+DOMAIN-SUFFIX,twimg.com
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,meta.com
+
+# other
+DOMAIN-SUFFIX,aol.com
+DOMAIN-SUFFIX,canva.dev
+DOMAIN-SUFFIX,dyson.com
+DOMAIN-SUFFIX,hostinger.com
+DOMAIN-SUFFIX,skladchina.biz
+DOMAIN-SUFFIX,splunkcloud.com
+DOMAIN-SUFFIX,realguide.com
+DOMAIN-SUFFIX,x-minus.pro
+DOMAIN-SUFFIX,api2.support-kp.com
+DOMAIN-SUFFIX,mobile-iphone.mixcloud.com
+DOMAIN-SUFFIX,thumbnailer.mixcloud.com
+DOMAIN-SUFFIX,hackernoon.com
+DOMAIN-SUFFIX,harvestapp.com
+DOMAIN-SUFFIX,cub.red
+DOMAIN-SUFFIX,cloudflare.com
+DOMAIN-SUFFIX,gql.twitch.tv
+DOMAIN-SUFFIX,usher.ttvnw.net
+DOMAIN-SUFFIX,hqporner.com
+
+# ai
+DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN-SUFFIX,elevenlabs.io
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,composer.opera-api.com
+DOMAIN-SUFFIX,googleapis.com
+
+# games
+DOMAIN-SUFFIX,anzu-us.com
+DOMAIN-SUFFIX,cdn.id.supercell.com
+DOMAIN-SUFFIX,clashofclans.com
+DOMAIN-SUFFIX,clashofclans.inbox.supercell.com
+DOMAIN-SUFFIX,game-assets.clashofclans.com
+DOMAIN-SUFFIX,game.boombeachgame.com
+DOMAIN-SUFFIX,game.clashofclans.com
+DOMAIN-SUFFIX,gameloft.com
+DOMAIN-SUFFIX,security.id.supercell.com
+
+# notion
+DOMAIN-SUFFIX,notion.so
+DOMAIN-SUFFIX,notionusercontent.com
+
+# ip
+DOMAIN-SUFFIX,ifconfig.me
+DOMAIN-SUFFIX,ipinfo.io
+DOMAIN-SUFFIX,browserleaks.com
+DOMAIN-SUFFIX,maxmind.com
+
+# analytics
+DOMAIN-SUFFIX,datacamp.com
+DOMAIN-SUFFIX,redis.io
+DOMAIN-SUFFIX,tableau.com
+DOMAIN-SUFFIX,tableausoftware.com
+DOMAIN-SUFFIX,tableauusercontent.com
+
+# xbox
+DOMAIN-SUFFIX,user.auth.xboxlive.com
+DOMAIN-SUFFIX,xsts.auth.xboxlive.com
+
+# jetbrains
+DOMAIN-SUFFIX,jetbrains.com
+
+# ukrainian 
+DOMAIN-SUFFIX,semrush.com
+DOMAIN-SUFFIX,setapp.com
+DOMAIN-SUFFIX,netpeaksoftware.com
+
+# kahoot
+DOMAIN-SUFFIX,kahoot.it
+DOMAIN-SUFFIX,kahoot.com
