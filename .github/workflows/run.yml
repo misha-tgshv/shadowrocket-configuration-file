@@ -120,7 +120,7 @@ jobs:
           ref: 'main'
           token: ${{ secrets.ACCESS_TOKEN }}
           sparse-checkout: |
-            sourсe/General.txt
+            source/General.txt
           sparse-checkout-cone-mode: false
           path: conf.d
 
@@ -193,13 +193,13 @@ jobs:
           ref: 'Custom'
           token: ${{ secrets.ACCESS_TOKEN }}
           sparse-checkout: |
-            sourсe/General.txt
+            source/General.txt
           sparse-checkout-cone-mode: false
           path: conf.d
 
       - name: Создаем конфиг sr_ru_public_lists.conf
         run: |
-          cp ./conf.d/sourсe/General.txt ./conf.d/sr_ru_public_lists.conf
+          cp ./conf.d/source/General.txt ./conf.d/sr_ru_public_lists.conf
           cat <<EOF >> ./conf.d/sr_ru_public_lists.conf
           # Выборочные правила маршрутизации
           [Rule]
@@ -220,7 +220,7 @@ jobs:
 
       - name: Создаем конфиг sr_basic_nonru.conf
         run: |
-          cp ./conf.d/sourсe/General.txt ./conf.d/sr_basic_nonru.conf
+          cp ./conf.d/source/General.txt ./conf.d/sr_basic_nonru.conf
           cat <<EOF >> ./conf.d/sr_basic_nonru.conf
           # Выборочные правила маршрутизации
           [Rule]
@@ -242,7 +242,7 @@ jobs:
 
       - name: Создаем конфиг sr_ru_mini.conf с импортом community.list
         run: |
-          cp ./conf.d/sourсe/General.txt ./conf.d/sr_ru_mini.conf
+          cp ./conf.d/source/General.txt ./conf.d/sr_ru_mini.conf
           echo "# Выборочные правила маршрутизации" >> ./conf.d/sr_ru_mini.conf
           echo "[Rule]" >> ./conf.d/sr_ru_mini.conf
           curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list | awk '
@@ -264,7 +264,7 @@ jobs:
 
       # - name: Создаем конфиг sr_ru_mini.conf
       #   run: |
-      #     cp ./conf.d/sourсe/General.txt ./conf.d/sr_ru_mini.conf
+      #     cp ./conf.d/source/General.txt ./conf.d/sr_ru_mini.conf
       #     cat <<EOF >> ./conf.d/sr_ru_mini.conf
       #     # Выборочные правила маршрутизации
       #     [Rule]
@@ -299,7 +299,7 @@ jobs:
         run: |
           sed -i 's/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_public_lists\.conf/update-url = https:\/\/cdn\.jsdelivr\.net\/gh\/misha-tgshv\/shadowrocket-configuration-file@release\/conf\/sr_ru_mini\.conf/g' ./conf.d/sr_ru_mini.conf 
       - name: Удаляем временный General.txt
-        run: rm -f ./conf.d/sourсe/General.txt
+        run: rm -f ./conf.d/source/General.txt
 
       - name: Загружаем конфиги в artifacts
         uses: actions/upload-artifact@v4
