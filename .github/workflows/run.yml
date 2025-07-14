@@ -134,7 +134,7 @@ jobs:
 
       # --- Генерация конфигов ---
       # - name: Копируем шаблон General.txt
-      #   run: cp source/General.txt conf/General.txt
+      #   run: cp source/General.txt source/General.txt
 
       - name: Создаем sr_ru_basic.conf
         run: |
