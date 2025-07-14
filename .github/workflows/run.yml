@@ -69,7 +69,7 @@ jobs:
           echo "# NAME: domains_refilter.list" > rules/domains_refilter.list
           echo "# AUTHOR: misha-tgshv" >> rules/domains_refilter.list
           echo "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file" >> rules/domains_refilter.list
-          echo "# UPDATED: $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S') MSK" >> rules/domains_refilter.list
+          echo "# UPDATED: $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S')" MSK >> rules/domains_refilter.list
           echo "# SOURCE: https://github.com/1andrevich/Re-filter-lists" >> rules/domains_refilter.list
           sed 's/^/DOMAIN-SUFFIX,/g' temp3.txt | tee domaintmp
           wc -l < domaintmp | awk '{print "# TOTAL:", $1}' >> rules/domains_refilter.list
@@ -132,68 +132,63 @@ jobs:
             | sed "1i# Last modified youtube.response.js: ${{ env.YT_SCRIPT_DATE }}" \
             | sed "1i# Last modified YT-Premium-V1: ${{ env.YT_MODULE_DATE }}" > modules/YT-Premium-V1-RU.module
 
-      # --- Генерация конфигов ---
-      # - name: Копируем шаблон General.txt
-      #   run: cp source/General.txt source/General.txt
-
+      # --- Генерация конфигов без копирования шаблона ---
       - name: Создаем sr_ru_basic.conf
         run: |
-          cp conf/General.txt conf/sr_ru_basic.conf
-          cat <<EOF >> conf/sr_ru_basic.conf
-          # Выборочные правила маршрутизации
-          [Rule]
-          # Список доменов телеграм-чата «Про Shadowrocket на русском»
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_community.list,PROXY
-          # Список доменов refilter
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_refilter.list,PROXY
-          # Список ip-адресов refilter
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/ips_refilter.list,PROXY,no-resolve
-          # Список доменов Discord
-          RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_discord.list,PROXY
-          # Список портов Discord
-          RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY
-          # Финальное правило маршрутизации
-          FINAL,DIRECT
-          EOF
-          sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" conf/sr_ru_basic.conf
+          GENERAL_CONTENT=$(cat source/General.txt)
+          {
+            echo "$GENERAL_CONTENT"
+            echo "# Выборочные правила маршрутизации"
+            echo "[Rule]"
+            echo "# Список доменов телеграм-чата «Про Shadowrocket на русском»"
+            echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_community.list,PROXY"
+            echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_refilter.list,PROXY"
+            echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/ips_refilter.list,PROXY,no-resolve"
+            echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_discord.list,PROXY"
+            echo "RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY"
+            echo "FINAL,DIRECT"
+          } > conf/sr_ru_basic.conf
+          sed -i "1s/^/# @misha-tgshv, built on $(TZ=\"Asia/Novokuznetsk\" date)\n/" conf/sr_ru_basic.conf
 
       - name: Создаем sr_basic_nonru.conf
         run: |
-          cp conf/General.txt conf/sr_basic_nonru.conf
-          cat <<EOF >> conf/sr_basic_nonru.conf
-          # Выборочные правила маршрутизации
-          [Rule]
-          # Российские домены через прокси
-          DOMAIN-SUFFIX,ru,PROXY
-          DOMAIN-SUFFIX,su,PROXY
-          DOMAIN-SUFFIX,рф,PROXY
-          DOMAIN-KEYWORD,.ru,PROXY
-          DOMAIN-KEYWORD,.su,PROXY
-          DOMAIN-KEYWORD,.рф,PROXY
-          # Финальное правило: все остальное напрямую
-          FINAL,DIRECT
-          EOF
-          sed -i "1s/^/# @misha-tgshv, built on $(TZ="Asia/Novokuznetsk" date)\n/" conf/sr_basic_nonru.conf
+          GENERAL_CONTENT=$(cat source/General.txt)
+          {
+            echo "$GENERAL_CONTENT"
+            echo "# Выборочные правила маршрутизации"
+            echo "[Rule]"
+            echo "DOMAIN-SUFFIX,ru,PROXY"
+            echo "DOMAIN-SUFFIX,su,PROXY"
+            echo "DOMAIN-SUFFIX,рф,PROXY"
+            echo "DOMAIN-KEYWORD,.ru,PROXY"
+            echo "DOMAIN-KEYWORD,.su,PROXY"
+            echo "DOMAIN-KEYWORD,.рф,PROXY"
+            echo "FINAL,DIRECT"
+          } > conf/sr_basic_nonru.conf
+          sed -i "1s/^/# @misha-tgshv, built on $(TZ=\"Asia/Novokuznetsk\" date)\n/" conf/sr_basic_nonru.conf
 
       - name: Создаем sr_ru_mini.conf с импортом community.list
         run: |
-          cp conf/General.txt conf/sr_ru_mini.conf
-          echo "# Выборочные правила маршрутизации" >> conf/sr_ru_mini.conf
-          echo "[Rule]" >> conf/sr_ru_mini.conf
-          curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list | awk '
-            BEGIN { special_count=0 }
-            /^#/ { next }
-            NF==0 { next }
-            {
-              if (special_count < 4) {
-                print "DOMAIN-KEYWORD," $1 ",PROXY"
-                special_count++
-              } else {
-                print "DOMAIN-SUFFIX," $1 ",PROXY"
+          GENERAL_CONTENT=$(cat source/General.txt)
+          {
+            echo "$GENERAL_CONTENT"
+            echo "# Выборочные правила маршрутизации"
+            echo "[Rule]"
+            curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list | awk '
+              BEGIN { special_count=0 }
+              /^#/ { next }
+              NF==0 { next }
+              {
+                if (special_count < 4) {
+                  print "DOMAIN-KEYWORD," $1 ",PROXY"
+                  special_count++
+                } else {
+                  print "DOMAIN-SUFFIX," $1 ",PROXY"
+                }
               }
-            }
-          ' >> conf/sr_ru_mini.conf
-          echo "FINAL,DIRECT" >> conf/sr_ru_mini.conf
+            '
+            echo "FINAL,DIRECT"
+          } > conf/sr_ru_mini.conf
           sed -i "1s/^/# mini conf, @misha-tgshv, built on $(TZ=\"Asia/Novokuznetsk\" date)\n/" conf/sr_ru_mini.conf
           sed -i '1G' conf/sr_ru_mini.conf
 
