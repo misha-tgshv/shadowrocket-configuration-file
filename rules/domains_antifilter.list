@@ -1,4 +1,4 @@
-# Количество доменов: 455
+# Количество доменов: 456
 DOMAIN-SUFFIX,10minutemail.com
 DOMAIN-SUFFIX,1337x.to
 DOMAIN-SUFFIX,4pda.to
@@ -44,6 +44,7 @@ DOMAIN-SUFFIX,appstorrent.ru
 DOMAIN-SUFFIX,apt.releases.hashicorp.com
 DOMAIN-SUFFIX,aqicn.org
 DOMAIN-SUFFIX,arc.intel.com
+DOMAIN-SUFFIX,archiveofourown.org
 DOMAIN-SUFFIX,arm.com
 DOMAIN-SUFFIX,artifacts.elastic.co
 DOMAIN-SUFFIX,atlassian.com
