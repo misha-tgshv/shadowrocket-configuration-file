@@ -23,16 +23,18 @@ jobs:
         run: |
           mkdir -p rules scripts modules conf
 
-      # --- Генерация файлов (как у тебя, без изменений) ---
-      # (здесь вставляй все свои шаги генерации списков и скриптов)
+      # --- Генерация файлов (оставь свои шаги без изменений) ---
+      # ... здесь твои шаги генерации rules, scripts, modules ...
 
-      # --- Генерация конфигов с корректным обновлением update-url ---
-      - name: Создаем sr_ru_basic.conf с правильным update-url
+      # --- Генерация конфигов ---
+      - name: Создаем sr_ru_basic.conf с заменой update-url в копии general
         run: |
           CONFNAME="sr_ru_basic.conf"
-          GENERAL_CONTENT=$(cat source/General.txt)
+          cp source/General.txt conf/General.tmp
+          sed -i "s|^update-url =.*|update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/${CONFNAME}|" conf/General.tmp
+
           {
-            echo "$GENERAL_CONTENT"
+            cat conf/General.tmp
             echo "# Выборочные правила маршрутизации"
             echo "[Rule]"
             echo "# Список доменов телеграм-чата «Про Shadowrocket на русском»"
@@ -44,20 +46,17 @@ jobs:
             echo "FINAL,DIRECT"
           } > conf/${CONFNAME}
 
-          # Удаляем все старые update-url
-          sed -i '/^update-url =/d' conf/${CONFNAME}
-          # Вставляем новую update-url сразу после [General]
-          sed -i '/\[General\]/a update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/'"${CONFNAME}" conf/${CONFNAME}
-
-          # Добавляем комментарий с датой сборки
           sed -i "1s/^/# @misha-tgshv, built on $(TZ=\"Asia/Novokuznetsk\" date)\n/" conf/${CONFNAME}
+          rm conf/General.tmp
 
-      - name: Создаем sr_basic_nonru.conf с правильным update-url
+      - name: Создаем sr_basic_nonru.conf с заменой update-url
         run: |
           CONFNAME="sr_basic_nonru.conf"
-          GENERAL_CONTENT=$(cat source/General.txt)
+          cp source/General.txt conf/General.tmp
+          sed -i "s|^update-url =.*|update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/${CONFNAME}|" conf/General.tmp
+
           {
-            echo "$GENERAL_CONTENT"
+            cat conf/General.tmp
             echo "# Выборочные правила маршрутизации"
             echo "[Rule]"
             echo "DOMAIN-SUFFIX,ru,PROXY"
@@ -69,16 +68,17 @@ jobs:
             echo "FINAL,DIRECT"
           } > conf/${CONFNAME}
 
-          sed -i '/^update-url =/d' conf/${CONFNAME}
-          sed -i '/\[General\]/a update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/'"${CONFNAME}" conf/${CONFNAME}
           sed -i "1s/^/# @misha-tgshv, built on $(TZ=\"Asia/Novokuznetsk\" date)\n/" conf/${CONFNAME}
+          rm conf/General.tmp
 
-      - name: Создаем sr_ru_mini.conf с правильным update-url
+      - name: Создаем sr_ru_mini.conf с заменой update-url
         run: |
           CONFNAME="sr_ru_mini.conf"
-          GENERAL_CONTENT=$(cat source/General.txt)
+          cp source/General.txt conf/General.tmp
+          sed -i "s|^update-url =.*|update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/${CONFNAME}|" conf/General.tmp
+
           {
-            echo "$GENERAL_CONTENT"
+            cat conf/General.tmp
             echo "# Выборочные правила маршрутизации"
             echo "[Rule]"
             curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list | awk '
@@ -97,12 +97,11 @@ jobs:
             echo "FINAL,DIRECT"
           } > conf/${CONFNAME}
 
-          sed -i '/^update-url =/d' conf/${CONFNAME}
-          sed -i '/\[General\]/a update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/'"${CONFNAME}" conf/${CONFNAME}
           sed -i "1s/^/# mini conf, @misha-tgshv, built on $(TZ=\"Asia/Novokuznetsk\" date)\n/" conf/${CONFNAME}
           sed -i '1G' conf/${CONFNAME}
+          rm conf/General.tmp
 
-      # --- Остальные твои шаги, например git commit и push ---
+      # --- Коммитим и пушим ---
       - name: Настраиваем git
         run: |
           git config --local user.name "github-actions[bot]"
