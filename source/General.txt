@@ -77,7 +77,7 @@ udp-policy-not-supported-behaviour = REJECT
 include = sr_ru_extended.conf
 
 # URL-адрес обновления файла конфигурации
-update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/sr_ru_public_lists.conf
+update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/conf/sr_ru_basic.conf
 
 # Выбираем наиболее быстрый сервера для прокси
 # [Proxy Group]
