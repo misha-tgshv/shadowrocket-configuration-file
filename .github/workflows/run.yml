@@ -31,7 +31,7 @@ jobs:
         run: |
           CONFNAME="sr_ru_basic.conf"
           cp source/General.txt conf/General.tmp
-          sed -i "s|^update-url =.*|update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/${CONFNAME}|" conf/General.tmp
+          sed -i "s|^update-url =.*|update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/conf/${CONFNAME}|" conf/General.tmp
 
           {
             cat conf/General.tmp
@@ -75,7 +75,7 @@ jobs:
         run: |
           CONFNAME="sr_ru_mini.conf"
           cp source/General.txt conf/General.tmp
-          sed -i "s|^update-url =.*|update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/${CONFNAME}|" conf/General.tmp
+          sed -i "s|^update-url =.*|update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/conf/${CONFNAME}|" conf/General.tmp
 
           {
             cat conf/General.tmp
