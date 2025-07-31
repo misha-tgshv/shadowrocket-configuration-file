@@ -3,8 +3,8 @@
 
 ## Конфиги
 ### Базовый конфиг
- Весь трафик будет идти напрямую через вашего оператора связи, а запросы к доменам из конфига будут идти через ваш сервер. Например, у вас будет доступ к Ютуб или Инстаграм без необходимости каждый раз запускать программу для VPN.
-Базовый конфиг [sr_ru_public_lists.conf](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/conf/sr_ru_public_lists.conf). Он включает в себя пять списков:
+Весь трафик будет идти напрямую через вашего оператора связи, а запросы к доменам из конфига будут идти через ваш сервер. Например, у вас будет доступ к Ютуб или Инстаграм без необходимости каждый раз запускать программу для VPN.
+Базовый конфиг [sr_ru_basic.conf](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/conf/sr_ru_basic.conf). Он включает в себя пять списков:
 * domain_comunity.list — домены телеграм-чата «Про Shadowrocket на русском»;
 * domain_refilter.list — домены из списка сообщества [Re:filter](https://github.com/1andrevich/Re-filter-lists);
 * ip_refilter.list — IP-адреса из списка сообщества Re:filer;
