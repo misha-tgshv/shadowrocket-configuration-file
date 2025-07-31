@@ -50,7 +50,7 @@ tun-included-routes =
 always-real-ip=time.*.com,ntp.*.com,*.cloudflareclient.com
 
 # Включает автоматический ответ на ping (ICMP Echo Request) от имени TUN-интерфейса. Удобно для сетевой диагностики, но может приводить к созданию fake-IP маппинга, что увеличивает расход ресурсов и может в итоге разряжать аккумулятор. Если цель — минимизация fake-IP и энергозатрат, ставить false.
-icmp-auto-reply = true
+icmp-auto-reply = false
 
 # Управляет, активна ли политика REJECT для URL-перезаписи вне режима конфигурации. При true REJECT работает постоянно, что может «жёстко» блокировать трафик. 
 always-reject-url-rewrite = false
