@@ -132,12 +132,14 @@ jobs:
             | sed "1i# Last modified youtube.response.js: ${{ env.YT_SCRIPT_DATE }}" \
             | sed "1i# Last modified YT-Premium-V1: ${{ env.YT_MODULE_DATE }}" > modules/YT-Premium-V1-RU.module
 
-      # --- Генерация конфигов без копирования шаблона ---
+      # --- Генерация конфигов с подстановкой имени файла в update-url ---
       - name: Создаем sr_ru_basic.conf
         run: |
+          CONFNAME="sr_ru_basic.conf"
           GENERAL_CONTENT=$(cat source/General.txt)
           {
             echo "$GENERAL_CONTENT"
+            echo "update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/${CONFNAME}"
             echo "# Выборочные правила маршрутизации"
             echo "[Rule]"
             echo "# Список доменов телеграм-чата «Про Shadowrocket на русском»"
@@ -147,14 +149,16 @@ jobs:
             echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_discord.list,PROXY"
             echo "RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY"
             echo "FINAL,DIRECT"
-          } > conf/sr_ru_basic.conf
-          sed -i "1s/^/# @misha-tgshv, built on $(TZ=\"Asia/Novokuznetsk\" date)\n/" conf/sr_ru_basic.conf
+          } > conf/${CONFNAME}
+          sed -i "1s/^/# @misha-tgshv, built on $(TZ=\"Asia/Novokuznetsk\" date)\n/" conf/${CONFNAME}
 
       - name: Создаем sr_basic_nonru.conf
         run: |
+          CONFNAME="sr_basic_nonru.conf"
           GENERAL_CONTENT=$(cat source/General.txt)
           {
             echo "$GENERAL_CONTENT"
+            echo "update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/${CONFNAME}"
             echo "# Выборочные правила маршрутизации"
             echo "[Rule]"
             echo "DOMAIN-SUFFIX,ru,PROXY"
@@ -164,14 +168,16 @@ jobs:
             echo "DOMAIN-KEYWORD,.su,PROXY"
             echo "DOMAIN-KEYWORD,.рф,PROXY"
             echo "FINAL,DIRECT"
-          } > conf/sr_basic_nonru.conf
-          sed -i "1s/^/# @misha-tgshv, built on $(TZ=\"Asia/Novokuznetsk\" date)\n/" conf/sr_basic_nonru.conf
+          } > conf/${CONFNAME}
+          sed -i "1s/^/# @misha-tgshv, built on $(TZ=\"Asia/Novokuznetsk\" date)\n/" conf/${CONFNAME}
 
       - name: Создаем sr_ru_mini.conf с импортом community.list
         run: |
+          CONFNAME="sr_ru_mini.conf"
           GENERAL_CONTENT=$(cat source/General.txt)
           {
             echo "$GENERAL_CONTENT"
+            echo "update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@release/conf/${CONFNAME}"
             echo "# Выборочные правила маршрутизации"
             echo "[Rule]"
             curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list | awk '
@@ -188,9 +194,9 @@ jobs:
               }
             '
             echo "FINAL,DIRECT"
-          } > conf/sr_ru_mini.conf
-          sed -i "1s/^/# mini conf, @misha-tgshv, built on $(TZ=\"Asia/Novokuznetsk\" date)\n/" conf/sr_ru_mini.conf
-          sed -i '1G' conf/sr_ru_mini.conf
+          } > conf/${CONFNAME}
+          sed -i "1s/^/# mini conf, @misha-tgshv, built on $(TZ=\"Asia/Novokuznetsk\" date)\n/" conf/${CONFNAME}
+          sed -i '1G' conf/${CONFNAME}
 
       # --- Автоматический коммит и push ---
       - name: Настраиваем git
