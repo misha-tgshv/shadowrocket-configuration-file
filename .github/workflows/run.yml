@@ -108,6 +108,9 @@ jobs:
           
           # Удаляем строку update-url, если она там есть
           sed -i '/^update-url =/d' conf/General.tmp
+
+          # Закомментируем строку include = sr_ru_extended.conf
+          sed -i 's|^\(include = sr_ru_extended.conf\)|# \1|' conf/General.tmp
       
           {
             cat conf/General.tmp
