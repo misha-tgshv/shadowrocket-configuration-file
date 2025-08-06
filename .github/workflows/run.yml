@@ -26,20 +26,26 @@ jobs:
       # --- Генерация файлов ---
       - name: Генерируем domains_community.list
         run: |
-          curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list \
-            | awk 'NR==1 {print "# NAME: domains_community.list"}
-                   NR==2 {print "# AUTHOR: misha-tgshv"}
-                   NR==3 {print "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file"}
-                   NR==4 {print "# UPDATED: " strftime("%Y-%m-%d %H:%M:%S", systime(), 1) " MSK"}
-                   NR==5 {print "# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list"}
-                   NR>5 {
-                     if ($0 ~ /#gemini/) {print "DOMAIN-KEYWORD," $0; next}
-                     if (NR==2 || NR==3 || NR==4) {print "DOMAIN-KEYWORD," $0; next}
-                     if (NR==5) {print "DOMAIN," $0; next}
-                     if (NR==8) {print "URL-REGEX," $0; next}
-                     if (!/^#/ && NF>0) {print "DOMAIN-SUFFIX," $0; next}
-                     if (/^#/ || NF==0) {print $0}
-                   }' > rules/domains_community.list
+          curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list | \
+          awk '
+          NR==1 { print "# NAME: domains_community.list"; next }
+          NR==2 { print "# AUTHOR: misha-tgshv"; next }
+          NR==3 { print "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file"; next }
+          NR==4 { print "# UPDATED: " strftime("%Y-%m-%d %H:%M:%S", systime(), 1) " MSK"; next }
+          NR==5 { print "# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list"; next }
+
+          # Пропускаем комментарии и пустые строки
+          /^#/ || NF==0 { print $0; next }
+          
+          # Если строка содержит "gemini", метим DOMAIN-KEYWORD
+          $0 ~ /gemini/ { print "DOMAIN-KEYWORD," $0; next }
+          
+          # Если строка содержит слеш "/", считаем, что это URL-REGEX
+          $0 ~ /\// { print "URL-REGEX," $0; next }
+          
+          # Все остальные — DOMAIN-SUFFIX
+          { print "DOMAIN-SUFFIX," $0 }
+          ' > rules/domains_community.list
 
       - name: Генерируем domains_antifilter.list
         run: |
