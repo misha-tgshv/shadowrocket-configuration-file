@@ -29,17 +29,29 @@ jobs:
           curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list \
             | tr -d '\r' \
             | awk '
+              function trim(s) {
+                gsub(/^[ \t\r\n]+/, "", s);
+                gsub(/[ \t\r\n]+$/, "", s);
+                return s;
+              }
+          
               NR==1 { print "# NAME: domains_community.list"; next }
               NR==2 { print "# AUTHOR: misha-tgshv"; next }
               NR==3 { print "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file"; next }
               NR==4 { print "# UPDATED: " strftime("%Y-%m-%d %H:%M:%S", systime(), 1) " MSK"; next }
               NR==5 { print "# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list"; next }
-              /^#/ || NF==0 { print $0; next }
-              $0 ~ /\// { print "URL-REGEX," $0; next }
-              $0 !~ /\./ { print "DOMAIN-KEYWORD," $0; next }
-              $0 ~ /^[^\/]*\.[^\/.]+$/ { print "DOMAIN," $0; next }
-              { print "DOMAIN-SUFFIX," $0 }
-            ' > rules/domains_community.list
+          
+              {
+                line = trim($0);
+                if (line == "") { print ""; next }
+                if (line ~ /^#/) { print line; next }
+                if (line ~ /\//) { print "URL-REGEX," line; next }
+                if (line !~ /\./) { print "DOMAIN-KEYWORD," line; next }
+                if (line ~ /^[^\/]*\.[^\/.]+$/) { print "DOMAIN," line; next }
+                print "DOMAIN-SUFFIX," line;
+              }
+            '
+
               
       - name: Генерируем domains_antifilter.list
         run: |
