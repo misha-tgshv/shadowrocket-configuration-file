@@ -1,19 +1,22 @@
 # NAME: domains_community.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2025-08-06 18:37:37 MSK
+# UPDATED: 2025-08-06 18:48:52 MSK
 # SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list
+# special
+DOMAIN-KEYWORD,instagram
+DOMAIN-KEYWORD,4pda
+DOMAIN-KEYWORD,tiktok
+DOMAIN-KEYWORD,gemini
 DOMAIN-KEYWORD,yt3
 DOMAIN,spotify.com
 URL-REGEX,habr.com/ru/articles/785186/
-
 # social
 DOMAIN,twimg.com
 DOMAIN,fbcdn.net
 DOMAIN,fbsbx.com
 DOMAIN,meta.com
 DOMAIN,googleusercontent.com
-
 # other
 DOMAIN,aol.com
 DOMAIN,canva.dev
@@ -33,7 +36,6 @@ DOMAIN,cloudflare.com
 DOMAIN,gql.twitch.tv
 DOMAIN,usher.ttvnw.net
 DOMAIN,hqporner.com
-
 # ai
 DOMAIN,apple-relay.apple.com
 DOMAIN,copilot.microsoft.com
@@ -45,7 +47,6 @@ DOMAIN,composer.opera-api.com
 DOMAIN,googleapis.com
 DOMAIN,manus.im
 DOMAIN,anthropic.com
-
 # games
 DOMAIN,anzu-us.com
 DOMAIN,cdn.id.supercell.com
@@ -56,36 +57,29 @@ DOMAIN,game.boombeachgame.com
 DOMAIN,game.clashofclans.com
 DOMAIN,gameloft.com
 DOMAIN,security.id.supercell.com
-
 # notion
 DOMAIN,notion.so
 DOMAIN,notionusercontent.com
-
 # ip
 DOMAIN,ifconfig.me
 DOMAIN,ipinfo.io
 DOMAIN,browserleaks.com
 DOMAIN,maxmind.com
-
 # analytics
 DOMAIN,datacamp.com
 DOMAIN,redis.io
 DOMAIN,tableau.com
 DOMAIN,tableausoftware.com
 DOMAIN,tableauusercontent.com
-
 # xbox
 DOMAIN,user.auth.xboxlive.com
 DOMAIN,xsts.auth.xboxlive.com
-
 # jetbrains
 DOMAIN,jetbrains.com
-
 # ukrainian 
 DOMAIN,semrush.com
 DOMAIN,setapp.com
 DOMAIN,netpeaksoftware.com
-
 # kahoot
 DOMAIN,kahoot.it
 DOMAIN,kahoot.com
