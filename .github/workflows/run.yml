@@ -27,23 +27,19 @@ jobs:
       - name: Генерируем domains_community.list
         run: |
           curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list \
+            | tr -d '\r' \
             | awk '
               NR==1 { print "# NAME: domains_community.list"; next }
               NR==2 { print "# AUTHOR: misha-tgshv"; next }
               NR==3 { print "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file"; next }
               NR==4 { print "# UPDATED: " strftime("%Y-%m-%d %H:%M:%S", systime(), 1) " MSK"; next }
               NR==5 { print "# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list"; next }
-              # Просто копируем все комментарии и пустые
               /^#/ || NF==0 { print $0; next }
-              # логика для URL-REGEX
               $0 ~ /\// { print "URL-REGEX," $0; next }
-              # логика для DOMAIN-KEYWORD (нет точки)
               $0 !~ /\./ { print "DOMAIN-KEYWORD," $0; next }
-              # логика для DOMAIN. Домен вида x.y без поддоменов
               $0 ~ /^[^\/]*\.[^\/.]+$/ { print "DOMAIN," $0; next }
-              # все остальное — DOMAIN-SUFFIX
               { print "DOMAIN-SUFFIX," $0 }
-              '
+            ' > rules/domains_community.list
               
       - name: Генерируем domains_antifilter.list
         run: |
