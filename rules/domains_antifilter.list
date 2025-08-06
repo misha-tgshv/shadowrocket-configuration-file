@@ -1,4 +1,4 @@
-# Количество доменов: 456
+# Количество доменов: 458
 DOMAIN-SUFFIX,10minutemail.com
 DOMAIN-SUFFIX,1337x.to
 DOMAIN-SUFFIX,4pda.to
@@ -252,6 +252,7 @@ DOMAIN-SUFFIX,nordvpn.com
 DOMAIN-SUFFIX,notepad-plus-plus.org
 DOMAIN-SUFFIX,novayagazeta.eu
 DOMAIN-SUFFIX,novayagazeta.ru
+DOMAIN-SUFFIX,nsf.gov
 DOMAIN-SUFFIX,ntc.party
 DOMAIN-SUFFIX,nxp.com
 DOMAIN-SUFFIX,nyaa.si
@@ -401,6 +402,7 @@ DOMAIN-SUFFIX,vipdrive.net
 DOMAIN-SUFFIX,vot-tak.tv
 DOMAIN-SUFFIX,vrv.co
 DOMAIN-SUFFIX,vyos.io
+DOMAIN-SUFFIX,vyos.net
 DOMAIN-SUFFIX,watchguard.com
 DOMAIN-SUFFIX,weather.com
 DOMAIN-SUFFIX,weblance.com.ua
