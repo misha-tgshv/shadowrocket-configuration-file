@@ -36,6 +36,7 @@ jobs:
               /^#/ || NF==0 { print $0; next }
               $0 ~ /\// { print "URL-REGEX," $0; next }
               $0 !~ /\./ { print "DOMAIN-KEYWORD," $0; next }
+              $0 ~ /^[^\/]*\.[^\/.]+$/ { print "DOMAIN," $0; next }
               { print "DOMAIN-SUFFIX," $0 }
             ' > rules/domains_community.list
 
