@@ -26,32 +26,29 @@ jobs:
       # --- Генерация файлов ---
       - name: Генерируем domains_community.list
         run: |
-          curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list \
-            | tr -d '\r' \
-            | awk '
-              function trim(s) {
-                gsub(/^[ \t\r\n]+/, "", s);
-                gsub(/[ \t\r\n]+$/, "", s);
-                return s;
-              }
-          
-              NR==1 { print "# NAME: domains_community.list"; next }
-              NR==2 { print "# AUTHOR: misha-tgshv"; next }
-              NR==3 { print "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file"; next }
-              NR==4 { print "# UPDATED: " strftime("%Y-%m-%d %H:%M:%S", systime(), 1) " MSK"; next }
-              NR==5 { print "# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list"; next }
-          
-              {
-                line = trim($0);
-                if (line == "") { print ""; next }
-                if (line ~ /^#/) { print line; next }
-                if (line ~ /\//) { print "URL-REGEX," line; next }
-                if (line !~ /\./) { print "DOMAIN-KEYWORD," line; next }
-                if (line ~ /^[^\/]*\.[^\/.]+$/) { print "DOMAIN," line; next }
-                print "DOMAIN-SUFFIX," line;
-              }
+          curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list | \
+            tr -d '\r' | \
+            awk '
+            BEGIN {
+              print "# NAME: domains_community.list";
+              print "# AUTHOR: misha-tgshv";
+              print "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file";
+              print "# UPDATED: " strftime("%Y-%m-%d %H:%M:%S", systime(), 1) " MSK";
+              print "# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list";
+            }
+            # Копируем комментарии
+            /^#/ { print $0; next }
+            # Пропускаем пустые
+            /^$/ { next }
+            # URL-REGEX если есть слэш
+            /\// { print "URL-REGEX," $0; next }
+            # DOMAIN-KEYWORD если нет ни одной точки
+            !/./ { print "DOMAIN-KEYWORD," $0; next }
+            # DOMAIN если одинарный домен (ровно одна точка, нет /)
+            /^[^\/]*\.[^\/.]+$/ { print "DOMAIN," $0; next }
+            # Всё остальное — DOMAIN-SUFFIX
+            { print "DOMAIN-SUFFIX," $0 }
             '
-
               
       - name: Генерируем domains_antifilter.list
         run: |
