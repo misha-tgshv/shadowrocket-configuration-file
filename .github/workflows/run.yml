@@ -25,24 +25,24 @@ jobs:
 
       # --- Генерация файлов ---
       - name: Генерируем domains_community.list
-          run: |
-            curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list | \
-            tr -d '\r' | \
-            awk '
-            BEGIN {
-              print "# NAME: domains_community.list";
-              print "# AUTHOR: misha-tgshv";
-              print "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file";
-              print "# UPDATED: " strftime("%Y-%m-%d %H:%M:%S", systime(), 1) " MSK";
-              print "# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list";
-            }
-            /^#/ { print $0; next }
-            /^$/ { next }
-            /\// { print "URL-REGEX," $0; next }
-            $0 !~ /\./ { print "DOMAIN-KEYWORD," $0; next }
-            /^[^\/]*\.[^\/.]+$/ { print "DOMAIN," $0; next }
-            { print "DOMAIN-SUFFIX," $0 }
-            ' > rules/domains_community.list
+        run: | 
+          curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list | \
+          tr -d '\r' | \
+          awk '
+          BEGIN {
+            print "# NAME: domains_community.list";
+            print "# AUTHOR: misha-tgshv";
+            print "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file";
+            print "# UPDATED: " strftime("%Y-%m-%d %H:%M:%S", systime(), 1) " MSK";
+            print "# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list";
+          }
+          /^#/ { print $0; next }
+          /^$/ { next }
+          /\// { print "URL-REGEX," $0; next }
+          $0 !~ /\./ { print "DOMAIN-KEYWORD," $0; next }
+          /^[^\/]*\.[^\/.]+$/ { print "DOMAIN," $0; next }
+          { print "DOMAIN-SUFFIX," $0 }
+          ' > rules/domains_community.list
               
       - name: Генерируем domains_antifilter.list
         run: |
