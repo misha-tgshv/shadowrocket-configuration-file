@@ -1,9 +1,9 @@
 # NAME: domains_community.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2025-08-06 18:26:44 MSK
+# UPDATED: 2025-08-06 18:29:18 MSK
 # SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list
-DOMAIN-SUFFIX,yt3
+DOMAIN-KEYWORD,yt3
 DOMAIN-SUFFIX,spotify.com
 URL-REGEX,habr.com/ru/articles/785186/
 
