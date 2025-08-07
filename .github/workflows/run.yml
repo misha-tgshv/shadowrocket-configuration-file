@@ -36,7 +36,7 @@ jobs:
             print "# UPDATED: " strftime("%Y-%m-%d %H:%M:%S", systime(), 1) " MSK";
             print "# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list";
           }
-          NR>5 && /^#/  { print $0; print ""; next }
+          NR>5 && /^#/  { print ""; print $0; next }
           NF == 0 { next }
           $0 == "instagram" { print "DOMAIN-KEYWORD,instagram"; next }
           $0 == "4pda"      { print "DOMAIN-KEYWORD,4pda"; next }
@@ -48,7 +48,6 @@ jobs:
           { print "DOMAIN-SUFFIX," $0 }
           ' > rules/domains_community.list
 
-              
       - name: Генерируем domains_antifilter.list
         run: |
           curl -sSL https://community.antifilter.download/list/domains.lst \
