@@ -36,17 +36,18 @@ jobs:
             print "# UPDATED: " strftime("%Y-%m-%d %H:%M:%S", systime(), 1) " MSK";
             print "# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list";
           }
-          /^#/ { print $0; next }
+          NR>5 && /^#/  { print $0; print ""; next }
           NF == 0 { next }
           $0 == "instagram" { print "DOMAIN-KEYWORD,instagram"; next }
-          $0 == "4pda" { print "DOMAIN-KEYWORD,4pda"; next }
-          $0 == "tiktok" { print "DOMAIN-KEYWORD,tiktok"; next }
-          $0 == "gemini" { print "DOMAIN-KEYWORD,gemini"; next }
-          $0 == "yt3" { print "DOMAIN-KEYWORD,yt3"; next }
+          $0 == "4pda"      { print "DOMAIN-KEYWORD,4pda"; next }
+          $0 == "tiktok"    { print "DOMAIN-KEYWORD,tiktok"; next }
+          $0 == "gemini"    { print "DOMAIN-KEYWORD,gemini"; next }
+          $0 == "yt3"       { print "DOMAIN-KEYWORD,yt3"; next }
           $0 == "spotify.com" { print "DOMAIN,spotify.com"; next }
           $0 == "habr.com/ru/articles/785186/" { print "URL-REGEX,habr.com/ru/articles/785186/"; next }
           { print "DOMAIN-SUFFIX," $0 }
           ' > rules/domains_community.list
+
               
       - name: Генерируем domains_antifilter.list
         run: |
