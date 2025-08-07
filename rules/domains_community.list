@@ -1,7 +1,7 @@
 # NAME: domains_community.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2025-08-07 00:53:49 MSK
+# UPDATED: 2025-08-07 03:40:17 MSK
 # SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list
 # special
 DOMAIN-KEYWORD,instagram
@@ -12,74 +12,74 @@ DOMAIN-KEYWORD,yt3
 DOMAIN,spotify.com
 URL-REGEX,habr.com/ru/articles/785186/
 # social
-DOMAIN,twimg.com
-DOMAIN,fbcdn.net
-DOMAIN,fbsbx.com
-DOMAIN,meta.com
-DOMAIN,googleusercontent.com
+DOMAIN-SUFFIX,twimg.com
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,meta.com
+DOMAIN-SUFFIX,googleusercontent.com
 # other
-DOMAIN,aol.com
-DOMAIN,canva.dev
-DOMAIN,dyson.com
-DOMAIN,hostinger.com
-DOMAIN,skladchina.biz
-DOMAIN,splunkcloud.com
-DOMAIN,realguide.com
-DOMAIN,x-minus.pro
-DOMAIN,api2.support-kp.com
-DOMAIN,mobile-iphone.mixcloud.com
-DOMAIN,thumbnailer.mixcloud.com
-DOMAIN,hackernoon.com
-DOMAIN,harvestapp.com
-DOMAIN,cub.red
-DOMAIN,cloudflare.com
-DOMAIN,gql.twitch.tv
-DOMAIN,usher.ttvnw.net
-DOMAIN,hqporner.com
+DOMAIN-SUFFIX,aol.com
+DOMAIN-SUFFIX,canva.dev
+DOMAIN-SUFFIX,dyson.com
+DOMAIN-SUFFIX,hostinger.com
+DOMAIN-SUFFIX,skladchina.biz
+DOMAIN-SUFFIX,splunkcloud.com
+DOMAIN-SUFFIX,realguide.com
+DOMAIN-SUFFIX,x-minus.pro
+DOMAIN-SUFFIX,api2.support-kp.com
+DOMAIN-SUFFIX,mobile-iphone.mixcloud.com
+DOMAIN-SUFFIX,thumbnailer.mixcloud.com
+DOMAIN-SUFFIX,hackernoon.com
+DOMAIN-SUFFIX,harvestapp.com
+DOMAIN-SUFFIX,cub.red
+DOMAIN-SUFFIX,cloudflare.com
+DOMAIN-SUFFIX,gql.twitch.tv
+DOMAIN-SUFFIX,usher.ttvnw.net
+DOMAIN-SUFFIX,hqporner.com
 # ai
-DOMAIN,apple-relay.apple.com
-DOMAIN,copilot.microsoft.com
-DOMAIN,elevenlabs.io
-DOMAIN,grok.com
-DOMAIN,x.ai
-DOMAIN,sora.com
-DOMAIN,composer.opera-api.com
-DOMAIN,googleapis.com
-DOMAIN,manus.im
-DOMAIN,anthropic.com
+DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN-SUFFIX,elevenlabs.io
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,composer.opera-api.com
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,manus.im
+DOMAIN-SUFFIX,anthropic.com
 # games
-DOMAIN,anzu-us.com
-DOMAIN,cdn.id.supercell.com
-DOMAIN,clashofclans.com
-DOMAIN,clashofclans.inbox.supercell.com
-DOMAIN,game-assets.clashofclans.com
-DOMAIN,game.boombeachgame.com
-DOMAIN,game.clashofclans.com
-DOMAIN,gameloft.com
-DOMAIN,security.id.supercell.com
+DOMAIN-SUFFIX,anzu-us.com
+DOMAIN-SUFFIX,cdn.id.supercell.com
+DOMAIN-SUFFIX,clashofclans.com
+DOMAIN-SUFFIX,clashofclans.inbox.supercell.com
+DOMAIN-SUFFIX,game-assets.clashofclans.com
+DOMAIN-SUFFIX,game.boombeachgame.com
+DOMAIN-SUFFIX,game.clashofclans.com
+DOMAIN-SUFFIX,gameloft.com
+DOMAIN-SUFFIX,security.id.supercell.com
 # notion
-DOMAIN,notion.so
-DOMAIN,notionusercontent.com
+DOMAIN-SUFFIX,notion.so
+DOMAIN-SUFFIX,notionusercontent.com
 # ip
-DOMAIN,ifconfig.me
-DOMAIN,ipinfo.io
-DOMAIN,browserleaks.com
-DOMAIN,maxmind.com
+DOMAIN-SUFFIX,ifconfig.me
+DOMAIN-SUFFIX,ipinfo.io
+DOMAIN-SUFFIX,browserleaks.com
+DOMAIN-SUFFIX,maxmind.com
 # analytics
-DOMAIN,datacamp.com
-DOMAIN,redis.io
-DOMAIN,tableau.com
-DOMAIN,tableausoftware.com
-DOMAIN,tableauusercontent.com
+DOMAIN-SUFFIX,datacamp.com
+DOMAIN-SUFFIX,redis.io
+DOMAIN-SUFFIX,tableau.com
+DOMAIN-SUFFIX,tableausoftware.com
+DOMAIN-SUFFIX,tableauusercontent.com
 # xbox
-DOMAIN,user.auth.xboxlive.com
-DOMAIN,xsts.auth.xboxlive.com
+DOMAIN-SUFFIX,user.auth.xboxlive.com
+DOMAIN-SUFFIX,xsts.auth.xboxlive.com
 # jetbrains
-DOMAIN,jetbrains.com
+DOMAIN-SUFFIX,jetbrains.com
 # ukrainian 
-DOMAIN,semrush.com
-DOMAIN,setapp.com
-DOMAIN,netpeaksoftware.com
+DOMAIN-SUFFIX,semrush.com
+DOMAIN-SUFFIX,setapp.com
+DOMAIN-SUFFIX,netpeaksoftware.com
 # kahoot
-DOMAIN,kahoot.it
-DOMAIN,kahoot.com
+DOMAIN-SUFFIX,kahoot.it
+DOMAIN-SUFFIX,kahoot.com
