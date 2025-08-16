@@ -1,16 +1,31 @@
 # NAME: domains_community.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2025-08-16 08:39:47 MSK
+# UPDATED: 2025-08-16 11:17:37 MSK
 # SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list
 # special
 DOMAIN-KEYWORD,instagram
 DOMAIN-KEYWORD,4pda
 DOMAIN-KEYWORD,tiktok
 DOMAIN-KEYWORD,gemini
-DOMAIN-KEYWORD,yt3
 DOMAIN,spotify.com
 URL-REGEX,habr.com/ru/articles/785186/
+
+# yotube
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,i.ytimg.com
+DOMAIN-SUFFIX,i9.ytimg.com
+DOMAIN-SUFFIX,yt3.ggpht.com
+DOMAIN-SUFFIX,yt3.googleusercontent.com
+DOMAIN-SUFFIX,yt4.ggpht.com
+DOMAIN-SUFFIX,yt4.googleusercontent.com
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,youtube-ui.l.google.com
+DOMAIN-SUFFIX,ytimg.l.google.com
+DOMAIN-SUFFIX,ytstatic.l.google.com
 
 # social
 DOMAIN-SUFFIX,twimg.com
