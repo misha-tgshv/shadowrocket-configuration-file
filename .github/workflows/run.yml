@@ -43,7 +43,6 @@ jobs:
           $0 == "4pda"           { print "DOMAIN-KEYWORD,4pda"; next }
           $0 == "tiktok"         { print "DOMAIN-KEYWORD,tiktok"; next }
           $0 == "gemini"         { print "DOMAIN-KEYWORD,gemini"; next }
-          $0 == "yt3"            { print "DOMAIN-KEYWORD,yt3"; next }
           $0 == "spotify.com"    { print "DOMAIN,spotify.com"; next }
           $0 == "habr.com/ru/articles/785186/" { print "URL-REGEX,habr.com/ru/articles/785186/"; next }
           { print "DOMAIN-SUFFIX," $0 }
