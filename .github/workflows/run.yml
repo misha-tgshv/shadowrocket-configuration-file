@@ -42,6 +42,7 @@ jobs:
           $0 == "instagram"      { print "DOMAIN-KEYWORD,instagram"; next }
           $0 == "4pda"           { print "DOMAIN-KEYWORD,4pda"; next }
           $0 == "tiktok"         { print "DOMAIN-KEYWORD,tiktok"; next }
+          $0 == "tiktok"         { print "DOMAIN-KEYWORD,whatsapp"; next }
           $0 == "gemini"         { print "DOMAIN-KEYWORD,gemini"; next }
           $0 == "spotify.com"    { print "DOMAIN,spotify.com"; next }
           $0 == "habr.com/ru/articles/785186/" { print "URL-REGEX,habr.com/ru/articles/785186/"; next }
@@ -154,6 +155,7 @@ jobs:
             echo "[Rule]"
             echo "# Список доменов телеграм-чата «Про Shadowrocket на русском»"
             echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_community.list,PROXY"
+            echo "RULE-SET,https://raw.githubusercontent.com/HybridNetworks/whatsapp-cidr/refs/heads/main/WhatsApp/whatsapp_cidr_ipv4.list,PROXY,no-resolve"
             echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_refilter.list,PROXY"
             echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/ips_refilter.list,PROXY,no-resolve"
             echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_discord.list,PROXY"
