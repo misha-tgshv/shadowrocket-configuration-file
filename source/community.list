@@ -15,9 +15,8 @@ googlevideo.com
 i.ytimg.com
 i9.ytimg.com
 yt3.ggpht.com
-yt3.googleusercontent.com
 yt4.ggpht.com
-yt4.googleusercontent.com
+googleusercontent.com
 gstatic.com
 youtube-ui.l.google.com
 ytimg.l.google.com
@@ -28,7 +27,6 @@ twimg.com
 fbcdn.net
 fbsbx.com
 meta.com
-googleusercontent.com
 
 # other
 aol.com
@@ -59,7 +57,6 @@ grok.com
 x.ai
 sora.com
 composer.opera-api.com
-googleapis.com
 manus.im
 anthropic.com
 
