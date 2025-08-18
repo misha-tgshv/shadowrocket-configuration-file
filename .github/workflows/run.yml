@@ -36,8 +36,8 @@ jobs:
             print "# UPDATED: " strftime("%Y-%m-%d %H:%M:%S", systime(), 1) " MSK";
             print "# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list";
           }
-          NR>8 && /^#/ { print ""; print $0; next }
-          NR<=8 && /^#/ { print $0; next }
+          NR>7 && /^#/ { print ""; print $0; next }
+          NR<=7 && /^#/ { print $0; next }
           NF == 0 { next }
           $0 == "instagram"      { print "DOMAIN-KEYWORD,instagram"; next }
           $0 == "facebook"       { print "DOMAIN-KEYWORD,facebook"; next }
