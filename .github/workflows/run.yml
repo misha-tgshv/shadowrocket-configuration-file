@@ -23,7 +23,7 @@ jobs:
         run: |
           mkdir -p rules scripts modules conf
 
-      # --- Генерация файлов ---
+      # --- Генерация файлов --- 
       - name: Генерируем domains_community.list
         run: |
           curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list | \
