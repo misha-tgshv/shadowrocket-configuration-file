@@ -40,6 +40,7 @@ jobs:
           NR<=5 && /^#/ { print $0; next }
           NF == 0 { next }
           $0 == "instagram"      { print "DOMAIN-KEYWORD,instagram"; next }
+          $0 == "facebook"      { print "DOMAIN-KEYWORD,facebook"; next }
           $0 == "4pda"           { print "DOMAIN-KEYWORD,4pda"; next }
           $0 == "tiktok"         { print "DOMAIN-KEYWORD,tiktok"; next }
           $0 == "tiktok"         { print "DOMAIN-KEYWORD,whatsapp"; next }
