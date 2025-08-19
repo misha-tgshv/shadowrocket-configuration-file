@@ -1,7 +1,7 @@
 # NAME: domains_community.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2025-08-19 00:47:20 MSK
+# UPDATED: 2025-08-19 12:44:10 MSK
 # SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list
 # special
 DOMAIN-KEYWORD,instagram
@@ -54,6 +54,7 @@ DOMAIN-SUFFIX,gql.twitch.tv
 DOMAIN-SUFFIX,usher.ttvnw.net
 DOMAIN-SUFFIX,speedtest.net
 DOMAIN-SUFFIX,hqporner.com
+DOMAIN-SUFFIX,deepl.com
 
 # ai
 DOMAIN-SUFFIX,apple-relay.apple.com
