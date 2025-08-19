@@ -128,6 +128,7 @@ DOMAIN-SUFFIX,bank-arzamas.ru
 DOMAIN-SUFFIX,bank-hlynov.ru
 DOMAIN-SUFFIX,bank-rc.ru
 DOMAIN-SUFFIX,bank-rk.ru
+DOMAIN-SUFFIX,bank-zone.ru
 DOMAIN-SUFFIX,bank.procombank.com
 DOMAIN-SUFFIX,bank131.com
 DOMAIN-SUFFIX,bank131.ru
@@ -160,6 +161,7 @@ DOMAIN-SUFFIX,bktb.ru
 DOMAIN-SUFFIX,blanc.ru
 DOMAIN-SUFFIX,bliz.nskbl.ru
 DOMAIN-SUFFIX,bnal.ru
+DOMAIN-SUFFIX,bonus.energotransbank.com
 DOMAIN-SUFFIX,bonuspartner.ru
 DOMAIN-SUFFIX,booking-visit.rshb.ru
 DOMAIN-SUFFIX,boshe.gift-cards.ru
@@ -203,6 +205,7 @@ DOMAIN-SUFFIX,corpcard.alfabank.ru
 DOMAIN-SUFFIX,corporate.mkb.ru
 DOMAIN-SUFFIX,cosmos-bank.ru
 DOMAIN-SUFFIX,cred.metib.ru
+DOMAIN-SUFFIX,credit-lkk.agroros.ru
 DOMAIN-SUFFIX,credit.chelind.ru
 DOMAIN-SUFFIX,credit.sovcombank.ru
 DOMAIN-SUFFIX,creditbusiness.chelind.ru
@@ -251,7 +254,6 @@ DOMAIN-SUFFIX,ecom.ubrr.ru
 DOMAIN-SUFFIX,econombank.ru
 DOMAIN-SUFFIX,elecsnet.ru
 DOMAIN-SUFFIX,eleksir.finance
-DOMAIN-SUFFIX,emb.ru
 DOMAIN-SUFFIX,emitent.pervbank.ru
 DOMAIN-SUFFIX,en.nrb.ru
 DOMAIN-SUFFIX,energobank.ru
@@ -324,6 +326,7 @@ DOMAIN-SUFFIX,ibv.ru
 DOMAIN-SUFFIX,icbru.ru
 DOMAIN-SUFFIX,id-test.alfabank.ru
 DOMAIN-SUFFIX,idea.sovcombank.ru
+DOMAIN-SUFFIX,import-export.energotransbank.com
 DOMAIN-SUFFIX,in-bank.ru
 DOMAIN-SUFFIX,infinite.kk.bank
 DOMAIN-SUFFIX,infinite.kubankredit.ru
@@ -493,6 +496,7 @@ DOMAIN-SUFFIX,mtcfinance.ru
 DOMAIN-SUFFIX,mti-bank.ru
 DOMAIN-SUFFIX,murmall.gift-cards.ru
 DOMAIN-SUFFIX,my.alfabank.ru
+DOMAIN-SUFFIX,my.energotransbank.com
 DOMAIN-SUFFIX,my.gift-cards.ru
 DOMAIN-SUFFIX,my.snbank.ru
 DOMAIN-SUFFIX,mygift.gift-cards.ru
@@ -804,6 +808,7 @@ DOMAIN-SUFFIX,voip.lockobank.ru
 DOMAIN-SUFFIX,vpodarok-my.gift-cards.ru
 DOMAIN-SUFFIX,vtb-grants.fut.ru
 DOMAIN-SUFFIX,vtb-liga.fut.ru
+DOMAIN-SUFFIX,vtb.corp.ru
 DOMAIN-SUFFIX,vtb.fut.ru
 DOMAIN-SUFFIX,vtb24.ru
 DOMAIN-SUFFIX,vtbfamily.ru
@@ -933,7 +938,6 @@ DOMAIN-SUFFIX,www.dvbank.ru
 DOMAIN-SUFFIX,www.eatpbank.ru
 DOMAIN-SUFFIX,www.eco-invest.ru
 DOMAIN-SUFFIX,www.el-plat.ru
-DOMAIN-SUFFIX,www.emb.ru
 DOMAIN-SUFFIX,www.energotransbank.com
 DOMAIN-SUFFIX,www.eng.bankorange.ru
 DOMAIN-SUFFIX,www.etbank.ru
@@ -1137,7 +1141,6 @@ DOMAIN-SUFFIX,www.trust.ru
 DOMAIN-SUFFIX,www.tsbnk.ru
 DOMAIN-SUFFIX,www.ubrr.ru
 DOMAIN-SUFFIX,www.ubs.com
-DOMAIN-SUFFIX,www.ucsnbco.ru
 DOMAIN-SUFFIX,www.ufa.planeta-mall.ru
 DOMAIN-SUFFIX,www.ufd-pb.ru
 DOMAIN-SUFFIX,www.unicredit.ru
@@ -1174,6 +1177,7 @@ DOMAIN-SUFFIX,www.zenit.ru
 DOMAIN-SUFFIX,www.zhivagobank.ru
 DOMAIN-SUFFIX,www.ziraatbank.ru
 DOMAIN-SUFFIX,www.zolotayakorona.ru
+DOMAIN-SUFFIX,yabank.yandex.ru
 DOMAIN-SUFFIX,yarmarka-center.gift-cards.ru
 DOMAIN-SUFFIX,yarmarka.gift-cards.ru
 DOMAIN-SUFFIX,yoobusiness.ru
