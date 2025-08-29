@@ -155,8 +155,6 @@ jobs:
             echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/voice_ports.list,PROXY"
             echo "RULE-SET,https://raw.githubusercontent.com/HybridNetworks/whatsapp-cidr/refs/heads/main/WhatsApp/whatsapp_cidr_ipv4.list,PROXY,no-resolve"
             echo "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Telegram/Telegram.list"
-            echo "# RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_refilter.list,PROXY"
-            echo "# RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/ips_refilter.list,PROXY,no-resolve"
             echo "FINAL,DIRECT"
           } > conf/${CONFNAME}
 
@@ -199,14 +197,17 @@ jobs:
             # Отдельное проксирование для telegram (ключевое слово)
             echo "DOMAIN-KEYWORD,telegram,PROXY"
             # Генерация доменов из community.list
-            curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list | awk '
-              BEGIN { special_count=0 }
-              /^#/ { next }
-              NF==0 { next }
+            curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/source/community.list | \
+            awk '
+              BEGIN { before_youtube=1 }
+              /^#/ {
+                if ($0 == "# youtube") before_youtube=0
+                next
+              }
+              NF == 0 { next }
               {
-                if (special_count < 5) {
+                if (before_youtube) {
                   print "DOMAIN-KEYWORD," $1 ",PROXY"
-                  special_count++
                 } else {
                   print "DOMAIN-SUFFIX," $1 ",PROXY"
                 }
