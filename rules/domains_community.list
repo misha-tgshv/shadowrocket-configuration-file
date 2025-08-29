@@ -1,7 +1,7 @@
 # NAME: domains_community.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2025-08-29 18:36:30 MSK
+# UPDATED: 2025-08-29 18:44:13 MSK
 # SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list
 # special
 DOMAIN-KEYWORD,4pda
@@ -17,7 +17,7 @@ DOMAIN-SUFFIX,rutracker
 DOMAIN-KEYWORD,tiktok
 DOMAIN-KEYWORD,whatsapp
 
-# yotube
+# youtube
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,googlevideo.com
