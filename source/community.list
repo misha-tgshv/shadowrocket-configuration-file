@@ -1,66 +1,87 @@
 # special
-instagram
-facebook
 4pda
+facebook
+hdrezka
+instagram
+kahoot
+kinozal
+notion
+rezka
+rutor
+rutracker
 tiktok
 whatsapp
-gemini
-spotify.com
-habr.com/ru/articles/785186/
 
 # yotube
-youtube.com
-youtu.be
 googleapis.com
+googleusercontent.com
 googlevideo.com
+gstatic.com
 i.ytimg.com
 i9.ytimg.com
+youtu.be
+youtube-ui.l.google.com
+youtube.com
 yt3.ggpht.com
 yt4.ggpht.com
-googleusercontent.com
-gstatic.com
-youtube-ui.l.google.com
 ytimg.l.google.com
 ytstatic.l.google.com
 
 # social
-twimg.com
 fbcdn.net
 fbsbx.com
+ig.me
+ign.com
+medium.com
 meta.com
+quora.com
+strava.com
+twimg.com
+twitch.tv
 
 # other
-aol.com
-canva.dev
-dyson.com
-hostinger.com
-skladchina.biz
-splunkcloud.com
-realguide.com
-x-minus.pro
-api2.support-kp.com
-mobile-iphone.mixcloud.com
-thumbnailer.mixcloud.com
-hackernoon.com
-harvestapp.com
 cub.red
+dyson.com
+hackernoon.com
+iherb.com
+ikea.com
+seasonvar.ru
+skladchik.com
+skladchina.biz
+ttvnw.net
+
+# tools
+aol.com
+api2.support-kp.com
+canva.dev
 cloudflare.com
-gql.twitch.tv
-usher.ttvnw.net
-speedtest.net
-hqporner.com
-deepl.com
+digitalocean.com
+harvestapp.com
+hostinger.com
+intel.com
+jetbrains.com
+mixcloud.com
+netpeaksoftware.com
+notionusercontent.com
+proton.me
+realguide.com
+redislabs.com
+semrush.com
+setapp.com
+splunkcloud.com
+x-minus.pro
 
 # ai
+anthropic.com
 apple-relay.apple.com
+composer.opera-api.com
 copilot.microsoft.com
+deepl.com
 elevenlabs.io
 grok.com
-x.ai
-sora.com
-composer.opera-api.com
 manus.im
-anthropic.com
+sora.com
+x.ai
 
 # games
 anzu-us.com
@@ -73,15 +94,12 @@ game.clashofclans.com
 gameloft.com
 security.id.supercell.com
 
-# notion
-notion.so
-notionusercontent.com
-
-# ip
+# network
+browserleaks.com
 ifconfig.me
 ipinfo.io
-browserleaks.com
 maxmind.com
+speedtest.net
 
 # analytics
 datacamp.com
@@ -94,14 +112,15 @@ tableauusercontent.com
 user.auth.xboxlive.com
 xsts.auth.xboxlive.com
 
-# jetbrains
-jetbrains.com
-
-# ukrainian 
-semrush.com
-setapp.com
-netpeaksoftware.com
-
-# kahoot
-kahoot.it
-kahoot.com
+# news
+euronews.com
+grani.ru
+gulagu.net
+holod.media
+meduza.io
+navalny.com
+novaya.no
+novayagazeta.eu
+novayagazeta.ru
+ntc.party
+proekt.media
