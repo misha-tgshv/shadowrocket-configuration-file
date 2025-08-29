@@ -19,13 +19,13 @@
 ## Модули
 Для YouTube доступен модуль [YT-Premium-V1-RU.module](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/modules/YT-Premium-V1-RU.module) с отключенными китайскими субтитрами и необходимыми правилами. Требует выпуск HTTPS-сертификата на устройства. Хорошо работает на iOS, плохо на macOS и не работает на Apple TV.
 
-# Актуальные списки
+## Актуальные списки
 - `domains_community.list` — домены сообщества «Про Shadowrocket на русском», включающие универсальные правила для популярных доменов;
 - `voice_ports.list` — порты для работы аудиозвонков в Whatsapp и Telegram;
 - `whatsapp_cidr_ipv4.list` — список от @HybridNetworks, который имеет наибольший, актуальный, обновляющийся список ip-адресов Whatsapp;
 - `Telegram.list` — универсальный список, включающий в себя правила по доменам и диапазону IP-адресов от [@blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Telegram/Telegram.list);
 
-# Исключенные списки
+## Исключенные списки
 Из-за некорректной обработки или каких-то других причин в списки постоянно попадают самые обыкновенные домены или IP-адреса от Яндекса, Google и т.д. Поэтому с 30 августа было решено их исключить из конфигов. Вы можете ими пользоваться на свой страх и риск. Они будут попрежнему обновляться:
 - `domains_refilter.list` — домены сообщества [Антифильтр](https://community.antifilter.download);
 - `ips_refilter.list` — ip-адреса сообщества [Антифильтр](https://community.antifilter.download);
@@ -33,6 +33,9 @@
 - `domain_youtube.list` — домены из [@blackmatrix7](https://github.com/dsvip/Quantumult-X);
 - `domain_discord.list` — домены из [@blackmatrix7](https://github.com/blackmatrix7/ios_rule_script).
 - `domain_youtube.list` — домены из [@blackmatrix7](https://github.com/dsvip/Quantumult-X);
+
+## Рекомендованные списки
+`inside-raw.lst` — домены от [@itdog](https://github.com/itdoginfo/allow-domains/blob/main/Russia/inside-clashx.lst).
 
 ## Инструкции и помощь
 Подробные инструкции по настройке, использованию и дополнительным функциям доступны в [блоге](https://mishatugushev.ru/blog/?go=all/shadowrocket-seamless).
