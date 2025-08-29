@@ -1,40 +1,39 @@
 # Shadowrocket: выборочная защита трафика на iOS и других платформах
 
-Выборочная защита интернет-трафика на iOS, iPadOS, macOS и tvOS с помощью приложения Shadowrocket для пользователей из России. В основе — усовершенствованные правила маршрутизации, позволяющие направлять трафик через прокси-серверы по заданным доменам и портам, обеспечивая удобство и безопасность. Для общения и оперативного обсуждения конфигураций и настроек доступен телеграм-чат [«Про Shadowrocket на русском»](https://t.me/shadowrocket_ru).
+Выборочная защита интернет-трафика на iOS, iPadOS, macOS и tvOS с помощью приложения Shadowrocket для пользователей из России. В основе — усовершенствованные правила маршрутизации, позволяющие направлять трафик через прокси-серверы по заданным доменам и портам, обеспечивая удобство и безопасность. Оперативное обсуждения конфигураций и настроек в телеграм-чате [«Про Shadowrocket на русском»](https://t.me/shadowrocket_ru).
 
-## Конфигурации
 
-### Базовый конфиг
+## Конфигурации (конфиги)
 
-Трафик по умолчанию идет напрямую через оператора связи, при этом запросы к доменам из конфигурации направляются через сервер. Так можно пользоваться популярными сервисами без постоянного запуска VPN.
+| Конфиг             | Краткое описание                                                                                             |
+|--------------------|-------------------------------------------------------------------------------------------------------------|
+| [sr_ru_basic.conf](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/conf/sr_ru_basic.conf)  | Базовый конфиг: весь трафик идет напрямую через оператора, кроме доменов из списка, для которых используется прокси. Включает списки сообщества «Про Shadowrocket на русском» и порты голосового трафика.        |
+| [sr_ru_mini.conf](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/conf/sr_ru_mini.conf)   | Минимальный конфиг с ограниченным числом популярных проксированных доменов для быстрой и легкой настройки.    |
+| [sr_ru_extended.conf](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/conf/sr_ru_extended.conf) | Расширенный конфиг с возможностью добавлять собственные правила маршрутизации. Можно не скачивать, а создать в приложении.                              |
+| [sr_nonru_basic.conf(https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/conf/sr_nonru_basic.conf) | Конфиг для тех, кто заружем, проксирующий все российские домены и домены на кириллице.
 
-Базовый конфиг [sr_ru_basic.conf](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/conf/sr_ru_basic.conf) содержит 5 списков:
-- `domain_community.list` — домены телеграм-чата «Про Shadowrocket на русском»;
-- `domain_refilter.list` — домены сообщества [Re:filter](https://github.com/1andrevich/Re-filter-lists);
-- `ip_refilter.list` — IP-адреса сообщества Re:filter;
-- `voice_ports.list` — порты для голосового трафика.
+## Особенности конфигов
+- Для популярных доменов (например, Instagram, YouTube) применяется дополнительное подправило `DOMAIN-KEYWORD`;
+- Используются подправила `DOMAIN-SUFFIX` для корректной работы с поддоменами и расширяющие возможности, если появился новый поддомен;
 
 ## Модули
+Для YouTube доступен модуль [YT-Premium-V1-RU.module](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/modules/YT-Premium-V1-RU.module) с отключенными китайскими субтитрами и необходимыми правилами. Требует выпуск HTTPS-сертификата на устройства. Хорошо работает на iOS, плохо на macOS и не работает на Apple TV.
 
-Для YouTube доступен модуль [YT-Premium-V1-RU.module](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/modules/YT-Premium-V1-RU.module) с отключенными китайскими субтитрами и необходимыми правилами.
+# Актуальные списки
+- `domains_community.list` — домены сообщества «Про Shadowrocket на русском», включающие универсальные правила для популярных доменов;
+- `voice_ports.list` — порты для работы аудиозвонков в Whatsapp и Telegram;
+- `whatsapp_cidr_ipv4.list` — список от @HybridNetworks, который имеет наибольший, актуальный, обновляющийся список ip-адресов Whatsapp;
+- `Telegram.list` — универсальный список, включающий в себя правила по доменам и диапазону IP-адресов от [@blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Telegram/Telegram.list);
 
-## Обновление списков
-
-Списки обновляются автоматически раз в сутки. Все актуальные файлы находятся в ветке `main`.
-
+# Исключенные списки
+Из-за некорректной обработки или каких-то других причин в списки постоянно попадают самые обыкновенные домены или IP-адреса от Яндекса, Google и т.д. Поэтому с 30 августа было решено их исключить из конфигов. Вы можете ими пользоваться на свой страх и риск. Они будут попрежнему обновляться:
+- `domains_refilter.list` — домены сообщества [Антифильтр](https://community.antifilter.download);
+- `ips_refilter.list` — ip-адреса сообщества [Антифильтр](https://community.antifilter.download);
 - `domain_antifilter.list` — домены сообщества [Антифильтр](https://community.antifilter.download);
-- `domain_banking.list` — домены банков из списка ЦБ РФ;
 - `domain_youtube.list` — домены из [@blackmatrix7](https://github.com/dsvip/Quantumult-X);
 - `domain_discord.list` — домены из [@blackmatrix7](https://github.com/blackmatrix7/ios_rule_script).
+- `domain_youtube.list` — домены из [@blackmatrix7](https://github.com/dsvip/Quantumult-X);
 
 ## Инструкции и помощь
-
 Подробные инструкции по настройке, использованию и дополнительным функциям доступны в [блоге](https://mishatugushev.ru/blog/?go=all/shadowrocket-seamless).
-
 Поддержать проект можно переводом средств на ЮMoney: [410015839777064](https://yoomoney.ru/to/410015839777064).
-
-## Особенности
-
-- Используются подправила `DOMAIN-SUFFIX` для корректной работы с поддоменами;
-- Для популярных доменов (например, Instagram, YouTube) применяется дополнительное подправило `DOMAIN-KEYWORD`;
-- Домен `spotify.com` исключен из большинства списков для прямой загрузки контента.
