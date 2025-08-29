@@ -1,71 +1,92 @@
 # NAME: domains_community.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2025-08-29 17:41:07 MSK
+# UPDATED: 2025-08-29 18:36:30 MSK
 # SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list
 # special
-DOMAIN-KEYWORD,instagram
-DOMAIN-KEYWORD,facebook
 DOMAIN-KEYWORD,4pda
+DOMAIN-KEYWORD,facebook
+DOMAIN-SUFFIX,hdrezka
+DOMAIN-KEYWORD,instagram
+DOMAIN-SUFFIX,kahoot
+DOMAIN-SUFFIX,kinozal
+DOMAIN-SUFFIX,notion
+DOMAIN-SUFFIX,rezka
+DOMAIN-SUFFIX,rutor
+DOMAIN-SUFFIX,rutracker
 DOMAIN-KEYWORD,tiktok
 DOMAIN-KEYWORD,whatsapp
-DOMAIN-KEYWORD,gemini
-DOMAIN,spotify.com
-URL-REGEX,habr.com/ru/articles/785186/
 
 # yotube
-DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,youtu.be
 DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,i.ytimg.com
 DOMAIN-SUFFIX,i9.ytimg.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,youtube-ui.l.google.com
+DOMAIN-SUFFIX,youtube.com
 DOMAIN-SUFFIX,yt3.ggpht.com
 DOMAIN-SUFFIX,yt4.ggpht.com
-DOMAIN-SUFFIX,googleusercontent.com
-DOMAIN-SUFFIX,gstatic.com
-DOMAIN-SUFFIX,youtube-ui.l.google.com
 DOMAIN-SUFFIX,ytimg.l.google.com
 DOMAIN-SUFFIX,ytstatic.l.google.com
 
 # social
-DOMAIN-SUFFIX,twimg.com
 DOMAIN-SUFFIX,fbcdn.net
 DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,ig.me
+DOMAIN-SUFFIX,ign.com
+DOMAIN-SUFFIX,medium.com
 DOMAIN-SUFFIX,meta.com
+DOMAIN-SUFFIX,quora.com
+DOMAIN-SUFFIX,strava.com
+DOMAIN-SUFFIX,twimg.com
+DOMAIN-SUFFIX,twitch.tv
 
 # other
-DOMAIN-SUFFIX,aol.com
-DOMAIN-SUFFIX,canva.dev
-DOMAIN-SUFFIX,dyson.com
-DOMAIN-SUFFIX,hostinger.com
-DOMAIN-SUFFIX,skladchina.biz
-DOMAIN-SUFFIX,splunkcloud.com
-DOMAIN-SUFFIX,realguide.com
-DOMAIN-SUFFIX,x-minus.pro
-DOMAIN-SUFFIX,api2.support-kp.com
-DOMAIN-SUFFIX,mobile-iphone.mixcloud.com
-DOMAIN-SUFFIX,thumbnailer.mixcloud.com
-DOMAIN-SUFFIX,hackernoon.com
-DOMAIN-SUFFIX,harvestapp.com
 DOMAIN-SUFFIX,cub.red
+DOMAIN-SUFFIX,dyson.com
+DOMAIN-SUFFIX,hackernoon.com
+DOMAIN-SUFFIX,iherb.com
+DOMAIN-SUFFIX,ikea.com
+DOMAIN-SUFFIX,seasonvar.ru
+DOMAIN-SUFFIX,skladchik.com
+DOMAIN-SUFFIX,skladchina.biz
+DOMAIN-SUFFIX,ttvnw.net
+
+# tools
+DOMAIN-SUFFIX,aol.com
+DOMAIN-SUFFIX,api2.support-kp.com
+DOMAIN-SUFFIX,canva.dev
 DOMAIN-SUFFIX,cloudflare.com
-DOMAIN-SUFFIX,gql.twitch.tv
-DOMAIN-SUFFIX,usher.ttvnw.net
-DOMAIN-SUFFIX,speedtest.net
-DOMAIN-SUFFIX,hqporner.com
-DOMAIN-SUFFIX,deepl.com
+DOMAIN-SUFFIX,digitalocean.com
+DOMAIN-SUFFIX,harvestapp.com
+DOMAIN-SUFFIX,hostinger.com
+DOMAIN-SUFFIX,intel.com
+DOMAIN-SUFFIX,jetbrains.com
+DOMAIN-SUFFIX,mixcloud.com
+DOMAIN-SUFFIX,netpeaksoftware.com
+DOMAIN-SUFFIX,notionusercontent.com
+DOMAIN-SUFFIX,proton.me
+DOMAIN-SUFFIX,realguide.com
+DOMAIN-SUFFIX,redislabs.com
+DOMAIN-SUFFIX,semrush.com
+DOMAIN-SUFFIX,setapp.com
+DOMAIN-SUFFIX,splunkcloud.com
+DOMAIN-SUFFIX,x-minus.pro
 
 # ai
+DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN-SUFFIX,composer.opera-api.com
 DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN-SUFFIX,deepl.com
 DOMAIN-SUFFIX,elevenlabs.io
 DOMAIN-SUFFIX,grok.com
-DOMAIN-SUFFIX,x.ai
-DOMAIN-SUFFIX,sora.com
-DOMAIN-SUFFIX,composer.opera-api.com
 DOMAIN-SUFFIX,manus.im
-DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,x.ai
 
 # games
 DOMAIN-SUFFIX,anzu-us.com
@@ -78,15 +99,12 @@ DOMAIN-SUFFIX,game.clashofclans.com
 DOMAIN-SUFFIX,gameloft.com
 DOMAIN-SUFFIX,security.id.supercell.com
 
-# notion
-DOMAIN-SUFFIX,notion.so
-DOMAIN-SUFFIX,notionusercontent.com
-
-# ip
+# network
+DOMAIN-SUFFIX,browserleaks.com
 DOMAIN-SUFFIX,ifconfig.me
 DOMAIN-SUFFIX,ipinfo.io
-DOMAIN-SUFFIX,browserleaks.com
 DOMAIN-SUFFIX,maxmind.com
+DOMAIN-SUFFIX,speedtest.net
 
 # analytics
 DOMAIN-SUFFIX,datacamp.com
@@ -99,14 +117,15 @@ DOMAIN-SUFFIX,tableauusercontent.com
 DOMAIN-SUFFIX,user.auth.xboxlive.com
 DOMAIN-SUFFIX,xsts.auth.xboxlive.com
 
-# jetbrains
-DOMAIN-SUFFIX,jetbrains.com
-
-# ukrainian 
-DOMAIN-SUFFIX,semrush.com
-DOMAIN-SUFFIX,setapp.com
-DOMAIN-SUFFIX,netpeaksoftware.com
-
-# kahoot
-DOMAIN-SUFFIX,kahoot.it
-DOMAIN-SUFFIX,kahoot.com
+# news
+DOMAIN-SUFFIX,euronews.com
+DOMAIN-SUFFIX,grani.ru
+DOMAIN-SUFFIX,gulagu.net
+DOMAIN-SUFFIX,holod.media
+DOMAIN-SUFFIX,meduza.io
+DOMAIN-SUFFIX,navalny.com
+DOMAIN-SUFFIX,novaya.no
+DOMAIN-SUFFIX,novayagazeta.eu
+DOMAIN-SUFFIX,novayagazeta.ru
+DOMAIN-SUFFIX,ntc.party
+DOMAIN-SUFFIX,proekt.media
