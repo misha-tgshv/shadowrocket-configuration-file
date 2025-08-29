@@ -23,6 +23,15 @@ jobs:
         run: |
           mkdir -p rules scripts modules conf
 
+      - name: Создаем список voice с DST-PORT
+        run: |
+          {
+            echo "DST-PORT,596-599"
+            echo "DST-PORT,1400"
+            echo "DST-PORT,5222"
+            echo "DST-PORT,3478"
+          } > rules/voice_ports.list
+
       # --- Генерация файлов --- 
       - name: Генерируем domains_community.list
         run: |
@@ -156,11 +165,10 @@ jobs:
             echo "[Rule]"
             echo "# Список доменов телеграм-чата «Про Shadowrocket на русском»"
             echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_community.list,PROXY"
+            echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/voice_ports.list,PROXY"
             echo "RULE-SET,https://raw.githubusercontent.com/HybridNetworks/whatsapp-cidr/refs/heads/main/WhatsApp/whatsapp_cidr_ipv4.list,PROXY,no-resolve"
             echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_refilter.list,PROXY"
             echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/ips_refilter.list,PROXY,no-resolve"
-            echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_discord.list,PROXY"
-            echo "RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY"
             echo "FINAL,DIRECT"
           } > conf/${CONFNAME}
 
