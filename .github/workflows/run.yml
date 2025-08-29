@@ -48,7 +48,7 @@ jobs:
             }
             /^#/ {
               print;
-              if ($0 == "# yotube") { before_youtube=0 }  # Обратите внимание на точное совпадение с комментарием "# yotube"
+              if ($0 == "# youtube") { before_youtube=0 }
               next
             }
             NF == 0 { next }
