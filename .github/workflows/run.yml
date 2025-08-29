@@ -23,7 +23,7 @@ jobs:
         run: |
           mkdir -p rules scripts modules conf
 
-      - name: Создаем список voice с DST-PORT
+      - name: Генерируем список voice с DST-PORT
         run: |
           {
             echo "DST-PORT,596-599"
@@ -96,20 +96,6 @@ jobs:
           wc -l < domaintmp | awk '{print "# TOTAL:", $1}' >> rules/domains_refilter.list
           cat domaintmp >> rules/domains_refilter.list
           rm domaintmp temp3.txt
-
-      - name: Генерируем domains_youtube.list
-        run: |
-          curl -sSL https://raw.githubusercontent.com/dsvip/Quantumult-X/dec9019816ba55897c162c3dbd3ac997ac160f09/blackmatrix7/rule/Shadowrocket/YouTube.list \
-            | sed -n '/DOMAIN-SUFFIX,/p' > rules/domains_youtube.list
-          sed -i "1s/^/DOMAIN-KEYWORD,youtube\n/" rules/domains_youtube.list
-          sed -i "1s/^/DOMAIN-KEYWORD,googlevideo\n/" rules/domains_youtube.list
-
-      - name: Генерируем domains_discord.list
-        run: |
-          curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Discord/Discord.list \
-            | sed -n '/DOMAIN-SUFFIX,/p' > rules/domains_discord.list
-          sed -i "1s/^/DOMAIN-KEYWORD,discord\n/" rules/domains_discord.list
-          sed -i "1s/^/DOMAIN-KEYWORD,discordapp\n/" rules/domains_discord.list
 
       - name: Генерируем ips_refilter.list
         run: |
