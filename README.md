@@ -12,7 +12,6 @@
 - `domain_community.list` — домены телеграм-чата «Про Shadowrocket на русском»;
 - `domain_refilter.list` — домены сообщества [Re:filter](https://github.com/1andrevich/Re-filter-lists);
 - `ip_refilter.list` — IP-адреса сообщества Re:filter;
-- `port_discord.list` — порты из списка [@helmiau](https://github.com/helmiau/clashrules/blob/main/shadowrocket/Game_Discord_Ports.list);
 - `voice_ports.list` — порты для голосового трафика.
 
 ## Модули
