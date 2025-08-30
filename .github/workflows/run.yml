@@ -32,6 +32,23 @@ jobs:
             echo "DST-PORT,3478"
           } > rules/voice_ports.list
 
+      - name: Получаем IP-адреса для доменов
+        run: |
+          curl -s https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/source/domains.list > temp_domains.txt
+          > domain_ips.list
+          while read domain; do
+            # Пропуск пустых строк и комментариев
+            [ -z "$domain" ] && continue
+            [[ $domain =~ ^# ]] && continue
+            ip=$(dig +short "$domain" | grep -E '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)
+            if [ -n "$ip" ]; then
+              echo "$domain $ip" >> domain_ips.list
+            else
+              echo "$domain (нет IP)" >> domain_ips.list
+            fi
+          done < temp_domains.txt
+          rm temp_domains.txt
+
       # --- Генерация файлов --- 
       - name: Генерируем domains_community.list
         run: |
