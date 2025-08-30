@@ -30,12 +30,11 @@
 - `domains_refilter.list` — домены сообщества [Антифильтр](https://community.antifilter.download);
 - `ips_refilter.list` — ip-адреса сообщества [Антифильтр](https://community.antifilter.download);
 - `domain_antifilter.list` — домены сообщества [Антифильтр](https://community.antifilter.download);
-- `domain_youtube.list` — домены из [@blackmatrix7](https://github.com/dsvip/Quantumult-X);
-- `domain_discord.list` — домены из [@blackmatrix7](https://github.com/blackmatrix7/ios_rule_script).
-- `domain_youtube.list` — домены из [@blackmatrix7](https://github.com/dsvip/Quantumult-X);
 
 ## Рекомендованные списки
-`inside-raw.lst` — домены от [@itdog](https://github.com/itdoginfo/allow-domains/blob/main/Russia/inside-clashx.lst).
+— `inside-raw.lst` — домены от [@itdog](https://github.com/itdoginfo/allow-domains/blob/main/Russia/inside-clashx.lst);
+- `domain_youtube.list` — домены для Ютуба из [@blackmatrix7](https://github.com/dsvip/Quantumult-X);
+- `domain_discord.list` — домены из [@blackmatrix7](https://github.com/blackmatrix7/ios_rule_script).
 
 ## Инструкции и помощь
 Подробные инструкции по настройке, использованию и дополнительным функциям доступны в [блоге](https://mishatugushev.ru/blog/?go=all/shadowrocket-seamless).
