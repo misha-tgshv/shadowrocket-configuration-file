@@ -1,13 +1,19 @@
 # NAME: domains_refilter.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2025-08-30 19:26:54 MSK
+# UPDATED: 2025-08-31 03:48:57 MSK
 # SOURCE: https://github.com/1andrevich/Re-filter-lists
-# TOTAL: 43147
+# TOTAL: 43177
 DOMAIN-SUFFIX,4pda.ru
 DOMAIN-SUFFIX,4pda.to
 DOMAIN-SUFFIX,abook-club.ru
 DOMAIN-SUFFIX,adguard.com
+DOMAIN-SUFFIX,autodesk.com
+DOMAIN-SUFFIX,autodesk360.com
+DOMAIN-SUFFIX,autocad.com
+DOMAIN-SUFFIX,autodesk.io
+DOMAIN-SUFFIX,a360.co
+DOMAIN-SUFFIX,autodesk.net
 DOMAIN-SUFFIX,adobe.activate.com
 DOMAIN-SUFFIX,adobe.com
 DOMAIN-SUFFIX,adobe.de
@@ -57,6 +63,7 @@ DOMAIN-SUFFIX,bbci.co.uk
 DOMAIN-SUFFIX,bitbucket.org
 DOMAIN-SUFFIX,bitcoin.org
 DOMAIN-SUFFIX,bitru.org
+DOMAIN-SUFFIX,byteoversea.com
 DOMAIN-SUFFIX,booktracker.org
 DOMAIN-SUFFIX,boosteroid.com
 DOMAIN-SUFFIX,bosch-home.com
@@ -114,6 +121,7 @@ DOMAIN-SUFFIX,czx.to
 DOMAIN-SUFFIX,d.docs.live.net
 DOMAIN-SUFFIX,database.clamav.net
 DOMAIN-SUFFIX,deezer.com
+DOMAIN-SUFFIX,deepl.com
 DOMAIN-SUFFIX,tailscale.com
 DOMAIN-SUFFIX,pkgs.tailscale.com
 DOMAIN-SUFFIX,dl.tailscale.com
@@ -270,6 +278,8 @@ DOMAIN-SUFFIX,meteo.paraplan.net
 DOMAIN-SUFFIX,mobile.events.data.microsoft.com
 DOMAIN-SUFFIX,monster.ie
 DOMAIN-SUFFIX,mouser.com
+DOMAIN-SUFFIX,muscdn.com
+DOMAIN-SUFFIX,musical.ly
 DOMAIN-SUFFIX,mrakopedia.net
 DOMAIN-SUFFIX,myworld-portal.leica-geosystems.com
 DOMAIN-SUFFIX,www.mongodb.com
@@ -279,6 +289,7 @@ DOMAIN-SUFFIX,nordvpn.com
 DOMAIN-SUFFIX,nordaccount.com
 DOMAIN-SUFFIX,nordcdn.com
 DOMAIN-SUFFIX,notion.com
+DOMAIN-SUFFIX,notion.so
 DOMAIN-SUFFIX,notepad-plus-plus.org
 DOMAIN-SUFFIX,notebooklm.google
 DOMAIN-SUFFIX,ntc.party
@@ -287,6 +298,7 @@ DOMAIN-SUFFIX,nyaa.tracker.wf
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oasis.app
 DOMAIN-SUFFIX,omv-extras.org
+DOMAIN-SUFFIX,omtrdc.net
 DOMAIN-SUFFIX,onlineradiobox.com
 DOMAIN-SUFFIX,onlinesim.ru
 DOMAIN-SUFFIX,openai.com
@@ -356,6 +368,7 @@ DOMAIN-SUFFIX,semnasem.org
 DOMAIN-SUFFIX,software-static.download.prss.microsoft.com
 DOMAIN-SUFFIX,sovanews.tv
 DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,sendgrid.net
 DOMAIN-SUFFIX,stockx.com
 DOMAIN-SUFFIX,serpstat.com
 DOMAIN-SUFFIX,singlekey-id.com
@@ -385,7 +398,24 @@ DOMAIN-SUFFIX,terraform.io
 DOMAIN-SUFFIX,themoviedb.org
 DOMAIN-SUFFIX,tidal.com
 DOMAIN-SUFFIX,tiktok.com
+DOMAIN-SUFFIX,tik-tokapi.com
+DOMAIN-SUFFIX,tiktokcdn-eu.com
+DOMAIN-SUFFIX,tiktokcdn-us.com
+DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,tiktokd.net
+DOMAIN-SUFFIX,tiktokd.org
+DOMAIN-SUFFIX,tiktokeu-cdn.com
+DOMAIN-SUFFIX,tiktokrow-cdn.com
+DOMAIN-SUFFIX,tiktokv.com
+DOMAIN-SUFFIX,tiktokv.eu
+DOMAIN-SUFFIX,tiktokv.us
+DOMAIN-SUFFIX,tiktokw.eu
+DOMAIN-SUFFIX,tiktokw.us
+DOMAIN-SUFFIX,ttlivecdn.com
+DOMAIN-SUFFIX,ttoverseaus.net
+DOMAIN-SUFFIX,ttwstatic.com
 DOMAIN-SUFFIX,timberland.com
+DOMAIN-SUFFIX,tinkercad.com
 DOMAIN-SUFFIX,tmdb.org
 DOMAIN-SUFFIX,tokenized.play.google.com
 DOMAIN-SUFFIX,tools.cisco.com
