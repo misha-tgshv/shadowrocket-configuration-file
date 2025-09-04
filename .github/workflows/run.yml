@@ -26,22 +26,18 @@ jobs:
       - name: Генерируем список voice с DST-PORT
         run: |
           {
-            echo "# WhatsApp — Голос и видео"
+            echo "# WhatsApp/Telegram/FaceTime — Голос"
+            echo "# https://faq.whatsapp.com/490531153094849/?cms_platform=iphone&helpref=platform_switcher"
+            echo "# https://www.netify.ai/resources/protocols/telegram"
+            echo "# https://www.netify.ai/resources/applications/whatsapp"
             echo "DST-PORT,3478,PROXY"
             echo "DST-PORT,3480,PROXY"
             echo "DST-PORT,3484,PROXY"
-            echo "DST-PORT,45395,PROXY"
-            echo "DST-PORT,4244,PROXY"
+            echo "# WhatsApp — Видео"
+            echo "# https://developers.facebook.com/docs/whatsapp/guides/network-requirements/"
             echo "DST-PORT,5222,PROXY"
-            echo "DST-PORT,5223,PROXY"
-            echo "DST-PORT,5228,PROXY"
-            echo "DST-PORT,5242,PROXY"
-            echo "DST-PORT,50318,PROXY"
-            echo "DST-PORT,59234,PROXY"
             echo "# Telegram — Голос и видео (RTP / P2P)"
             echo "DST-PORT,596-599,PROXY"
-            echo "DST-PORT,1400,PROXY"
-            echo "DST-PORT,4000-5000,PROXY"
             echo "# TCP порт для сигнальных звонков Telegram"
             echo "DST-PORT,1400,PROXY"
           } > rules/voice_ports.list
