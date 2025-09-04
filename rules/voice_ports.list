@@ -1,18 +1,14 @@
-# WhatsApp — Голос и видео
+# WhatsApp/Telegram/FaceTime — Голос
+# https://faq.whatsapp.com/490531153094849/?cms_platform=iphone&helpref=platform_switcher
+# https://www.netify.ai/resources/protocols/telegram
+# https://www.netify.ai/resources/applications/whatsapp
 DST-PORT,3478,PROXY
 DST-PORT,3480,PROXY
 DST-PORT,3484,PROXY
-DST-PORT,45395,PROXY
-DST-PORT,4244,PROXY
+# WhatsApp — Видео
+# https://developers.facebook.com/docs/whatsapp/guides/network-requirements/
 DST-PORT,5222,PROXY
-DST-PORT,5223,PROXY
-DST-PORT,5228,PROXY
-DST-PORT,5242,PROXY
-DST-PORT,50318,PROXY
-DST-PORT,59234,PROXY
 # Telegram — Голос и видео (RTP / P2P)
 DST-PORT,596-599,PROXY
-DST-PORT,1400,PROXY
-DST-PORT,4000-5000,PROXY
 # TCP порт для сигнальных звонков Telegram
 DST-PORT,1400,PROXY
