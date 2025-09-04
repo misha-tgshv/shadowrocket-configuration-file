@@ -38,7 +38,7 @@ jobs:
             echo "DST-PORT,5222,PROXY"
             echo "# Telegram — Голос и видео (RTP / P2P)"
             echo "DST-PORT,596-599,PROXY"
-            echo "DST-PORT,50000-59999,PROXY"
+            echo "# DST-PORT,50000-59999,PROXY"
             echo "# TCP порт для сигнальных звонков Telegram"
             echo "DST-PORT,1400,PROXY"
             
