@@ -41,7 +41,8 @@ jobs:
             echo "# DST-PORT,50000-59999,PROXY"
             echo "# TCP порт для сигнальных звонков Telegram"
             echo "DST-PORT,1400,PROXY"
-            echo "# Google Meet — Голос и видео (RTP / P2P)"
+            echo "# Google Meet"
+            echo "# https://support.google.com/a/answer/1279090?hl=en#zippy=%2Cavoid-using-vpns%2Cavoid-using-qos%2Cavoid-using-proxies%2Cusing-vdi%2Cusing-wi-fi%2Cconfiguring-default-video-quality%2Cstep-review-bandwidth-requirements%2Cstep-allow-access-to-google-ip-address-ranges-for-audio-and-video%2Cstep-allow-access-to-uniform-resource-identifiers-uris%2Cstep-set-up-outbound-ports-for-media-traffic"
             echo "DST-PORT,19302​–19309,PROXY"
             
           } > rules/voice_ports.list
