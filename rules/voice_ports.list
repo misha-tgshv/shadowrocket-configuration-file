@@ -13,3 +13,5 @@ DST-PORT,596-599,PROXY
 # DST-PORT,50000-59999,PROXY
 # TCP порт для сигнальных звонков Telegram
 DST-PORT,1400,PROXY
+# Google Meet — Голос и видео (RTP / P2P)
+DST-PORT,19302​–19309,PROXY
