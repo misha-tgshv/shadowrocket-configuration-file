@@ -1,7 +1,7 @@
 # NAME: domains_community.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2025-09-12 00:42:37 MSK
+# UPDATED: 2025-09-12 08:24:12 MSK
 # SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list
 # special
 DOMAIN-KEYWORD,4pda
@@ -80,16 +80,17 @@ DOMAIN-SUFFIX,x-minus.pro
 # ai
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,composer.opera-api.com
 DOMAIN-SUFFIX,copilot.microsoft.com
 DOMAIN-SUFFIX,deepl.com
 DOMAIN-SUFFIX,elevenlabs.io
 DOMAIN-SUFFIX,grok.com
 DOMAIN-SUFFIX,manus.im
-DOMAIN-SUFFIX,sora.com
-DOMAIN-SUFFIX,x.ai
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,searchgpt.com
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,x.ai
 # games
 DOMAIN-SUFFIX,anzu-us.com
 DOMAIN-SUFFIX,cdn.id.supercell.com
