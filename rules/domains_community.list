@@ -1,7 +1,7 @@
 # NAME: domains_community.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2025-10-18 00:41:53 MSK
+# UPDATED: 2025-10-18 07:20:29 MSK
 # SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list
 # special
 DOMAIN-KEYWORD,4pda
@@ -55,6 +55,7 @@ DOMAIN-SUFFIX,skladchik.com
 DOMAIN-SUFFIX,skladchina.biz
 DOMAIN-SUFFIX,ttvnw.net
 DOMAIN-SUFFIX,patreon.com
+DOMAIN-SUFFIX,premierleague.com
 DOMAIN-SUFFIX,spotifycdn.com
 DOMAIN-SUFFIX,scdn.co
 # tools
