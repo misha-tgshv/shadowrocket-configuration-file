@@ -1,4 +1,4 @@
-# Количество доменов: 464
+# Количество доменов: 465
 DOMAIN-SUFFIX,10minutemail.com
 DOMAIN-SUFFIX,1337x.to
 DOMAIN-SUFFIX,4pda.to
@@ -73,6 +73,7 @@ DOMAIN-SUFFIX,builds.parsec.app
 DOMAIN-SUFFIX,canva.com
 DOMAIN-SUFFIX,cdn.id.supercell.com
 DOMAIN-SUFFIX,cdn.oaistatic.com
+DOMAIN-SUFFIX,cdn2site.com
 DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,certifytheweb.com
 DOMAIN-SUFFIX,chat.openai.com
