@@ -1,13 +1,12 @@
 # NAME: domains_community.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2025-10-29 00:48:24 MSK
+# UPDATED: 2025-10-29 11:30:18 MSK
 # SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list
 # special
 DOMAIN-KEYWORD,4pda
 DOMAIN-KEYWORD,discord
 DOMAIN-KEYWORD,facebook
-DOMAIN-KEYWORD,flibusta
 DOMAIN-KEYWORD,hdrezka
 DOMAIN-KEYWORD,instagram
 DOMAIN-KEYWORD,kahoot
