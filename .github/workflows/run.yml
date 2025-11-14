@@ -287,16 +287,16 @@ jobs:
             echo "# Отправляем все сайты в ГЕО напрямую, а остальное в прокси"
             echo "[Rule]"
             echo "GEOIP,RU,DIRECT"
-            echo "DOMAIN-SUFFIX,ru,DIRECT"
-            echo "DOMAIN-SUFFIX,рф,DIRECT"
-            echo "DOMAIN-SUFFIX,su,DIRECT"
+            echo "# DOMAIN-SUFFIX,ru,DIRECT"
+            echo "# DOMAIN-SUFFIX,рф,DIRECT"
+            echo "# DOMAIN-SUFFIX,su,DIRECT"
             echo ""
             echo "# Final"
             echo "FINAL,PROXY"
           } > conf/${CONFNAME}
 
           # Вставляем .ru в строку skip-proxy в conf/${CONFNAME}
-          sed -i '/^skip-proxy/ s/$/,*.ru/' conf/${CONFNAME}
+          sed -i '/^skip-proxy/ s/$/,*.ru,*.su,*.рф/' conf/${CONFNAME}
           
           sed -i "1s/^/# @misha-tgshv, built on $(TZ=\"Asia/Novokuznetsk\" date)\n/" conf/${CONFNAME}
           rm conf/General.tmp
