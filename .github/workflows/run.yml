@@ -197,6 +197,9 @@ jobs:
           cp source/General.txt conf/General.tmp
           sed -i "s|^update-url =.*|update-url = https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/conf/${CONFNAME}|" conf/General.tmp
 
+          # Вставляем .ru в строку skip-proxy в conf/${CONFNAME}
+          sed -i '/^skip-proxy/ s/$/,*.ru/' conf/${CONFNAME}
+          
           {
             cat conf/General.tmp
             echo "# Выборочные правила маршрутизации"
