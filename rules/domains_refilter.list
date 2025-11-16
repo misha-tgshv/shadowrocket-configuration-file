@@ -1,7 +1,7 @@
 # NAME: domains_refilter.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2025-11-15 03:46:23 MSK
+# UPDATED: 2025-11-16 03:51:54 MSK
 # SOURCE: https://github.com/1andrevich/Re-filter-lists
 # TOTAL: 43250
 DOMAIN-SUFFIX,4pda.ru
