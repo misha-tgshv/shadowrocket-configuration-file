@@ -1,10 +1,11 @@
 # NAME: domains_community.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2025-11-28 00:45:36 MSK
+# UPDATED: 2025-11-28 12:05:35 MSK
 # SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list
 # special
 DOMAIN-KEYWORD,4pda
+DOMAIN-KEYWORD,chatgpt
 DOMAIN-KEYWORD,discord
 DOMAIN-KEYWORD,facebook
 DOMAIN-KEYWORD,flibusta
@@ -16,9 +17,9 @@ DOMAIN-KEYWORD,notion
 DOMAIN-KEYWORD,rezka
 DOMAIN-KEYWORD,rutor
 DOMAIN-KEYWORD,rutracker
-DOMAIN-KEYWORD,tiktok
-DOMAIN-KEYWORD,chatgpt
 DOMAIN-KEYWORD,supercell
+DOMAIN-KEYWORD,tiktok
+DOMAIN-KEYWORD,whatsapp
 # youtube
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,googleusercontent.com
