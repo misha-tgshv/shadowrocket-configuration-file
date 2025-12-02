@@ -41,7 +41,7 @@ dns-direct-fallback-proxy = true
 
 # Перезаписывает системный DNS на указанные DoH-серверы. Google DNS — стандартный, Adguard предлагает блокировку рекламы. Хорошая практика для приватности и обхода фильтров.
 # Вы можете выбрать альтернативный DOH/DOT — https://github.com/curl/curl/wiki/DNS-over-HTTPS
-dns-server = https://dns.google/dns-query, https://dns.adguard-dns.com/dns-query
+dns-server = https://dns.google/dns-query, https://dns.adguard-dns.com/dns-query, cloudflare-dns.com, dns.quad9.net, dns.adguard-dns.com, dns.comss.one
 
 # При сбое основного django Server — fallback на системный DNS. Можно указать другие DoH, но у вас стоит system для совместимости
 # fallback-dns-server = https://cloudflare-dns.com/dns-query, https://freedns.controld.com/p3
