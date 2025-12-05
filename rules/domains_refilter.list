@@ -1,9 +1,9 @@
 # NAME: domains_refilter.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2025-12-04 03:48:58 MSK
+# UPDATED: 2025-12-05 03:50:00 MSK
 # SOURCE: https://github.com/1andrevich/Re-filter-lists
-# TOTAL: 43250
+# TOTAL: 43252
 DOMAIN-SUFFIX,4pda.ru
 DOMAIN-SUFFIX,4pda.to
 DOMAIN-SUFFIX,abook-club.ru
@@ -361,6 +361,8 @@ DOMAIN-SUFFIX,refinitiv.com
 DOMAIN-SUFFIX,registry.terraform.io
 DOMAIN-SUFFIX,releases.hashicorp.com
 DOMAIN-SUFFIX,repo.mongodb.org
+DOMAIN-SUFFIX,roblox.com
+DOMAIN-SUFFIX,roblox-api.arkoselabs.com
 DOMAIN-SUFFIX,republic.ru
 DOMAIN-SUFFIX,rutor.info
 DOMAIN-SUFFIX,rutor.is
