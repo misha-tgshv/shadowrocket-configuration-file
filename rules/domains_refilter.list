@@ -1,9 +1,9 @@
 # NAME: domains_refilter.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2025-12-12 11:28:53 MSK
+# UPDATED: 2025-12-13 03:46:39 MSK
 # SOURCE: https://github.com/1andrevich/Re-filter-lists
-# TOTAL: 43293
+# TOTAL: 43298
 DOMAIN-SUFFIX,4pda.ru
 DOMAIN-SUFFIX,4pda.to
 DOMAIN-SUFFIX,abook-club.ru
@@ -2921,6 +2921,7 @@ DOMAIN-SUFFIX,a.xxx-yaroslavl.ru
 DOMAIN-SUFFIX,a.xxxlibz.com
 DOMAIN-SUFFIX,a.zfilm-hd-3053.online
 DOMAIN-SUFFIX,a360.co
+DOMAIN-SUFFIX,aadg.msidentity.com
 DOMAIN-SUFFIX,aak.tiviha-tv.ru
 DOMAIN-SUFFIX,ab.lordfilmik.fun
 DOMAIN-SUFFIX,ab.lordseriy.fun
@@ -4513,6 +4514,7 @@ DOMAIN-SUFFIX,at.pirat.one
 DOMAIN-SUFFIX,at.tutsport.com
 DOMAIN-SUFFIX,atalysreitlimited.com
 DOMAIN-SUFFIX,atarasii.com
+DOMAIN-SUFFIX,atcoder.jp
 DOMAIN-SUFFIX,atcorp.org
 DOMAIN-SUFFIX,atempl.com
 DOMAIN-SUFFIX,atesh.org
@@ -8001,7 +8003,6 @@ DOMAIN-SUFFIX,colorepratica.com
 DOMAIN-SUFFIX,colta.ru
 DOMAIN-SUFFIX,columbian-boys.com
 DOMAIN-SUFFIX,colvilleproperties-limited.com
-DOMAIN-SUFFIX,com
 DOMAIN-SUFFIX,com-business.ru
 DOMAIN-SUFFIX,com.amarkets.site
 DOMAIN-SUFFIX,com.cy
@@ -11856,6 +11857,7 @@ DOMAIN-SUFFIX,flaawlessbaarriier.online
 DOMAIN-SUFFIX,flaawlessbaarriier.shop
 DOMAIN-SUFFIX,flaawlessbaarriier.space
 DOMAIN-SUFFIX,flaawlessbaarriier.website
+DOMAIN-SUFFIX,flac24.ru
 DOMAIN-SUFFIX,flag.ua
 DOMAIN-SUFFIX,flagma-fi.com
 DOMAIN-SUFFIX,flagma-ge.com
@@ -13353,6 +13355,7 @@ DOMAIN-SUFFIX,getmorebonus.info
 DOMAIN-SUFFIX,getmorebonuses.net
 DOMAIN-SUFFIX,getonv-go.net
 DOMAIN-SUFFIX,getoutline.org
+DOMAIN-SUFFIX,getpocket.com
 DOMAIN-SUFFIX,getserials.online
 DOMAIN-SUFFIX,getsevich.ru
 DOMAIN-SUFFIX,getsuyu.bond
@@ -17215,7 +17218,7 @@ DOMAIN-SUFFIX,kellymadison.com
 DOMAIN-SUFFIX,kemerovo-maz.ru
 DOMAIN-SUFFIX,kemerovorea.ru
 DOMAIN-SUFFIX,kemlya.schoolsovetskoe.ru
-DOMAIN-SUFFIX,kemono.party
+DOMAIN-SUFFIX,kemono.cr
 DOMAIN-SUFFIX,kemono.su
 DOMAIN-SUFFIX,kempravab.site
 DOMAIN-SUFFIX,ken.pirat.one
@@ -19089,7 +19092,6 @@ DOMAIN-SUFFIX,lesbianseduction.tv
 DOMAIN-SUFFIX,lesbiansex.best
 DOMAIN-SUFFIX,lesbiansexhub.com
 DOMAIN-SUFFIX,lesbianstate.com
-DOMAIN-SUFFIX,lesbiansubmission.com
 DOMAIN-SUFFIX,lesbiantribe.com
 DOMAIN-SUFFIX,lesbiantube.club
 DOMAIN-SUFFIX,lesbiantube.tv
@@ -19186,6 +19188,7 @@ DOMAIN-SUFFIX,lgbtics.com
 DOMAIN-SUFFIX,lgbtkvartal.com
 DOMAIN-SUFFIX,lgbtnet.org
 DOMAIN-SUFFIX,lgbtqia.space
+DOMAIN-SUFFIX,lgbtqiabcdef.smena-pola--i-gay--sex-eto--kruto.duckdns.org
 DOMAIN-SUFFIX,lgbtqnation.com
 DOMAIN-SUFFIX,lgbtru.com
 DOMAIN-SUFFIX,lgbtx.ru
@@ -21195,6 +21198,7 @@ DOMAIN-SUFFIX,mediakrugnko.ru
 DOMAIN-SUFFIX,medialoft.eu
 DOMAIN-SUFFIX,mediamaniya.ru
 DOMAIN-SUFFIX,mediamimic.com
+DOMAIN-SUFFIX,medianet.kz
 DOMAIN-SUFFIX,medianova.com.ua
 DOMAIN-SUFFIX,mediapatriot.ru
 DOMAIN-SUFFIX,mediapool.bg
@@ -22415,6 +22419,7 @@ DOMAIN-SUFFIX,msknorka.ru
 DOMAIN-SUFFIX,mskobl.com
 DOMAIN-SUFFIX,msktab.org
 DOMAIN-SUFFIX,msktabakopt.ru
+DOMAIN-SUFFIX,msn.com
 DOMAIN-SUFFIX,mso-sro.ru
 DOMAIN-SUFFIX,msp44.ru
 DOMAIN-SUFFIX,msport.newsrbk.ru
@@ -25608,6 +25613,7 @@ DOMAIN-SUFFIX,pin-upw46.com
 DOMAIN-SUFFIX,pin.innovation45.ru
 DOMAIN-SUFFIX,pinduck.com
 DOMAIN-SUFFIX,pineappleink.co
+DOMAIN-SUFFIX,ping-admin.com
 DOMAIN-SUFFIX,pingmyusers.net
 DOMAIN-SUFFIX,pinguinklad.cc
 DOMAIN-SUFFIX,pingway.ru
@@ -29897,7 +29903,6 @@ DOMAIN-SUFFIX,sc.livetv503.me
 DOMAIN-SUFFIX,sc1.pirat.one
 DOMAIN-SUFFIX,scale2.ru
 DOMAIN-SUFFIX,scallyguy.com
-DOMAIN-SUFFIX,scalpboard.io
 DOMAIN-SUFFIX,scan-met.ru
 DOMAIN-SUFFIX,scandicon.ru
 DOMAIN-SUFFIX,scaniaclub.ru
@@ -30023,6 +30028,7 @@ DOMAIN-SUFFIX,seasonvar.ws
 DOMAIN-SUFFIX,sebastiansmolyn.com
 DOMAIN-SUFFIX,sebeanus.online
 DOMAIN-SUFFIX,secfirst.org
+DOMAIN-SUFFIX,seclists.org
 DOMAIN-SUFFIX,secmail.pro
 DOMAIN-SUFFIX,second.go2me.top
 DOMAIN-SUFFIX,secorgroup.ru
@@ -31244,7 +31250,6 @@ DOMAIN-SUFFIX,smsobor.ru
 DOMAIN-SUFFIX,smutr.com
 DOMAIN-SUFFIX,smw.bigmny.top
 DOMAIN-SUFFIX,snabarmatura-spb.ru
-DOMAIN-SUFFIX,snanews.de
 DOMAIN-SUFFIX,snap-storage-cdn.l.google.com
 DOMAIN-SUFFIX,snap.com
 DOMAIN-SUFFIX,snapchat.com
