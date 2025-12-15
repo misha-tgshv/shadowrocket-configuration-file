@@ -185,6 +185,8 @@ jobs:
             echo "RULE-SET,https://raw.githubusercontent.com/HybridNetworks/whatsapp-cidr/refs/heads/main/WhatsApp/whatsapp_cidr_ipv4.list,PROXY,no-resolve"
             echo "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Telegram/Telegram.list,PROXY"
             echo "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Discord/Discord.list,PROXY"
+            echo "RULE-SET,https://github.com/toneywhitez/zkeen_rules/releases/latest/download/telegram_ips.list,PROXY,no-resolve"
+            echo "RULE-SET,https://github.com/toneywhitez/zkeen_rules/releases/latest/download/meta_ips.list,no-resolve"
             echo "FINAL,DIRECT"
           } > conf/${CONFNAME}
 
