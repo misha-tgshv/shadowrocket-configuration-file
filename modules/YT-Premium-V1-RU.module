@@ -1,5 +1,5 @@
-# Last modified YT-Premium-V1: 
-# Last modified youtube.response.js: 
+# Last modified YT-Premium-V1: 2025-08-09
+# Last modified youtube.response.js: 2025-07-12
 #!name=YouTube Premium
 #!desc=Youtube Ad Full blocker with PIP player
 #!arguments=captionLang:off, lyricLang:off, blockUpload:true, blockImmersive:false, blockShorts:true, debug:false
