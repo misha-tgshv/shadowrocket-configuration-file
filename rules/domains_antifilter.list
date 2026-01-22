@@ -1,4 +1,4 @@
-# Количество доменов: 474
+# Количество доменов: 476
 DOMAIN-SUFFIX,10minutemail.com
 DOMAIN-SUFFIX,1337x.to
 DOMAIN-SUFFIX,4pda.to
@@ -87,6 +87,7 @@ DOMAIN-SUFFIX,clamav.net
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,cloud.mongodb.com
 DOMAIN-SUFFIX,cloudflare-dns.com
+DOMAIN-SUFFIX,codeium.com
 DOMAIN-SUFFIX,colta.ru
 DOMAIN-SUFFIX,community.cisco.com
 DOMAIN-SUFFIX,coomer.su
@@ -424,6 +425,7 @@ DOMAIN-SUFFIX,welt.de
 DOMAIN-SUFFIX,wetransfer.com
 DOMAIN-SUFFIX,wheather.com
 DOMAIN-SUFFIX,windguru.cz
+DOMAIN-SUFFIX,windsurf.com
 DOMAIN-SUFFIX,wixmp.com
 DOMAIN-SUFFIX,wunderground.com
 DOMAIN-SUFFIX,www.analog.com
