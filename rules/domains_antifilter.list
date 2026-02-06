@@ -1,4 +1,4 @@
-# Количество доменов: 478
+# Количество доменов: 480
 DOMAIN-SUFFIX,10minutemail.com
 DOMAIN-SUFFIX,1337x.to
 DOMAIN-SUFFIX,4pda.to
@@ -93,6 +93,7 @@ DOMAIN-SUFFIX,colta.ru
 DOMAIN-SUFFIX,community.cisco.com
 DOMAIN-SUFFIX,coomer.su
 DOMAIN-SUFFIX,copilot-proxy.githubusercontent.com
+DOMAIN-SUFFIX,copilot-telemetry.githubusercontent.com
 DOMAIN-SUFFIX,crunchyroll.com
 DOMAIN-SUFFIX,cub.red
 DOMAIN-SUFFIX,czx.to
@@ -163,6 +164,7 @@ DOMAIN-SUFFIX,geekyfuroshiki.com
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,geni.us
 DOMAIN-SUFFIX,genius.com
+DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,gitlab.io
 DOMAIN-SUFFIX,gllto.glpals.com
 DOMAIN-SUFFIX,gnome-look.org
