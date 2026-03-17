@@ -1,9 +1,9 @@
 # NAME: domains_refilter.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-03-16 04:12:45 MSK
+# UPDATED: 2026-03-17 04:04:33 MSK
 # SOURCE: https://github.com/1andrevich/Re-filter-lists
-# TOTAL: 81954
+# TOTAL: 81955
 DOMAIN-SUFFIX,4pda.ru
 DOMAIN-SUFFIX,4pda.to
 DOMAIN-SUFFIX,abook-club.ru
@@ -65,6 +65,7 @@ DOMAIN-SUFFIX,bitbucket.org
 DOMAIN-SUFFIX,bitcoin.org
 DOMAIN-SUFFIX,bitru.org
 DOMAIN-SUFFIX,byteoversea.com
+DOMAIN-SUFFIX,broadcom.com
 DOMAIN-SUFFIX,booktracker.org
 DOMAIN-SUFFIX,boosteroid.com
 DOMAIN-SUFFIX,bosch-home.com
