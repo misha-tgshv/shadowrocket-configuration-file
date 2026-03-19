@@ -168,6 +168,21 @@ jobs:
             | sed "1i# Last modified youtube.response.js: ${{ env.YT_SCRIPT_DATE }}" \
             | sed "1i# Last modified YT-Premium-V1: ${{ env.YT_MODULE_DATE }}" > modules/YT-Premium-V1-RU.module
 
+      - name: Генерируем Certificate.module
+        run: |
+          mkdir -p modules
+          cat > modules/Certificate.module << 'EOF'
+          #!name=Certificate Module
+          [MITM]
+          enable=true
+          ca-passphrase=${CA_PASSPHRASE}
+          ca-p12=${CA_P12}
+          EOF
+        env:
+          CA_PASSPHRASE: ${{ secrets.CA_PASSPHRASE }}
+          CA_P12: ${{ secrets.CA_P12 }}
+
+
       # --- Генерация конфигов ---
       - name: Создаем sr_ru_basic.conf с заменой update-url в копии general
         run: |
