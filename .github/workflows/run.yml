@@ -367,7 +367,7 @@ jobs:
             echo "# Отправляем все сайты в ГЕО напрямую, а остальное в прокси"
             echo "[Rule]"
             echo "GEOIP,RU,DIRECT"
-            echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/rules/domains_geo_detect.list,REJECT"
+            echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/rules/domains_geo_detect.list,DIRECT"
             echo "# DOMAIN-SUFFIX,ru,DIRECT"
             echo "# DOMAIN-SUFFIX,рф,DIRECT"
             echo "# DOMAIN-SUFFIX,su,DIRECT"
