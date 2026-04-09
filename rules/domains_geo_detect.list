@@ -1,7 +1,7 @@
 # NAME: domains_geo_detect.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-04-08 04:14:50 MSK
+# UPDATED: 2026-04-09 04:04:50 MSK
 # SOURCE: https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/category-ip-geo-detect.list
 # Количество доменов: 135
 DOMAIN-SUFFIX,2ip.io
