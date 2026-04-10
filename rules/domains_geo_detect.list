@@ -92,6 +92,7 @@ DOMAIN-SUFFIX,ipv4-check-perf.radar.cloudflare.com
 DOMAIN-SUFFIX,ipv4-internet.yandex.net
 DOMAIN-SUFFIX,ipv6-check-perf.radar.cloudflare.com
 DOMAIN-SUFFIX,ipv6-internet.yandex.net
+DOMAIN-SUFFIX,ip.mail.ru
 DOMAIN-SUFFIX,ipverify.com
 DOMAIN-SUFFIX,ipw.cn
 DOMAIN-SUFFIX,ipwhois.io
