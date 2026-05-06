@@ -57,6 +57,7 @@ DOMAIN-SUFFIX,accr.vtb.ru
 DOMAIN-SUFFIX,aclub.alfabank.ru
 DOMAIN-SUFFIX,aclub.ru
 DOMAIN-SUFFIX,acqsbp.cifra-bank.ru
+DOMAIN-SUFFIX,acquiring.chelind.ru
 DOMAIN-SUFFIX,acquiring.delo.ru
 DOMAIN-SUFFIX,acquiring.pervbank.ru
 DOMAIN-SUFFIX,acquiring.vtb.ru
@@ -132,7 +133,6 @@ DOMAIN-SUFFIX,bankermak.ru
 DOMAIN-SUFFIX,bankintegral.ru
 DOMAIN-SUFFIX,bankmaxima.ru
 DOMAIN-SUFFIX,bankofkazan.su
-DOMAIN-SUFFIX,bankorange.ru
 DOMAIN-SUFFIX,bankperm.ru
 DOMAIN-SUFFIX,bankstavr.ru
 DOMAIN-SUFFIX,bankvl.ru
@@ -249,7 +249,6 @@ DOMAIN-SUFFIX,emitent.pervbank.ru
 DOMAIN-SUFFIX,en.nrb.ru
 DOMAIN-SUFFIX,energobank.ru
 DOMAIN-SUFFIX,energotransbank.com
-DOMAIN-SUFFIX,eng
 DOMAIN-SUFFIX,enter.unicredit.ru
 DOMAIN-SUFFIX,envelope.lockobank.ru
 DOMAIN-SUFFIX,er-fin.com
@@ -305,11 +304,11 @@ DOMAIN-SUFFIX,home.bank
 DOMAIN-SUFFIX,homebank.ru
 DOMAIN-SUFFIX,homecredit.ru
 DOMAIN-SUFFIX,horoshomall.gift-cards.ru
-DOMAIN-SUFFIX,host1861554.hostland.pro
 DOMAIN-SUFFIX,hr.alfabank.ru
 DOMAIN-SUFFIX,hva.im
 DOMAIN-SUFFIX,i.doktor.kr
 DOMAIN-SUFFIX,ibamoscow.ru
+DOMAIN-SUFFIX,ibank.mosoblbank.ru
 DOMAIN-SUFFIX,ibank2.bankvyatich.ru
 DOMAIN-SUFFIX,ibd.ubrr.ru
 DOMAIN-SUFFIX,icbru.ru
@@ -322,7 +321,6 @@ DOMAIN-SUFFIX,in-bank.ru
 DOMAIN-SUFFIX,infinite.kk.bank
 DOMAIN-SUFFIX,infinite.kubankredit.ru
 DOMAIN-SUFFIX,info-partners.rosbank-auto.ru
-DOMAIN-SUFFIX,info.1cupis.ru:443
 DOMAIN-SUFFIX,info.akbars.ru
 DOMAIN-SUFFIX,info.zhivagobank.ru
 DOMAIN-SUFFIX,infobank.rosbank-auto.ru
@@ -423,7 +421,6 @@ DOMAIN-SUFFIX,lk.open-broker.ru
 DOMAIN-SUFFIX,lk.pervbank.ru
 DOMAIN-SUFFIX,lk.slaviabank.ru
 DOMAIN-SUFFIX,lk.ubrr.ru
-DOMAIN-SUFFIX,lk.vitabank.ru
 DOMAIN-SUFFIX,lk.vtb.ru
 DOMAIN-SUFFIX,lkap.bbr.ru
 DOMAIN-SUFFIX,lkbo.vtb.ru
@@ -439,7 +436,6 @@ DOMAIN-SUFFIX,lockomarket.ru
 DOMAIN-SUFFIX,lokobank.ru
 DOMAIN-SUFFIX,lotosplaza-my.gift-cards.ru
 DOMAIN-SUFFIX,lotosplazaptz.gift-cards.ru
-DOMAIN-SUFFIX,lp.chelind.ru
 DOMAIN-SUFFIX,lunchbox.gift-cards.ru
 DOMAIN-SUFFIX,m.bankuralsib.ru
 DOMAIN-SUFFIX,m.uralfd.ru
@@ -479,6 +475,7 @@ DOMAIN-SUFFIX,metropolis.gift-cards.ru
 DOMAIN-SUFFIX,mfk-suncity.gift-cards.ru
 DOMAIN-SUFFIX,mia.ru
 DOMAIN-SUFFIX,million.vtb.ru
+DOMAIN-SUFFIX,mir.chelind.ru
 DOMAIN-SUFFIX,mkb.ru
 DOMAIN-SUFFIX,mobile.auth.alfabank.ru
 DOMAIN-SUFFIX,modulbank.ru
@@ -594,7 +591,6 @@ DOMAIN-SUFFIX,pikhtabank.ru
 DOMAIN-SUFFIX,pin.rsb.ru
 DOMAIN-SUFFIX,planeta.gift-cards.ru
 DOMAIN-SUFFIX,play.google.com
-DOMAIN-SUFFIX,pochtabank.ru
 DOMAIN-SUFFIX,pokazhem.delo.ru
 DOMAIN-SUFFIX,pokupay.ru
 DOMAIN-SUFFIX,polza.home.bank
@@ -609,7 +605,6 @@ DOMAIN-SUFFIX,private.united.ru
 DOMAIN-SUFFIX,private.vtb.ru
 DOMAIN-SUFFIX,privilege.vtb.ru
 DOMAIN-SUFFIX,profit.akbars.ru
-DOMAIN-SUFFIX,promo.chelind.ru
 DOMAIN-SUFFIX,promo.crediteurope.ru
 DOMAIN-SUFFIX,promo.kk.bank
 DOMAIN-SUFFIX,promo.norvikbank.ru
@@ -623,6 +618,7 @@ DOMAIN-SUFFIX,psblog.ru
 DOMAIN-SUFFIX,pskb.com
 DOMAIN-SUFFIX,pushkinopark.gift-cards.ru
 DOMAIN-SUFFIX,pvubank.com
+DOMAIN-SUFFIX,qandyapp.ru
 DOMAIN-SUFFIX,queue.snbank.ru
 DOMAIN-SUFFIX,rabota.alfabank.ru
 DOMAIN-SUFFIX,rabota.vtb.ru
@@ -792,13 +788,12 @@ DOMAIN-SUFFIX,vfbank.ru
 DOMAIN-SUFFIX,vip.kk.bank
 DOMAIN-SUFFIX,vip.kubankredit.ru
 DOMAIN-SUFFIX,virtprostodar.gift-cards.ru
-DOMAIN-SUFFIX,vitabank.ru
-DOMAIN-SUFFIX,vitabank.spb.ru
 DOMAIN-SUFFIX,vitrina-zalog.rshb.ru
 DOMAIN-SUFFIX,vitrina.vtb.ru
 DOMAIN-SUFFIX,vk.%D1%81%D0%BEm
 DOMAIN-SUFFIX,vk.ru
 DOMAIN-SUFFIX,vklad.absolutbank.ru
+DOMAIN-SUFFIX,vklad.chelind.ru
 DOMAIN-SUFFIX,vklad.pervbank.ru
 DOMAIN-SUFFIX,vklad.sovcombank.ru
 DOMAIN-SUFFIX,vlb100.ru
@@ -877,9 +872,7 @@ DOMAIN-SUFFIX,www.bankintegral.ru
 DOMAIN-SUFFIX,www.bankkaluga.ru
 DOMAIN-SUFFIX,www.bankkontinental.ru
 DOMAIN-SUFFIX,www.bankofkazan.ru
-DOMAIN-SUFFIX,www.bankorange.ru
 DOMAIN-SUFFIX,www.bankperm.ru
-DOMAIN-SUFFIX,www.bankrmp.ru
 DOMAIN-SUFFIX,www.bankrsi.ru
 DOMAIN-SUFFIX,www.banksaratov.ru
 DOMAIN-SUFFIX,www.bankstavr.ru
@@ -936,7 +929,6 @@ DOMAIN-SUFFIX,www.eco-invest.ru
 DOMAIN-SUFFIX,www.efis-nco.ru
 DOMAIN-SUFFIX,www.el-plat.ru
 DOMAIN-SUFFIX,www.energotransbank.com
-DOMAIN-SUFFIX,www.eng.bankorange.ru
 DOMAIN-SUFFIX,www.enter.unicredit.ru
 DOMAIN-SUFFIX,www.er-fin.com
 DOMAIN-SUFFIX,www.etbank.ru
@@ -1045,7 +1037,6 @@ DOMAIN-SUFFIX,www.olabank.ru
 DOMAIN-SUFFIX,www.open.ru
 DOMAIN-SUFFIX,www.otpbank.ru
 DOMAIN-SUFFIX,www.payanyway.ru
-DOMAIN-SUFFIX,www.pochtabank.ru
 DOMAIN-SUFFIX,www.poidem.ru
 DOMAIN-SUFFIX,www.pokupay.ru
 DOMAIN-SUFFIX,www.primbank.ru
@@ -1126,7 +1117,6 @@ DOMAIN-SUFFIX,www.taidon.ru
 DOMAIN-SUFFIX,www.tbank.ru
 DOMAIN-SUFFIX,www.teleportbank.ru
 DOMAIN-SUFFIX,www.thbank.ru
-DOMAIN-SUFFIX,www.tiktok.com
 DOMAIN-SUFFIX,www.tinkoff.ru
 DOMAIN-SUFFIX,www.tkbbank.ru
 DOMAIN-SUFFIX,www.tkpb.ru
@@ -1157,8 +1147,6 @@ DOMAIN-SUFFIX,www.vbrr.ru
 DOMAIN-SUFFIX,www.venets-bank.ru
 DOMAIN-SUFFIX,www.vfbank.ru
 DOMAIN-SUFFIX,www.vikingbank.ru
-DOMAIN-SUFFIX,www.vitabank.ru
-DOMAIN-SUFFIX,www.vitabank.spb.ru
 DOMAIN-SUFFIX,www.vlbb.ru
 DOMAIN-SUFFIX,www.vostbank.ru
 DOMAIN-SUFFIX,www.vtb.com
