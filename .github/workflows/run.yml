@@ -159,13 +159,46 @@ jobs:
 
       - name: Генерируем domains_banking.list
         run: |
+          cat > /tmp/decode_idn.py << 'PYEOF'
+          import sys, urllib.parse
+          for line in sys.stdin:
+              line = line.strip()
+              if not line:
+                  continue
+              try:
+                  decoded = urllib.parse.unquote(line)
+                  parts = decoded.split('.')
+                  encoded_parts = [
+                      p.encode('idna').decode('ascii') if any(ord(c) > 127 for c in p) else p
+                      for p in parts
+                  ]
+                  print('.'.join(encoded_parts))
+              except Exception:
+                  print(line)
+          PYEOF
+
           curl -s https://www.cbr.ru/banking_sector/credit/cowebsites/ | \
           grep -oP 'href="\K[^"]+' | \
-          grep '^http' | \
-          sed -E '/(t\.me|vk\.com|ok\.ru|telegram|dzen|twitter|youtube|zen\.yandex\.ru|rutube\.ru|linkedin)/d' | \
-          sed 's/^https\?:\/\///' | \
-          sed 's/\/.*//' | \
-          sort -u | sed 's/^/DOMAIN-SUFFIX,/' > rules/domains_banking.list
+          grep -E '^https?://' | \
+          sed -E 's~https?://~~' | \
+          sed -E 's~/.*~~' | \
+          sed -E 's/^www\.//' | \
+          grep -E '^[a-zA-Z0-9%._-]+\.[a-zA-Z0-9%_-]+$' | \
+          grep -vE '(t\.me|vk\.com|ok\.ru|telegram|dzen|twitter|youtube|zen\.yandex|rutube|linkedin|play\.google|apps\.apple|appgallery|market\.yandex)' | \
+          python3 /tmp/decode_idn.py | \
+          sort -u > /tmp/temp_banking.txt
+
+          {
+            echo "# NAME: domains_banking.list"
+            echo "# AUTHOR: misha-tgshv"
+            echo "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file"
+            echo "# UPDATED: $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S') MSK"
+            echo "# SOURCE: https://www.cbr.ru/banking_sector/credit/cowebsites/"
+            echo "# TOTAL: $(wc -l < /tmp/temp_banking.txt)"
+            sed 's/^/DOMAIN-SUFFIX,/' /tmp/temp_banking.txt
+          } > rules/domains_banking.list
+
+          rm /tmp/decode_idn.py /tmp/temp_banking.txt
 
       # --- Генерация скриптов ---
       - name: Генерируем rewrite.youtube.response.preview.js
