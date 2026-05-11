@@ -232,7 +232,7 @@
 
   <!-- Hint box -->
   <div id="hintBox" class="hidden mb-6 rounded-xl p-4 text-xs text-slate-400 border border-slate-700 bg-slate-900">
-    <span class="text-slate-300 font-semibold">Пример логики: </span><span id="hintText"></span>
+    <span class="text-slate-300 font-semibold">Логика: </span><span id="hintText"></span>
   </div>
 
   <!-- Preview -->
@@ -252,7 +252,7 @@
   </div>
 
   <p class="text-xs text-slate-700 mt-5 text-center">
-    Файл генерируется прямо в браузере — никаких серверов, никакой слежки.
+    Файл генерируется прямо в браузере — никаких серверов, никакой слежки.<br>
     Базовый конфиг подтягивается из GitHub.
   </p>
 
@@ -301,10 +301,37 @@ document.getElementById('domainAction').addEventListener('change', updateHint);
 document.getElementById('chipAction').addEventListener('change', updateHint);
 
 function debounce(fn, ms) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; }
-
 function val(id) { return document.getElementById(id).value; }
 function getSelectedRules() { return RULE_SETS.filter(rs => document.querySelector(`.rule-chip[data-id="${rs.id}"]`)?.classList.contains('active')); }
 function getFinalRule() { return document.querySelector('input[name=finalRule]:checked')?.value || 'DIRECT'; }
+
+/**
+ * Clean the raw base conf text:
+ * 1. Remove the "update-url = ..." line
+ * 2. Remove the block starting with "# [Proxy Group]" up to (not including) "# Опционально"
+ */
+function cleanBaseConf(text) {
+  // Remove update-url line
+  text = text.replace(/^update-url\s*=.*$/m, '');
+
+  // Remove the commented Proxy Group examples block.
+  // Block starts at a line containing "# [Proxy Group]" and ends just before
+  // the first line that starts with "# Опционально"
+  const startMarker = '# [Proxy Group]';
+  const endMarker   = '# Опционально';
+  const startIdx = text.indexOf(startMarker);
+  const endIdx   = text.indexOf(endMarker);
+  if (startIdx !== -1 && endIdx !== -1 && endIdx > startIdx) {
+    // Find the beginning of the line where startMarker sits
+    const lineStart = text.lastIndexOf('\n', startIdx - 1) + 1;
+    text = text.slice(0, lineStart) + text.slice(endIdx);
+  }
+
+  // Collapse 3+ consecutive blank lines into 2
+  text = text.replace(/\n{3,}/g, '\n\n');
+
+  return text;
+}
 
 function buildRuleLines() {
   const lines = [];
@@ -315,7 +342,6 @@ function buildRuleLines() {
   const finalRule    = getFinalRule();
   const selected     = getSelectedRules();
 
-  // Custom domains
   const domainText = document.getElementById('customDomains').value.trim();
   if (domainText) {
     lines.push('# — Мои домены —');
@@ -325,7 +351,6 @@ function buildRuleLines() {
     });
   }
 
-  // Custom IPs
   const ipText = document.getElementById('customIPs').value.trim();
   if (ipText) {
     lines.push('# — Мои IP —');
@@ -334,7 +359,6 @@ function buildRuleLines() {
     });
   }
 
-  // Rule-set chips
   if (selected.length) {
     lines.push('# — Наборы правил —');
     selected.forEach(rs => {
@@ -350,11 +374,11 @@ function buildRuleLines() {
 function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 function colorLine(line) {
-  if (line.startsWith('#'))           return `<span style="color:#475569">${esc(line)}</span>`;
-  if (line.startsWith('FINAL'))       return `<span style="color:#f87171;font-weight:600">${esc(line)}</span>`;
-  if (line.startsWith('RULE-SET'))    return `<span style="color:#34d399">${esc(line)}</span>`;
-  if (line.startsWith('DOMAIN'))      return `<span style="color:#a78bfa">${esc(line)}</span>`;
-  if (line.startsWith('IP-CIDR'))     return `<span style="color:#60a5fa">${esc(line)}</span>`;
+  if (line.startsWith('#'))        return `<span style="color:#475569">${esc(line)}</span>`;
+  if (line.startsWith('FINAL'))    return `<span style="color:#f87171;font-weight:600">${esc(line)}</span>`;
+  if (line.startsWith('RULE-SET')) return `<span style="color:#34d399">${esc(line)}</span>`;
+  if (line.startsWith('DOMAIN'))   return `<span style="color:#a78bfa">${esc(line)}</span>`;
+  if (line.startsWith('IP-CIDR'))  return `<span style="color:#60a5fa">${esc(line)}</span>`;
   return `<span style="color:#94a3b8">${esc(line)}</span>`;
 }
 
@@ -375,9 +399,9 @@ function updateHint() {
   const selected = getSelectedRules();
   const hasDomains = document.getElementById('customDomains').value.trim();
 
-  let parts = [];
+  const parts = [];
   if (hasDomains) parts.push(`твои домены → ${domainAction}`);
-  if (selected.length) parts.push(`${selected.map(r=>r.label).join(', ')} → ${chipAction}`);
+  if (selected.length) parts.push(`${selected.map(r => r.label).join(', ')} → ${chipAction}`);
   parts.push(`всё остальное → ${final}`);
 
   if (parts.length > 1) {
@@ -392,7 +416,8 @@ async function fetchBaseConf(name) {
   if (cachedConfName === name && cachedConf) return cachedConf;
   const r = await fetch(BASE_URL + name + '.conf');
   if (!r.ok) throw new Error('Не удалось загрузить базовый конфиг');
-  cachedConf = await r.text();
+  const raw = await r.text();
+  cachedConf = cleanBaseConf(raw);
   cachedConfName = name;
   return cachedConf;
 }
