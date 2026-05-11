@@ -215,6 +215,7 @@ jobs:
           api.ipify.org
           ifconfig.me
           checkip.amazonaws.com
+          relay-api.eu.2gis.com
           EOF
   
           sort -u /tmp/ipchecker.txt > /tmp/ipchecker_sorted.txt
