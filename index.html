@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shadowrocket Config Generator</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { background: #0f172a; color: #e2e8f0; }
+  .card { background: #1e293b; border: 1px solid #334155; }
+  .badge { background: #0f172a; border: 1px solid #334155; }
+  textarea, select, input[type=text] {
+    background: #0f172a !important;
+    border: 1px solid #334155 !important;
+    color: #e2e8f0 !important;
+    border-radius: 8px;
+    padding: 10px 12px;
+    width: 100%;
+    font-size: 13px;
+    font-family: 'Menlo', 'Monaco', monospace;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  textarea:focus, select:focus, input[type=text]:focus {
+    border-color: #6366f1 !important;
+  }
+  select option { background: #1e293b; }
+  .btn-primary {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+  }
+  .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-secondary {
+    background: #1e293b;
+    color: #94a3b8;
+    border: 1px solid #334155;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover { border-color: #6366f1; color: #e2e8f0; }
+  .rule-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .rule-chip:hover { border-color: #6366f1; }
+  .rule-chip.active { background: #312e81; border-color: #6366f1; color: #a5b4fc; }
+  .rule-chip .dot { width: 6px; height: 6px; border-radius: 50%; background: #475569; flex-shrink: 0; }
+  .rule-chip.active .dot { background: #6366f1; }
+  #preview {
+    background: #020817;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 16px;
+    font-family: 'Menlo', 'Monaco', monospace;
+    font-size: 12px;
+    color: #64748b;
+    max-height: 300px;
+    overflow-y: auto;
+    white-space: pre;
+    line-height: 1.6;
+  }
+  .loader {
+    width: 18px; height: 18px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #e2e8f0;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    z-index: 100;
+    transform: translateY(80px);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  .toast.show { transform: translateY(0); opacity: 1; }
+  .toast.success { border-color: #10b981; }
+  .toast.error { border-color: #ef4444; }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #0f172a; }
+  ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+</style>
+</head>
+<body class="min-h-screen">
+
+<div class="max-w-3xl mx-auto px-4 py-10">
+
+  <!-- Header -->
+  <div class="mb-10">
+    <div class="flex items-center gap-3 mb-2">
+      <span class="text-3xl">🚀</span>
+      <h1 class="text-2xl font-bold text-white">Shadowrocket Config Generator</h1>
+    </div>
+    <p class="text-slate-400 text-sm ml-12">
+      Собери свой конфиг за 30 секунд — без ожидания и без заморочек
+    </p>
+    <div class="flex gap-2 mt-4 ml-12 flex-wrap">
+      <span class="badge text-xs px-3 py-1 rounded-full text-slate-400">by @misha-tgshv</span>
+      <a href="https://github.com/misha-tgshv/shadowrocket-configuration-file" target="_blank" class="badge text-xs px-3 py-1 rounded-full text-slate-400 hover:text-slate-200 transition-colors">GitHub →</a>
+    </div>
+  </div>
+
+  <!-- Step 1: Base config -->
+  <div class="card rounded-xl p-6 mb-4">
+    <h2 class="text-sm font-semibold text-slate-300 mb-1 uppercase tracking-wider">① Базовый конфиг</h2>
+    <p class="text-xs text-slate-500 mb-4">Выбери основу — она остаётся неизменной, ты только добавляешь свои правила поверх</p>
+    <select id="baseConfig">
+      <option value="sr_ru_basic">🇷🇺 RU Basic — для России (основной)</option>
+      <option value="sr_ru_extended">🇷🇺 RU Extended — расширенные правила</option>
+      <option value="sr_ru_geo">🗺️ RU Geo — с геолокацией</option>
+      <option value="sr_ru_keen">⚡ RU Keen — Keen DNS</option>
+      <option value="sr_ru_mini">🪶 RU Mini — минимальный</option>
+      <option value="sr_ru_whitelist">✅ RU Whitelist — белый список</option>
+      <option value="sr_nonru_basic">🌍 Non-RU Basic — для не-России</option>
+    </select>
+  </div>
+
+  <!-- Step 2: Quick presets -->
+  <div class="card rounded-xl p-6 mb-4">
+    <h2 class="text-sm font-semibold text-slate-300 mb-1 uppercase tracking-wider">② Готовые наборы правил</h2>
+    <p class="text-xs text-slate-500 mb-4">Выбери сервисы, трафик которых должен идти через прокси</p>
+    <div class="flex flex-wrap gap-2" id="ruleChips"></div>
+  </div>
+
+  <!-- Step 3: Custom domains -->
+  <div class="card rounded-xl p-6 mb-4">
+    <h2 class="text-sm font-semibold text-slate-300 mb-1 uppercase tracking-wider">③ Свои домены (опционально)</h2>
+    <p class="text-xs text-slate-500 mb-4">Один домен на строку. Можно с протоколом или без: <code class="text-purple-400">example.com</code> или <code class="text-purple-400">sub.example.com</code></p>
+    <textarea id="customDomains" rows="4" placeholder="youtube.com&#10;reddit.com&#10;sub.mysite.org"></textarea>
+  </div>
+
+  <!-- Step 4: Custom IPs -->
+  <div class="card rounded-xl p-6 mb-4">
+    <h2 class="text-sm font-semibold text-slate-300 mb-1 uppercase tracking-wider">④ Свои IP / CIDR (опционально)</h2>
+    <p class="text-xs text-slate-500 mb-4">Один адрес на строку: <code class="text-purple-400">1.2.3.4</code> или <code class="text-purple-400">1.2.3.0/24</code></p>
+    <textarea id="customIPs" rows="3" placeholder="1.2.3.4&#10;10.20.0.0/16"></textarea>
+  </div>
+
+  <!-- Step 5: Final rule -->
+  <div class="card rounded-xl p-6 mb-6">
+    <h2 class="text-sm font-semibold text-slate-300 mb-1 uppercase tracking-wider">⑤ Финальное правило</h2>
+    <p class="text-xs text-slate-500 mb-4">Что делать со всем остальным трафиком, который не попал под правила выше</p>
+    <div class="flex gap-5 flex-wrap">
+      <label class="flex items-center gap-2 cursor-pointer">
+        <input type="radio" name="finalRule" value="DIRECT" checked class="accent-indigo-500">
+        <span class="text-sm text-slate-300">DIRECT <span class="text-slate-500 text-xs">— всё остальное напрямую</span></span>
+      </label>
+      <label class="flex items-center gap-2 cursor-pointer">
+        <input type="radio" name="finalRule" value="PROXY" class="accent-indigo-500">
+        <span class="text-sm text-slate-300">PROXY <span class="text-slate-500 text-xs">— всё остальное через прокси</span></span>
+      </label>
+      <label class="flex items-center gap-2 cursor-pointer">
+        <input type="radio" name="finalRule" value="REJECT" class="accent-indigo-500">
+        <span class="text-sm text-slate-300">REJECT <span class="text-slate-500 text-xs">— блокировать всё остальное</span></span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Preview -->
+  <div class="card rounded-xl p-6 mb-6">
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="text-sm font-semibold text-slate-300 uppercase tracking-wider">Превью секции [Rule]</h2>
+      <button class="btn-secondary text-xs" onclick="updatePreview()">↻ Обновить</button>
+    </div>
+    <div id="preview" class="text-slate-500 italic">← Заполни форму выше или нажми «Обновить»</div>
+  </div>
+
+  <!-- Actions -->
+  <div class="flex gap-3 flex-wrap">
+    <button class="btn-primary flex items-center gap-2" onclick="generateAndDownload()" id="downloadBtn">
+      ⬇ Скачать .conf
+    </button>
+    <button class="btn-secondary" onclick="copyLink()">🔗 Скопировать ссылку</button>
+    <button class="btn-secondary" onclick="copyRawConf()">📋 Скопировать текст</button>
+  </div>
+
+  <p class="text-xs text-slate-600 mt-6 text-center">
+    Файл генерируется прямо в браузере — никаких серверов, никакой слежки.<br>
+    Базовый конфиг подтягивается из GitHub.
+  </p>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const RULE_SETS = [
+  { id: 'community', label: '🌐 RU Community', url: 'https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_community.list', ipUrl: 'https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/rules/domain_ips.list' },
+  { id: 'telegram',  label: '✈️ Telegram',   url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Telegram/Telegram.list', ipUrl: 'https://github.com/toneywhitez/zkeen_rules/releases/latest/download/telegram_ips.list' },
+  { id: 'whatsapp',  label: '💬 WhatsApp',   url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/WhatsApp/WhatsApp.list', ipUrl: 'https://raw.githubusercontent.com/HybridNetworks/whatsapp-cidr/refs/heads/main/WhatsApp/whatsapp_cidr_ipv4.list' },
+  { id: 'instagram', label: '📸 Instagram',  url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Instagram/Instagram.list', ipUrl: 'https://github.com/toneywhitez/zkeen_rules/releases/latest/download/meta_ips.list' },
+  { id: 'youtube',   label: '▶️ YouTube',    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/YouTube/YouTube.list' },
+  { id: 'discord',   label: '🎮 Discord',    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Discord/Discord.list' },
+  { id: 'twitter',   label: '𝕏 Twitter/X',   url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Twitter/Twitter.list' },
+  { id: 'openai',    label: '🤖 OpenAI',     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/OpenAI/OpenAI.list' },
+  { id: 'netflix',   label: '🎬 Netflix',    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Netflix/Netflix.list' },
+  { id: 'spotify',   label: '🎵 Spotify',    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Spotify/Spotify.list' },
+  { id: 'github',    label: '🐙 GitHub',     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/GitHub/GitHub.list' },
+  { id: 'google',    label: '🔍 Google',     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Google/Google.list' },
+  { id: 'apple',     label: '🍎 Apple',      url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Apple/Apple.list' },
+];
+
+const BASE_URL = 'https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/conf/';
+let cachedConf = null;
+let cachedConfName = null;
+
+// Init chips
+const chipsContainer = document.getElementById('ruleChips');
+RULE_SETS.forEach(rs => {
+  const el = document.createElement('div');
+  el.className = 'rule-chip';
+  el.dataset.id = rs.id;
+  el.innerHTML = `<span class="dot"></span>${rs.label}`;
+  el.addEventListener('click', () => {
+    el.classList.toggle('active');
+    updatePreview();
+  });
+  chipsContainer.appendChild(el);
+});
+
+// Auto-preview on changes
+['baseConfig', 'customDomains', 'customIPs'].forEach(id => {
+  document.getElementById(id).addEventListener('input', debounce(updatePreview, 500));
+});
+document.querySelectorAll('input[name=finalRule]').forEach(r =>
+  r.addEventListener('change', updatePreview)
+);
+
+function debounce(fn, ms) {
+  let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
+}
+
+function getSelectedRules() {
+  return RULE_SETS.filter(rs => document.querySelector(`.rule-chip[data-id="${rs.id}"]`)?.classList.contains('active'));
+}
+
+function getFinalRule() {
+  return document.querySelector('input[name=finalRule]:checked')?.value || 'DIRECT';
+}
+
+function buildRuleLines() {
+  const lines = [];
+  const selected = getSelectedRules();
+
+  const domainText = document.getElementById('customDomains').value.trim();
+  if (domainText) {
+    lines.push('# — Мои домены —');
+    domainText.split(/\n/).map(l => l.trim()).filter(Boolean).forEach(d => {
+      d = d.replace(/^https?:\/\//, '').replace(/\/.*$/, '').replace(/^www\./, '');
+      lines.push(`DOMAIN-SUFFIX,${d},PROXY`);
+    });
+  }
+
+  const ipText = document.getElementById('customIPs').value.trim();
+  if (ipText) {
+    lines.push('# — Мои IP —');
+    ipText.split(/\n/).map(l => l.trim()).filter(Boolean).forEach(ip => {
+      lines.push(`IP-CIDR,${ip},PROXY,no-resolve`);
+    });
+  }
+
+  if (selected.length) {
+    lines.push('# — Наборы правил —');
+    selected.forEach(rs => {
+      lines.push(`RULE-SET,${rs.url},PROXY`);
+      if (rs.ipUrl) lines.push(`RULE-SET,${rs.ipUrl},PROXY,no-resolve`);
+    });
+  }
+
+  lines.push(`FINAL,${getFinalRule()}`);
+  return lines;
+}
+
+function esc(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function updatePreview() {
+  const lines = buildRuleLines();
+  const html = lines.map(line => {
+    if (line.startsWith('#')) return `<span style="color:#475569">${esc(line)}</span>`;
+    if (line.startsWith('FINAL')) return `<span style="color:#f87171;font-weight:600">${esc(line)}</span>`;
+    if (line.startsWith('RULE-SET')) return `<span style="color:#34d399">${esc(line)}</span>`;
+    if (line.startsWith('DOMAIN') || line.startsWith('IP-CIDR')) return `<span style="color:#a78bfa">${esc(line)}</span>`;
+    return esc(line);
+  }).join('\n');
+  const el = document.getElementById('preview');
+  el.style.fontStyle = 'normal';
+  el.innerHTML = html || '<span style="color:#475569;font-style:italic">(пусто — добавь правила выше)</span>';
+}
+
+async function fetchBaseConf(name) {
+  if (cachedConfName === name && cachedConf) return cachedConf;
+  const r = await fetch(BASE_URL + name + '.conf');
+  if (!r.ok) throw new Error('Не удалось загрузить базовый конфиг');
+  cachedConf = await r.text();
+  cachedConfName = name;
+  return cachedConf;
+}
+
+async function buildFullConf() {
+  const name = document.getElementById('baseConfig').value;
+  const base = await fetchBaseConf(name);
+
+  const ruleIndex = base.indexOf('\n[Rule]');
+  const header = ruleIndex !== -1 ? base.substring(0, ruleIndex) : base;
+
+  const ruleLines = buildRuleLines();
+  const ts = new Date().toUTCString();
+  const comment = `# Generated by shadowrocket-config-generator | ${ts}\n# https://misha-tgshv.github.io/shadowrocket-configuration-file/\n\n`;
+
+  return comment + header + '\n[Rule]\n' + ruleLines.join('\n') + '\n';
+}
+
+async function generateAndDownload() {
+  const btn = document.getElementById('downloadBtn');
+  btn.innerHTML = '<span class="loader"></span> Генерирую...';
+  btn.disabled = true;
+  try {
+    const conf = await buildFullConf();
+    const blob = new Blob([conf], { type: 'text/plain' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `shadowrocket_${document.getElementById('baseConfig').value}_custom.conf`;
+    a.click();
+    showToast('✅ Файл скачан!', 'success');
+  } catch(e) {
+    showToast('❌ ' + e.message, 'error');
+  } finally {
+    btn.innerHTML = '⬇ Скачать .conf';
+    btn.disabled = false;
+  }
+}
+
+async function copyRawConf() {
+  try {
+    const conf = await buildFullConf();
+    await navigator.clipboard.writeText(conf);
+    showToast('📋 Конфиг скопирован в буфер', 'success');
+  } catch(e) {
+    showToast('❌ ' + e.message, 'error');
+  }
+}
+
+function copyLink() {
+  const params = new URLSearchParams();
+  params.set('base', document.getElementById('baseConfig').value);
+  params.set('final', getFinalRule());
+  const selected = getSelectedRules().map(r => r.id);
+  if (selected.length) params.set('rules', selected.join(','));
+  const domains = document.getElementById('customDomains').value.trim();
+  if (domains) params.set('d', btoa(unescape(encodeURIComponent(domains))));
+  const ips = document.getElementById('customIPs').value.trim();
+  if (ips) params.set('i', btoa(unescape(encodeURIComponent(ips))));
+  const url = location.origin + location.pathname + '?' + params.toString();
+  navigator.clipboard.writeText(url).then(() => showToast('🔗 Ссылка скопирована!', 'success'));
+}
+
+function showToast(msg, type = '') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast ' + type;
+  setTimeout(() => t.classList.add('show'), 10);
+  setTimeout(() => t.classList.remove('show'), 3200);
+}
+
+function restoreFromURL() {
+  const p = new URLSearchParams(location.search);
+  if (p.get('base')) document.getElementById('baseConfig').value = p.get('base');
+  if (p.get('final')) {
+    const r = document.querySelector(`input[name=finalRule][value="${p.get('final')}"]`);
+    if (r) r.checked = true;
+  }
+  if (p.get('rules')) {
+    p.get('rules').split(',').forEach(id => {
+      document.querySelector(`.rule-chip[data-id="${id}"]`)?.classList.add('active');
+    });
+  }
+  if (p.get('d')) {
+    try { document.getElementById('customDomains').value = decodeURIComponent(escape(atob(p.get('d')))); } catch(e){}
+  }
+  if (p.get('i')) {
+    try { document.getElementById('customIPs').value = decodeURIComponent(escape(atob(p.get('i')))); } catch(e){}
+  }
+  updatePreview();
+}
+
+restoreFromURL();
+</script>
+</body>
+</html>
