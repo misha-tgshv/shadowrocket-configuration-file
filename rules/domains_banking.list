@@ -1,9 +1,9 @@
 # NAME: domains_banking.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-05-11 06:51:05 MSK
+# UPDATED: 2026-05-11 06:57:31 MSK
 # SOURCE: https://www.cbr.ru/banking_sector/credit/cowebsites/
-# TOTAL: 1027
+# TOTAL: 1025
 DOMAIN-SUFFIX,1.psbank.ru
 DOMAIN-SUFFIX,13.alfabank.ru
 DOMAIN-SUFFIX,131.ru
@@ -13,10 +13,6 @@ DOMAIN-SUFFIX,1erc.ru
 DOMAIN-SUFFIX,3ds.ubrr.ru
 DOMAIN-SUFFIX,3dsmc.ubrr.ru
 DOMAIN-SUFFIX,7305115.ru
-DOMAIN-SUFFIX,BALTINVESTBANK.COM
-DOMAIN-SUFFIX,Lk.atb.su
-DOMAIN-SUFFIX,WWW.CBRCA.RU
-DOMAIN-SUFFIX,ZALOG.BALTINVESTBANK.COM
 DOMAIN-SUFFIX,abank.ru
 DOMAIN-SUFFIX,abr.ru
 DOMAIN-SUFFIX,absolut-trust.ru
@@ -104,6 +100,7 @@ DOMAIN-SUFFIX,backbron.kamkombank.ru
 DOMAIN-SUFFIX,baikalcredobank.ru
 DOMAIN-SUFFIX,balakovo-bank.ru
 DOMAIN-SUFFIX,baltbank.ru
+DOMAIN-SUFFIX,baltinvestbank.com
 DOMAIN-SUFFIX,bancaintesa.ru
 DOMAIN-SUFFIX,bank-45.ru
 DOMAIN-SUFFIX,bank-arzamas.ru
@@ -182,6 +179,7 @@ DOMAIN-SUFFIX,card.ubrr.ru
 DOMAIN-SUFFIX,cardcredit.ru
 DOMAIN-SUFFIX,career.1cupis.ru
 DOMAIN-SUFFIX,career.raiffeisen.ru
+DOMAIN-SUFFIX,cbrca.ru
 DOMAIN-SUFFIX,ccb.cn
 DOMAIN-SUFFIX,ccb.ru
 DOMAIN-SUFFIX,ccbrussia.ru
@@ -472,6 +470,7 @@ DOMAIN-SUFFIX,lexus-finance.ru
 DOMAIN-SUFFIX,lexus.ru
 DOMAIN-SUFFIX,link.alfabank.ru
 DOMAIN-SUFFIX,lk-dbo.autofinancebank.ru
+DOMAIN-SUFFIX,lk.atb.su
 DOMAIN-SUFFIX,lk.bankperm.ru
 DOMAIN-SUFFIX,lk.digital.uralsib.ru
 DOMAIN-SUFFIX,lk.mkb.ru
@@ -509,8 +508,6 @@ DOMAIN-SUFFIX,marketplace-my.gift-cards.ru
 DOMAIN-SUFFIX,marketplace.pervbank.ru
 DOMAIN-SUFFIX,marmeladmall.gift-cards.ru
 DOMAIN-SUFFIX,matkap.snbank.ru
-DOMAIN-SUFFIX,max.ru
-DOMAIN-SUFFIX,max.rulnovikombank_official
 DOMAIN-SUFFIX,mbbru.ru
 DOMAIN-SUFFIX,mbrus-bank.ru
 DOMAIN-SUFFIX,mcbank.ru
@@ -938,7 +935,7 @@ DOMAIN-SUFFIX,virtprostodar.gift-cards.ru
 DOMAIN-SUFFIX,vitrina-zalog.rshb.ru
 DOMAIN-SUFFIX,vitrina.vtb.ru
 DOMAIN-SUFFIX,vk.ru
-DOMAIN-SUFFIX,vk.xn--m-0tbi
+DOMAIN-SUFFIX,vk.xn--m-0tbi # vk.соm
 DOMAIN-SUFFIX,vklad.absolutbank.ru
 DOMAIN-SUFFIX,vklad.chelind.ru
 DOMAIN-SUFFIX,vklad.pervbank.ru
@@ -968,47 +965,47 @@ DOMAIN-SUFFIX,westernunion.ru
 DOMAIN-SUFFIX,wm.sovcombank.ru
 DOMAIN-SUFFIX,woori.ru
 DOMAIN-SUFFIX,wumte.ru
-DOMAIN-SUFFIX,xn-----6kcbbbkyqlacrwuz0azpe1g.xn--p1ai
-DOMAIN-SUFFIX,xn----7sbbgpkiac3a6aquke1e.xn--p1ai
-DOMAIN-SUFFIX,xn----7sbc1bbpx.xn--p1ai
-DOMAIN-SUFFIX,xn----7sbcc7bbnf3b.xn--p1ai
-DOMAIN-SUFFIX,xn----7sbcoetidz6azac4j.com
-DOMAIN-SUFFIX,xn----7sbcoetidz6azac4j.net
-DOMAIN-SUFFIX,xn----7sbcoetidz6azac4j.su
-DOMAIN-SUFFIX,xn----8sbc8adbsdb.xn--p1ai
-DOMAIN-SUFFIX,xn----8sbc8adrq.xn--p1ai
-DOMAIN-SUFFIX,xn--80aaadelf1ajfdec5ahj7aog.xn--p1ai
-DOMAIN-SUFFIX,xn--80aaanetpw3ba4m.xn--p1ai
-DOMAIN-SUFFIX,xn--80aabb0crq.xn--p1ai
-DOMAIN-SUFFIX,xn--80aabbofwlcf0ag7a5ag1m.xn--p1ai
-DOMAIN-SUFFIX,xn--80aacc5bcuf.xn--p1ai
-DOMAIN-SUFFIX,xn--80aacd4aobv3a8l.xn--p1ai
-DOMAIN-SUFFIX,xn--80aacgj8apdcfucpk3n.xn--p1ai
-DOMAIN-SUFFIX,xn--80aacktqbtccfwhip4n.xn--p1ai
-DOMAIN-SUFFIX,xn--80aamd4bpgcg.xn--p1ai
-DOMAIN-SUFFIX,xn--80ab0acbpdb.xn--p1ai
-DOMAIN-SUFFIX,xn--80ab0acoo.xn--p1ai
-DOMAIN-SUFFIX,xn--80ab2aant.xn--p1ai
-DOMAIN-SUFFIX,xn--80abclbyjxftaheo.xn--p1ai
-DOMAIN-SUFFIX,xn--80abidppcrd6g.xn--p1ai
-DOMAIN-SUFFIX,xn--80abkdocegchudk7aiqk6fud.xn--p1ai
-DOMAIN-SUFFIX,xn--80abkdqhcx2axc.xn--p1ai
-DOMAIN-SUFFIX,xn--80abkdqhcx2axc5i.com
-DOMAIN-SUFFIX,xn--80abkdqhcx2axc5i.net
-DOMAIN-SUFFIX,xn--80abkdqhcx2axc5i.su
-DOMAIN-SUFFIX,xn--80abuehbpdc4b5c8b.xn--p1ai
-DOMAIN-SUFFIX,xn--80aehb2bilakgf3bu.xn--p1ai
-DOMAIN-SUFFIX,xn--80ag7aaibi.xn--p1ai
-DOMAIN-SUFFIX,xn--80ajijsfw.xn--p1ai
-DOMAIN-SUFFIX,xn--80atbkdbppdcuz.xn--p1ai
-DOMAIN-SUFFIX,xn--90a4aaz.xn--p1ai
-DOMAIN-SUFFIX,xn--90ab2c.xn--p1ai
-DOMAIN-SUFFIX,xn--90agclcdedgvi3agok6e7c.xn--p1ai
-DOMAIN-SUFFIX,xn--b1acdqftdebb.xn--80abcykcpfdu.xn--p1ai
-DOMAIN-SUFFIX,xn--b1afbkon4ai1b.xn--p1ai
-DOMAIN-SUFFIX,xn--bpay-43d.akbars.ru
-DOMAIN-SUFFIX,xn--d1abkftnrcqv.xn--p1ai
-DOMAIN-SUFFIX,xn--d1arj.xn--p1ai
+DOMAIN-SUFFIX,xn-----6kcbbbkyqlacrwuz0azpe1g.xn--p1ai # БАНК-РАЗВИТИЕ-СТОЛИЦА.РФ
+DOMAIN-SUFFIX,xn----7sbbgpkiac3a6aquke1e.xn--p1ai # РАЗВИТИЕ-СТОЛИЦА.РФ
+DOMAIN-SUFFIX,xn----7sbc1bbpx.xn--p1ai # банк-рк.рф
+DOMAIN-SUFFIX,xn----7sbcc7bbnf3b.xn--p1ai # банк-мскб.рф
+DOMAIN-SUFFIX,xn----7sbcoetidz6azac4j.com # кубань-кредит.com
+DOMAIN-SUFFIX,xn----7sbcoetidz6azac4j.net # кубань-кредит.net
+DOMAIN-SUFFIX,xn----7sbcoetidz6azac4j.su # кубань-кредит.su
+DOMAIN-SUFFIX,xn----8sbc8adbsdb.xn--p1ai # локо-банк.рф
+DOMAIN-SUFFIX,xn----8sbc8adrq.xn--p1ai # рк-банк.рф
+DOMAIN-SUFFIX,xn--80aaadelf1ajfdec5ahj7aog.xn--p1ai # александровскийбанк.рф
+DOMAIN-SUFFIX,xn--80aaanetpw3ba4m.xn--p1ai # единаякасса.рф
+DOMAIN-SUFFIX,xn--80aabb0crq.xn--p1ai # РБАБАНК.РФ
+DOMAIN-SUFFIX,xn--80aabbofwlcf0ag7a5ag1m.xn--p1ai # кубанькредитбанк.рф
+DOMAIN-SUFFIX,xn--80aacc5bcuf.xn--p1ai # вакобанк.рф
+DOMAIN-SUFFIX,xn--80aacd4aobv3a8l.xn--p1ai # славиябанк.рф
+DOMAIN-SUFFIX,xn--80aacgj8apdcfucpk3n.xn--p1ai # энерготрансбанк.рф
+DOMAIN-SUFFIX,xn--80aacktqbtccfwhip4n.xn--p1ai # солидарностьбанк.рф
+DOMAIN-SUFFIX,xn--80aamd4bpgcg.xn--p1ai # астрасенд.рф
+DOMAIN-SUFFIX,xn--80ab0acbpdb.xn--p1ai # локобанк.рф
+DOMAIN-SUFFIX,xn--80ab0acoo.xn--p1ai # ркбанк.рф
+DOMAIN-SUFFIX,xn--80ab2aant.xn--p1ai # банкрк.рф
+DOMAIN-SUFFIX,xn--80abclbyjxftaheo.xn--p1ai # северстройбанк.рф
+DOMAIN-SUFFIX,xn--80abidppcrd6g.xn--p1ai # челиндбанк.рф
+DOMAIN-SUFFIX,xn--80abkdocegchudk7aiqk6fud.xn--p1ai # банкстоличныйкредит.рф
+DOMAIN-SUFFIX,xn--80abkdqhcx2axc.xn--p1ai # кубанкредит.рф
+DOMAIN-SUFFIX,xn--80abkdqhcx2axc5i.com # кубанькредит.com
+DOMAIN-SUFFIX,xn--80abkdqhcx2axc5i.net # кубанькредит.net
+DOMAIN-SUFFIX,xn--80abkdqhcx2axc5i.su # кубанькредит.su
+DOMAIN-SUFFIX,xn--80abuehbpdc4b5c8b.xn--p1ai # отличныйбанк.рф
+DOMAIN-SUFFIX,xn--80aehb2bilakgf3bu.xn--p1ai # центррасчетов.рф
+DOMAIN-SUFFIX,xn--80ag7aaibi.xn--p1ai # агророс.рф
+DOMAIN-SUFFIX,xn--80ajijsfw.xn--p1ai # ипотека.рф
+DOMAIN-SUFFIX,xn--80atbkdbppdcuz.xn--p1ai # хочуконтракт.рф
+DOMAIN-SUFFIX,xn--90a4aaz.xn--p1ai # чбрр.рф
+DOMAIN-SUFFIX,xn--90ab2c.xn--p1ai # втб.рф
+DOMAIN-SUFFIX,xn--90agclcdedgvi3agok6e7c.xn--p1ai # кбстоличныйкредит.рф
+DOMAIN-SUFFIX,xn--b1acdqftdebb.xn--80abcykcpfdu.xn--p1ai # новогодний.норвикбанк.рф
+DOMAIN-SUFFIX,xn--b1afbkon4ai1b.xn--p1ai # челинвест.рф
+DOMAIN-SUFFIX,xn--bpay-43d.akbars.ru # аbpay.akbars.ru
+DOMAIN-SUFFIX,xn--d1abkftnrcqv.xn--p1ai # хочукредит.рф
+DOMAIN-SUFFIX,xn--d1arj.xn--p1ai # нрд.рф
 DOMAIN-SUFFIX,yabank.yandex.ru
 DOMAIN-SUFFIX,yarinterbank.ru
 DOMAIN-SUFFIX,yarmarka.gift-cards.ru
@@ -1018,6 +1015,7 @@ DOMAIN-SUFFIX,yoomoney.ru
 DOMAIN-SUFFIX,yoosoft.ru
 DOMAIN-SUFFIX,young.vtb.ru
 DOMAIN-SUFFIX,ypmn.ru
+DOMAIN-SUFFIX,zalog.baltinvestbank.com
 DOMAIN-SUFFIX,zalog.sovcombank.ru
 DOMAIN-SUFFIX,zemcombank.ru
 DOMAIN-SUFFIX,zemsky.ru
