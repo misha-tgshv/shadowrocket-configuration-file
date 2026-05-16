@@ -23,29 +23,6 @@ jobs:
         run: |
           mkdir -p rules scripts modules conf
 
-      - name: Генерируем список voice с DST-PORT
-        run: |
-          {
-            echo "# WhatsApp/Telegram/FaceTime — Голос"
-            echo "# https://faq.whatsapp.com/490531153094849/?cms_platform=iphone&helpref=platform_switcher"
-            echo "# https://www.netify.ai/resources/protocols/telegram"
-            echo "# https://www.netify.ai/resources/applications/whatsapp"
-            echo "DST-PORT,3478,PROXY"
-            echo "DST-PORT,3480,PROXY"
-            echo "DST-PORT,3484,PROXY"
-            echo "# WhatsApp — Видео"
-            echo "# https://developers.facebook.com/docs/whatsapp/guides/network-requirements/"
-            echo "DST-PORT,5222,PROXY"
-            echo "# Telegram — Голос и видео (RTP / P2P)"
-            echo "DST-PORT,596-599,PROXY"
-            echo "# DST-PORT,50000-59999,PROXY"
-            echo "# TCP порт для сигнальных звонков Telegram"
-            echo "DST-PORT,1400,PROXY"
-            echo "# Google Meet"
-            echo "# https://support.google.com/a/answer/1279090?hl=en#zippy=%2Cavoid-using-vpns%2Cavoid-using-qos%2Cavoid-using-proxies%2Cusing-vdi%2Cusing-wi-fi%2Cconfiguring-default-video-quality%2Cstep-review-bandwidth-requirements%2Cstep-allow-access-to-google-ip-address-ranges-for-audio-and-video%2Cstep-allow-access-to-uniform-resource-identifiers-uris%2Cstep-set-up-outbound-ports-for-media-traffic"
-            echo "DST-PORT,19302​–19309,PROXY"
-            
-          } > rules/voice_ports.list
       - name: Генерируем domains_geo_detect.list
         run: |
           curl -s https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ip-geo-detect.list \
@@ -282,10 +259,9 @@ jobs:
             echo "[Rule]"
             echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_community.list,PROXY"
             echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/rules/domain_ips.list,PROXY,no-resolve"
-            # echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/main/rules/voice_ports.list,PROXY"
-            echo "RULE-SET,https://raw.githubusercontent.com/HybridNetworks/whatsapp-cidr/refs/heads/main/WhatsApp/whatsapp_cidr_ipv4.list,PROXY,no-resolve"
             echo "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Telegram/Telegram.list,PROXY"
             echo "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Discord/Discord.list,PROXY"
+            echo "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Whatsapp/Whatsapp.list,PROXY"
             echo "RULE-SET,https://github.com/toneywhitez/zkeen_rules/releases/latest/download/telegram_ips.list,PROXY,no-resolve"
             echo "RULE-SET,https://github.com/toneywhitez/zkeen_rules/releases/latest/download/meta_ips.list,PROXY,no-resolve"
             echo "FINAL,DIRECT"
@@ -326,8 +302,8 @@ jobs:
             echo "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/YouTube/YouTube.list,PROXY"
             echo "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Instagram/Instagram.list,PROXY"
             echo "RULE-SET,https://raw/.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Facebook/Facebook.list,PROXY"
-            echo "RULE-SET,https://raw.githubusercontent.com/HybridNetworks/whatsapp-cidr/refs/heads/main/WhatsApp/whatsapp_cidr_ipv4.list,PROXY,no-resolve"
             echo "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Telegram/Telegram.list,PROXY"
+            echo "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Whatsapp/Whatsapp.list,PROXY"
             echo "RULE-SET,https://github.com/toneywhitez/zkeen_rules/releases/latest/download/telegram_ips.list,PROXY,no-resolve"
             echo "RULE-SET,https://github.com/toneywhitez/zkeen_rules/releases/latest/download/meta_ips.list,PROXY,no-resolve"
             echo "FINAL,DIRECT"
