@@ -31,7 +31,7 @@
 - `domains_ipchecker` - чекеры, использующиеся в российских приложения.
 
 ## Где брать еще списки?
-- Использовать популярные от Blackmatrix7. Например, для [ТГ](https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Shadowrocket/TelegramUS/README.md);
+- Использовать популярные от Blackmatrix7. Например, для [ТГ](https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Shadowrocket/Telegram/README.md);
 - Поискать актуальные в разных форматах на [IPlist](https://iplist.opencck.org/ru/). Для SR подойдет формате в Text;
 
 ## Инструкции и помощь
