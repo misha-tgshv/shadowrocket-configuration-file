@@ -1,12 +1,13 @@
 # NAME: domains_banking.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-05-26 04:57:22 MSK
+# UPDATED: 2026-05-27 05:06:36 MSK
 # SOURCE: https://www.cbr.ru/banking_sector/credit/cowebsites/
-# TOTAL: 1025
+# TOTAL: 1026
 DOMAIN-SUFFIX,1.psbank.ru
 DOMAIN-SUFFIX,13.alfabank.ru
 DOMAIN-SUFFIX,131.ru
+DOMAIN-SUFFIX,141.8.192.25
 DOMAIN-SUFFIX,1c.raif.ru
 DOMAIN-SUFFIX,1cb.ru
 DOMAIN-SUFFIX,1erc.ru
@@ -88,6 +89,7 @@ DOMAIN-SUFFIX,aura.planeta-mall.ru
 DOMAIN-SUFFIX,ausn.absolutbank.ru
 DOMAIN-SUFFIX,ausn.gazprombank.ru
 DOMAIN-SUFFIX,auth.lk.vtb.ru
+DOMAIN-SUFFIX,auto.chelind.ru
 DOMAIN-SUFFIX,auto.vtb.ru
 DOMAIN-SUFFIX,autobahn.db.com
 DOMAIN-SUFFIX,autofinancebank.ru
@@ -111,7 +113,6 @@ DOMAIN-SUFFIX,bank-mscb.ru
 DOMAIN-SUFFIX,bank-peresvet.ru
 DOMAIN-SUFFIX,bank-rc.ru
 DOMAIN-SUFFIX,bank-rk.ru
-DOMAIN-SUFFIX,bank-zone.ru
 DOMAIN-SUFFIX,bank.procombank.com
 DOMAIN-SUFFIX,bank45.ru
 DOMAIN-SUFFIX,banka-ui.dev
@@ -300,6 +301,7 @@ DOMAIN-SUFFIX,filebox-test.alfabank.ru
 DOMAIN-SUFFIX,finambank.ru
 DOMAIN-SUFFIX,finance.ozon.ru
 DOMAIN-SUFFIX,finbank.ru
+DOMAIN-SUFFIX,finpilot.finance
 DOMAIN-SUFFIX,finsb.ru
 DOMAIN-SUFFIX,finstarbank.ru
 DOMAIN-SUFFIX,fintender.ru
@@ -618,7 +620,6 @@ DOMAIN-SUFFIX,old.gazprombank.ru
 DOMAIN-SUFFIX,old.nsd.ru
 DOMAIN-SUFFIX,olmapay.ru
 DOMAIN-SUFFIX,oms.rsb.ru
-DOMAIN-SUFFIX,onetwoauto.ru
 DOMAIN-SUFFIX,online.absolutbank.ru
 DOMAIN-SUFFIX,online.akibank.ru
 DOMAIN-SUFFIX,online.bankstavr.ru
@@ -771,6 +772,7 @@ DOMAIN-SUFFIX,rshbdigital.ru
 DOMAIN-SUFFIX,rsl.vtb.ru
 DOMAIN-SUFFIX,ru.abchina.com
 DOMAIN-SUFFIX,ru.ccb.com
+DOMAIN-SUFFIX,ru.pinterest.com
 DOMAIN-SUFFIX,rusbsbank.ru
 DOMAIN-SUFFIX,rusfincorp.ru
 DOMAIN-SUFFIX,rusnarbank.ru
@@ -868,6 +870,7 @@ DOMAIN-SUFFIX,t-mall.gift-cards.ru
 DOMAIN-SUFFIX,t-win.vtb.ru
 DOMAIN-SUFFIX,tagbank.ru
 DOMAIN-SUFFIX,taidon.ru
+DOMAIN-SUFFIX,tangrm.ru
 DOMAIN-SUFFIX,tatsotsbank.ru
 DOMAIN-SUFFIX,tbank.ru
 DOMAIN-SUFFIX,teatr.vtb.ru
@@ -959,7 +962,6 @@ DOMAIN-SUFFIX,vtbrussia.ru
 DOMAIN-SUFFIX,vtbstrana.ru
 DOMAIN-SUFFIX,waybank.ru
 DOMAIN-SUFFIX,wb-bank.ru
-DOMAIN-SUFFIX,webmobile.sovcombank.ru
 DOMAIN-SUFFIX,welcome.rdb.ru
 DOMAIN-SUFFIX,westernunion.ru
 DOMAIN-SUFFIX,wm.sovcombank.ru
@@ -1017,7 +1019,6 @@ DOMAIN-SUFFIX,young.vtb.ru
 DOMAIN-SUFFIX,ypmn.ru
 DOMAIN-SUFFIX,zalog.baltinvestbank.com
 DOMAIN-SUFFIX,zalog.sovcombank.ru
-DOMAIN-SUFFIX,zemcombank.ru
 DOMAIN-SUFFIX,zemsky.ru
 DOMAIN-SUFFIX,zenit-card.ru
 DOMAIN-SUFFIX,zenit-clubchampion.ru
