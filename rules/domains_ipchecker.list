@@ -1,7 +1,7 @@
 # NAME: domains_ipchecker.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-05-30 04:54:07 MSK
+# UPDATED: 2026-05-31 05:07:39 MSK
 # SOURCE: manual curated list
 # TOTAL: 4
 DOMAIN-SUFFIX,api.ipify.org
