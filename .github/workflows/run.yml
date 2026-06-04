@@ -39,7 +39,7 @@ jobs:
             echo "# AUTHOR: misha-tgshv"
             echo "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file"
             echo "# UPDATED: $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S') MSK"
-            echo "# SOURCE: https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/category-ip-geo-detect.list"
+            echo "# SOURCE: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ip-geo-detect.list"
             echo "# Количество доменов: $(wc -l < temp_geo_detect.txt)"
             cat temp_geo_detect.txt
           } > rules/domains_geo_detect.list
@@ -70,7 +70,7 @@ jobs:
               print "# AUTHOR: misha-tgshv";
               print "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file";
               print "# UPDATED: " strftime("%Y-%m-%d %H:%M:%S", systime(), 1) " MSK";
-              print "# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list";
+              print "# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/rules/domains_community.list";
               before_youtube=1
             }
             /^#/ {
@@ -282,7 +282,7 @@ jobs:
               echo "# Выборочные правила маршрутизации"
               echo "[Rule]"
               echo "RULE-SET,https://github.com/hydraponique/roscomvpn-geoip/raw/refs/heads/master/release/text/whitelist.txt,DIRECT"
-              echo "RULE-SET,https://github.com/hxehex/russia-mobile-internet-whitelist/blob/main/whitelist.txt,DIRECT"
+              echo "RULE-SET,https://raw.githubusercontent.com/hxehex/russia-mobile-internet-whitelist/refs/heads/main/whitelist.txt,DIRECT"
               echo "FINAL,PROXY"
             } > conf/${CONFNAME}
     
