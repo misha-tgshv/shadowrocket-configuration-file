@@ -1,8 +1,8 @@
 # NAME: domains_community.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-06-04 02:31:15 MSK
-# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/community.list
+# UPDATED: 2026-06-04 13:55:46 MSK
+# SOURCE: https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/rules/domains_community.list
 # special
 DOMAIN-KEYWORD,4pda
 DOMAIN-KEYWORD,canva
