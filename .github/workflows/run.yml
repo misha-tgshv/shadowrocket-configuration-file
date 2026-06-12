@@ -301,7 +301,7 @@ jobs:
             echo "[Rule]"
             echo "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/YouTube/YouTube.list,PROXY"
             echo "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Instagram/Instagram.list,PROXY"
-            echo "RULE-SET,https://raw/.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Facebook/Facebook.list,PROXY"
+            echo "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Facebook/Facebook.list,PROXY"
             echo "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Telegram/Telegram.list,PROXY"
             echo "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Whatsapp/Whatsapp.list,PROXY"
             echo "RULE-SET,https://github.com/toneywhitez/zkeen_rules/releases/latest/download/telegram_ips.list,PROXY,no-resolve"
@@ -420,6 +420,7 @@ jobs:
           # Вставляем .ru в строку skip-proxy в conf/${CONFNAME}
           sed -i '/^skip-proxy/ s/$/,*.ru,*.su,*.рф/' conf/${CONFNAME}
           
+          # Обязательно. Добавьте эти адреса в настройках программы Settings → GeoLite2 Database
           sed -i "1s/^/# @misha-tgshv, built on $(TZ=\"Asia/Novokuznetsk\" date)\n/" conf/${CONFNAME}
           rm conf/General.tmp
 
@@ -432,7 +433,7 @@ jobs:
       - name: Добавляем и коммитим новые файлы
         run: |
           git add rules scripts modules conf
-          git commit -m "Auto: обновление сгенерированных файлов [skip ci]" || echo "No changes to commit"
+          git commit -m "Auto: обновление сгенерированных файлы [skip ci]" || echo "No changes to commit"
 
       - name: Пушим изменения в main
         run: git push origin main
