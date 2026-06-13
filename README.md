@@ -35,4 +35,4 @@
 - Поискать актуальные в разных форматах на [IPlist](https://iplist.opencck.org/ru/). Для SR подойдет формате в Text;
 
 ## Инструкции и помощь
-Подробные инструкции по настройке, использованию и дополнительным функциям доступны в [блоге](https://mishatugushev.ru/blog/?go=all/shadowrocket-seamless). Поддержать проект можно на [Бусти](https://boosty.to/misha_tgshv/donate).
+Подробные инструкции по настройке, использованию и дополнительным функциям доступны в [блоге](https://mishatugushev.ru/blog/?go=all/shadowrocket-seamless). Поддержать проект можно на [Бусти](https://boosty.to/misha_tgshv/donate?ref=github).
