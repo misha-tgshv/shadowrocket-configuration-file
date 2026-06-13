@@ -189,10 +189,11 @@ jobs:
       - name: Генерируем domains_ipchecker.list
         run: |
           cat > /tmp/ipchecker.txt << 'EOF'
-          api.ipify.org
+          ipify.org
           ifconfig.me
+          x5static.net
           checkip.amazonaws.com
-          relay-api.eu.2gis.com
+          eu.2gis.com
           EOF
   
           sort -u /tmp/ipchecker.txt > /tmp/ipchecker_sorted.txt
