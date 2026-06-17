@@ -224,16 +224,16 @@ jobs:
           sort -u /tmp/custom-proxy.txt > /tmp/custom-proxy.txt
   
           {
-            echo "# NAME: domains_ipchecker.list"
+            echo "# NAME: custom-proxy.list"
             echo "# AUTHOR: misha-tgshv"
             echo "# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file"
             echo "# UPDATED: $(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M:%S') MSK"
             echo "# SOURCE: manual curated list"
-            echo "# TOTAL: $(wc -l < /tmp/ipchecker_sorted.txt)"
-            sed 's/^/DOMAIN-SUFFIX,/' /tmp/ipchecker_sorted.txt
-          } > rules/domains_ipchecker.list
+            echo "# TOTAL: $(wc -l < /tmp/custom-proxy.txt)"
+            sed 's/^/DOMAIN-SUFFIX,/' /tmp/custom-proxy.txt
+          } > rules/custom-proxy.list
   
-          rm /tmp/ipchecker.txt /tmp/ipchecker_sorted.txt
+          rm /tmp/custom-proxy.txt /tmp/custom-proxy.txt
 
       # --- Генерация скриптов ---
       - name: Генерируем rewrite.youtube.response.preview.js
@@ -436,9 +436,9 @@ jobs:
             cat conf/General.tmp
             echo "# Отправляем все сайты в ГЕО напрямую, а остальное в прокси"
             echo "[Rule]"
+            echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/rules/custom-proxy.list,PROXY"
             echo "GEOIP,RU,DIRECT"
             echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/rules/domains_ipchecker.list,DIRECT"
-            echo "RULE-SET,https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/rules/custom-proxy.list,PROXY"
             echo "# DOMAIN-SUFFIX,ru,DIRECT"
             echo "# DOMAIN-SUFFIX,рф,DIRECT"
             echo "# DOMAIN-SUFFIX,su,DIRECT"
