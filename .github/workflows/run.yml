@@ -220,9 +220,9 @@ jobs:
           cp-rp16-normal-ycru.tiktokv.com
           habr.com
           EOF
-  
-          sort -u /tmp/custom-proxy.txt > /tmp/custom-proxy.txt
-  
+      
+          sort -u -o /tmp/custom-proxy.txt /tmp/custom-proxy.txt
+      
           {
             echo "# NAME: custom-proxy.list"
             echo "# AUTHOR: misha-tgshv"
@@ -232,15 +232,15 @@ jobs:
             echo "# TOTAL: $(wc -l < /tmp/custom-proxy.txt)"
             sed 's/^/DOMAIN-SUFFIX,/' /tmp/custom-proxy.txt
           } > rules/custom-proxy.list
+      
+          rm -f /tmp/custom-proxy.txt
   
-          rm /tmp/custom-proxy.txt /tmp/custom-proxy.txt
-
-      # --- Генерация скриптов ---
-      - name: Генерируем rewrite.youtube.response.preview.js
-        run: |
-          curl -sSL "https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js" > temp.txt
-          sed 's/;e!/;e/g' temp.txt > scripts/rewrite.youtube.response.preview.js
-          rm temp.txt
+        # --- Генерация скриптов ---
+        - name: Генерируем rewrite.youtube.response.preview.js
+          run: |
+            curl -sSL "https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js" > temp.txt
+            sed 's/;e!/;e/g' temp.txt > scripts/rewrite.youtube.response.preview.js
+            rm temp.txt
 
       # --- Генерация модулей ---
       - name: Получаем даты последних изменений
