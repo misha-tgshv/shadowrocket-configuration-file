@@ -1,0 +1,11 @@
+# NAME: custom-proxy.list
+# AUTHOR: misha-tgshv
+# REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
+# UPDATED: 2026-06-17 13:53:58 MSK
+# SOURCE: manual curated list
+# TOTAL: 5
+DOMAIN-SUFFIX,cp-rp16-normal-ycru.tiktokv.com
+DOMAIN-SUFFIX,habr.com
+DOMAIN-SUFFIX,p16-sign-sg.tiktokcdn.com
+DOMAIN-SUFFIX,p16-sign-va.tiktokcdn.com
+DOMAIN-SUFFIX,sf-ssp.tiktokcdn.com
