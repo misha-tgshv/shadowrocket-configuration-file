@@ -1,13 +1,12 @@
 # NAME: domains_banking.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-06-23 05:26:22 MSK
+# UPDATED: 2026-06-23 18:10:19 MSK
 # SOURCE: https://www.cbr.ru/banking_sector/credit/cowebsites/
 # TOTAL: 1026
 DOMAIN-SUFFIX,1.psbank.ru
 DOMAIN-SUFFIX,13.alfabank.ru
 DOMAIN-SUFFIX,131.ru
-DOMAIN-SUFFIX,141.8.192.25
 DOMAIN-SUFFIX,1c.raif.ru
 DOMAIN-SUFFIX,1cb.ru
 DOMAIN-SUFFIX,1erc.ru
@@ -52,6 +51,7 @@ DOMAIN-SUFFIX,alfafuture.com
 DOMAIN-SUFFIX,alfafuture.ru
 DOMAIN-SUFFIX,alfaleasing.ru
 DOMAIN-SUFFIX,alfapartners.alfabank.ru
+DOMAIN-SUFFIX,alnairao.ru
 DOMAIN-SUFFIX,altbank.com
 DOMAIN-SUFFIX,altynbank.com
 DOMAIN-SUFFIX,amanatpay.ru
@@ -219,7 +219,6 @@ DOMAIN-SUFFIX,cr20.ccb2.ru
 DOMAIN-SUFFIX,cred.metib.ru
 DOMAIN-SUFFIX,credit-fl-lkk.agroros.ru
 DOMAIN-SUFFIX,credit-lkk.agroros.ru
-DOMAIN-SUFFIX,credit-zenit.ru
 DOMAIN-SUFFIX,credit.chelind.ru
 DOMAIN-SUFFIX,credit.sovcombank.ru
 DOMAIN-SUFFIX,creditbusiness.chelind.ru
@@ -324,7 +323,6 @@ DOMAIN-SUFFIX,gift-cards.ru
 DOMAIN-SUFFIX,go.unicredit.ru
 DOMAIN-SUFFIX,gorbank.spb.ru
 DOMAIN-SUFFIX,gorodpay.ru
-DOMAIN-SUFFIX,gp.zenit.ru
 DOMAIN-SUFFIX,gpb.ru
 DOMAIN-SUFFIX,granat.az
 DOMAIN-SUFFIX,granatpay.ru
@@ -393,7 +391,6 @@ DOMAIN-SUFFIX,job.alfabank.ru
 DOMAIN-SUFFIX,job.cifra-bank.ru
 DOMAIN-SUFFIX,job.delo.ru
 DOMAIN-SUFFIX,journal.uralsib.ru
-DOMAIN-SUFFIX,jpmorgan.ru
 DOMAIN-SUFFIX,k-accounts.gazprombank.ru
 DOMAIN-SUFFIX,kaleidoscope-center.gift-cards.ru
 DOMAIN-SUFFIX,kalinamall.gift-cards.ru
@@ -776,6 +773,7 @@ DOMAIN-SUFFIX,ru.pinterest.com
 DOMAIN-SUFFIX,rusbsbank.ru
 DOMAIN-SUFFIX,rusfincorp.ru
 DOMAIN-SUFFIX,rusnarbank.ru
+DOMAIN-SUFFIX,russia.jpmorgan.com
 DOMAIN-SUFFIX,russitabank.ru
 DOMAIN-SUFFIX,rzb.ru
 DOMAIN-SUFFIX,s.gazprombank.ru
@@ -958,12 +956,15 @@ DOMAIN-SUFFIX,vtb.promo
 DOMAIN-SUFFIX,vtb.ru
 DOMAIN-SUFFIX,vtb24.ru
 DOMAIN-SUFFIX,vtbfamily.ru
+DOMAIN-SUFFIX,vtbklassika.ru
 DOMAIN-SUFFIX,vtbrussia.ru
 DOMAIN-SUFFIX,vtbstrana.ru
 DOMAIN-SUFFIX,waybank.ru
 DOMAIN-SUFFIX,wb-bank.ru
+DOMAIN-SUFFIX,wbpay.ru
 DOMAIN-SUFFIX,welcome.rdb.ru
 DOMAIN-SUFFIX,westernunion.ru
+DOMAIN-SUFFIX,wiki-nvbo.mkb.ru
 DOMAIN-SUFFIX,wm.sovcombank.ru
 DOMAIN-SUFFIX,woori.ru
 DOMAIN-SUFFIX,wumte.ru
@@ -971,6 +972,7 @@ DOMAIN-SUFFIX,xn-----6kcbbbkyqlacrwuz0azpe1g.xn--p1ai # БАНК-РАЗВИТИ�
 DOMAIN-SUFFIX,xn----7sbbgpkiac3a6aquke1e.xn--p1ai # РАЗВИТИЕ-СТОЛИЦА.РФ
 DOMAIN-SUFFIX,xn----7sbc1bbpx.xn--p1ai # банк-рк.рф
 DOMAIN-SUFFIX,xn----7sbcc7bbnf3b.xn--p1ai # банк-мскб.рф
+DOMAIN-SUFFIX,xn----7sbcg2bhldj1e7c.xn--p1ai # банк-хлынов.рф
 DOMAIN-SUFFIX,xn----7sbcoetidz6azac4j.com # кубань-кредит.com
 DOMAIN-SUFFIX,xn----7sbcoetidz6azac4j.net # кубань-кредит.net
 DOMAIN-SUFFIX,xn----7sbcoetidz6azac4j.su # кубань-кредит.su
@@ -1020,11 +1022,9 @@ DOMAIN-SUFFIX,ypmn.ru
 DOMAIN-SUFFIX,zalog.baltinvestbank.com
 DOMAIN-SUFFIX,zalog.sovcombank.ru
 DOMAIN-SUFFIX,zemsky.ru
-DOMAIN-SUFFIX,zenit-card.ru
-DOMAIN-SUFFIX,zenit-clubchampion.ru
-DOMAIN-SUFFIX,zenit-partners.ru
 DOMAIN-SUFFIX,zenit.ru
 DOMAIN-SUFFIX,zenitcard.ru
+DOMAIN-SUFFIX,zenitresearch.ru
 DOMAIN-SUFFIX,zero.cmrbank.ru
 DOMAIN-SUFFIX,zeroclient.cmrbank.ru
 DOMAIN-SUFFIX,zhivagobank.ru
