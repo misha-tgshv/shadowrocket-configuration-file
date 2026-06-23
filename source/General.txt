@@ -119,6 +119,6 @@ AUTO = url-test, policy-regex-filter=^(?!.*(YouTube|Россия|🇷🇺)).*, i
 
 # Опционально. Добавьте эти адреса в настройках программы Settings → GeoLite2 Database
 # Если у вас нет аккаунта на Maxmind и вы испольузуете финальное правило Proxy или Auto
-# country: https://cdn.jsdelivr.net/gh/P3TERX/GeoLite.mmdb@download/GeoLite2-Country.mmdb
-# asn: https://cdn.jsdelivr.net/gh/P3TERX/GeoLite.mmdb@download/GeoLite2-ASN.mmdb
+# country: https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country-without-asn.mmdb 
+# asn: https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb
 
