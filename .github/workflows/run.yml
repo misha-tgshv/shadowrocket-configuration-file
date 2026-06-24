@@ -283,13 +283,13 @@ jobs:
             cat conf/General.tmp
             echo "# Выборочные правила маршрутизации"
             echo "[Rule]"
-            echo "RULE-SET,https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file/main/rules/domains_community.list,PROXY"
-            echo "RULE-SET,https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/rules/domain_ips.list,PROXY,no-resolve"
-            echo "RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Telegram/Telegram.list,PROXY"
-            echo "RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/refs/heads/master/rule/Shadowrocket/Discord/Discord.list,PROXY"
-            echo "RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Whatsapp/Whatsapp.list,PROXY"
-            echo "RULE-SET,https://cdn.jsdelivr.net/gh/toneywhitez/zkeen_rules/releases/latest/download/telegram_ips.list,PROXY,no-resolve"
-            echo "RULE-SET,https://cdn.jsdelivr.net/gh/toneywhitez/zkeen_rules/releases/latest/download/meta_ips.list,PROXY,no-resolve"
+            echo "RULE-SET,https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/rules/domains_community.list,PROXY"
+            echo "RULE-SET,https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/rules/domain_ips.list,PROXY,no-resolve"
+            echo "RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Shadowrocket/Telegram/Telegram.list,PROXY"
+            echo "RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Shadowrocket/Discord/Discord.list,PROXY"
+            echo "RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Shadowrocket/Whatsapp/Whatsapp.list,PROXY"
+            echo "RULE-SET,https://github.com/toneywhitez/zkeen_rules/releases/latest/download/telegram_ips.list,PROXY,no-resolve"
+            echo "RULE-SET,https://github.com/toneywhitez/zkeen_rules/releases/latest/download/meta_ips.list,PROXY,no-resolve"
             echo "FINAL,DIRECT"
           } > conf/${CONFNAME}
 
