@@ -436,9 +436,9 @@ jobs:
             cat conf/General.tmp
             echo "# Отправляем все сайты в ГЕО напрямую, а остальное в прокси"
             echo "[Rule]"
-            echo "RULE-SET,https:https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/rules/custom-proxy.list,PROXY"
+            echo "RULE-SET,https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/rules/custom-proxy.list,PROXY"
             echo "GEOIP,RU,DIRECT"
-            echo "RULE-SET,https://https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/rules/domains_ipchecker.list,DIRECT"
+            echo "RULE-SET,https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/rules/domains_ipchecker.list,DIRECT"
             echo "# DOMAIN-SUFFIX,ru,DIRECT"
             echo "# DOMAIN-SUFFIX,рф,DIRECT"
             echo "# DOMAIN-SUFFIX,su,DIRECT"
