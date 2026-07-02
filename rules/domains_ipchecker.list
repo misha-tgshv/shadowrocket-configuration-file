@@ -1,7 +1,7 @@
 # NAME: domains_ipchecker.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-07-01 05:38:00 MSK
+# UPDATED: 2026-07-02 05:27:39 MSK
 # SOURCE: manual curated list
 # TOTAL: 5
 DOMAIN-SUFFIX,checkip.amazonaws.com
