@@ -194,6 +194,7 @@ jobs:
           x5static.net
           checkip.amazonaws.com
           eu.2gis.com
+          ping.ozon.kz
           EOF
   
           sort -u /tmp/ipchecker.txt > /tmp/ipchecker_sorted.txt
