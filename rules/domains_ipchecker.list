@@ -1,11 +1,12 @@
 # NAME: domains_ipchecker.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-07-07 05:09:34 MSK
+# UPDATED: 2026-07-07 06:55:08 MSK
 # SOURCE: manual curated list
-# TOTAL: 5
+# TOTAL: 6
 DOMAIN-SUFFIX,checkip.amazonaws.com
 DOMAIN-SUFFIX,eu.2gis.com
 DOMAIN-SUFFIX,ifconfig.me
 DOMAIN-SUFFIX,ipify.org
+DOMAIN-SUFFIX,ping.ozon.kz
 DOMAIN-SUFFIX,x5static.net
