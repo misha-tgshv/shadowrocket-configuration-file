@@ -1,9 +1,9 @@
 # NAME: domains_banking.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-07-23 04:56:12 MSK
+# UPDATED: 2026-07-24 04:51:25 MSK
 # SOURCE: https://www.cbr.ru/banking_sector/credit/cowebsites/
-# TOTAL: 1026
+# TOTAL: 1035
 DOMAIN-SUFFIX,1.psbank.ru
 DOMAIN-SUFFIX,13.alfabank.ru
 DOMAIN-SUFFIX,131.ru
@@ -29,6 +29,7 @@ DOMAIN-SUFFIX,acquiring.pervbank.ru
 DOMAIN-SUFFIX,acquiring.vtb.ru
 DOMAIN-SUFFIX,acs.pervbank.ru
 DOMAIN-SUFFIX,action.norvikbank.ru
+DOMAIN-SUFFIX,agent.chelind.ru
 DOMAIN-SUFFIX,agroros.ru
 DOMAIN-SUFFIX,ai-bank.ru
 DOMAIN-SUFFIX,aic.ru
@@ -142,6 +143,7 @@ DOMAIN-SUFFIX,bantikov.ru
 DOMAIN-SUFFIX,bbr.ru
 DOMAIN-SUFFIX,bcosm.ru
 DOMAIN-SUFFIX,bcs-bank.ru
+DOMAIN-SUFFIX,beautifulcompliment-my.gift-cards.ru
 DOMAIN-SUFFIX,beauty-my.gift-cards.ru
 DOMAIN-SUFFIX,benefit.gift-cards.ru
 DOMAIN-SUFFIX,bereit.ru
@@ -172,6 +174,7 @@ DOMAIN-SUFFIX,business.energotransbank.com
 DOMAIN-SUFFIX,business.faktura.ru
 DOMAIN-SUFFIX,business.rsb.ru
 DOMAIN-SUFFIX,business.united.ru
+DOMAIN-SUFFIX,bystrobank.ru
 DOMAIN-SUFFIX,ca-cib.ru
 DOMAIN-SUFFIX,capital-bank.ru
 DOMAIN-SUFFIX,capitalbank.ru
@@ -300,7 +303,7 @@ DOMAIN-SUFFIX,filebox-test.alfabank.ru
 DOMAIN-SUFFIX,finambank.ru
 DOMAIN-SUFFIX,finance.ozon.ru
 DOMAIN-SUFFIX,finbank.ru
-DOMAIN-SUFFIX,finpilot.finance
+DOMAIN-SUFFIX,finpilot.su
 DOMAIN-SUFFIX,finsb.ru
 DOMAIN-SUFFIX,finstarbank.ru
 DOMAIN-SUFFIX,fintender.ru
@@ -320,7 +323,7 @@ DOMAIN-SUFFIX,gebank.ru
 DOMAIN-SUFFIX,genbank.ru
 DOMAIN-SUFFIX,gethalva.ru
 DOMAIN-SUFFIX,gift-cards.ru
-DOMAIN-SUFFIX,go.unicredit.ru
+DOMAIN-SUFFIX,giftpass.gift-cards.ru
 DOMAIN-SUFFIX,gorbank.spb.ru
 DOMAIN-SUFFIX,gorodpay.ru
 DOMAIN-SUFFIX,gpb.ru
@@ -357,6 +360,7 @@ DOMAIN-SUFFIX,id-test.alfabank.ru
 DOMAIN-SUFFIX,idea.sovcombank.ru
 DOMAIN-SUFFIX,ilove-car.vtb.ru
 DOMAIN-SUFFIX,ilovecar.vtb.ru
+DOMAIN-SUFFIX,imall.gift-cards.ru
 DOMAIN-SUFFIX,import-export.energotransbank.com
 DOMAIN-SUFFIX,in-bank.ru
 DOMAIN-SUFFIX,infinite.kk.bank
@@ -376,6 +380,7 @@ DOMAIN-SUFFIX,invest.rshb.ru
 DOMAIN-SUFFIX,investday.vtb.ru
 DOMAIN-SUFFIX,investments.alfabank.ru
 DOMAIN-SUFFIX,ipb.ru
+DOMAIN-SUFFIX,ipoteka-biz.chelind.ru
 DOMAIN-SUFFIX,ipoteka-online.vtb.ru
 DOMAIN-SUFFIX,ipoteka.chelind.ru
 DOMAIN-SUFFIX,ipoteka.raiffeisen.ru
@@ -563,7 +568,6 @@ DOMAIN-SUFFIX,my.energotransbank.com
 DOMAIN-SUFFIX,my.gift-cards.ru
 DOMAIN-SUFFIX,my.snbank.ru
 DOMAIN-SUFFIX,my.vtb.ru
-DOMAIN-SUFFIX,mygift.gift-cards.ru
 DOMAIN-SUFFIX,mygift.ru
 DOMAIN-SUFFIX,mygiftcard.ru
 DOMAIN-SUFFIX,mygiftcardal.gift-cards.ru
@@ -701,6 +705,7 @@ DOMAIN-SUFFIX,promo.slbank.ru
 DOMAIN-SUFFIX,promo.united.ru
 DOMAIN-SUFFIX,prostobank.online
 DOMAIN-SUFFIX,prostodar-my.gift-cards.ru
+DOMAIN-SUFFIX,prostodar.ru
 DOMAIN-SUFFIX,prvbank.ru
 DOMAIN-SUFFIX,psbank.ru
 DOMAIN-SUFFIX,psblog.ru
@@ -710,6 +715,7 @@ DOMAIN-SUFFIX,pskb.com
 DOMAIN-SUFFIX,ptkb.ru
 DOMAIN-SUFFIX,pushkinopark.gift-cards.ru
 DOMAIN-SUFFIX,pvubank.com
+DOMAIN-SUFFIX,qandyapp.com
 DOMAIN-SUFFIX,qandyapp.ru
 DOMAIN-SUFFIX,queue.snbank.ru
 DOMAIN-SUFFIX,rabota.alfabank.ru
@@ -962,6 +968,7 @@ DOMAIN-SUFFIX,vtbstrana.ru
 DOMAIN-SUFFIX,waybank.ru
 DOMAIN-SUFFIX,wb-bank.ru
 DOMAIN-SUFFIX,wbpay.ru
+DOMAIN-SUFFIX,wealth-care.ru
 DOMAIN-SUFFIX,welcome.rdb.ru
 DOMAIN-SUFFIX,westernunion.ru
 DOMAIN-SUFFIX,wiki-nvbo.mkb.ru
@@ -1021,10 +1028,12 @@ DOMAIN-SUFFIX,young.vtb.ru
 DOMAIN-SUFFIX,ypmn.ru
 DOMAIN-SUFFIX,zalog.baltinvestbank.com
 DOMAIN-SUFFIX,zalog.sovcombank.ru
+DOMAIN-SUFFIX,zarplata.chelind.ru
 DOMAIN-SUFFIX,zemsky.ru
 DOMAIN-SUFFIX,zenit.ru
 DOMAIN-SUFFIX,zenitcard.ru
 DOMAIN-SUFFIX,zenitresearch.ru
+DOMAIN-SUFFIX,zenlt.ru
 DOMAIN-SUFFIX,zero.cmrbank.ru
 DOMAIN-SUFFIX,zeroclient.cmrbank.ru
 DOMAIN-SUFFIX,zhivagobank.ru
