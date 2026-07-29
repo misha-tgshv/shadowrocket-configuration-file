@@ -1,9 +1,9 @@
 # NAME: domains_geo_detect.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-07-28 04:43:58 MSK
+# UPDATED: 2026-07-29 04:45:35 MSK
 # SOURCE: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ip-geo-detect.list
-# Количество доменов: 153
+# Количество доменов: 156
 DOMAIN-SUFFIX,2ip.io
 DOMAIN-SUFFIX,2ip.ua
 DOMAIN-SUFFIX,51degrees.com
@@ -97,6 +97,7 @@ DOMAIN-SUFFIX,ipqualityscore.com
 DOMAIN-SUFFIX,ipquery.io
 DOMAIN-SUFFIX,ipregistry.co
 DOMAIN-SUFFIX,iproyal.com
+DOMAIN-SUFFIX,ipsimple.org
 DOMAIN-SUFFIX,ipstack.com
 DOMAIN-SUFFIX,ipv4-check-perf.radar.cloudflare.com
 DOMAIN-SUFFIX,ipv4-internet.yandex.net
@@ -117,6 +118,7 @@ DOMAIN-SUFFIX,my-ip.io
 DOMAIN-SUFFIX,my.ipinfo.app
 DOMAIN-SUFFIX,myexternalip.com
 DOMAIN-SUFFIX,myip.com
+DOMAIN-SUFFIX,myip.dnsomatic.com
 DOMAIN-SUFFIX,myip.expert
 DOMAIN-SUFFIX,myip.la
 DOMAIN-SUFFIX,myip.link
@@ -126,6 +128,7 @@ DOMAIN-SUFFIX,myipaddress.com
 DOMAIN-SUFFIX,myiplookup.com
 DOMAIN-SUFFIX,mylocation.org
 DOMAIN-SUFFIX,nodedata.io
+DOMAIN-SUFFIX,nossl.sh
 DOMAIN-SUFFIX,osint.sh
 DOMAIN-SUFFIX,proxycheck.io
 DOMAIN-SUFFIX,realip.cc
