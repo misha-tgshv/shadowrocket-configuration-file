@@ -1,9 +1,9 @@
 # NAME: domains_banking.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-08-03 04:56:19 MSK
+# UPDATED: 2026-08-04 04:31:02 MSK
 # SOURCE: https://www.cbr.ru/banking_sector/credit/cowebsites/
-# TOTAL: 1035
+# TOTAL: 1036
 DOMAIN-SUFFIX,1.psbank.ru
 DOMAIN-SUFFIX,13.alfabank.ru
 DOMAIN-SUFFIX,131.ru
@@ -50,6 +50,7 @@ DOMAIN-SUFFIX,alfabank.ru
 DOMAIN-SUFFIX,alfafinance.ru
 DOMAIN-SUFFIX,alfafuture.com
 DOMAIN-SUFFIX,alfafuture.ru
+DOMAIN-SUFFIX,alfaglobal.alfabank.ru
 DOMAIN-SUFFIX,alfaleasing.ru
 DOMAIN-SUFFIX,alfapartners.alfabank.ru
 DOMAIN-SUFFIX,alnairao.ru
@@ -266,7 +267,6 @@ DOMAIN-SUFFIX,donteksbank.ru
 DOMAIN-SUFFIX,dp.sngb.ru
 DOMAIN-SUFFIX,dsrnko.ru
 DOMAIN-SUFFIX,dtb1.ru
-DOMAIN-SUFFIX,dvbank.ru
 DOMAIN-SUFFIX,earco.ru
 DOMAIN-SUFFIX,eatpbank.ru
 DOMAIN-SUFFIX,ebs.snbank.ru
@@ -395,6 +395,7 @@ DOMAIN-SUFFIX,jncd.gift-cards.ru
 DOMAIN-SUFFIX,job.alfabank.ru
 DOMAIN-SUFFIX,job.cifra-bank.ru
 DOMAIN-SUFFIX,job.delo.ru
+DOMAIN-SUFFIX,journal.sovcombank.ru
 DOMAIN-SUFFIX,journal.uralsib.ru
 DOMAIN-SUFFIX,k-accounts.gazprombank.ru
 DOMAIN-SUFFIX,kaleidoscope-center.gift-cards.ru
@@ -518,6 +519,7 @@ DOMAIN-SUFFIX,mcbank.ru
 DOMAIN-SUFFIX,mcbankrus.ru
 DOMAIN-SUFFIX,mcplat.ru
 DOMAIN-SUFFIX,meal.gift-cards.ru
+DOMAIN-SUFFIX,media.halvacard.ru
 DOMAIN-SUFFIX,mega-adygeya-my.gift-cards.ru
 DOMAIN-SUFFIX,mega-belaya-dacha-my.gift-cards.ru
 DOMAIN-SUFFIX,mega-kazan-my.gift-cards.ru
@@ -589,7 +591,6 @@ DOMAIN-SUFFIX,nico-bank.ru
 DOMAIN-SUFFIX,nipbank.ru
 DOMAIN-SUFFIX,nkbank.ru
 DOMAIN-SUFFIX,nko-rr.ru
-DOMAIN-SUFFIX,nkoistina.ru
 DOMAIN-SUFFIX,nkomobi.ru
 DOMAIN-SUFFIX,nkz-my.gift-cards.ru
 DOMAIN-SUFFIX,nkz.planeta-mall.ru
@@ -620,6 +621,7 @@ DOMAIN-SUFFIX,old.derzhava.ru
 DOMAIN-SUFFIX,old.gazprombank.ru
 DOMAIN-SUFFIX,old.nsd.ru
 DOMAIN-SUFFIX,olmapay.ru
+DOMAIN-SUFFIX,omnitransfer.ru
 DOMAIN-SUFFIX,oms.rsb.ru
 DOMAIN-SUFFIX,online.absolutbank.ru
 DOMAIN-SUFFIX,online.akibank.ru
@@ -657,6 +659,7 @@ DOMAIN-SUFFIX,paycenter.ru
 DOMAIN-SUFFIX,paymentcenter.ru
 DOMAIN-SUFFIX,paymentkit.ru
 DOMAIN-SUFFIX,payments.raiffeisen.ru
+DOMAIN-SUFFIX,paymenttechno.ru
 DOMAIN-SUFFIX,pb.vtb.ru
 DOMAIN-SUFFIX,pearl.gift-cards.ru
 DOMAIN-SUFFIX,people.sovcombank.ru
@@ -715,8 +718,6 @@ DOMAIN-SUFFIX,pskb.com
 DOMAIN-SUFFIX,ptkb.ru
 DOMAIN-SUFFIX,pushkinopark.gift-cards.ru
 DOMAIN-SUFFIX,pvubank.com
-DOMAIN-SUFFIX,qandyapp.com
-DOMAIN-SUFFIX,qandyapp.ru
 DOMAIN-SUFFIX,queue.snbank.ru
 DOMAIN-SUFFIX,rabota.alfabank.ru
 DOMAIN-SUFFIX,rabota.vtb.ru
