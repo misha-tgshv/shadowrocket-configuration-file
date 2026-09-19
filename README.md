@@ -15,6 +15,11 @@
 | [sr_ru_geo.conf](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/conf/sr_ru_geo.conf)  | Все в прокси кроме доменов ru/рф, они мимо туннеля. Лучший вариант для звонков Telegram, Whatsapp и Facetime. Подключите дополительно ГЕО базы, ссылки на них есть в 94 строке. Обратите внимание, что может увеличиться время загрузки из Апстора и возможны другими минусы, которые автор пока не обнаружил.|
 | [sr_ru_whitelist.conf](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/conf/sr_ru_whitelist.conf)  | БС через провайдера, а остальное в прокси|
 
+### Альтернативные ссылки на конфиги (при проблемах с github)
+- Базовый - https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/conf/sr_ru_basic.conf.conf
+- Гео - https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/conf/sr_ru_geo.conf
+- БС - https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/conf/sr_ru_whitelist.conf
+
 ## Особенности
 - Для популярных доменов (например, Instagram, YouTube) применяется дополнительное подправило `DOMAIN-KEYWORD`;
 - Используются подправила `DOMAIN-SUFFIX` для корректной работы с поддоменами и расширяющие возможности, если появился новый поддомен;
