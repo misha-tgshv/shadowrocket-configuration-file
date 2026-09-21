@@ -1,9 +1,9 @@
 # NAME: domains_geo_detect.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-09-20 05:27:38 MSK
+# UPDATED: 2026-09-21 05:26:31 MSK
 # SOURCE: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ip-geo-detect.list
-# Количество доменов: 225
+# Количество доменов: 229
 DOMAIN-SUFFIX,2ip.io
 DOMAIN-SUFFIX,2ip.ua
 DOMAIN-SUFFIX,51degrees.com
@@ -28,6 +28,7 @@ DOMAIN-SUFFIX,country.is
 DOMAIN-SUFFIX,criminalip.io
 DOMAIN-SUFFIX,curlmyip.net
 DOMAIN-SUFFIX,db-ip.com
+DOMAIN-SUFFIX,dnscheck.tools
 DOMAIN-SUFFIX,dnsleaktest.com
 DOMAIN-SUFFIX,extreme-ip-lookup.com
 DOMAIN-SUFFIX,find-my-ip.com
@@ -109,6 +110,8 @@ DOMAIN-SUFFIX,iplocate.io
 DOMAIN-SUFFIX,iplocation.com
 DOMAIN-SUFFIX,iplocation.io
 DOMAIN-SUFFIX,iplocation.net
+DOMAIN-SUFFIX,iplogger.com
+DOMAIN-SUFFIX,iplogger.org
 DOMAIN-SUFFIX,iplookup.it
 DOMAIN-SUFFIX,ipme.co
 DOMAIN-SUFFIX,ipme.in
@@ -149,6 +152,7 @@ DOMAIN-SUFFIX,myip.eu
 DOMAIN-SUFFIX,myip.expert
 DOMAIN-SUFFIX,myip.fi
 DOMAIN-SUFFIX,myip.ge
+DOMAIN-SUFFIX,myip.happ.su
 DOMAIN-SUFFIX,myip.hk
 DOMAIN-SUFFIX,myip.id
 DOMAIN-SUFFIX,myip.is
