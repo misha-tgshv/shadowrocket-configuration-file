@@ -1,9 +1,9 @@
 # NAME: domains_refilter.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-10-11 05:59:49 MSK
+# UPDATED: 2026-10-12 06:23:19 MSK
 # SOURCE: https://github.com/1andrevich/Re-filter-lists
-# TOTAL: 81752
+# TOTAL: 81971
 DOMAIN-SUFFIX,4pda.ru
 DOMAIN-SUFFIX,4pda.to
 DOMAIN-SUFFIX,abook-club.ru
@@ -89,6 +89,7 @@ DOMAIN-SUFFIX,beyond.hg-cdn.com
 DOMAIN-SUFFIX,bowsersinsidestory.com
 DOMAIN-SUFFIX,brawlstarsgame.com
 DOMAIN-SUFFIX,feed.rutracker.cc
+DOMAIN-SUFFIX,freeanimehentai.net
 DOMAIN-SUFFIX,caesium.app
 DOMAIN-SUFFIX,canva.com
 DOMAIN-SUFFIX,cdn.id.supercell.com
@@ -99,6 +100,7 @@ DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,chatgpt.livekit.cloud
 DOMAIN-SUFFIX,turn.livekit.cloud
 DOMAIN-SUFFIX,host.livekit.cloud
+DOMAIN-SUFFIX,hanime-cdn.com
 DOMAIN-SUFFIX,checkout.buckaroo.nl
 DOMAIN-SUFFIX,chess.com
 DOMAIN-SUFFIX,cisco.com
@@ -115,6 +117,7 @@ DOMAIN-SUFFIX,autodiscover.instagram.com
 DOMAIN-SUFFIX,black.instagram.com
 DOMAIN-SUFFIX,blog.business.instagram.com
 DOMAIN-SUFFIX,blog.instagram.com
+DOMAIN-SUFFIX,bluearchiveyostar.com
 DOMAIN-SUFFIX,business.instagram.com
 DOMAIN-SUFFIX,community.instagram.com
 DOMAIN-SUFFIX,developers.instagram.com
@@ -467,6 +470,7 @@ DOMAIN-SUFFIX,portal.bgpmon.net
 DOMAIN-SUFFIX,ppy.sh
 DOMAIN-SUFFIX,protonmail.com
 DOMAIN-SUFFIX,pump.fun
+DOMAIN-SUFFIX,production.cloudfront.docker.com
 DOMAIN-SUFFIX,personaltrainermath.com
 DOMAIN-SUFFIX,playnintendo.com
 DOMAIN-SUFFIX,pokedex3d.com
@@ -675,6 +679,7 @@ DOMAIN-SUFFIX,www.stalker2.com
 DOMAIN-SUFFIX,www.support.xerox.com
 DOMAIN-SUFFIX,www.youtube.com
 DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,yostarplat.com
 DOMAIN-SUFFIX,ubnt.com
 DOMAIN-SUFFIX,ui.com
 DOMAIN-SUFFIX,www.ti.com
@@ -958,6 +963,7 @@ DOMAIN-SUFFIX,123sport.me
 DOMAIN-SUFFIX,123videos.top
 DOMAIN-SUFFIX,123wrestling.com
 DOMAIN-SUFFIX,123ya-uchebnik.ru
+DOMAIN-SUFFIX,124.225.213.74
 DOMAIN-SUFFIX,125okna.ru
 DOMAIN-SUFFIX,125rc.biz
 DOMAIN-SUFFIX,125rc.com
@@ -1012,7 +1018,6 @@ DOMAIN-SUFFIX,142fri.tv-hub.top
 DOMAIN-SUFFIX,142may.tvhub.icu
 DOMAIN-SUFFIX,1430mm.ru
 DOMAIN-SUFFIX,143porn.com
-DOMAIN-SUFFIX,144.31.236.132
 DOMAIN-SUFFIX,1493.ru
 DOMAIN-SUFFIX,14cra.cc
 DOMAIN-SUFFIX,14metrov.biz
@@ -1032,6 +1037,7 @@ DOMAIN-SUFFIX,1520gym.ru
 DOMAIN-SUFFIX,1534wwaslbddf-chekov-firma.info
 DOMAIN-SUFFIX,1540.com.ua
 DOMAIN-SUFFIX,1564.landing-for-daddy.com
+DOMAIN-SUFFIX,15880.com
 DOMAIN-SUFFIX,15best.ru
 DOMAIN-SUFFIX,15c.buzz
 DOMAIN-SUFFIX,15coinsgrand.top
@@ -1039,7 +1045,6 @@ DOMAIN-SUFFIX,15dayvic.ru
 DOMAIN-SUFFIX,15dragoncoins.top
 DOMAIN-SUFFIX,15g.click
 DOMAIN-SUFFIX,15min.lt
-DOMAIN-SUFFIX,15minut.org
 DOMAIN-SUFFIX,15n.buzz
 DOMAIN-SUFFIX,15nov8.hd-rzk1.xyz
 DOMAIN-SUFFIX,15r.top
@@ -1056,6 +1061,7 @@ DOMAIN-SUFFIX,162gp.online
 DOMAIN-SUFFIX,162gp.ru
 DOMAIN-SUFFIX,163avtoshkola.ru
 DOMAIN-SUFFIX,163med-sprawka.ru
+DOMAIN-SUFFIX,166.1.2.109
 DOMAIN-SUFFIX,168.exodirectory.com
 DOMAIN-SUFFIX,16coinsxmas.top
 DOMAIN-SUFFIX,16honeys.com
@@ -1086,7 +1092,6 @@ DOMAIN-SUFFIX,1812-09.torrent24.org
 DOMAIN-SUFFIX,1812-16.torrent24.org
 DOMAIN-SUFFIX,1812kld.ru
 DOMAIN-SUFFIX,184.education
-DOMAIN-SUFFIX,185.88.36.151
 DOMAIN-SUFFIX,188school.ru
 DOMAIN-SUFFIX,18anime.me
 DOMAIN-SUFFIX,18avmm.tv
@@ -1813,6 +1818,7 @@ DOMAIN-SUFFIX,21t.click
 DOMAIN-SUFFIX,21thorlightningways.top
 DOMAIN-SUFFIX,21u.top
 DOMAIN-SUFFIX,21v.click
+DOMAIN-SUFFIX,21vek.by
 DOMAIN-SUFFIX,22.doramalive.la
 DOMAIN-SUFFIX,22.pornoklad.ink
 DOMAIN-SUFFIX,22.xporno.online
@@ -2135,7 +2141,9 @@ DOMAIN-SUFFIX,3005www.lasttor.com
 DOMAIN-SUFFIX,300mg.ru
 DOMAIN-SUFFIX,303-303.ru
 DOMAIN-SUFFIX,303.landing-gama.com
+DOMAIN-SUFFIX,306bets10.com
 DOMAIN-SUFFIX,30740944.84167.ru
+DOMAIN-SUFFIX,307bets10.com
 DOMAIN-SUFFIX,309nov.tvhub.icu
 DOMAIN-SUFFIX,30kr.at
 DOMAIN-SUFFIX,30october.org
@@ -2408,7 +2416,6 @@ DOMAIN-SUFFIX,44q.click
 DOMAIN-SUFFIX,44ru.ru
 DOMAIN-SUFFIX,44t.click
 DOMAIN-SUFFIX,45-60.ru
-DOMAIN-SUFFIX,45.39.60.36
 DOMAIN-SUFFIX,4520365.84167.ru
 DOMAIN-SUFFIX,4557wa.c97.org
 DOMAIN-SUFFIX,45km-auto.ru
@@ -2570,6 +2577,7 @@ DOMAIN-SUFFIX,51laki.com
 DOMAIN-SUFFIX,51news.ru
 DOMAIN-SUFFIX,51royalrussia.com
 DOMAIN-SUFFIX,52.bordel.house
+DOMAIN-SUFFIX,520hack.com
 DOMAIN-SUFFIX,52ds.ru
 DOMAIN-SUFFIX,53g.click
 DOMAIN-SUFFIX,53sadik.ru
@@ -2624,6 +2632,7 @@ DOMAIN-SUFFIX,5e7f887c54477.site123.me
 DOMAIN-SUFFIX,5ec1cb23637b7.site123.me
 DOMAIN-SUFFIX,5edmat.com
 DOMAIN-SUFFIX,5elem.ru
+DOMAIN-SUFFIX,5element.by
 DOMAIN-SUFFIX,5families.top
 DOMAIN-SUFFIX,5gclarity.com
 DOMAIN-SUFFIX,5gradus24-krd.ru
@@ -2764,6 +2773,7 @@ DOMAIN-SUFFIX,7501.express-wallet.com
 DOMAIN-SUFFIX,75porn.net
 DOMAIN-SUFFIX,76detsad.ru
 DOMAIN-SUFFIX,76school.ru
+DOMAIN-SUFFIX,77.91.127.244
 DOMAIN-SUFFIX,7744895f.piped.pages.dev
 DOMAIN-SUFFIX,77bestdpo.ru
 DOMAIN-SUFFIX,77p.fun
@@ -2878,6 +2888,7 @@ DOMAIN-SUFFIX,8.viptorpro.com
 DOMAIN-SUFFIX,80.pornoklad.ink
 DOMAIN-SUFFIX,80b.click
 DOMAIN-SUFFIX,80wun0mb.com
+DOMAIN-SUFFIX,81.cn
 DOMAIN-SUFFIX,81.pornoklad.ink
 DOMAIN-SUFFIX,810kjiezmb.com
 DOMAIN-SUFFIX,813p82rlwcd86pk.filonl.ru
@@ -2964,6 +2975,7 @@ DOMAIN-SUFFIX,936redirect.com
 DOMAIN-SUFFIX,93sad.ru
 DOMAIN-SUFFIX,93shkola.online
 DOMAIN-SUFFIX,93shkola.ru
+DOMAIN-SUFFIX,94.242.58.19
 DOMAIN-SUFFIX,9407573.ru
 DOMAIN-SUFFIX,944z7awimb.com
 DOMAIN-SUFFIX,947redirect.com
@@ -3019,8 +3031,6 @@ DOMAIN-SUFFIX,9torrent.net
 DOMAIN-SUFFIX,9tv.co.il
 DOMAIN-SUFFIX,9videos.tv
 DOMAIN-SUFFIX,9vids.com
-DOMAIN-SUFFIX,Demokracija.eu
-DOMAIN-SUFFIX,Euobserver.com
 DOMAIN-SUFFIX,a-3studio.ru
 DOMAIN-SUFFIX,a-a63.ru
 DOMAIN-SUFFIX,a-agent.ru
@@ -3185,6 +3195,7 @@ DOMAIN-SUFFIX,a1.animerem.org
 DOMAIN-SUFFIX,a1.animevost.top
 DOMAIN-SUFFIX,a1.blog-club.org
 DOMAIN-SUFFIX,a1.bluesystem.me
+DOMAIN-SUFFIX,a1.by
 DOMAIN-SUFFIX,a1.detectivo.org
 DOMAIN-SUFFIX,a1.herrutor.site
 DOMAIN-SUFFIX,a1.mp4film.net
@@ -3351,7 +3362,6 @@ DOMAIN-SUFFIX,abbdsm.com
 DOMAIN-SUFFIX,abbytime.com
 DOMAIN-SUFFIX,abc-multimedia.com
 DOMAIN-SUFFIX,abc.logovohd.online
-DOMAIN-SUFFIX,abc.net.au
 DOMAIN-SUFFIX,abc.run2me.top
 DOMAIN-SUFFIX,abc.run2me.xyz
 DOMAIN-SUFFIX,abc.transy-msk.xyz
@@ -3436,6 +3446,7 @@ DOMAIN-SUFFIX,aboutfoursquare.ru
 DOMAIN-SUFFIX,aboutrussia.org
 DOMAIN-SUFFIX,abp-mebel.ru
 DOMAIN-SUFFIX,abpp.com.br
+DOMAIN-SUFFIX,abpr2.railfan.net
 DOMAIN-SUFFIX,abracadabrashop.biz.24rc.lol
 DOMAIN-SUFFIX,abraziv-nn.ru
 DOMAIN-SUFFIX,abrest.ru
@@ -3524,6 +3535,7 @@ DOMAIN-SUFFIX,accords-land.ru
 DOMAIN-SUFFIX,accords-land.top
 DOMAIN-SUFFIX,accordtt.ru
 DOMAIN-SUFFIX,account.proton.me
+DOMAIN-SUFFIX,account.tiger.com
 DOMAIN-SUFFIX,account.wbgames.com
 DOMAIN-SUFFIX,accruebrokerlimited.com
 DOMAIN-SUFFIX,accruelimited.com
@@ -3600,6 +3612,7 @@ DOMAIN-SUFFIX,active-broker.com
 DOMAIN-SUFFIX,active-levis.xyz
 DOMAIN-SUFFIX,active-pr.ru
 DOMAIN-SUFFIX,activebodyguide.ru
+DOMAIN-SUFFIX,activecloud.by
 DOMAIN-SUFFIX,activecorp.com.br
 DOMAIN-SUFFIX,activekiddy.ru
 DOMAIN-SUFFIX,activeness.social
@@ -3607,6 +3620,7 @@ DOMAIN-SUFFIX,activeswiftrd.com
 DOMAIN-SUFFIX,activitylesson.com
 DOMAIN-SUFFIX,activos-chainzolplatform.com
 DOMAIN-SUFFIX,activoschainzol-platform.com
+DOMAIN-SUFFIX,activpn.com
 DOMAIN-SUFFIX,actmart.ru
 DOMAIN-SUFFIX,actressx.com
 DOMAIN-SUFFIX,actualcleaning.ru
@@ -3869,6 +3883,7 @@ DOMAIN-SUFFIX,afinacentr.ru
 DOMAIN-SUFFIX,afinance.pro
 DOMAIN-SUFFIX,afinserv.ru
 DOMAIN-SUFFIX,afisha.london
+DOMAIN-SUFFIX,afisha.relax.by
 DOMAIN-SUFFIX,afisha.tochka.net
 DOMAIN-SUFFIX,afishakinosputnik.ru
 DOMAIN-SUFFIX,afishar.com
@@ -3954,7 +3969,6 @@ DOMAIN-SUFFIX,agnosticfront.com
 DOMAIN-SUFFIX,agonta.ru
 DOMAIN-SUFFIX,agoor.ru
 DOMAIN-SUFFIX,agora-events.com
-DOMAIN-SUFFIX,agora.legal
 DOMAIN-SUFFIX,agora.md
 DOMAIN-SUFFIX,agorakoeln.de
 DOMAIN-SUFFIX,agosdip.ru
@@ -4034,6 +4048,7 @@ DOMAIN-SUFFIX,ahri-gallery-20250322.top
 DOMAIN-SUFFIX,ahri8.com
 DOMAIN-SUFFIX,ahtuba-adm.ru
 DOMAIN-SUFFIX,ahufgpp.com
+DOMAIN-SUFFIX,ahvalnews.com
 DOMAIN-SUFFIX,ai.aappspot.com
 DOMAIN-SUFFIX,ai.casvn.ru
 DOMAIN-SUFFIX,ai.cinema-24.net
@@ -4144,6 +4159,7 @@ DOMAIN-SUFFIX,aist-print.ru
 DOMAIN-SUFFIX,aistake.shop
 DOMAIN-SUFFIX,aistorggroup.ru
 DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,aistudio.xiaomimimo.com
 DOMAIN-SUFFIX,ait-tt.ru
 DOMAIN-SUFFIX,aitafilm.ru
 DOMAIN-SUFFIX,aitesol.com
@@ -4638,6 +4654,7 @@ DOMAIN-SUFFIX,allmarketshub.com
 DOMAIN-SUFFIX,allmatureporn.org
 DOMAIN-SUFFIX,allmedmedicalsupplies.co.ke
 DOMAIN-SUFFIX,allmedtech.ru
+DOMAIN-SUFFIX,allminsk.biz
 DOMAIN-SUFFIX,allmp3s.org
 DOMAIN-SUFFIX,allmults.org
 DOMAIN-SUFFIX,allnames.info
@@ -4646,6 +4663,7 @@ DOMAIN-SUFFIX,allnumerology.ru
 DOMAIN-SUFFIX,allo-card.net
 DOMAIN-SUFFIX,alloha.filmoteka.mom
 DOMAIN-SUFFIX,alloldpics.com
+DOMAIN-SUFFIX,allout.org
 DOMAIN-SUFFIX,allow24-m1.com
 DOMAIN-SUFFIX,allow24-m10.com
 DOMAIN-SUFFIX,allow24-m11.com
@@ -4847,7 +4865,6 @@ DOMAIN-SUFFIX,alpinizm66.ru
 DOMAIN-SUFFIX,alpiyskayaskazka.ru
 DOMAIN-SUFFIX,alpvdzkb.com
 DOMAIN-SUFFIX,alpvostok.ru
-DOMAIN-SUFFIX,alqassam.ps
 DOMAIN-SUFFIX,alr-cure.link
 DOMAIN-SUFFIX,alrf86.ru
 DOMAIN-SUFFIX,alrhajigroup.com
@@ -4890,6 +4907,7 @@ DOMAIN-SUFFIX,altarix.ru
 DOMAIN-SUFFIX,altav.ru
 DOMAIN-SUFFIX,altavpn.net
 DOMAIN-SUFFIX,altay-solonovka.ru
+DOMAIN-SUFFIX,altaynews.kz
 DOMAIN-SUFFIX,altayproteam.kz
 DOMAIN-SUFFIX,altayresort.ru
 DOMAIN-SUFFIX,altbookmark.com
@@ -5071,6 +5089,7 @@ DOMAIN-SUFFIX,americansk.com
 DOMAIN-SUFFIX,americantreasure.live
 DOMAIN-SUFFIX,americanwota.com
 DOMAIN-SUFFIX,americass.net
+DOMAIN-SUFFIX,amerikaninsesi.com
 DOMAIN-SUFFIX,amerio.life
 DOMAIN-SUFFIX,ameriteflippingmarket.com
 DOMAIN-SUFFIX,ameta-vrn.ru
@@ -5154,6 +5173,7 @@ DOMAIN-SUFFIX,amp-shift-lumen.top
 DOMAIN-SUFFIX,amp-spark-delta.top
 DOMAIN-SUFFIX,amp-vodyara112.ru
 DOMAIN-SUFFIX,amp-vodyara412.ru
+DOMAIN-SUFFIX,amp.cloudflare.com
 DOMAIN-SUFFIX,amp.fakty.ua
 DOMAIN-SUFFIX,amp.glavnoe.ukrainianwall.com
 DOMAIN-SUFFIX,amp.hvylya.net
@@ -5328,6 +5348,7 @@ DOMAIN-SUFFIX,anatlosonline.com
 DOMAIN-SUFFIX,anatoliypiksaev.ru
 DOMAIN-SUFFIX,anatomy.help
 DOMAIN-SUFFIX,anbentibit-app.com
+DOMAIN-SUFFIX,anca.org
 DOMAIN-SUFFIX,anche-design.ru
 DOMAIN-SUFFIX,anchor-bitrowsoft.com
 DOMAIN-SUFFIX,anchor-crest.com
@@ -5372,6 +5393,7 @@ DOMAIN-SUFFIX,androchem.vip
 DOMAIN-SUFFIX,android-apk-free.ru
 DOMAIN-SUFFIX,android-vpn.top
 DOMAIN-SUFFIX,android.dailydownloaded.com
+DOMAIN-SUFFIX,android.myapp.com
 DOMAIN-SUFFIX,androidcorpo.com
 DOMAIN-SUFFIX,androidflash.ru
 DOMAIN-SUFFIX,androidgamesbox.ru
@@ -5381,7 +5403,6 @@ DOMAIN-SUFFIX,androlog-kb.ru
 DOMAIN-SUFFIX,androlog74.ru
 DOMAIN-SUFFIX,andromarkets.com
 DOMAIN-SUFFIX,andromeda.eog.bz
-DOMAIN-SUFFIX,andromeda.lumiora.space
 DOMAIN-SUFFIX,andromeda65.com
 DOMAIN-SUFFIX,andromedaschool.ru
 DOMAIN-SUFFIX,andtv.ru
@@ -5651,6 +5672,7 @@ DOMAIN-SUFFIX,anomera.su
 DOMAIN-SUFFIX,anomera2.ru
 DOMAIN-SUFFIX,anomolodezhka.ru
 DOMAIN-SUFFIX,anon-v.lol
+DOMAIN-SUFFIX,anonfiles.com
 DOMAIN-SUFFIX,anonim.pro
 DOMAIN-SUFFIX,anonimizer.net
 DOMAIN-SUFFIX,anons33.ru
@@ -5806,6 +5828,7 @@ DOMAIN-SUFFIX,ap.cinema-24.net
 DOMAIN-SUFFIX,ap.do4a.me
 DOMAIN-SUFFIX,ap.max-platform.xyz
 DOMAIN-SUFFIX,ap.offinfs.site
+DOMAIN-SUFFIX,ap.org.tr
 DOMAIN-SUFFIX,ap.wforex.org
 DOMAIN-SUFFIX,apachan.ru
 DOMAIN-SUFFIX,apache-geneva.com
@@ -5865,7 +5888,6 @@ DOMAIN-SUFFIX,aphorism-citation.org
 DOMAIN-SUFFIX,aphorism-citation.ru
 DOMAIN-SUFFIX,aphroditeporntube.com
 DOMAIN-SUFFIX,api.app.prod.grazie.aws.intellij.net
-DOMAIN-SUFFIX,api.githib.com
 DOMAIN-SUFFIX,api.github.com
 DOMAIN-SUFFIX,api.githubcopilot.com
 DOMAIN-SUFFIX,api.home-connect.com
@@ -5945,7 +5967,6 @@ DOMAIN-SUFFIX,appexasset.com
 DOMAIN-SUFFIX,appflame.com
 DOMAIN-SUFFIX,appium.ru
 DOMAIN-SUFFIX,apple-service38.ru
-DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,appleavenue.ru
 DOMAIN-SUFFIX,applecrush.top
 DOMAIN-SUFFIX,appleshopspb.ru
@@ -5963,10 +5984,10 @@ DOMAIN-SUFFIX,apps.stream2watch.sx
 DOMAIN-SUFFIX,apps4b-demo.ru
 DOMAIN-SUFFIX,appsnews.ru
 DOMAIN-SUFFIX,appspot.nude-moon.skin
-DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,appstorrent.ru
 DOMAIN-SUFFIX,apptv.space
 DOMAIN-SUFFIX,appyo.xyz
+DOMAIN-SUFFIX,appzplanet.com
 DOMAIN-SUFFIX,apr-technology.ru
 DOMAIN-SUFFIX,apravda.com
 DOMAIN-SUFFIX,apreal-samara.ru
@@ -6052,7 +6073,6 @@ DOMAIN-SUFFIX,arbivexsoft.com
 DOMAIN-SUFFIX,arbivise-engine.com
 DOMAIN-SUFFIX,arborizaxs.ru
 DOMAIN-SUFFIX,arbuzova10.ru
-DOMAIN-SUFFIX,arc-international.net
 DOMAIN-SUFFIX,arc-pro.ru
 DOMAIN-SUFFIX,arc.intel.com
 DOMAIN-SUFFIX,arcadespot.com
@@ -6231,6 +6251,7 @@ DOMAIN-SUFFIX,armavirsma.ru
 DOMAIN-SUFFIX,armdou58.ru
 DOMAIN-SUFFIX,armedkit.foundation
 DOMAIN-SUFFIX,armenia-borzya.ru
+DOMAIN-SUFFIX,armenialiberty.am
 DOMAIN-SUFFIX,armenian-porn.cc
 DOMAIN-SUFFIX,armenian-porn.top
 DOMAIN-SUFFIX,armenianreport.com
@@ -6424,6 +6445,7 @@ DOMAIN-SUFFIX,arvyx-fund.net
 DOMAIN-SUFFIX,arxangelsk.vip-steroids.com
 DOMAIN-SUFFIX,arxangelsk.vipster.net
 DOMAIN-SUFFIX,aryion.com
+DOMAIN-SUFFIX,as-ansar.com
 DOMAIN-SUFFIX,as-dv.com
 DOMAIN-SUFFIX,as-ekb.ru
 DOMAIN-SUFFIX,as-elektrik.ru
@@ -6615,6 +6637,7 @@ DOMAIN-SUFFIX,astalavr.com
 DOMAIN-SUFFIX,astana-artstudio.kz
 DOMAIN-SUFFIX,astana-shop.com
 DOMAIN-SUFFIX,astana.steroids.kz
+DOMAIN-SUFFIX,astaninki.com
 DOMAIN-SUFFIX,astars.tv
 DOMAIN-SUFFIX,astartamebel.ru
 DOMAIN-SUFFIX,astcoltd.ru
@@ -6730,6 +6753,7 @@ DOMAIN-SUFFIX,atlas-1300.com
 DOMAIN-SUFFIX,atlas-finance.org
 DOMAIN-SUFFIX,atlas-inc.pro
 DOMAIN-SUFFIX,atlasavenuewealth.com
+DOMAIN-SUFFIX,atlasdergisi.com
 DOMAIN-SUFFIX,atlasekb.ru
 DOMAIN-SUFFIX,atlasfinex.com
 DOMAIN-SUFFIX,atlasgame.buzz
@@ -6738,6 +6762,7 @@ DOMAIN-SUFFIX,atlaspromarkets.com
 DOMAIN-SUFFIX,atlassian.com
 DOMAIN-SUFFIX,atlasstandardunion.org
 DOMAIN-SUFFIX,atlasventures.company
+DOMAIN-SUFFIX,atlasvpn.com
 DOMAIN-SUFFIX,atlasvpn.work
 DOMAIN-SUFFIX,atlaswealthbase.com
 DOMAIN-SUFFIX,atlaxfinance.com
@@ -6914,6 +6939,7 @@ DOMAIN-SUFFIX,auditnds.ru
 DOMAIN-SUFFIX,auditor63.ru
 DOMAIN-SUFFIX,auditsupport.ru
 DOMAIN-SUFFIX,audittdoc.ru
+DOMAIN-SUFFIX,auduboninternational.org
 DOMAIN-SUFFIX,auecomix.com
 DOMAIN-SUFFIX,auf-123.15e.click
 DOMAIN-SUFFIX,auf-125.35e.click
@@ -7188,6 +7214,7 @@ DOMAIN-SUFFIX,aviled.ru
 DOMAIN-SUFFIX,avinastyle.ru
 DOMAIN-SUFFIX,avinfo17.info
 DOMAIN-SUFFIX,avintegration.ru
+DOMAIN-SUFFIX,avira.com
 DOMAIN-SUFFIX,avistarnews.ru
 DOMAIN-SUFFIX,avita54.ru
 DOMAIN-SUFFIX,avito-cdn.itsaol.com
@@ -7347,12 +7374,14 @@ DOMAIN-SUFFIX,avtotrasolog.ru
 DOMAIN-SUFFIX,avtotreys.site
 DOMAIN-SUFFIX,avtoturbo.ru
 DOMAIN-SUFFIX,avtovazsalon.ru
+DOMAIN-SUFFIX,avtovelomoto.by
 DOMAIN-SUFFIX,avtovikup057.com
 DOMAIN-SUFFIX,avtovishki-v-kaliningrade.ru
 DOMAIN-SUFFIX,avtovokzal-39.ru
 DOMAIN-SUFFIX,avtovokzal-bl.ru
 DOMAIN-SUFFIX,avtovokzal-ivanovo.ru
 DOMAIN-SUFFIX,avtovomske.ru
+DOMAIN-SUFFIX,avtovopros.by
 DOMAIN-SUFFIX,avtoweek2016.ru
 DOMAIN-SUFFIX,avtoyurist-rostov.ru
 DOMAIN-SUFFIX,avtozak.info
@@ -7443,6 +7472,7 @@ DOMAIN-SUFFIX,aymennjawad.org
 DOMAIN-SUFFIX,ayr-van.ltd
 DOMAIN-SUFFIX,ayurveda-nk.ru
 DOMAIN-SUFFIX,ayuston.com
+DOMAIN-SUFFIX,ayyildizpartisi.org.tr
 DOMAIN-SUFFIX,az.do4a.me
 DOMAIN-SUFFIX,az.liveball.gg
 DOMAIN-SUFFIX,az.lozonefilms.buzz
@@ -7459,6 +7489,8 @@ DOMAIN-SUFFIX,azatlyk-vatan.blogspot.com
 DOMAIN-SUFFIX,azattyk.org
 DOMAIN-SUFFIX,azattyq.org
 DOMAIN-SUFFIX,azattyqasia.org
+DOMAIN-SUFFIX,azatutyun.am
+DOMAIN-SUFFIX,azatutyun.net
 DOMAIN-SUFFIX,azbit29f.com
 DOMAIN-SUFFIX,azbuka-stroyki054.ru
 DOMAIN-SUFFIX,azbukadobra.ru
@@ -7474,6 +7506,7 @@ DOMAIN-SUFFIX,azcongress.ru
 DOMAIN-SUFFIX,azcsare.com
 DOMAIN-SUFFIX,azena.co.nz
 DOMAIN-SUFFIX,azent.ru
+DOMAIN-SUFFIX,azerbaycansaati.tv
 DOMAIN-SUFFIX,azerbaycanvolta.az
 DOMAIN-SUFFIX,azerforum.com
 DOMAIN-SUFFIX,azerki.net
@@ -7704,7 +7737,6 @@ DOMAIN-SUFFIX,babylon13.org.ua
 DOMAIN-SUFFIX,babyroomrf.ru
 DOMAIN-SUFFIX,babystash.com
 DOMAIN-SUFFIX,babytransport.ru
-DOMAIN-SUFFIX,bacardi.com
 DOMAIN-SUFFIX,bacgiangcity.site
 DOMAIN-SUFFIX,bachilo.ru
 DOMAIN-SUFFIX,backhim.web.tv
@@ -7766,6 +7798,7 @@ DOMAIN-SUFFIX,bahadur.ru
 DOMAIN-SUFFIX,bahmut1571.com.ua
 DOMAIN-SUFFIX,bahustar.ru
 DOMAIN-SUFFIX,baidarka34.ru
+DOMAIN-SUFFIX,baihe.com
 DOMAIN-SUFFIX,baik24.biz
 DOMAIN-SUFFIX,baikal-gastrofestival.ru
 DOMAIN-SUFFIX,baikal-journal.ru
@@ -8201,6 +8234,7 @@ DOMAIN-SUFFIX,bbc-ccnn.com
 DOMAIN-SUFFIX,bbc-gay.com
 DOMAIN-SUFFIX,bbc.co.uk
 DOMAIN-SUFFIX,bbc.com
+DOMAIN-SUFFIX,bbcazeri.com
 DOMAIN-SUFFIX,bbcccnn.org
 DOMAIN-SUFFIX,bbci.co.uk
 DOMAIN-SUFFIX,bbcking.com
@@ -8215,6 +8249,7 @@ DOMAIN-SUFFIX,bbm.com
 DOMAIN-SUFFIX,bbocgydsupyujjvq.oia7ds95vb0e.live
 DOMAIN-SUFFIX,bbombproxy.github.io
 DOMAIN-SUFFIX,bbs.leyuxyz.com
+DOMAIN-SUFFIX,bbs.myhack58.com
 DOMAIN-SUFFIX,bbs.sincoole.com
 DOMAIN-SUFFIX,bbscam.com
 DOMAIN-SUFFIX,bbsdbrl.top
@@ -8290,6 +8325,7 @@ DOMAIN-SUFFIX,bdf.vc
 DOMAIN-SUFFIX,bdfclub.com
 DOMAIN-SUFFIX,bdfclub.org
 DOMAIN-SUFFIX,bdfoptions.com
+DOMAIN-SUFFIX,bdg.news
 DOMAIN-SUFFIX,bdggamee.app
 DOMAIN-SUFFIX,bdmsh2.ru
 DOMAIN-SUFFIX,bdorecipecalculator.com
@@ -8609,6 +8645,7 @@ DOMAIN-SUFFIX,begovoi-sport.ru
 DOMAIN-SUFFIX,behappy-ekb.ru
 DOMAIN-SUFFIX,behavioralhealthjobs.com
 DOMAIN-SUFFIX,beheaded.top
+DOMAIN-SUFFIX,beian.gov.cn
 DOMAIN-SUFFIX,bein-sports.online
 DOMAIN-SUFFIX,beinmatch.tv
 DOMAIN-SUFFIX,bekafoods.ru
@@ -8706,6 +8743,7 @@ DOMAIN-SUFFIX,belsatdoc.wordpress.com
 DOMAIN-SUFFIX,belsch3.ru
 DOMAIN-SUFFIX,belschool26.ru
 DOMAIN-SUFFIX,belsorriso.ru
+DOMAIN-SUFFIX,belstat.gov.by
 DOMAIN-SUFFIX,belstores.ru
 DOMAIN-SUFFIX,belthara.info
 DOMAIN-SUFFIX,beltlight-msk.ru
@@ -8918,6 +8956,7 @@ DOMAIN-SUFFIX,bestgore.fun
 DOMAIN-SUFFIX,bestgothic.com
 DOMAIN-SUFFIX,bestgrassshop24.biz
 DOMAIN-SUFFIX,besthdgayporn.com
+DOMAIN-SUFFIX,besthost.by
 DOMAIN-SUFFIX,bestiality.show
 DOMAIN-SUFFIX,besticq.ru
 DOMAIN-SUFFIX,bestkids62.ru
@@ -8988,6 +9027,9 @@ DOMAIN-SUFFIX,bestzone.one
 DOMAIN-SUFFIX,bestzzporno.club
 DOMAIN-SUFFIX,bestzzporno.pro
 DOMAIN-SUFFIX,betfair.com
+DOMAIN-SUFFIX,betfair.com.au
+DOMAIN-SUFFIX,betonmobile.by
+DOMAIN-SUFFIX,better.kz
 DOMAIN-SUFFIX,betternet.co
 DOMAIN-SUFFIX,bevarapex-engine.com
 DOMAIN-SUFFIX,beverlyhotsprings.com
@@ -9333,7 +9375,6 @@ DOMAIN-SUFFIX,bindrest.com
 DOMAIN-SUFFIX,binecrafter.com
 DOMAIN-SUFFIX,binexes.online
 DOMAIN-SUFFIX,binexlimited.net
-DOMAIN-SUFFIX,bing-amp.com
 DOMAIN-SUFFIX,bingato.com
 DOMAIN-SUFFIX,bingcha.ru
 DOMAIN-SUFFIX,bingo-lategep.ru
@@ -9360,6 +9401,7 @@ DOMAIN-SUFFIX,binpro24.com
 DOMAIN-SUFFIX,binpro24.net
 DOMAIN-SUFFIX,bintreidclub.com
 DOMAIN-SUFFIX,binworld.pro
+DOMAIN-SUFFIX,bip.com
 DOMAIN-SUFFIX,biqle.life
 DOMAIN-SUFFIX,birbit.com
 DOMAIN-SUFFIX,birchrunpremierlabradors.com
@@ -9725,6 +9767,7 @@ DOMAIN-SUFFIX,bj247.cc
 DOMAIN-SUFFIX,bjbdjs.com
 DOMAIN-SUFFIX,bjdwlgs.com
 DOMAIN-SUFFIX,bjzhikun.com
+DOMAIN-SUFFIX,bk.by
 DOMAIN-SUFFIX,bk.do4a.me
 DOMAIN-SUFFIX,bk1x.mobi
 DOMAIN-SUFFIX,bka-furnitura.ru
@@ -9739,6 +9782,7 @@ DOMAIN-SUFFIX,bl-credo.online
 DOMAIN-SUFFIX,bl-credo.ru
 DOMAIN-SUFFIX,bl-sp.at
 DOMAIN-SUFFIX,bl.do4a.me
+DOMAIN-SUFFIX,bl.ink
 DOMAIN-SUFFIX,bl.otxataba.net
 DOMAIN-SUFFIX,bl230126pb.com
 DOMAIN-SUFFIX,bl2site.at
@@ -9752,6 +9796,7 @@ DOMAIN-SUFFIX,black.instagram.com
 DOMAIN-SUFFIX,blackberry.com
 DOMAIN-SUFFIX,blackseanews.net
 DOMAIN-SUFFIX,blackseango.org
+DOMAIN-SUFFIX,blackseatv.com
 DOMAIN-SUFFIX,blacxprut.com
 DOMAIN-SUFFIX,bladerunner2049.crabdance.com
 DOMAIN-SUFFIX,bladewalker.com
@@ -9888,7 +9933,6 @@ DOMAIN-SUFFIX,blockchain-summit.pro
 DOMAIN-SUFFIX,blockchaintradingsociety.com
 DOMAIN-SUFFIX,blockcointeam.com
 DOMAIN-SUFFIX,blockdapchain.com
-DOMAIN-SUFFIX,blockdx.co
 DOMAIN-SUFFIX,blockedgelimited.com
 DOMAIN-SUFFIX,blockfortxchange.com
 DOMAIN-SUFFIX,blockgrowthsolution.com
@@ -10011,10 +10055,12 @@ DOMAIN-SUFFIX,blue-sky-engine.com
 DOMAIN-SUFFIX,blue-yellow.lt
 DOMAIN-SUFFIX,blue.eog.bz
 DOMAIN-SUFFIX,blue.eog1.pro
+DOMAIN-SUFFIX,bluearchiveyostar.com
 DOMAIN-SUFFIX,bluebutterflyproject.org
 DOMAIN-SUFFIX,bluechipadvisor.live
 DOMAIN-SUFFIX,bluecover.ru
 DOMAIN-SUFFIX,bluecrest-equity.com
+DOMAIN-SUFFIX,blued.com
 DOMAIN-SUFFIX,bluediamondassets.com
 DOMAIN-SUFFIX,bluedoor.fun
 DOMAIN-SUFFIX,blueformy.com
@@ -10033,6 +10079,7 @@ DOMAIN-SUFFIX,bluepondish.com
 DOMAIN-SUFFIX,blueprintoptions.com
 DOMAIN-SUFFIX,bluequbit-ai.net
 DOMAIN-SUFFIX,bluequbittradingapp.net
+DOMAIN-SUFFIX,blueskyswimwear.com
 DOMAIN-SUFFIX,bluestockpips.com
 DOMAIN-SUFFIX,bluestoneluxent.net
 DOMAIN-SUFFIX,bluesuisse.com
@@ -10244,6 +10291,7 @@ DOMAIN-SUFFIX,bolshieserdca.ru
 DOMAIN-SUFFIX,bolshoi-kamen.isuzu-altai.ru
 DOMAIN-SUFFIX,bolshoi-kamen.soyuz-inv.ru
 DOMAIN-SUFFIX,bolshoi-tickets.ru
+DOMAIN-SUFFIX,bolshoibelarus.by
 DOMAIN-SUFFIX,bolshowprazdnik.ru
 DOMAIN-SUFFIX,bolshoy19.ru
 DOMAIN-SUFFIX,bolshoyforum.com
@@ -10732,6 +10780,7 @@ DOMAIN-SUFFIX,brentoliver.com
 DOMAIN-SUFFIX,brentonbrown.com
 DOMAIN-SUFFIX,brentwil.online
 DOMAIN-SUFFIX,brentwil.ru
+DOMAIN-SUFFIX,brestcity.com
 DOMAIN-SUFFIX,bretagne-auto.ru
 DOMAIN-SUFFIX,brevistechnologies.cc
 DOMAIN-SUFFIX,brevistechnology.co
@@ -10802,7 +10851,6 @@ DOMAIN-SUFFIX,broadcast-park.ru
 DOMAIN-SUFFIX,broadcom.com
 DOMAIN-SUFFIX,broadvape.ru
 DOMAIN-SUFFIX,broadviewstream.com
-DOMAIN-SUFFIX,broadvoice.com
 DOMAIN-SUFFIX,brockerassets.org
 DOMAIN-SUFFIX,brockshomebrew.com
 DOMAIN-SUFFIX,broclub.vip
@@ -10951,6 +10999,7 @@ DOMAIN-SUFFIX,bsclear.net
 DOMAIN-SUFFIX,bsclear.pw
 DOMAIN-SUFFIX,bsconnect.co
 DOMAIN-SUFFIX,bsdmporn.net
+DOMAIN-SUFFIX,bseu.by
 DOMAIN-SUFFIX,bsfin.info
 DOMAIN-SUFFIX,bsgate25.com
 DOMAIN-SUFFIX,bsgateway-market.com
@@ -11050,6 +11099,7 @@ DOMAIN-SUFFIX,btc-sites.com
 DOMAIN-SUFFIX,btc-xp.com
 DOMAIN-SUFFIX,btc1-2alrex.com
 DOMAIN-SUFFIX,btc650-elora-app.com
+DOMAIN-SUFFIX,btcchina.com
 DOMAIN-SUFFIX,btcdunixplatform.com
 DOMAIN-SUFFIX,btcelrex-system.com
 DOMAIN-SUFFIX,btceprex-v2.com
@@ -11315,6 +11365,7 @@ DOMAIN-SUFFIX,businesshina.ru
 DOMAIN-SUFFIX,businessman.pw
 DOMAIN-SUFFIX,businessunited.ru
 DOMAIN-SUFFIX,businessupgrade.ru
+DOMAIN-SUFFIX,businessweekly.com.tw
 DOMAIN-SUFFIX,businesswise.tech
 DOMAIN-SUFFIX,businesswithpurposepodcast.com
 DOMAIN-SUFFIX,businessyield.com
@@ -11396,6 +11447,7 @@ DOMAIN-SUFFIX,bvaljezur.pt
 DOMAIN-SUFFIX,bvb-growth.com
 DOMAIN-SUFFIX,bvgindustrial.ru
 DOMAIN-SUFFIX,bvre.de
+DOMAIN-SUFFIX,bvrrless.ddns.net
 DOMAIN-SUFFIX,bvrufa.ru
 DOMAIN-SUFFIX,bw.ashoo.fun
 DOMAIN-SUFFIX,bwcag.com
@@ -11408,6 +11460,7 @@ DOMAIN-SUFFIX,bx.ashoo.link
 DOMAIN-SUFFIX,by-textest.ru
 DOMAIN-SUFFIX,by.aappspot.com
 DOMAIN-SUFFIX,by.ashoo.fun
+DOMAIN-SUFFIX,by.entimby.site
 DOMAIN-SUFFIX,by.intelegram.one
 DOMAIN-SUFFIX,by.job.town
 DOMAIN-SUFFIX,by.jooble.org
@@ -12133,6 +12186,7 @@ DOMAIN-SUFFIX,cdo-rostov.ru
 DOMAIN-SUFFIX,cdo-yugra.ru
 DOMAIN-SUFFIX,cdoastrum.ru
 DOMAIN-SUFFIX,cdod4.ru
+DOMAIN-SUFFIX,cdp1998.org
 DOMAIN-SUFFIX,cdtlivenskiy.ru
 DOMAIN-SUFFIX,cdtvr.ru
 DOMAIN-SUFFIX,cdu-art.ru
@@ -12159,6 +12213,7 @@ DOMAIN-SUFFIX,cekoin-software.com
 DOMAIN-SUFFIX,cekon-swap.world
 DOMAIN-SUFFIX,ceks.club
 DOMAIN-SUFFIX,celebforum.co
+DOMAIN-SUFFIX,celebmafia.com
 DOMAIN-SUFFIX,celebrationsaunas.com
 DOMAIN-SUFFIX,celebrities-nude.su
 DOMAIN-SUFFIX,celebrityfakes4u.com
@@ -12225,7 +12280,6 @@ DOMAIN-SUFFIX,centre-pribor.ru
 DOMAIN-SUFFIX,centre-sodeistvie.ru
 DOMAIN-SUFFIX,centre-t.com
 DOMAIN-SUFFIX,centre-t.ru
-DOMAIN-SUFFIX,centre1.com
 DOMAIN-SUFFIX,centre7.ru
 DOMAIN-SUFFIX,centrepmspmr.kz
 DOMAIN-SUFFIX,centrgrand.ru
@@ -12398,6 +12452,7 @@ DOMAIN-SUFFIX,characterlibrary.booru.org
 DOMAIN-SUFFIX,charanadi.ru
 DOMAIN-SUFFIX,chargebacks.ru
 DOMAIN-SUFFIX,charity-ukrbusiness.com.ua
+DOMAIN-SUFFIX,charity.foodblockchain.com.cn
 DOMAIN-SUFFIX,charitysweets.org
 DOMAIN-SUFFIX,charlzen.online
 DOMAIN-SUFFIX,charlzen.ru
@@ -12422,24 +12477,14 @@ DOMAIN-SUFFIX,chastoozerie.ru
 DOMAIN-SUFFIX,chasy-columbus.ru
 DOMAIN-SUFFIX,chat.com
 DOMAIN-SUFFIX,chat.fan2cam.com
-DOMAIN-SUFFIX,chat.in-the.eu
 DOMAIN-SUFFIX,chat.md
-DOMAIN-SUFFIX,chat.nuvon.app
 DOMAIN-SUFFIX,chat.openai.com
-DOMAIN-SUFFIX,chat.privittytech.com
-DOMAIN-SUFFIX,chat.sus.fr
-DOMAIN-SUFFIX,chat.vim.wtf
-DOMAIN-SUFFIX,chat.zashm.org
 DOMAIN-SUFFIX,chat18.top
 DOMAIN-SUFFIX,chatasy.com
 DOMAIN-SUFFIX,chatbtc-app.com
 DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,chatgpt.livekit.cloud
 DOMAIN-SUFFIX,chathamhouse.org
-DOMAIN-SUFFIX,chatmail.au
-DOMAIN-SUFFIX,chatmail.culturanerd.it
-DOMAIN-SUFFIX,chatmail.email
-DOMAIN-SUFFIX,chatmail.woodpeckersnest.space
 DOMAIN-SUFFIX,chatname.net
 DOMAIN-SUFFIX,chatsex.xxx
 DOMAIN-SUFFIX,chaturbat-sex.su
@@ -12740,6 +12785,7 @@ DOMAIN-SUFFIX,chillibandits.top
 DOMAIN-SUFFIX,chimasa.com
 DOMAIN-SUFFIX,chimehq.shop
 DOMAIN-SUFFIX,chimpundulodge.com
+DOMAIN-SUFFIX,china-moutai.com
 DOMAIN-SUFFIX,china-oil.ru
 DOMAIN-SUFFIX,chinaboyxxx.cc
 DOMAIN-SUFFIX,chinadigitaltimes.net
@@ -12856,6 +12902,7 @@ DOMAIN-SUFFIX,christianwilde.com
 DOMAIN-SUFFIX,christinaxu.org
 DOMAIN-SUFFIX,christophsbignaturaltits.net
 DOMAIN-SUFFIX,christsatonement.com
+DOMAIN-SUFFIX,chrlawyers.hk
 DOMAIN-SUFFIX,chromastore.biz
 DOMAIN-SUFFIX,chromebrowser.ru
 DOMAIN-SUFFIX,chronicclub.cc
@@ -12864,7 +12911,6 @@ DOMAIN-SUFFIX,chronicles.pro
 DOMAIN-SUFFIX,chronograph.moscow
 DOMAIN-SUFFIX,chryron.com
 DOMAIN-SUFFIX,chrysalide-asso.fr
-DOMAIN-SUFFIX,chtml.ca
 DOMAIN-SUFFIX,chto-skryvaet-ljubov-2024.swezhak.su
 DOMAIN-SUFFIX,chto-takoe-goodbyedpi.mag-original.ru
 DOMAIN-SUFFIX,chtoestchto.ru
@@ -12886,6 +12932,7 @@ DOMAIN-SUFFIX,chuma24.org
 DOMAIN-SUFFIX,chunkymuscle.com
 DOMAIN-SUFFIX,chupaporntube.com
 DOMAIN-SUFFIX,chupiessocks.ru
+DOMAIN-SUFFIX,church.by
 DOMAIN-SUFFIX,church.ua
 DOMAIN-SUFFIX,churchofchrist-barnaul.ru
 DOMAIN-SUFFIX,chutastation.com
@@ -12986,6 +13033,7 @@ DOMAIN-SUFFIX,circusporn.com
 DOMAIN-SUFFIX,cirkdusoley.ru
 DOMAIN-SUFFIX,cirkkrasnodar.ru
 DOMAIN-SUFFIX,cirugiagenero.com
+DOMAIN-SUFFIX,cis.minsk.by
 DOMAIN-SUFFIX,cisco.com
 DOMAIN-SUFFIX,ciscobinary.openh264.org
 DOMAIN-SUFFIX,cisevent.ru
@@ -13003,7 +13051,6 @@ DOMAIN-SUFFIX,citeia.com
 DOMAIN-SUFFIX,citiesbattle.ru
 DOMAIN-SUFFIX,citijungle.biz
 DOMAIN-SUFFIX,citilink-promo.ru
-DOMAIN-SUFFIX,citizensclimatelobby.org
 DOMAIN-SUFFIX,citkit.ru
 DOMAIN-SUFFIX,cito-vestnik.ru
 DOMAIN-SUFFIX,citrix.com
@@ -13039,9 +13086,7 @@ DOMAIN-SUFFIX,citysmile.org
 DOMAIN-SUFFIX,cityvotepro.xyz
 DOMAIN-SUFFIX,civi.tvfilms.club
 DOMAIN-SUFFIX,civiccouncil.info
-DOMAIN-SUFFIX,civicidea.ge
 DOMAIN-SUFFIX,civicsolidarity.org
-DOMAIN-SUFFIX,civil.ge
 DOMAIN-SUFFIX,civilfornepal.com
 DOMAIN-SUFFIX,civilmplus.org
 DOMAIN-SUFFIX,civilplatform.ru
@@ -13110,6 +13155,7 @@ DOMAIN-SUFFIX,clati11.ru
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,clawar.net
 DOMAIN-SUFFIX,clayfold.icu
+DOMAIN-SUFFIX,clb.org.hk
 DOMAIN-SUFFIX,clbkminigame.top
 DOMAIN-SUFFIX,clbnikcoins.top
 DOMAIN-SUFFIX,clbnikssaga.top
@@ -13231,6 +13277,8 @@ DOMAIN-SUFFIX,cloudtinvt.org
 DOMAIN-SUFFIX,cloudview.ru
 DOMAIN-SUFFIX,cloudviney.com
 DOMAIN-SUFFIX,cloudvpn.ai
+DOMAIN-SUFFIX,cloudvpn.pro
+DOMAIN-SUFFIX,cloudvps.by
 DOMAIN-SUFFIX,cloudzsexy.com
 DOMAIN-SUFFIX,clounineglobal.com
 DOMAIN-SUFFIX,clouty.kz
@@ -13334,7 +13382,9 @@ DOMAIN-SUFFIX,cmt.tqz.mybluehostin.me
 DOMAIN-SUFFIX,cmtrading-assets.org
 DOMAIN-SUFFIX,cmtrading-software.com
 DOMAIN-SUFFIX,cmyplus.ru
+DOMAIN-SUFFIX,cn.blizzard.com
 DOMAIN-SUFFIX,cn.bt4g.com
+DOMAIN-SUFFIX,cn.cmcm.com
 DOMAIN-SUFFIX,cn.com.ua
 DOMAIN-SUFFIX,cn.noxinfluencer.com
 DOMAIN-SUFFIX,cn.tubebay.net
@@ -13355,6 +13405,7 @@ DOMAIN-SUFFIX,cnstgwe.xn--c1aem.icu
 DOMAIN-SUFFIX,cnstlfg.xn--c1aem.art
 DOMAIN-SUFFIX,cnt-baimak.ru
 DOMAIN-SUFFIX,cntly.co
+DOMAIN-SUFFIX,cnvax.com
 DOMAIN-SUFFIX,co-alarm.ru
 DOMAIN-SUFFIX,co.comv.info
 DOMAIN-SUFFIX,co167.ru
@@ -13508,6 +13559,7 @@ DOMAIN-SUFFIX,col.erokomiksi.fun
 DOMAIN-SUFFIX,colabwb.ru
 DOMAIN-SUFFIX,colary.ru
 DOMAIN-SUFFIX,colcafabrics.com
+DOMAIN-SUFFIX,coldhak.ca
 DOMAIN-SUFFIX,coldseria.com
 DOMAIN-SUFFIX,colibri-dental.kz
 DOMAIN-SUFFIX,colibriloyalty.com
@@ -13520,6 +13572,7 @@ DOMAIN-SUFFIX,collectiveapp.com
 DOMAIN-SUFFIX,collectordaily.com
 DOMAIN-SUFFIX,collectorsmilitaria.com
 DOMAIN-SUFFIX,college-pokrovsk.ru
+DOMAIN-SUFFIX,collegehumor.com
 DOMAIN-SUFFIX,collegerules.com
 DOMAIN-SUFFIX,colliderporn.com
 DOMAIN-SUFFIX,colombiafuckfest.com
@@ -13629,6 +13682,7 @@ DOMAIN-SUFFIX,companion-group.ru
 DOMAIN-SUFFIX,company-lt.ru
 DOMAIN-SUFFIX,company03.ru
 DOMAIN-SUFFIX,companyvss.kz
+DOMAIN-SUFFIX,comparty.by
 DOMAIN-SUFFIX,compas-boat.ru
 DOMAIN-SUFFIX,compass-hostels.com
 DOMAIN-SUFFIX,compcor.ru
@@ -13884,7 +13938,6 @@ DOMAIN-SUFFIX,courses24.top
 DOMAIN-SUFFIX,courses4.ru
 DOMAIN-SUFFIX,coursetravel.ru
 DOMAIN-SUFFIX,coursoteka.ru
-DOMAIN-SUFFIX,courtwatch.ge
 DOMAIN-SUFFIX,courvix.com
 DOMAIN-SUFFIX,covaite.com
 DOMAIN-SUFFIX,covendur.com
@@ -13894,7 +13947,9 @@ DOMAIN-SUFFIX,covid19-accept-int.org
 DOMAIN-SUFFIX,covid19central.ca
 DOMAIN-SUFFIX,covid19mentalhealthawareness.com
 DOMAIN-SUFFIX,covidapi.info
+DOMAIN-SUFFIX,covidcon.org
 DOMAIN-SUFFIX,covidimpactstories.click
+DOMAIN-SUFFIX,covidtracking.com
 DOMAIN-SUFFIX,covok.biz
 DOMAIN-SUFFIX,covokizh.biz
 DOMAIN-SUFFIX,cowyqoa0.ru
@@ -14120,6 +14175,7 @@ DOMAIN-SUFFIX,crimeanews-24.ru
 DOMAIN-SUFFIX,crimeaz.ru
 DOMAIN-SUFFIX,crimerussia.com
 DOMAIN-SUFFIX,crimezone.in.ua
+DOMAIN-SUFFIX,criminal.az
 DOMAIN-SUFFIX,criminalperfume.ru
 DOMAIN-SUFFIX,crimking.ru
 DOMAIN-SUFFIX,crimlife.ru
@@ -14372,6 +14428,7 @@ DOMAIN-SUFFIX,ct-vibe.com
 DOMAIN-SUFFIX,ct.casvn.ru
 DOMAIN-SUFFIX,ctavka1.com
 DOMAIN-SUFFIX,ctc-chel.ru
+DOMAIN-SUFFIX,ctdsb.cnhubei.com
 DOMAIN-SUFFIX,ctforex.com
 DOMAIN-SUFFIX,ctgdp77.lineorg.com
 DOMAIN-SUFFIX,ctgfood.ru
@@ -14521,7 +14578,6 @@ DOMAIN-SUFFIX,cxv.ashoo.bike
 DOMAIN-SUFFIX,cybatrix.com
 DOMAIN-SUFFIX,cyber-elka.ru
 DOMAIN-SUFFIX,cyber-yozh.com
-DOMAIN-SUFFIX,cyber.harvard.edu
 DOMAIN-SUFFIX,cyberarmy.com.ua
 DOMAIN-SUFFIX,cyberclass.moscow
 DOMAIN-SUFFIX,cyberconnectkw.com
@@ -14600,7 +14656,6 @@ DOMAIN-SUFFIX,d.filmqwq.online
 DOMAIN-SUFFIX,d.firebro.top
 DOMAIN-SUFFIX,d.fractr.xyz
 DOMAIN-SUFFIX,d.fsl-stream.im
-DOMAIN-SUFFIX,d.gaufr.es
 DOMAIN-SUFFIX,d.goodpotency.pw
 DOMAIN-SUFFIX,d.hd-1080.online
 DOMAIN-SUFFIX,d.hglab.ru
@@ -14667,6 +14722,7 @@ DOMAIN-SUFFIX,d6.boominfo.org
 DOMAIN-SUFFIX,d6.ebook.surf
 DOMAIN-SUFFIX,d66.buzz
 DOMAIN-SUFFIX,d69.buzz
+DOMAIN-SUFFIX,d6hnm3uzmmstw.cloudfront.net
 DOMAIN-SUFFIX,d7.boominfo.org
 DOMAIN-SUFFIX,d7.ebook.surf
 DOMAIN-SUFFIX,d7.lovertab.com
@@ -14804,7 +14860,6 @@ DOMAIN-SUFFIX,danilovbells.ru
 DOMAIN-SUFFIX,danjori.blogspot.com
 DOMAIN-SUFFIX,dankesound.ru
 DOMAIN-SUFFIX,danko-kotel.ru
-DOMAIN-SUFFIX,danneskjold.de
 DOMAIN-SUFFIX,dannyboylimerick.website
 DOMAIN-SUFFIX,danserpreg.ru
 DOMAIN-SUFFIX,dansezza.ru
@@ -14828,6 +14883,7 @@ DOMAIN-SUFFIX,darim.info
 DOMAIN-SUFFIX,darimmir.online
 DOMAIN-SUFFIX,darimmir.ru
 DOMAIN-SUFFIX,darjakaisa.ru
+DOMAIN-SUFFIX,darksidereviews.com
 DOMAIN-SUFFIX,darlihin.ru
 DOMAIN-SUFFIX,darmed-beauty.ru
 DOMAIN-SUFFIX,darmosreg.ru
@@ -14876,7 +14932,6 @@ DOMAIN-SUFFIX,datawav.club
 DOMAIN-SUFFIX,datawebglobal.com
 DOMAIN-SUFFIX,datdrop.com
 DOMAIN-SUFFIX,date.ashoo.watch
-DOMAIN-SUFFIX,date.com
 DOMAIN-SUFFIX,date.pimp36.com
 DOMAIN-SUFFIX,date.pimp55.org
 DOMAIN-SUFFIX,dateforyou.ru
@@ -14960,6 +15015,7 @@ DOMAIN-SUFFIX,dc-marvel.ru
 DOMAIN-SUFFIX,dc.ashoo.cfd
 DOMAIN-SUFFIX,dc416.ru
 DOMAIN-SUFFIX,dca-bit.com
+DOMAIN-SUFFIX,dcard.tw
 DOMAIN-SUFFIX,dcd.klad.cc
 DOMAIN-SUFFIX,dcd24.biz
 DOMAIN-SUFFIX,dchomelessplan.com
@@ -15048,6 +15104,7 @@ DOMAIN-SUFFIX,deadhouse.ru
 DOMAIN-SUFFIX,deadhouse.xyz
 DOMAIN-SUFFIX,deadpool-shop.fun
 DOMAIN-SUFFIX,deadpool-shop.top
+DOMAIN-SUFFIX,deal.by
 DOMAIN-SUFFIX,dealersclub.biz
 DOMAIN-SUFFIX,dean.comv.info
 DOMAIN-SUFFIX,dearrussian.wtf
@@ -15055,6 +15112,7 @@ DOMAIN-SUFFIX,dearst.ru
 DOMAIN-SUFFIX,death2032.dreamwidth.org
 DOMAIN-SUFFIX,deathmetal.org
 DOMAIN-SUFFIX,debaty.sumy.ua
+DOMAIN-SUFFIX,debian.org
 DOMAIN-SUFFIX,debitos-sp-2025.online
 DOMAIN-SUFFIX,debt-freedao.live
 DOMAIN-SUFFIX,debtsex.com
@@ -15189,7 +15247,6 @@ DOMAIN-SUFFIX,delsten.org
 DOMAIN-SUFFIX,delta-course.org
 DOMAIN-SUFFIX,delta-gamma-amp.top
 DOMAIN-SUFFIX,delta-technology.ru
-DOMAIN-SUFFIX,delta.thelab.uno
 DOMAIN-SUFFIX,deltairk.ru
 DOMAIN-SUFFIX,deltasonic.com.ua
 DOMAIN-SUFFIX,deltastroyshop.ru
@@ -15222,6 +15279,7 @@ DOMAIN-SUFFIX,demo1c.ru
 DOMAIN-SUFFIX,democracyendowment.eu
 DOMAIN-SUFFIX,demokracija.eu
 DOMAIN-SUFFIX,demokracija.si
+DOMAIN-SUFFIX,demokrasiicinbirlik.com
 DOMAIN-SUFFIX,demovies.ru
 DOMAIN-SUFFIX,demrocradio.com
 DOMAIN-SUFFIX,demru.cy
@@ -15719,6 +15777,7 @@ DOMAIN-SUFFIX,digitalpropel.top
 DOMAIN-SUFFIX,digitalsbasenetworks.com
 DOMAIN-SUFFIX,digitalsdisperse.top
 DOMAIN-SUFFIX,digitalshift.top
+DOMAIN-SUFFIX,digitalskills.by
 DOMAIN-SUFFIX,digitalstart.info
 DOMAIN-SUFFIX,digitalstockassetmining.org
 DOMAIN-SUFFIX,digitalstreamflow.top
@@ -15940,6 +15999,7 @@ DOMAIN-SUFFIX,dizaifest.com
 DOMAIN-SUFFIX,dizain-ad.ru
 DOMAIN-SUFFIX,dizaindachi.ru
 DOMAIN-SUFFIX,dizayn-dvor.ru
+DOMAIN-SUFFIX,dizimag.pw
 DOMAIN-SUFFIX,dj-1x.com
 DOMAIN-SUFFIX,dj-lab.ru
 DOMAIN-SUFFIX,djankoiadm.ru
@@ -16097,7 +16157,7 @@ DOMAIN-SUFFIX,dns-shop.sliderweb.ru
 DOMAIN-SUFFIX,dns.adguard.com
 DOMAIN-SUFFIX,dns.alidns.com
 DOMAIN-SUFFIX,dns.indapills.org
-DOMAIN-SUFFIX,dns.switch.ch
+DOMAIN-SUFFIX,dns.nextdns.io
 DOMAIN-SUFFIX,dns2.ray-host.ru
 DOMAIN-SUFFIX,dntchita.ru
 DOMAIN-SUFFIX,dntpasteur.ru
@@ -16434,6 +16494,7 @@ DOMAIN-SUFFIX,don-star.ru
 DOMAIN-SUFFIX,donate.fbk.world
 DOMAIN-SUFFIX,donate.ovd.cards
 DOMAIN-SUFFIX,donate.redcrossredcrescent.org
+DOMAIN-SUFFIX,donate.torproject.org
 DOMAIN-SUFFIX,donate1024.org
 DOMAIN-SUFFIX,donatello.me
 DOMAIN-SUFFIX,donatello.to
@@ -16453,6 +16514,7 @@ DOMAIN-SUFFIX,donetsk.chi-psy.ru
 DOMAIN-SUFFIX,donetsk.city-driving.ru
 DOMAIN-SUFFIX,donetsk.radioxfm.ru
 DOMAIN-SUFFIX,donetskie.com
+DOMAIN-SUFFIX,dongtaiwang.com
 DOMAIN-SUFFIX,donio.sk
 DOMAIN-SUFFIX,donkadet.ru
 DOMAIN-SUFFIX,donkeyfoodsec.com
@@ -16490,6 +16552,7 @@ DOMAIN-SUFFIX,doope.ru
 DOMAIN-SUFFIX,doorhan-ykt.ru
 DOMAIN-SUFFIX,doors-rus.ru
 DOMAIN-SUFFIX,doosan-irkutsk.ru
+DOMAIN-SUFFIX,doovi.com
 DOMAIN-SUFFIX,dop-235g.okis.ru
 DOMAIN-SUFFIX,dopal.org
 DOMAIN-SUFFIX,dopedoor.com
@@ -16589,7 +16652,6 @@ DOMAIN-SUFFIX,doraprangadzhiyska.com
 DOMAIN-SUFFIX,dorato-vaultaris.net
 DOMAIN-SUFFIX,dorczpit.com
 DOMAIN-SUFFIX,doreinvexus-software.com
-DOMAIN-SUFFIX,doriafeministfund.org
 DOMAIN-SUFFIX,dorianix-floxin.com
 DOMAIN-SUFFIX,doritis.ru
 DOMAIN-SUFFIX,dork-unit.com
@@ -16944,6 +17006,7 @@ DOMAIN-SUFFIX,drexdigital.org
 DOMAIN-SUFFIX,drezbol.ru
 DOMAIN-SUFFIX,drezinex-app.com
 DOMAIN-SUFFIX,drezna-adm.ru
+DOMAIN-SUFFIX,drfl.kz
 DOMAIN-SUFFIX,drg247.online
 DOMAIN-SUFFIX,drg43.online
 DOMAIN-SUFFIX,drg44.online
@@ -17169,6 +17232,7 @@ DOMAIN-SUFFIX,dsad250.ru
 DOMAIN-SUFFIX,dsad35.ru
 DOMAIN-SUFFIX,dsad390.ru
 DOMAIN-SUFFIX,dsad407.ru
+DOMAIN-SUFFIX,dsae.by
 DOMAIN-SUFFIX,dsau.dp.ua
 DOMAIN-SUFFIX,dsb.animerem.org
 DOMAIN-SUFFIX,dsbch1.ru
@@ -17454,6 +17518,7 @@ DOMAIN-SUFFIX,dyrochki.net
 DOMAIN-SUFFIX,dys-ta.com
 DOMAIN-SUFFIX,dysolay5.ru
 DOMAIN-SUFFIX,dysonur.ru
+DOMAIN-SUFFIX,dytt8.net
 DOMAIN-SUFFIX,dyvojuo0.ru
 DOMAIN-SUFFIX,dyvys.info
 DOMAIN-SUFFIX,dz.ashoo.bar
@@ -17560,8 +17625,6 @@ DOMAIN-SUFFIX,e2.boominfo.org
 DOMAIN-SUFFIX,e2.hd.vg
 DOMAIN-SUFFIX,e2.xatab-repack.org
 DOMAIN-SUFFIX,e27sm.filonl.ru
-DOMAIN-SUFFIX,e2ee.im
-DOMAIN-SUFFIX,e2ee.wang
 DOMAIN-SUFFIX,e3.boominfo.org
 DOMAIN-SUFFIX,e3.filmworld1.buzz
 DOMAIN-SUFFIX,e3.hd.vg
@@ -17611,6 +17674,7 @@ DOMAIN-SUFFIX,earerepost.com
 DOMAIN-SUFFIX,earlydays.io
 DOMAIN-SUFFIX,earlyretirementhealthinsurance.com
 DOMAIN-SUFFIX,earlyrider-russia.ru
+DOMAIN-SUFFIX,earthaction.org
 DOMAIN-SUFFIX,earthlen.icu
 DOMAIN-SUFFIX,eas.mailbox.org
 DOMAIN-SUFFIX,easy-drop.co
@@ -17922,6 +17986,7 @@ DOMAIN-SUFFIX,econetspb.ru
 DOMAIN-SUFFIX,econogti-nsk.ru
 DOMAIN-SUFFIX,econom-ia.com.ua
 DOMAIN-SUFFIX,economicfunerals.com
+DOMAIN-SUFFIX,economics.basnet.by
 DOMAIN-SUFFIX,economist-ucheba.ru
 DOMAIN-SUFFIX,economistua.com
 DOMAIN-SUFFIX,economspb.com
@@ -17942,6 +18007,7 @@ DOMAIN-SUFFIX,ecoriogo.com
 DOMAIN-SUFFIX,ecos.finance
 DOMAIN-SUFFIX,ecosanitize.ru
 DOMAIN-SUFFIX,ecoscrepton.kz
+DOMAIN-SUFFIX,ecosen.kz
 DOMAIN-SUFFIX,ecosistema2022.ru
 DOMAIN-SUFFIX,ecosity.ru
 DOMAIN-SUFFIX,ecosminers.com
@@ -18093,6 +18159,7 @@ DOMAIN-SUFFIX,egoistki.club
 DOMAIN-SUFFIX,egoistki.info
 DOMAIN-SUFFIX,egosdip.ru
 DOMAIN-SUFFIX,egosuit.ru
+DOMAIN-SUFFIX,egov.press
 DOMAIN-SUFFIX,egovmetrics.com
 DOMAIN-SUFFIX,egreenunion.com
 DOMAIN-SUFFIX,egrn-365.ru
@@ -18194,6 +18261,7 @@ DOMAIN-SUFFIX,eko24.cc
 DOMAIN-SUFFIX,eko24.co
 DOMAIN-SUFFIX,ekobitt.com
 DOMAIN-SUFFIX,ekoing.ru
+DOMAIN-SUFFIX,ekonomistler.org.tr
 DOMAIN-SUFFIX,ekookna.pro
 DOMAIN-SUFFIX,ekoplus.su
 DOMAIN-SUFFIX,ekosfera69.ru
@@ -18394,7 +18462,6 @@ DOMAIN-SUFFIX,elontradingsignals.com
 DOMAIN-SUFFIX,elonxperience.com
 DOMAIN-SUFFIX,elpais.com
 DOMAIN-SUFFIX,elparlamentoagustin.xyz
-DOMAIN-SUFFIX,elpha.com
 DOMAIN-SUFFIX,elpilon.com.co
 DOMAIN-SUFFIX,elrealsw.com
 DOMAIN-SUFFIX,elrockescultura.com
@@ -18774,12 +18841,12 @@ DOMAIN-SUFFIX,eq0xnr81.xn----7sbbas7adbh1ak4hek1gg.xn--p1ai
 DOMAIN-SUFFIX,eqdkp.ru
 DOMAIN-SUFFIX,eqtfinance.net
 DOMAIN-SUFFIX,equafistake.com
+DOMAIN-SUFFIX,equal-eyes.org
 DOMAIN-SUFFIX,equal-payy.com
 DOMAIN-SUFFIX,equaldex.com
 DOMAIN-SUFFIX,equalibra.org
 DOMAIN-SUFFIX,equalit.ie
 DOMAIN-SUFFIX,equalitie.org
-DOMAIN-SUFFIX,equality.ge
 DOMAIN-SUFFIX,equestriangirls.blogs.allthefallen.moe
 DOMAIN-SUFFIX,equijob.de
 DOMAIN-SUFFIX,equiloompro-app.net
@@ -18842,7 +18909,6 @@ DOMAIN-SUFFIX,ergonomicadoma.ru
 DOMAIN-SUFFIX,erhe.me
 DOMAIN-SUFFIX,eriding-solutions.com
 DOMAIN-SUFFIX,erikalust.com
-DOMAIN-SUFFIX,erimedia.ge
 DOMAIN-SUFFIX,eriongroup.biz
 DOMAIN-SUFFIX,erisongs.com
 DOMAIN-SUFFIX,erito.com
@@ -19110,7 +19176,6 @@ DOMAIN-SUFFIX,estee-bca.ru
 DOMAIN-SUFFIX,esteels.ru
 DOMAIN-SUFFIX,esterholdings.com
 DOMAIN-SUFFIX,estern.link
-DOMAIN-SUFFIX,esternunion.com
 DOMAIN-SUFFIX,estex.org
 DOMAIN-SUFFIX,esthetick.com
 DOMAIN-SUFFIX,esthetiks.ru
@@ -19437,6 +19502,7 @@ DOMAIN-SUFFIX,exchangeinnovation.com
 DOMAIN-SUFFIX,exchangemassiveworld.com
 DOMAIN-SUFFIX,exchangepro.org
 DOMAIN-SUFFIX,exchangevaults.com
+DOMAIN-SUFFIX,excite.com
 DOMAIN-SUFFIX,excitebots.com
 DOMAIN-SUFFIX,exclusive-interior.ru
 DOMAIN-SUFFIX,exclusive39.ru
@@ -19470,7 +19536,6 @@ DOMAIN-SUFFIX,exler.wiki
 DOMAIN-SUFFIX,exmatube.com
 DOMAIN-SUFFIX,exme.su
 DOMAIN-SUFFIX,exmo.com
-DOMAIN-SUFFIX,exmormon.org
 DOMAIN-SUFFIX,exmuz.com
 DOMAIN-SUFFIX,exneespro.com
 DOMAIN-SUFFIX,exness.com
@@ -19480,7 +19545,6 @@ DOMAIN-SUFFIX,exo-ignitesoftware.com
 DOMAIN-SUFFIX,exo-vault.com
 DOMAIN-SUFFIX,exo.in.ua
 DOMAIN-SUFFIX,exodirectory.com
-DOMAIN-SUFFIX,exodus.lumiora.space
 DOMAIN-SUFFIX,exodusftx.com
 DOMAIN-SUFFIX,exodusp2phft.com
 DOMAIN-SUFFIX,exodustrading-soft.com
@@ -19536,6 +19600,7 @@ DOMAIN-SUFFIX,expertoptions.com
 DOMAIN-SUFFIX,expertphotography.com
 DOMAIN-SUFFIX,expertprolite.com
 DOMAIN-SUFFIX,experttradingoptions.com
+DOMAIN-SUFFIX,experty.by
 DOMAIN-SUFFIX,explainer.one
 DOMAIN-SUFFIX,explainer.ua
 DOMAIN-SUFFIX,explicitgalor1.com
@@ -20277,6 +20342,7 @@ DOMAIN-SUFFIX,federationshop.top
 DOMAIN-SUFFIX,federationshop.xyz
 DOMAIN-SUFFIX,fedim.ru
 DOMAIN-SUFFIX,fediverse.blog
+DOMAIN-SUFFIX,fedoraproject.org
 DOMAIN-SUFFIX,fedorovhd.com
 DOMAIN-SUFFIX,fedorovkarb.ru
 DOMAIN-SUFFIX,fee.animerem.org
@@ -20337,7 +20403,6 @@ DOMAIN-SUFFIX,femida-groupp.ru
 DOMAIN-SUFFIX,femida51.ru
 DOMAIN-SUFFIX,feminisms.co
 DOMAIN-SUFFIX,feminist.com
-DOMAIN-SUFFIX,feminist.org
 DOMAIN-SUFFIX,feministeerium.ee
 DOMAIN-SUFFIX,feministsagainstwar.org
 DOMAIN-SUFFIX,feminita.kz
@@ -20475,7 +20540,6 @@ DOMAIN-SUFFIX,fh21.ru
 DOMAIN-SUFFIX,fhaccess.com
 DOMAIN-SUFFIX,fhg08.ru
 DOMAIN-SUFFIX,fhgddgjk-2fabrika-chekov.info
-DOMAIN-SUFFIX,fhi360.org
 DOMAIN-SUFFIX,fhost.info
 DOMAIN-SUFFIX,fhpk.ru
 DOMAIN-SUFFIX,fhth.ck.ua
@@ -21304,6 +21368,7 @@ DOMAIN-SUFFIX,fomasters.ru
 DOMAIN-SUFFIX,fomichaparts.com
 DOMAIN-SUFFIX,fomprotake-system.com
 DOMAIN-SUFFIX,fon-infosport.info
+DOMAIN-SUFFIX,fonbet.by
 DOMAIN-SUFFIX,fond-179.ru
 DOMAIN-SUFFIX,fond-bytdobru.ru
 DOMAIN-SUFFIX,fond-intellect.ru
@@ -21360,6 +21425,7 @@ DOMAIN-SUFFIX,football-obzor-kz.ru
 DOMAIN-SUFFIX,football-online2.com
 DOMAIN-SUFFIX,football-russia.tv
 DOMAIN-SUFFIX,football-www.football-russia.tv
+DOMAIN-SUFFIX,football.by
 DOMAIN-SUFFIX,football.ua
 DOMAIN-SUFFIX,football24.ua
 DOMAIN-SUFFIX,footballgh.org
@@ -21823,7 +21889,6 @@ DOMAIN-SUFFIX,foto.hentaihooked.com
 DOMAIN-SUFFIX,fotoboobs.info
 DOMAIN-SUFFIX,fotoburov.ru
 DOMAIN-SUFFIX,fotodama.mobi
-DOMAIN-SUFFIX,fotoday.pro
 DOMAIN-SUFFIX,fotofd.ru
 DOMAIN-SUFFIX,fotogenes.ru
 DOMAIN-SUFFIX,fotogolyh.art
@@ -21921,6 +21986,7 @@ DOMAIN-SUFFIX,fr.eporner.com
 DOMAIN-SUFFIX,fr.erkiss.club
 DOMAIN-SUFFIX,fr.fapix.porn
 DOMAIN-SUFFIX,fr.filmatixxx.com
+DOMAIN-SUFFIX,fr.gov.by
 DOMAIN-SUFFIX,fr.lotbob.ru
 DOMAIN-SUFFIX,fr.memedroid.com
 DOMAIN-SUFFIX,fr.nenavist.org
@@ -21977,7 +22043,6 @@ DOMAIN-SUFFIX,frankvip.me
 DOMAIN-SUFFIX,frankvip.top
 DOMAIN-SUFFIX,frankyclub.info
 DOMAIN-SUFFIX,frankyshop.org
-DOMAIN-SUFFIX,frant.me
 DOMAIN-SUFFIX,frantsuz33.ru
 DOMAIN-SUFFIX,fraternalheart.org
 DOMAIN-SUFFIX,fratgayporn.com
@@ -22054,6 +22119,7 @@ DOMAIN-SUFFIX,free555kf7lsmbsite.to
 DOMAIN-SUFFIX,freeadultcomix.com
 DOMAIN-SUFFIX,freeanime.info
 DOMAIN-SUFFIX,freeanime.ru
+DOMAIN-SUFFIX,freeanimehentai.net
 DOMAIN-SUFFIX,freeaudiobooks.me
 DOMAIN-SUFFIX,freebareback.com
 DOMAIN-SUFFIX,freebeats.ru
@@ -22079,7 +22145,6 @@ DOMAIN-SUFFIX,freedomdenissinyakov.ru
 DOMAIN-SUFFIX,freedomfinances.ltd
 DOMAIN-SUFFIX,freedomhide.com
 DOMAIN-SUFFIX,freedomhouse.org
-DOMAIN-SUFFIX,freedominfo.org
 DOMAIN-SUFFIX,freedominvfinance.com
 DOMAIN-SUFFIX,freedomletters.org
 DOMAIN-SUFFIX,freedomrussia.org
@@ -22140,6 +22205,7 @@ DOMAIN-SUFFIX,freeonestube.com
 DOMAIN-SUFFIX,freeotraboty.ru
 DOMAIN-SUFFIX,freepdf.info
 DOMAIN-SUFFIX,freephotoporno.com
+DOMAIN-SUFFIX,freepik.com
 DOMAIN-SUFFIX,freeplanet-vpn.com
 DOMAIN-SUFFIX,freeplanetvpn-ru.net
 DOMAIN-SUFFIX,freeplanetvpn-rus.net
@@ -22191,13 +22257,13 @@ DOMAIN-SUFFIX,freesliv.net
 DOMAIN-SUFFIX,freesmoking.online
 DOMAIN-SUFFIX,freesmoking.ru
 DOMAIN-SUFFIX,freesofts.ru
-DOMAIN-SUFFIX,freespeechdebate.com
 DOMAIN-SUFFIX,freespirit.webboard.org
 DOMAIN-SUFFIX,freestreams-live.my
 DOMAIN-SUFFIX,freestreams-live.top
 DOMAIN-SUFFIX,freestreams-live1.se
 DOMAIN-SUFFIX,freestreams-live1.top
 DOMAIN-SUFFIX,freetexthost.net
+DOMAIN-SUFFIX,freetibet.org
 DOMAIN-SUFFIX,freetps.ru
 DOMAIN-SUFFIX,freetrx.pro
 DOMAIN-SUFFIX,freetube18.net
@@ -22281,7 +22347,6 @@ DOMAIN-SUFFIX,freshxxxpics.com
 DOMAIN-SUFFIX,fresnogarageguys.com
 DOMAIN-SUFFIX,freyrneit.ru
 DOMAIN-SUFFIX,frhdporn.com
-DOMAIN-SUFFIX,fri-gate.org
 DOMAIN-SUFFIX,friday5.ru
 DOMAIN-SUFFIX,fridaytula.ru
 DOMAIN-SUFFIX,friend-house.ru
@@ -22390,6 +22455,7 @@ DOMAIN-SUFFIX,fto.to
 DOMAIN-SUFFIX,ftokrenix-app.com
 DOMAIN-SUFFIX,ftopx.com
 DOMAIN-SUFFIX,ftp.asmodei.ru
+DOMAIN-SUFFIX,ftp.cc.uoc.gr
 DOMAIN-SUFFIX,ftp.go-lagu.net
 DOMAIN-SUFFIX,ftp.orbitjet.space
 DOMAIN-SUFFIX,ftp.pimpletv.ru
@@ -22537,7 +22603,6 @@ DOMAIN-SUFFIX,fundspireplataforma-software.com
 DOMAIN-SUFFIX,fundsprynt.com
 DOMAIN-SUFFIX,fundswages.icu
 DOMAIN-SUFFIX,fundswages.xyz
-DOMAIN-SUFFIX,fundtexaschoice.org
 DOMAIN-SUFFIX,fundvet.city
 DOMAIN-SUFFIX,fundvet.com
 DOMAIN-SUFFIX,fundwithyou.ru
@@ -22568,6 +22633,7 @@ DOMAIN-SUFFIX,fuqster.com
 DOMAIN-SUFFIX,fur.booru.org
 DOMAIN-SUFFIX,furaffinity.net
 DOMAIN-SUFFIX,furbylife.ru
+DOMAIN-SUFFIX,furfur.me
 DOMAIN-SUFFIX,furkaloxarius.com
 DOMAIN-SUFFIX,furmanov.sex-fantasy.top
 DOMAIN-SUFFIX,furnikuhni.ru
@@ -22815,6 +22881,7 @@ DOMAIN-SUFFIX,galaktika-furniture.ru
 DOMAIN-SUFFIX,galaktikaokon.ru
 DOMAIN-SUFFIX,galam.kz
 DOMAIN-SUFFIX,galamob.ru
+DOMAIN-SUFFIX,galasla.org
 DOMAIN-SUFFIX,galaticexchange.com
 DOMAIN-SUFFIX,galatranslations.com.kz
 DOMAIN-SUFFIX,galatranslations.kz
@@ -22890,6 +22957,7 @@ DOMAIN-SUFFIX,gamecasteqs.online
 DOMAIN-SUFFIX,gamecasteru.me
 DOMAIN-SUFFIX,gamecastet.online
 DOMAIN-SUFFIX,gamecasty.online
+DOMAIN-SUFFIX,gamedev.by
 DOMAIN-SUFFIX,gamedev.lviv.ua
 DOMAIN-SUFFIX,gamedevblogs.ru
 DOMAIN-SUFFIX,gamedk.ru
@@ -22909,6 +22977,7 @@ DOMAIN-SUFFIX,gameofthrone.online
 DOMAIN-SUFFIX,gameofthrones.site
 DOMAIN-SUFFIX,gameport.fun
 DOMAIN-SUFFIX,gameport.site
+DOMAIN-SUFFIX,gamersyde.com
 DOMAIN-SUFFIX,gametiengviet.com
 DOMAIN-SUFFIX,gametoearn.fun
 DOMAIN-SUFFIX,gametoparmsnews.ru
@@ -23058,6 +23127,7 @@ DOMAIN-SUFFIX,gay-xnxx.me
 DOMAIN-SUFFIX,gay-xxx-videos.me
 DOMAIN-SUFFIX,gay-xxx.top
 DOMAIN-SUFFIX,gay.aebn.com
+DOMAIN-SUFFIX,gay.az
 DOMAIN-SUFFIX,gay.fleshbot.com
 DOMAIN-SUFFIX,gay.freecartoons.biz
 DOMAIN-SUFFIX,gay.isporno.net
@@ -23130,6 +23200,7 @@ DOMAIN-SUFFIX,gaydude.me
 DOMAIN-SUFFIX,gaydudes.online
 DOMAIN-SUFFIX,gaydvd.lat
 DOMAIN-SUFFIX,gayedtube.com
+DOMAIN-SUFFIX,gayegypt.com
 DOMAIN-SUFFIX,gayel.com
 DOMAIN-SUFFIX,gayexam.com
 DOMAIN-SUFFIX,gayfamily.cc
@@ -23207,7 +23278,6 @@ DOMAIN-SUFFIX,gaymanflicks.net
 DOMAIN-SUFFIX,gaymanpornvideos.com
 DOMAIN-SUFFIX,gaymanthriving.com
 DOMAIN-SUFFIX,gaymenporn.click
-DOMAIN-SUFFIX,gaymenshealth.org
 DOMAIN-SUFFIX,gaymentality.com
 DOMAIN-SUFFIX,gaymes.net
 DOMAIN-SUFFIX,gayminator.com
@@ -23663,7 +23733,6 @@ DOMAIN-SUFFIX,geopronh.com
 DOMAIN-SUFFIX,geopronh.ru
 DOMAIN-SUFFIX,georemont.ru
 DOMAIN-SUFFIX,georgebyron.ru
-DOMAIN-SUFFIX,georgia-drive.com
 DOMAIN-SUFFIX,georgia.asia-places.com
 DOMAIN-SUFFIX,georgianlegion.ge
 DOMAIN-SUFFIX,georgschool11.ru
@@ -23747,7 +23816,6 @@ DOMAIN-SUFFIX,getgleam.shop
 DOMAIN-SUFFIX,getgolfball.ru
 DOMAIN-SUFFIX,getgserwfwerg.pro
 DOMAIN-SUFFIX,gethotspotshield.net
-DOMAIN-SUFFIX,geti2p.net
 DOMAIN-SUFFIX,getid.top
 DOMAIN-SUFFIX,getiptvlist.com
 DOMAIN-SUFFIX,getjolt.shop
@@ -24137,6 +24205,7 @@ DOMAIN-SUFFIX,giters.com
 DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,gitlab.io
 DOMAIN-SUFFIX,gitlab.pavlovia.org
+DOMAIN-SUFFIX,gitlab.torproject.org
 DOMAIN-SUFFIX,gitmanga.com
 DOMAIN-SUFFIX,gitmemories.com
 DOMAIN-SUFFIX,gitmepelt.online
@@ -24327,8 +24396,8 @@ DOMAIN-SUFFIX,glnkn.site
 DOMAIN-SUFFIX,glob-alliance.site
 DOMAIN-SUFFIX,glob-news.ru
 DOMAIN-SUFFIX,globabasekryptominer.com
+DOMAIN-SUFFIX,globalconservation.org
 DOMAIN-SUFFIX,globalgiving.org
-DOMAIN-SUFFIX,globalr2p.org
 DOMAIN-SUFFIX,globalvoices.org
 DOMAIN-SUFFIX,globassetsandassoc.com
 DOMAIN-SUFFIX,globaxweb.biz
@@ -24425,6 +24494,7 @@ DOMAIN-SUFFIX,gnomesgarden.pl
 DOMAIN-SUFFIX,gnomesgiants.top
 DOMAIN-SUFFIX,gnosisaeterna.org
 DOMAIN-SUFFIX,gntlmn.top
+DOMAIN-SUFFIX,gnu.org
 DOMAIN-SUFFIX,go-173.animegobest.ru
 DOMAIN-SUFFIX,go-203.animegobest.ru
 DOMAIN-SUFFIX,go-help.ru
@@ -24771,6 +24841,7 @@ DOMAIN-SUFFIX,goodwillinc.com
 DOMAIN-SUFFIX,goodzips.com
 DOMAIN-SUFFIX,google-dino.ru
 DOMAIN-SUFFIX,google.avitomoskva.ru
+DOMAIN-SUFFIX,google.com.tr
 DOMAIN-SUFFIX,google.reska.xyz
 DOMAIN-SUFFIX,googledino.ru
 DOMAIN-SUFFIX,googlestatic.servehttp.com
@@ -24929,6 +25000,7 @@ DOMAIN-SUFFIX,goumtk.ru
 DOMAIN-SUFFIX,goup.hashnode.dev
 DOMAIN-SUFFIX,gov.cinema-24.net
 DOMAIN-SUFFIX,gov.mirfilm.net
+DOMAIN-SUFFIX,gov.pl
 DOMAIN-SUFFIX,govemment.ru
 DOMAIN-SUFFIX,governmentussr.org
 DOMAIN-SUFFIX,goviet.ru
@@ -25154,6 +25226,7 @@ DOMAIN-SUFFIX,granicy-sred.ru
 DOMAIN-SUFFIX,granimator-engine.com
 DOMAIN-SUFFIX,graniru.org
 DOMAIN-SUFFIX,granitepointivcc.com
+DOMAIN-SUFFIX,granma.cu
 DOMAIN-SUFFIX,granniepornpics.com
 DOMAIN-SUFFIX,granny-porn.me
 DOMAIN-SUFFIX,grannyaiporn.com
@@ -25434,6 +25507,7 @@ DOMAIN-SUFFIX,grstepanovskiydou.ru
 DOMAIN-SUFFIX,grsti.ru
 DOMAIN-SUFFIX,grufest.ru
 DOMAIN-SUFFIX,gruming-krasnogorsk.ru
+DOMAIN-SUFFIX,grunge.com
 DOMAIN-SUFFIX,grunya-shop.ru
 DOMAIN-SUFFIX,grupokandidat.com
 DOMAIN-SUFFIX,grupolenex.com
@@ -25553,6 +25627,7 @@ DOMAIN-SUFFIX,gudermesshkola-1.ru
 DOMAIN-SUFFIX,gudvinpromo.ru
 DOMAIN-SUFFIX,guerdon-enterprise.com
 DOMAIN-SUFFIX,guerlain-parfum.ru
+DOMAIN-SUFFIX,guerrillagirls.com
 DOMAIN-SUFFIX,guerrillamail.com
 DOMAIN-SUFFIX,gufsin38.ru
 DOMAIN-SUFFIX,gugn.ru
@@ -25582,6 +25657,7 @@ DOMAIN-SUFFIX,gukovo.rosbrs.ru
 DOMAIN-SUFFIX,gulag.cz
 DOMAIN-SUFFIX,gulagu-net.ignorelist.com
 DOMAIN-SUFFIX,guljaj.com
+DOMAIN-SUFFIX,guljan.org
 DOMAIN-SUFFIX,gull-bitlinje.net
 DOMAIN-SUFFIX,gulliver45.ru
 DOMAIN-SUFFIX,gulliverperm.ru
@@ -25597,6 +25673,7 @@ DOMAIN-SUFFIX,gumssosh3.ru
 DOMAIN-SUFFIX,gumuv.zoopolis78.ru
 DOMAIN-SUFFIX,gun.deals
 DOMAIN-SUFFIX,gunbot.ru
+DOMAIN-SUFFIX,gunboyugazetesi.com.tr
 DOMAIN-SUFFIX,gunhunt.ru
 DOMAIN-SUFFIX,gunman.biz
 DOMAIN-SUFFIX,gunsanddragons.top
@@ -25763,6 +25840,7 @@ DOMAIN-SUFFIX,h8.boominfo.org
 DOMAIN-SUFFIX,h9.boominfo.org
 DOMAIN-SUFFIX,ha-crypton-ru.web.app
 DOMAIN-SUFFIX,ha.ashoo.wtf
+DOMAIN-SUFFIX,haamash.wordpress.com
 DOMAIN-SUFFIX,hab.media
 DOMAIN-SUFFIX,habapt.ru
 DOMAIN-SUFFIX,habar.org
@@ -25781,6 +25859,7 @@ DOMAIN-SUFFIX,habr.com
 DOMAIN-SUFFIX,habrparser.blogspot.com
 DOMAIN-SUFFIX,hack-forum.ru
 DOMAIN-SUFFIX,hackandyou.org
+DOMAIN-SUFFIX,hackerbbs.cc
 DOMAIN-SUFFIX,hackercat.ru
 DOMAIN-SUFFIX,hackerforum.pro
 DOMAIN-SUFFIX,hackerslist.com
@@ -25804,6 +25883,7 @@ DOMAIN-SUFFIX,hadiyaz.com
 DOMAIN-SUFFIX,hadleybags.ru
 DOMAIN-SUFFIX,hadson-club.com
 DOMAIN-SUFFIX,haeli.ru
+DOMAIN-SUFFIX,hafizagazetesi.com
 DOMAIN-SUFFIX,hager-nw.ru
 DOMAIN-SUFFIX,haha.bg
 DOMAIN-SUFFIX,haha.tennisi.com
@@ -25843,6 +25923,7 @@ DOMAIN-SUFFIX,hallporn.info
 DOMAIN-SUFFIX,halmabmdp.com.br
 DOMAIN-SUFFIX,halvingai-tech.com
 DOMAIN-SUFFIX,halvixen-app.com
+DOMAIN-SUFFIX,halyq-uni.kz
 DOMAIN-SUFFIX,halzen.ru
 DOMAIN-SUFFIX,ham3x.com
 DOMAIN-SUFFIX,hamaranta.com
@@ -25868,6 +25949,7 @@ DOMAIN-SUFFIX,hangadac.com
 DOMAIN-SUFFIX,hangish-sosh.ru
 DOMAIN-SUFFIX,hangoverpart3.com
 DOMAIN-SUFFIX,hanhikivi.net
+DOMAIN-SUFFIX,hanime-cdn.com
 DOMAIN-SUFFIX,hanime.fun
 DOMAIN-SUFFIX,hanime.tv
 DOMAIN-SUFFIX,hanime.watch
@@ -26029,6 +26111,7 @@ DOMAIN-SUFFIX,hazbinhotel.com
 DOMAIN-SUFFIX,hazbinhotel.fandom.com
 DOMAIN-SUFFIX,hazbinhotel.fans
 DOMAIN-SUFFIX,hb.ashoo.bar
+DOMAIN-SUFFIX,hb.by
 DOMAIN-SUFFIX,hbomax.com
 DOMAIN-SUFFIX,hbpluse.com
 DOMAIN-SUFFIX,hc-markets.com
@@ -26237,6 +26320,7 @@ DOMAIN-SUFFIX,healingfromwithinhouston.com
 DOMAIN-SUFFIX,healingpandemic.click
 DOMAIN-SUFFIX,health-lands.ru
 DOMAIN-SUFFIX,health2blog.com
+DOMAIN-SUFFIX,healthcare.by
 DOMAIN-SUFFIX,healthpolicyinitiative.com
 DOMAIN-SUFFIX,healthspirit.ru
 DOMAIN-SUFFIX,healthworker.ru
@@ -26546,7 +26630,6 @@ DOMAIN-SUFFIX,herandex.ru
 DOMAIN-SUFFIX,herborisia.fr
 DOMAIN-SUFFIX,hercules.eog.bz
 DOMAIN-SUFFIX,herculeswest.com
-DOMAIN-SUFFIX,herdict.org
 DOMAIN-SUFFIX,herdofhaflingers.com
 DOMAIN-SUFFIX,heredrunkgirls.tv
 DOMAIN-SUFFIX,heretic.camp
@@ -26608,7 +26691,6 @@ DOMAIN-SUFFIX,hey.ashoo.us
 DOMAIN-SUFFIX,hey.coocha.org
 DOMAIN-SUFFIX,heydouga.one
 DOMAIN-SUFFIX,heydouga.org
-DOMAIN-SUFFIX,heyjane.com
 DOMAIN-SUFFIX,hf-guap.ru
 DOMAIN-SUFFIX,hf-miarkets.com
 DOMAIN-SUFFIX,hf.ashoo.bar
@@ -26886,6 +26968,8 @@ DOMAIN-SUFFIX,hizbut-tahrir.info
 DOMAIN-SUFFIX,hizbuttahrir.org
 DOMAIN-SUFFIX,hjv.gepatit-stop3.ru
 DOMAIN-SUFFIX,hk.bt4g.org
+DOMAIN-SUFFIX,hkbookcity.com
+DOMAIN-SUFFIX,hkoutlanders.com
 DOMAIN-SUFFIX,hkra.at
 DOMAIN-SUFFIX,hkrn.at
 DOMAIN-SUFFIX,hl.ashoo.wtf
@@ -27147,6 +27231,7 @@ DOMAIN-SUFFIX,hostelfusion.ru
 DOMAIN-SUFFIX,hostelmakarov.ru
 DOMAIN-SUFFIX,hostf.info
 DOMAIN-SUFFIX,hostfilm.org
+DOMAIN-SUFFIX,hostfly.by
 DOMAIN-SUFFIX,hostgator.com
 DOMAIN-SUFFIX,hostgrivan.info
 DOMAIN-SUFFIX,hosthf.info
@@ -27393,11 +27478,13 @@ DOMAIN-SUFFIX,hr.casmr.ru
 DOMAIN-SUFFIX,hr.casvn.ru
 DOMAIN-SUFFIX,hr.filmovisex.sbs
 DOMAIN-SUFFIX,hr.pornofilmdomaci.sbs
+DOMAIN-SUFFIX,hra.am
 DOMAIN-SUFFIX,hrabro.od.ua
 DOMAIN-SUFFIX,hram-elisaveta.com
 DOMAIN-SUFFIX,hram-flot.ru
 DOMAIN-SUFFIX,hram-vsr.ru
 DOMAIN-SUFFIX,hram-vsr.xyz
+DOMAIN-SUFFIX,hram.by
 DOMAIN-SUFFIX,hram.org.ru
 DOMAIN-SUFFIX,hramkalitniki.ru
 DOMAIN-SUFFIX,hramlomonosov.ru
@@ -27518,7 +27605,6 @@ DOMAIN-SUFFIX,hu.sotsg.ru
 DOMAIN-SUFFIX,hu.stloe.ru
 DOMAIN-SUFFIX,huage.online
 DOMAIN-SUFFIX,huashen-ekb.ru
-DOMAIN-SUFFIX,huawei.com
 DOMAIN-SUFFIX,hub-book.com
 DOMAIN-SUFFIX,hub-books.com
 DOMAIN-SUFFIX,hub-financialinstitution.net
@@ -27558,9 +27644,11 @@ DOMAIN-SUFFIX,hullo.dating
 DOMAIN-SUFFIX,human-nonhuman.info
 DOMAIN-SUFFIX,humanconstanta.by
 DOMAIN-SUFFIX,humanconstanta.org
+DOMAIN-SUFFIX,humanflow.com
 DOMAIN-SUFFIX,humanitarian.novaposhta.ua
 DOMAIN-SUFFIX,humanitariancollege.ru
 DOMAIN-SUFFIX,humanpsy.ru
+DOMAIN-SUFFIX,humanrightsclub.net
 DOMAIN-SUFFIX,humanrightsfirst.org
 DOMAIN-SUFFIX,humanrightshouse.org
 DOMAIN-SUFFIX,humansenses.ru
@@ -27729,6 +27817,7 @@ DOMAIN-SUFFIX,i-referrer.ru
 DOMAIN-SUFFIX,i-rybak.ru
 DOMAIN-SUFFIX,i-seek-you.ru
 DOMAIN-SUFFIX,i-shop.dp.ua
+DOMAIN-SUFFIX,i-store.by
 DOMAIN-SUFFIX,i-sux-hd.com
 DOMAIN-SUFFIX,i-sux.com
 DOMAIN-SUFFIX,i-sux.porn
@@ -27820,10 +27909,7 @@ DOMAIN-SUFFIX,i2001.top
 DOMAIN-SUFFIX,i24bot-software.com
 DOMAIN-SUFFIX,i256.photobucket.com
 DOMAIN-SUFFIX,i273.photobucket.com
-DOMAIN-SUFFIX,i2p2.de
 DOMAIN-SUFFIX,i2pd.website
-DOMAIN-SUFFIX,i2pforum.net
-DOMAIN-SUFFIX,i2pgit.org
 DOMAIN-SUFFIX,i3.aic.la
 DOMAIN-SUFFIX,i3.filmworld10.buzz
 DOMAIN-SUFFIX,i3.rosstab.com
@@ -27847,6 +27933,7 @@ DOMAIN-SUFFIX,iabizapp-system.com
 DOMAIN-SUFFIX,iacore.ru
 DOMAIN-SUFFIX,iadvertising.ru
 DOMAIN-SUFFIX,iaeste.org
+DOMAIN-SUFFIX,iaffe.org
 DOMAIN-SUFFIX,iakovkhalip.ru
 DOMAIN-SUFFIX,iamat.com
 DOMAIN-SUFFIX,iamboutique.ru
@@ -27856,6 +27943,7 @@ DOMAIN-SUFFIX,iamproducer.ru
 DOMAIN-SUFFIX,iamsissy.com
 DOMAIN-SUFFIX,iamthetravelman.com
 DOMAIN-SUFFIX,iandolber.net
+DOMAIN-SUFFIX,iapbelarus.org
 DOMAIN-SUFFIX,iasakh.com
 DOMAIN-SUFFIX,iasakh.ru
 DOMAIN-SUFFIX,iato.ru
@@ -27866,6 +27954,7 @@ DOMAIN-SUFFIX,ib.garilla.qpon
 DOMAIN-SUFFIX,ib.sui-network.mom
 DOMAIN-SUFFIX,ibadmilfs.com
 DOMAIN-SUFFIX,ibazh.com
+DOMAIN-SUFFIX,ibb.istanbul
 DOMAIN-SUFFIX,ibclab.ru
 DOMAIN-SUFFIX,ibelive.cc
 DOMAIN-SUFFIX,iberdrola-engine.com
@@ -27896,6 +27985,7 @@ DOMAIN-SUFFIX,icanschool.ru
 DOMAIN-SUFFIX,icassetspro.com
 DOMAIN-SUFFIX,icbda2015.org
 DOMAIN-SUFFIX,icbla.legal
+DOMAIN-SUFFIX,icc-cpi.int
 DOMAIN-SUFFIX,icc-iso.ru
 DOMAIN-SUFFIX,icdentm.ru
 DOMAIN-SUFFIX,icds.ee
@@ -27937,11 +28027,11 @@ DOMAIN-SUFFIX,ichigocandy.com
 DOMAIN-SUFFIX,ichinese.online
 DOMAIN-SUFFIX,ichinuke.com
 DOMAIN-SUFFIX,ichkeria.info
-DOMAIN-SUFFIX,ici.radio-canada.ca
 DOMAIN-SUFFIX,icipr.international
 DOMAIN-SUFFIX,iclub.energy
 DOMAIN-SUFFIX,icmarkets.com
 DOMAIN-SUFFIX,icnet.tv
+DOMAIN-SUFFIX,ico-china.org
 DOMAIN-SUFFIX,icolog.ru
 DOMAIN-SUFFIX,icon.pp.ua
 DOMAIN-SUFFIX,iconeatuarial.com.br
@@ -27962,6 +28052,7 @@ DOMAIN-SUFFIX,icrw.org
 DOMAIN-SUFFIX,icsignalsmartrading.com
 DOMAIN-SUFFIX,icskorea.co.kr
 DOMAIN-SUFFIX,icts-sevsu.ru
+DOMAIN-SUFFIX,ictt.by
 DOMAIN-SUFFIX,ictv.ua
 DOMAIN-SUFFIX,icvoenmeh.ru
 DOMAIN-SUFFIX,icwbzamb.com
@@ -28032,6 +28123,7 @@ DOMAIN-SUFFIX,ieltshacker.ru
 DOMAIN-SUFFIX,iep-km.ru
 DOMAIN-SUFFIX,ieport.ru
 DOMAIN-SUFFIX,iesdiegotortosa.com
+DOMAIN-SUFFIX,iesenthal.com
 DOMAIN-SUFFIX,ieshua.org
 DOMAIN-SUFFIX,iesriojucar.es
 DOMAIN-SUFFIX,ievbras.ru
@@ -28055,6 +28147,7 @@ DOMAIN-SUFFIX,igarka.bunin-yur.online
 DOMAIN-SUFFIX,igasiamarts.com
 DOMAIN-SUFFIX,igate.com.ua
 DOMAIN-SUFFIX,igb7.ru
+DOMAIN-SUFFIX,igeme.net
 DOMAIN-SUFFIX,igfap.com
 DOMAIN-SUFFIX,igg-games.com
 DOMAIN-SUFFIX,igidonline.xyz
@@ -28154,6 +28247,7 @@ DOMAIN-SUFFIX,ildarody.com
 DOMAIN-SUFFIX,ilecta.ru
 DOMAIN-SUFFIX,ilegacy.ru
 DOMAIN-SUFFIX,ilfumo.ru
+DOMAIN-SUFFIX,ilga-europe.org
 DOMAIN-SUFFIX,ilga.org
 DOMAIN-SUFFIX,ilianhostel.ru
 DOMAIN-SUFFIX,ilikecomix.com
@@ -28511,7 +28605,6 @@ DOMAIN-SUFFIX,inefex.com
 DOMAIN-SUFFIX,inefex.org
 DOMAIN-SUFFIX,inertiafinance.co
 DOMAIN-SUFFIX,inertix.pro
-DOMAIN-SUFFIX,inespectator.com
 DOMAIN-SUFFIX,inessa-ra.ru
 DOMAIN-SUFFIX,inet123.ru
 DOMAIN-SUFFIX,inetprivacy.com
@@ -28532,6 +28625,7 @@ DOMAIN-SUFFIX,infiniteaccesspro.com
 DOMAIN-SUFFIX,infinitehentai.com
 DOMAIN-SUFFIX,infinitehorizonsinfo.com
 DOMAIN-SUFFIX,infiniteluststudios.itch.io
+DOMAIN-SUFFIX,infinitetube.com
 DOMAIN-SUFFIX,infinitipinnacle.org
 DOMAIN-SUFFIX,infinity-bitwave-app.net
 DOMAIN-SUFFIX,infinity-hash.io
@@ -28609,6 +28703,7 @@ DOMAIN-SUFFIX,informatik04.ru
 DOMAIN-SUFFIX,information.dk
 DOMAIN-SUFFIX,informatione.ru
 DOMAIN-SUFFIX,informator.ua
+DOMAIN-SUFFIX,informburo.kz
 DOMAIN-SUFFIX,informburo.net
 DOMAIN-SUFFIX,informeffluents.xyz
 DOMAIN-SUFFIX,informer.today
@@ -28713,7 +28808,6 @@ DOMAIN-SUFFIX,inrussia-sk.ru
 DOMAIN-SUFFIX,insane.gg
 DOMAIN-SUFFIX,insane.vodka
 DOMAIN-SUFFIX,inschooler.ru
-DOMAIN-SUFFIX,insecure.org
 DOMAIN-SUFFIX,inshe.tv
 DOMAIN-SUFFIX,insidebitcoins.com
 DOMAIN-SUFFIX,insider-media.net
@@ -28888,7 +28982,6 @@ DOMAIN-SUFFIX,internationaldriversassociation.com
 DOMAIN-SUFFIX,internationaldrivershub.ru
 DOMAIN-SUFFIX,internationalist.blog.bg
 DOMAIN-SUFFIX,internationalplus.net
-DOMAIN-SUFFIX,internationalrivers.org
 DOMAIN-SUFFIX,internavigation.ru
 DOMAIN-SUFFIX,internedz.com
 DOMAIN-SUFFIX,internetafisha.ru
@@ -29134,6 +29227,7 @@ DOMAIN-SUFFIX,irkutsk.registratsya-schools.ru
 DOMAIN-SUFFIX,irkutsk.soski.org
 DOMAIN-SUFFIX,irkutsk.vipster.net
 DOMAIN-SUFFIX,irma-l.ru
+DOMAIN-SUFFIX,irna.ir
 DOMAIN-SUFFIX,iro-rt.ru
 DOMAIN-SUFFIX,iron-smart.ru
 DOMAIN-SUFFIX,ironagespb.ru
@@ -29181,15 +29275,17 @@ DOMAIN-SUFFIX,ishim.sevtorgi.ru
 DOMAIN-SUFFIX,ishimbai.chi-psy.ru
 DOMAIN-SUFFIX,ishimbay-art-gallery.ru
 DOMAIN-SUFFIX,ishimemory.com
+DOMAIN-SUFFIX,ishr.ch
 DOMAIN-SUFFIX,isi2000.online
 DOMAIN-SUFFIX,isi2000.ru
-DOMAIN-SUFFIX,isiswomen.org
 DOMAIN-SUFFIX,isk-areal.ru
+DOMAIN-SUFFIX,iskcon.com
 DOMAIN-SUFFIX,iskova.news
 DOMAIN-SUFFIX,iskra-media.com
 DOMAIN-SUFFIX,iskra.work
 DOMAIN-SUFFIX,islam-dlya-vsex.blogspot.com
 DOMAIN-SUFFIX,islam-perm.ru
+DOMAIN-SUFFIX,islam.by
 DOMAIN-SUFFIX,islam.in.ua
 DOMAIN-SUFFIX,islamcenter.ru
 DOMAIN-SUFFIX,islamcontent.com
@@ -29204,6 +29300,7 @@ DOMAIN-SUFFIX,islamicpublishing.org
 DOMAIN-SUFFIX,islammessage.org
 DOMAIN-SUFFIX,islamnur.ru
 DOMAIN-SUFFIX,islampeace.ru
+DOMAIN-SUFFIX,islamqa.info
 DOMAIN-SUFFIX,islamrk.ru
 DOMAIN-SUFFIX,islamvmoldove.com
 DOMAIN-SUFFIX,islamwww.com
@@ -29227,15 +29324,18 @@ DOMAIN-SUFFIX,isportlive.net
 DOMAIN-SUFFIX,israelan.com
 DOMAIN-SUFFIX,israelinfo.co.il
 DOMAIN-SUFFIX,israelsp.ru
+DOMAIN-SUFFIX,israeltv.to
 DOMAIN-SUFFIX,isramedic.co.il
 DOMAIN-SUFFIX,isrg-pensia.ru
 DOMAIN-SUFFIX,iss.anilib.top
 DOMAIN-SUFFIX,issaplus.com
+DOMAIN-SUFFIX,isscr.org
 DOMAIN-SUFFIX,issti.ru
 DOMAIN-SUFFIX,issuu.com
 DOMAIN-SUFFIX,ist3-1.filesor.com
 DOMAIN-SUFFIX,ist8-3.filesor.com
 DOMAIN-SUFFIX,istanbulkumar.edu.pl
+DOMAIN-SUFFIX,istanbullgbti.org
 DOMAIN-SUFFIX,isterbost.ru
 DOMAIN-SUFFIX,istinno-govoryu-vam.z-zasrancy.giize.com
 DOMAIN-SUFFIX,istinno-govoryu-vam.z-zasrancy.gleeze.com
@@ -29688,7 +29788,6 @@ DOMAIN-SUFFIX,jamix.cc
 DOMAIN-SUFFIX,jamminjarsdemo.com
 DOMAIN-SUFFIX,jamp-group.ru
 DOMAIN-SUFFIX,jancel.ru
-DOMAIN-SUFFIX,janesdueprocess.org
 DOMAIN-SUFFIX,jannyai.com
 DOMAIN-SUFFIX,janus-shop.ru
 DOMAIN-SUFFIX,jao-da.com
@@ -30206,6 +30305,7 @@ DOMAIN-SUFFIX,justfun.club
 DOMAIN-SUFFIX,justgayfans.com
 DOMAIN-SUFFIX,justice-journal.ru
 DOMAIN-SUFFIX,justiceacademy.org
+DOMAIN-SUFFIX,justicewomen.com
 DOMAIN-SUFFIX,justincestporn.com
 DOMAIN-SUFFIX,justlesbianpussy.com
 DOMAIN-SUFFIX,justpaste.it
@@ -30354,7 +30454,6 @@ DOMAIN-SUFFIX,kabbala-for-nations.ru
 DOMAIN-SUFFIX,kabel-kz.com
 DOMAIN-SUFFIX,kabinetinfo.ru
 DOMAIN-SUFFIX,kabluchini.ru
-DOMAIN-SUFFIX,kabobfest.com
 DOMAIN-SUFFIX,kabriolet01.ru
 DOMAIN-SUFFIX,kach.kz
 DOMAIN-SUFFIX,kacha34.ru
@@ -30502,6 +30601,7 @@ DOMAIN-SUFFIX,kamenstol.ru
 DOMAIN-SUFFIX,kameranabludenia.ru
 DOMAIN-SUFFIX,kamerashop.ru
 DOMAIN-SUFFIX,kamerdam.com
+DOMAIN-SUFFIX,kamikadze-d.net
 DOMAIN-SUFFIX,kaminforlife.ru
 DOMAIN-SUFFIX,kamini-sauni.ru
 DOMAIN-SUFFIX,kaminy74.ru
@@ -30647,6 +30747,7 @@ DOMAIN-SUFFIX,karyera82.ru
 DOMAIN-SUFFIX,karymskoe.s-grup.life
 DOMAIN-SUFFIX,karyvoe6.ru
 DOMAIN-SUFFIX,kasago.biz
+DOMAIN-SUFFIX,kasaum.ankara.edu.tr
 DOMAIN-SUFFIX,kashalot.com
 DOMAIN-SUFFIX,kaskad-anadyr.ru
 DOMAIN-SUFFIX,kaskad-idpa.ru
@@ -30661,7 +30762,6 @@ DOMAIN-SUFFIX,kasynainternetowe.net
 DOMAIN-SUFFIX,kasynainternetowe12.net
 DOMAIN-SUFFIX,kasynainternetowe4.net
 DOMAIN-SUFFIX,kat-53.ru
-DOMAIN-SUFFIX,kat.am
 DOMAIN-SUFFIX,kataevprize.ru
 DOMAIN-SUFFIX,katalika.ru
 DOMAIN-SUFFIX,katalogclub.ru
@@ -30733,6 +30833,7 @@ DOMAIN-SUFFIX,kazadebiet.kz
 DOMAIN-SUFFIX,kazagar.ru
 DOMAIN-SUFFIX,kazakh-sex.top
 DOMAIN-SUFFIX,kazakhporno.com
+DOMAIN-SUFFIX,kazakhstan.fes.de
 DOMAIN-SUFFIX,kazaki-ussuri.ru
 DOMAIN-SUFFIX,kazakveterenar.blogspot.ru
 DOMAIN-SUFFIX,kazan-avtoservis.ru
@@ -31462,6 +31563,7 @@ DOMAIN-SUFFIX,kmrpqbq.info
 DOMAIN-SUFFIX,kmt-amp-mahnemso.ru
 DOMAIN-SUFFIX,kmt-amp-micro.ru
 DOMAIN-SUFFIX,kmt365amp.top
+DOMAIN-SUFFIX,kmu.gov.ua
 DOMAIN-SUFFIX,kmuzon.com
 DOMAIN-SUFFIX,kmv-otpusk.ru
 DOMAIN-SUFFIX,kmvis.com
@@ -31471,6 +31573,7 @@ DOMAIN-SUFFIX,kn.ashoo.org
 DOMAIN-SUFFIX,kn.ashoo.place
 DOMAIN-SUFFIX,kna28.cc
 DOMAIN-SUFFIX,knab1.cc
+DOMAIN-SUFFIX,knaben.org
 DOMAIN-SUFFIX,knaben.ru
 DOMAIN-SUFFIX,knack.be
 DOMAIN-SUFFIX,knapsackforhope.org
@@ -32104,6 +32207,7 @@ DOMAIN-SUFFIX,kriminal.tv
 DOMAIN-SUFFIX,kriminals-teamz.ru
 DOMAIN-SUFFIX,krimuvet.online
 DOMAIN-SUFFIX,krimuvet.ru
+DOMAIN-SUFFIX,krinica.org
 DOMAIN-SUFFIX,krinich.ru
 DOMAIN-SUFFIX,kriofil.ru
 DOMAIN-SUFFIX,krishutaff.com
@@ -32331,6 +32435,7 @@ DOMAIN-SUFFIX,kudo-dv.ru
 DOMAIN-SUFFIX,kudrovo.fba-tiger.ru
 DOMAIN-SUFFIX,kudrovo.icqnet.ru
 DOMAIN-SUFFIX,kuevroman.ru
+DOMAIN-SUFFIX,kufar.by
 DOMAIN-SUFFIX,kugahelu.online
 DOMAIN-SUFFIX,kugostr.online
 DOMAIN-SUFFIX,kugostr.ru
@@ -32367,6 +32472,7 @@ DOMAIN-SUFFIX,kultsport42.ru
 DOMAIN-SUFFIX,kultura-novosk.ru
 DOMAIN-SUFFIX,kultura-ozersk.ru
 DOMAIN-SUFFIX,kultura-selkup.ru
+DOMAIN-SUFFIX,kultura.by
 DOMAIN-SUFFIX,kultura22.ru
 DOMAIN-SUFFIX,kulturabdulino.ru
 DOMAIN-SUFFIX,kulturalounge.ru
@@ -32388,6 +32494,7 @@ DOMAIN-SUFFIX,kunzite.ru
 DOMAIN-SUFFIX,kup-att.ru
 DOMAIN-SUFFIX,kup-dpl.ru
 DOMAIN-SUFFIX,kup-xum.ru
+DOMAIN-SUFFIX,kupalauski.by
 DOMAIN-SUFFIX,kupdf.net
 DOMAIN-SUFFIX,kuper-careers.ru
 DOMAIN-SUFFIX,kupetstravkin.ru
@@ -32985,6 +33092,7 @@ DOMAIN-SUFFIX,lamanovamuseum.com
 DOMAIN-SUFFIX,lamatan-gka.co
 DOMAIN-SUFFIX,lamatangka.com
 DOMAIN-SUFFIX,lambdafm.point.im
+DOMAIN-SUFFIX,lambdaistanbul.org
 DOMAIN-SUFFIX,lambdalegal.org
 DOMAIN-SUFFIX,lamibia.com
 DOMAIN-SUFFIX,laminat38.ru
@@ -33222,7 +33330,6 @@ DOMAIN-SUFFIX,leamax.ru
 DOMAIN-SUFFIX,lean24.tv
 DOMAIN-SUFFIX,leaneducation.ru
 DOMAIN-SUFFIX,leannecrow.com
-DOMAIN-SUFFIX,leap.se
 DOMAIN-SUFFIX,learn.hoou.de
 DOMAIN-SUFFIX,learners-world.com
 DOMAIN-SUFFIX,learningmatters.co
@@ -33421,6 +33528,7 @@ DOMAIN-SUFFIX,lenporno.space
 DOMAIN-SUFFIX,lenporno.top
 DOMAIN-SUFFIX,lenporno.work
 DOMAIN-SUFFIX,lenrestoran.ru
+DOMAIN-SUFFIX,lens.google.com
 DOMAIN-SUFFIX,lenschool2.ru
 DOMAIN-SUFFIX,lenskiy.org
 DOMAIN-SUFFIX,lensmen.ru
@@ -33481,6 +33589,7 @@ DOMAIN-SUFFIX,lesbianbliss.com
 DOMAIN-SUFFIX,lesbianbreastfeeding.com
 DOMAIN-SUFFIX,lesbiancloud.com
 DOMAIN-SUFFIX,lesbianfeetporn.com
+DOMAIN-SUFFIX,lesbiangenius.org
 DOMAIN-SUFFIX,lesbianlabs.com
 DOMAIN-SUFFIX,lesbianpics.net
 DOMAIN-SUFFIX,lesbianpie.com
@@ -33581,7 +33690,6 @@ DOMAIN-SUFFIX,letsloop.com
 DOMAIN-SUFFIX,letsporn.com
 DOMAIN-SUFFIX,letspresent.ru
 DOMAIN-SUFFIX,letsvpn.world
-DOMAIN-SUFFIX,letterboxd.com
 DOMAIN-SUFFIX,letters-now.org
 DOMAIN-SUFFIX,letuch-rig.ru
 DOMAIN-SUFFIX,letvimter.ru
@@ -33687,6 +33795,7 @@ DOMAIN-SUFFIX,lex-kr1.ru
 DOMAIN-SUFFIX,lex-kr2.ru
 DOMAIN-SUFFIX,lex-kr3.ru
 DOMAIN-SUFFIX,lex-kr4.ru
+DOMAIN-SUFFIX,lex-lab.tech
 DOMAIN-SUFFIX,lex-laz1.top
 DOMAIN-SUFFIX,lex-laz2.top
 DOMAIN-SUFFIX,lex-laz3.top
@@ -33736,10 +33845,12 @@ DOMAIN-SUFFIX,lexx-hotel.ru
 DOMAIN-SUFFIX,leyla-hayat-ask-adalet.net
 DOMAIN-SUFFIX,leystroy.ru
 DOMAIN-SUFFIX,lezbebad.net
+DOMAIN-SUFFIX,lezce.com
 DOMAIN-SUFFIX,lezcuties.org
 DOMAIN-SUFFIX,lezdomaction.com
 DOMAIN-SUFFIX,lezgidin.ru
 DOMAIN-SUFFIX,lezkiss.com
+DOMAIN-SUFFIX,lezsmeeting.com
 DOMAIN-SUFFIX,lezziebff.com
 DOMAIN-SUFFIX,lfc-legion.ru
 DOMAIN-SUFFIX,lfc.sa
@@ -33765,6 +33876,7 @@ DOMAIN-SUFFIX,lgbtics.com
 DOMAIN-SUFFIX,lgbtkvartal.com
 DOMAIN-SUFFIX,lgbtlibrary.blogspot.com
 DOMAIN-SUFFIX,lgbtnet.org
+DOMAIN-SUFFIX,lgbtnewsnow.org
 DOMAIN-SUFFIX,lgbtporn.net
 DOMAIN-SUFFIX,lgbtpropaganda.media
 DOMAIN-SUFFIX,lgbtqia.fandom.com
@@ -33802,6 +33914,7 @@ DOMAIN-SUFFIX,libaid.ru
 DOMAIN-SUFFIX,libbox.club
 DOMAIN-SUFFIX,libcbor.org
 DOMAIN-SUFFIX,libcsys.com
+DOMAIN-SUFFIX,liberal.org.tr
 DOMAIN-SUFFIX,liberation.fr
 DOMAIN-SUFFIX,liberoferotex.net
 DOMAIN-SUFFIX,libertatemlab.ru
@@ -33811,7 +33924,6 @@ DOMAIN-SUFFIX,liberty64.ru
 DOMAIN-SUFFIX,libertyclimate.ru
 DOMAIN-SUFFIX,libertyfree.ru
 DOMAIN-SUFFIX,libertyoptionmarket.live
-DOMAIN-SUFFIX,libgen.fun
 DOMAIN-SUFFIX,libgen.is
 DOMAIN-SUFFIX,libgen.lc
 DOMAIN-SUFFIX,libgen.li
@@ -33819,7 +33931,6 @@ DOMAIN-SUFFIX,libgen.life
 DOMAIN-SUFFIX,libgen.me
 DOMAIN-SUFFIX,libgen.proxybit.casa
 DOMAIN-SUFFIX,libgen.rs
-DOMAIN-SUFFIX,libgen.space
 DOMAIN-SUFFIX,libgen.st
 DOMAIN-SUFFIX,libgen.unbl4you.work
 DOMAIN-SUFFIX,libgen.unblocked.cloud
@@ -34218,7 +34329,6 @@ DOMAIN-SUFFIX,live.hentaicupid.com
 DOMAIN-SUFFIX,live.living-plus.ltd
 DOMAIN-SUFFIX,live.mercijmsnap.com
 DOMAIN-SUFFIX,live.mysnapsex.com
-DOMAIN-SUFFIX,live.radiance.thatgamecompany.com
 DOMAIN-SUFFIX,live.snap4sex.com
 DOMAIN-SUFFIX,live.snaphentai.com
 DOMAIN-SUFFIX,live.snapminute.com
@@ -34270,7 +34380,6 @@ DOMAIN-SUFFIX,livefootball.live
 DOMAIN-SUFFIX,livefootball.su
 DOMAIN-SUFFIX,livegames.ru
 DOMAIN-SUFFIX,livego.online
-DOMAIN-SUFFIX,liveleak.com
 DOMAIN-SUFFIX,livemarketanalysis.live
 DOMAIN-SUFFIX,livematch.live
 DOMAIN-SUFFIX,livemy.info
@@ -34383,6 +34492,7 @@ DOMAIN-SUFFIX,loadka.ru
 DOMAIN-SUFFIX,loadkino.ru
 DOMAIN-SUFFIX,loadment.com
 DOMAIN-SUFFIX,loadmp4.info
+DOMAIN-SUFFIX,lobicilik.com
 DOMAIN-SUFFIX,lobnenskoe.su
 DOMAIN-SUFFIX,lobnya-school9.ru
 DOMAIN-SUFFIX,lobnya.hochukalyan.com
@@ -34440,6 +34550,7 @@ DOMAIN-SUFFIX,logikaprogressa.com
 DOMAIN-SUFFIX,logikhandel.com
 DOMAIN-SUFFIX,logikpulse.com
 DOMAIN-SUFFIX,login.amd.com
+DOMAIN-SUFFIX,login.by
 DOMAIN-SUFFIX,logiprogress.com
 DOMAIN-SUFFIX,logispherex.com
 DOMAIN-SUFFIX,logist.today
@@ -34544,6 +34655,7 @@ DOMAIN-SUFFIX,lookplain.com
 DOMAIN-SUFFIX,lookseries.online
 DOMAIN-SUFFIX,lookup-id.com
 DOMAIN-SUFFIX,lookw.ru
+DOMAIN-SUFFIX,looper.com
 DOMAIN-SUFFIX,loortcerial.icu
 DOMAIN-SUFFIX,looser.tennisi.com
 DOMAIN-SUFFIX,loosers.tennisi.com
@@ -34614,6 +34726,7 @@ DOMAIN-SUFFIX,losg.ru
 DOMAIN-SUFFIX,losinoostrovskypark.ru
 DOMAIN-SUFFIX,losinopetrovsk.ucoz.ru
 DOMAIN-SUFFIX,lossless71.ru
+DOMAIN-SUFFIX,losslessclub.com
 DOMAIN-SUFFIX,lost-quests.ru
 DOMAIN-SUFFIX,lost-series.ru
 DOMAIN-SUFFIX,lostfilm.tv
@@ -35018,6 +35131,7 @@ DOMAIN-SUFFIX,lurkmore.lol
 DOMAIN-SUFFIX,lurkmore.media
 DOMAIN-SUFFIX,lurkmore.online
 DOMAIN-SUFFIX,lurkmore.rip
+DOMAIN-SUFFIX,lurkmore.to
 DOMAIN-SUFFIX,lurkmore.wtf
 DOMAIN-SUFFIX,lushavest.com
 DOMAIN-SUFFIX,lushtera.click
@@ -35033,6 +35147,7 @@ DOMAIN-SUFFIX,lustmadness.itch.io
 DOMAIN-SUFFIX,lustprn.com
 DOMAIN-SUFFIX,lutakena.online
 DOMAIN-SUFFIX,lutakena.ru
+DOMAIN-SUFFIX,luther.by
 DOMAIN-SUFFIX,lutionfave.ru
 DOMAIN-SUFFIX,lutomaks.ru
 DOMAIN-SUFFIX,lutremark.online
@@ -35488,7 +35603,6 @@ DOMAIN-SUFFIX,m.yaeby.club
 DOMAIN-SUFFIX,m.yaeby.tv
 DOMAIN-SUFFIX,m.yaebymob.com
 DOMAIN-SUFFIX,m.yesvids.com
-DOMAIN-SUFFIX,m.youtube.com
 DOMAIN-SUFFIX,m.z1.fm
 DOMAIN-SUFFIX,m.z2.fm
 DOMAIN-SUFFIX,m.z3.fm
@@ -35753,7 +35867,6 @@ DOMAIN-SUFFIX,madou305perm.ru
 DOMAIN-SUFFIX,madouds5.ru
 DOMAIN-SUFFIX,madourodnichok.ru
 DOMAIN-SUFFIX,madpornpics.com
-DOMAIN-SUFFIX,madre.org
 DOMAIN-SUFFIX,madreshoy.com
 DOMAIN-SUFFIX,madroguerie-aveyron.com
 DOMAIN-SUFFIX,madwc.com
@@ -35866,6 +35979,7 @@ DOMAIN-SUFFIX,mail.cbdcru.com
 DOMAIN-SUFFIX,mail.clubtv.pro
 DOMAIN-SUFFIX,mail.cock.li
 DOMAIN-SUFFIX,mail.game-thrones.com
+DOMAIN-SUFFIX,mail.google.com
 DOMAIN-SUFFIX,mail.i.ua
 DOMAIN-SUFFIX,mail.interputa.ru
 DOMAIN-SUFFIX,mail.lekarstvadarom.ru
@@ -35884,7 +35998,6 @@ DOMAIN-SUFFIX,mail.xn----7sbbas7adbh1ak4hek1gg.xn--p1ai
 DOMAIN-SUFFIX,mail24volcano.com
 DOMAIN-SUFFIX,mail2ru.org
 DOMAIN-SUFFIX,mailbox.org
-DOMAIN-SUFFIX,mailchat.pl
 DOMAIN-SUFFIX,mailchi.mp
 DOMAIN-SUFFIX,maileldoclub.com
 DOMAIN-SUFFIX,mailfence.com
@@ -36185,9 +36298,11 @@ DOMAIN-SUFFIX,maoukml.ru
 DOMAIN-SUFFIX,maouschool39.ru
 DOMAIN-SUFFIX,maowaspace.org
 DOMAIN-SUFFIX,map-russia.ru
+DOMAIN-SUFFIX,map.sogou.com
 DOMAIN-SUFFIX,map.ukrainealarm.com
 DOMAIN-SUFFIX,map.xn----7sbbas7adbh1ak4hek1gg.xn--p1ai
 DOMAIN-SUFFIX,maplecraft.ru
+DOMAIN-SUFFIX,mapmiao.com
 DOMAIN-SUFFIX,mapnn.ru
 DOMAIN-SUFFIX,mapofpeace.org
 DOMAIN-SUFFIX,mapofukraine.net
@@ -36207,6 +36322,7 @@ DOMAIN-SUFFIX,maranit.ru
 DOMAIN-SUFFIX,marapartners.com
 DOMAIN-SUFFIX,mararus.com
 DOMAIN-SUFFIX,marashoes.ru
+DOMAIN-SUFFIX,marathonbet.by
 DOMAIN-SUFFIX,maratuka.ru
 DOMAIN-SUFFIX,marc-chagall.ru
 DOMAIN-SUFFIX,marchmont.ru
@@ -37114,6 +37230,7 @@ DOMAIN-SUFFIX,med-ukraine.info
 DOMAIN-SUFFIX,med-uln.ru
 DOMAIN-SUFFIX,med-uno.ru
 DOMAIN-SUFFIX,med-zab.ru
+DOMAIN-SUFFIX,med.by
 DOMAIN-SUFFIX,med.helper.org.ru
 DOMAIN-SUFFIX,medamilitaria.com
 DOMAIN-SUFFIX,medan-do.com
@@ -37543,7 +37660,6 @@ DOMAIN-SUFFIX,megommetr.ru
 DOMAIN-SUFFIX,megweb2.com
 DOMAIN-SUFFIX,meh-kozha.ru
 DOMAIN-SUFFIX,mehanik54.ru
-DOMAIN-SUFFIX,mehl.cloud
 DOMAIN-SUFFIX,mehovoi-portal.ru
 DOMAIN-SUFFIX,meijishoten.com
 DOMAIN-SUFFIX,meilleur-parfum.ru
@@ -37638,6 +37754,7 @@ DOMAIN-SUFFIX,memeplex.pics
 DOMAIN-SUFFIX,memes.getyarn.io
 DOMAIN-SUFFIX,memes.mobi
 DOMAIN-SUFFIX,memkyzmet.kz
+DOMAIN-SUFFIX,memleketpartisi.org.tr
 DOMAIN-SUFFIX,memo.site
 DOMAIN-SUFFIX,memocast.com
 DOMAIN-SUFFIX,memohrc.org
@@ -37774,6 +37891,7 @@ DOMAIN-SUFFIX,meta-glide.com
 DOMAIN-SUFFIX,meta-tradingai.com
 DOMAIN-SUFFIX,meta-vault.com
 DOMAIN-SUFFIX,meta-velora-engine.com
+DOMAIN-SUFFIX,meta.kz
 DOMAIN-SUFFIX,meta.ua
 DOMAIN-SUFFIX,meta7options.com
 DOMAIN-SUFFIX,metabigihit.com
@@ -37822,9 +37940,11 @@ DOMAIN-SUFFIX,metanoia.kz
 DOMAIN-SUFFIX,metapremiumpump.com
 DOMAIN-SUFFIX,metapunks.world
 DOMAIN-SUFFIX,metaratings.by
+DOMAIN-SUFFIX,metart.com
 DOMAIN-SUFFIX,metaset-ai-solution.com
 DOMAIN-SUFFIX,metasetai.net
 DOMAIN-SUFFIX,metasphereltd.org
+DOMAIN-SUFFIX,metasploit.com
 DOMAIN-SUFFIX,metatokens.games
 DOMAIN-SUFFIX,metatokens.life
 DOMAIN-SUFFIX,metatokens.live
@@ -37899,6 +38019,7 @@ DOMAIN-SUFFIX,mexisoulretreats.com
 DOMAIN-SUFFIX,mexporn.vip
 DOMAIN-SUFFIX,mexschool.ru
 DOMAIN-SUFFIX,mexvorin-app.net
+DOMAIN-SUFFIX,meydan.fm
 DOMAIN-SUFFIX,meyerhold.ru
 DOMAIN-SUFFIX,mezanixio-app.com
 DOMAIN-SUFFIX,mezen.city-driving.ru
@@ -37912,6 +38033,7 @@ DOMAIN-SUFFIX,mf-roba.ru
 DOMAIN-SUFFIX,mf.ashoo.so
 DOMAIN-SUFFIX,mf.xyahqweko.boats
 DOMAIN-SUFFIX,mfa-rso.su
+DOMAIN-SUFFIX,mfa.gov.ua
 DOMAIN-SUFFIX,mfaproject.com
 DOMAIN-SUFFIX,mfc31-belgorod.ru
 DOMAIN-SUFFIX,mfc74.ru
@@ -38170,6 +38292,7 @@ DOMAIN-SUFFIX,milftoon.xxx
 DOMAIN-SUFFIX,milftube.cc
 DOMAIN-SUFFIX,milfymadness1.com
 DOMAIN-SUFFIX,milfzr.com
+DOMAIN-SUFFIX,miliao.com
 DOMAIN-SUFFIX,milikest.online
 DOMAIN-SUFFIX,milikest.ru
 DOMAIN-SUFFIX,miliopt.online
@@ -38231,6 +38354,7 @@ DOMAIN-SUFFIX,minaro-ltd.com
 DOMAIN-SUFFIX,minatom.ru
 DOMAIN-SUFFIX,mind-fitness-federation.ru
 DOMAIN-SUFFIX,mind.ua
+DOMAIN-SUFFIX,minda.by
 DOMAIN-SUFFIX,mindafansub.top
 DOMAIN-SUFFIX,mindbox.com.ua
 DOMAIN-SUFFIX,mindevolution.net
@@ -38291,6 +38415,7 @@ DOMAIN-SUFFIX,miningnetworkltd.org
 DOMAIN-SUFFIX,minisou.ru
 DOMAIN-SUFFIX,ministr27.ru
 DOMAIN-SUFFIX,miniumsglobal.com
+DOMAIN-SUFFIX,minjust.net
 DOMAIN-SUFFIX,minjustgov.ru
 DOMAIN-SUFFIX,minkomsvjaz.ru
 DOMAIN-SUFFIX,minorleaguedugout.com
@@ -38318,6 +38443,7 @@ DOMAIN-SUFFIX,minussv.ru
 DOMAIN-SUFFIX,minutnik.site
 DOMAIN-SUFFIX,minval.az
 DOMAIN-SUFFIX,minyustrd.ru
+DOMAIN-SUFFIX,minzdrav.gov.by
 DOMAIN-SUFFIX,minzdravrd.ru
 DOMAIN-SUFFIX,mio-med.xyz
 DOMAIN-SUFFIX,mio-medis.net.ru
@@ -38428,6 +38554,7 @@ DOMAIN-SUFFIX,mirror1.dropmail.info
 DOMAIN-SUFFIX,mirror1x.com
 DOMAIN-SUFFIX,mirrorbay.org
 DOMAIN-SUFFIX,mirrors-1x.com
+DOMAIN-SUFFIX,mirrors.nju.edu.cn
 DOMAIN-SUFFIX,mirrors1x.com
 DOMAIN-SUFFIX,mirrorstream.org
 DOMAIN-SUFFIX,mirs36.ru
@@ -38648,6 +38775,7 @@ DOMAIN-SUFFIX,mmodnaya.ru
 DOMAIN-SUFFIX,mmofans.club
 DOMAIN-SUFFIX,mmopc.ru
 DOMAIN-SUFFIX,mmotgr.com
+DOMAIN-SUFFIX,mmozg.net
 DOMAIN-SUFFIX,mmpornohype.cc
 DOMAIN-SUFFIX,mmr.ua
 DOMAIN-SUFFIX,mmtechfair.com
@@ -38786,6 +38914,7 @@ DOMAIN-SUFFIX,modeofstyle.com
 DOMAIN-SUFFIX,moderator.az
 DOMAIN-SUFFIX,modern-center.ru
 DOMAIN-SUFFIX,modern-vdk.ru
+DOMAIN-SUFFIX,modernhorrors.com
 DOMAIN-SUFFIX,modernhuman.co
 DOMAIN-SUFFIX,modernizamos.com
 DOMAIN-SUFFIX,modernpornhd.com
@@ -38819,6 +38948,7 @@ DOMAIN-SUFFIX,moenomiya.b.dlsite.net
 DOMAIN-SUFFIX,moepc.net
 DOMAIN-SUFFIX,moepoore.ee
 DOMAIN-SUFFIX,moetv.ucoz.com
+DOMAIN-SUFFIX,mofcom.gov.cn
 DOMAIN-SUFFIX,mofet-school.ru
 DOMAIN-SUFFIX,mofosex.com
 DOMAIN-SUFFIX,mofosex.net
@@ -39384,6 +39514,7 @@ DOMAIN-SUFFIX,movies4k.biz
 DOMAIN-SUFFIX,movies4ufree.net
 DOMAIN-SUFFIX,movies7.watch
 DOMAIN-SUFFIX,moviesapk.org
+DOMAIN-SUFFIX,moviesarena.com
 DOMAIN-SUFFIX,moviesdivx.net
 DOMAIN-SUFFIX,moviesdot.ru
 DOMAIN-SUFFIX,movieseries.fun
@@ -39586,6 +39717,7 @@ DOMAIN-SUFFIX,mrbitgame.com
 DOMAIN-SUFFIX,mrbitpartner.com
 DOMAIN-SUFFIX,mrc-trans.com
 DOMAIN-SUFFIX,mrc.ck.ua
+DOMAIN-SUFFIX,mrdeepfakes.com
 DOMAIN-SUFFIX,mrexpo.ru
 DOMAIN-SUFFIX,mrgay.com
 DOMAIN-SUFFIX,mrgay.tube
@@ -39791,6 +39923,7 @@ DOMAIN-SUFFIX,mugalun.ru
 DOMAIN-SUFFIX,mugmuscles.com
 DOMAIN-SUFFIX,mugursworld.com
 DOMAIN-SUFFIX,muhajeer.com
+DOMAIN-SUFFIX,muhammadanism.com
 DOMAIN-SUFFIX,muhit.kz
 DOMAIN-SUFFIX,muhout.com
 DOMAIN-SUFFIX,muhtasibat.tatar
@@ -39993,6 +40126,7 @@ DOMAIN-SUFFIX,musktesladigital.com
 DOMAIN-SUFFIX,muskurs.ru
 DOMAIN-SUFFIX,muslim-library.com
 DOMAIN-SUFFIX,muslim-site.dreamwidth.org
+DOMAIN-SUFFIX,muslima.com
 DOMAIN-SUFFIX,muslimka.ru
 DOMAIN-SUFFIX,muslimuzbekistan.org
 DOMAIN-SUFFIX,muslyrics.ru
@@ -40634,7 +40768,6 @@ DOMAIN-SUFFIX,myskitow.net
 DOMAIN-SUFFIX,myskyguru.ru
 DOMAIN-SUFFIX,myslavegirl.org
 DOMAIN-SUFFIX,mysopdbs.info
-DOMAIN-SUFFIX,myspace.com
 DOMAIN-SUFFIX,myspmail.blogspot.com
 DOMAIN-SUFFIX,mysports-hit.ru
 DOMAIN-SUFFIX,myspot.su
@@ -41058,7 +41191,6 @@ DOMAIN-SUFFIX,nasennikov.ru
 DOMAIN-SUFFIX,naseveregvozdi.ru
 DOMAIN-SUFFIX,nash-auto.ru
 DOMAIN-SUFFIX,nash-detsad32.ru
-DOMAIN-SUFFIX,nash-sever.info
 DOMAIN-SUFFIX,nash-sovremennik.ru
 DOMAIN-SUFFIX,nash-sssr.ru
 DOMAIN-SUFFIX,nasha-strana.info
@@ -41212,6 +41344,7 @@ DOMAIN-SUFFIX,nazcar.ru
 DOMAIN-SUFFIX,nazi-watch.noblogs.org
 DOMAIN-SUFFIX,naziflag.com
 DOMAIN-SUFFIX,nazimy.ru
+DOMAIN-SUFFIX,nazk.gov.ua
 DOMAIN-SUFFIX,nazran.muslim-style.com
 DOMAIN-SUFFIX,nazrangrad.ru
 DOMAIN-SUFFIX,naztamabumiraya.com
@@ -41256,7 +41389,6 @@ DOMAIN-SUFFIX,ncglib.ru
 DOMAIN-SUFFIX,nch.kz
 DOMAIN-SUFFIX,nchara.ru
 DOMAIN-SUFFIX,nchkz.ru
-DOMAIN-SUFFIX,nclrights.org
 DOMAIN-SUFFIX,ncmu.ru
 DOMAIN-SUFFIX,ncomsistem.online
 DOMAIN-SUFFIX,ncomsistem.ru
@@ -41470,6 +41602,7 @@ DOMAIN-SUFFIX,netherexpro.app
 DOMAIN-SUFFIX,netherexprosystem.com
 DOMAIN-SUFFIX,nethertoxagent-platform.com
 DOMAIN-SUFFIX,nethuszar.ro
+DOMAIN-SUFFIX,netmap.su
 DOMAIN-SUFFIX,netmen2.site
 DOMAIN-SUFFIX,netmod-vpn-client.uptodown.com
 DOMAIN-SUFFIX,netpeak.net
@@ -41627,6 +41760,7 @@ DOMAIN-SUFFIX,newflairy.com
 DOMAIN-SUFFIX,newformat.info
 DOMAIN-SUFFIX,newgayporn.cc
 DOMAIN-SUFFIX,newgen-forum.com
+DOMAIN-SUFFIX,newgrodno.by
 DOMAIN-SUFFIX,newhdxxx.com
 DOMAIN-SUFFIX,newhentai.info
 DOMAIN-SUFFIX,newhit-game.ru
@@ -41965,6 +42099,7 @@ DOMAIN-SUFFIX,ng.nghmaty.site
 DOMAIN-SUFFIX,ngelpartners.com
 DOMAIN-SUFFIX,nggazeta.ru
 DOMAIN-SUFFIX,ngielements.com
+DOMAIN-SUFFIX,ngocn.net
 DOMAIN-SUFFIX,ngp.ashoo.black
 DOMAIN-SUFFIX,ngptt.ru
 DOMAIN-SUFFIX,nha-spb.com
@@ -41992,7 +42127,6 @@ DOMAIN-SUFFIX,nhschool.ru
 DOMAIN-SUFFIX,ni.indatab.org
 DOMAIN-SUFFIX,niadd.com
 DOMAIN-SUFFIX,niagara-club.ru
-DOMAIN-SUFFIX,nibblehole.com
 DOMAIN-SUFFIX,nice-books.ru
 DOMAIN-SUFFIX,nice-film.online
 DOMAIN-SUFFIX,nice-road-two.com
@@ -42184,6 +42318,7 @@ DOMAIN-SUFFIX,nizhnij-tagil.vipster.net
 DOMAIN-SUFFIX,nizhniy-novgorod.ashoo.bar
 DOMAIN-SUFFIX,nizniy-novgorod.xn----7sbbas7adbh1ak4hek1gg.xn--p1ai
 DOMAIN-SUFFIX,nizrp.ru
+DOMAIN-SUFFIX,njal.la
 DOMAIN-SUFFIX,njavtv.com
 DOMAIN-SUFFIX,njdwidefense.com
 DOMAIN-SUFFIX,njt.center
@@ -42291,6 +42426,7 @@ DOMAIN-SUFFIX,nobleve-flowroxsoft.com
 DOMAIN-SUFFIX,nobleveflowrox.net
 DOMAIN-SUFFIX,nobleza-invexortech.com
 DOMAIN-SUFFIX,noblock.ru
+DOMAIN-SUFFIX,noblogs.org
 DOMAIN-SUFFIX,noccor.info
 DOMAIN-SUFFIX,noccor.live
 DOMAIN-SUFFIX,noccor.net
@@ -42427,7 +42563,6 @@ DOMAIN-SUFFIX,notevericaa.com
 DOMAIN-SUFFIX,notfans.com
 DOMAIN-SUFFIX,notheft.ru
 DOMAIN-SUFFIX,nothern-tower.ru
-DOMAIN-SUFFIX,nothing-else.run.place
 DOMAIN-SUFFIX,nothingtoxic.com
 DOMAIN-SUFFIX,notification-letter.com
 DOMAIN-SUFFIX,notion-konsalt.ru
@@ -42744,6 +42879,7 @@ DOMAIN-SUFFIX,ntrez.ru
 DOMAIN-SUFFIX,nts-lib.ru
 DOMAIN-SUFFIX,ntsoanemogaladiholdings.com
 DOMAIN-SUFFIX,ntspolymer.ru
+DOMAIN-SUFFIX,ntu.edu.tw
 DOMAIN-SUFFIX,ntvinternet.ru
 DOMAIN-SUFFIX,ntvplus.biz
 DOMAIN-SUFFIX,ntwmarkets.com
@@ -43161,6 +43297,7 @@ DOMAIN-SUFFIX,ochphilxvertex.live
 DOMAIN-SUFFIX,ocn-t.ru
 DOMAIN-SUFFIX,ocoporno.net
 DOMAIN-SUFFIX,ocraddict.com
+DOMAIN-SUFFIX,oct.by
 DOMAIN-SUFFIX,oct02.rudub.mom
 DOMAIN-SUFFIX,oct19.rudub.homes
 DOMAIN-SUFFIX,oct21.rudub.homes
@@ -43222,6 +43359,7 @@ DOMAIN-SUFFIX,odyssey-elements.ru
 DOMAIN-SUFFIX,odywan.ru
 DOMAIN-SUFFIX,oe24.at
 DOMAIN-SUFFIX,oef.org.ee
+DOMAIN-SUFFIX,oek.am
 DOMAIN-SUFFIX,oeskimo-russia.ru
 DOMAIN-SUFFIX,oesrestaurant.com
 DOMAIN-SUFFIX,off-limits.ru
@@ -43239,6 +43377,7 @@ DOMAIN-SUFFIX,officalmega.cc
 DOMAIN-SUFFIX,office.curencymakrett.space
 DOMAIN-SUFFIX,office.ibgt.me
 DOMAIN-SUFFIX,office.mailbox.org
+DOMAIN-SUFFIX,officelife.media
 DOMAIN-SUFFIX,officemart64.ru
 DOMAIN-SUFFIX,officeprom.ru
 DOMAIN-SUFFIX,officiel-online.com
@@ -43346,6 +43485,7 @@ DOMAIN-SUFFIX,ok7pd.com
 DOMAIN-SUFFIX,okashik.atype.jp
 DOMAIN-SUFFIX,okay-cms.com
 DOMAIN-SUFFIX,okayfreedom-vpn.uptodown.com
+DOMAIN-SUFFIX,okayfreedom.com
 DOMAIN-SUFFIX,okayproxy.com
 DOMAIN-SUFFIX,okazu.yuricon.com
 DOMAIN-SUFFIX,okazuri.com
@@ -43564,6 +43704,7 @@ DOMAIN-SUFFIX,omd24.cc
 DOMAIN-SUFFIX,omegasof.army
 DOMAIN-SUFFIX,omegatc.ru
 DOMAIN-SUFFIX,omegatd.top
+DOMAIN-SUFFIX,omenwarpeace.org
 DOMAIN-SUFFIX,omeuzamb.com
 DOMAIN-SUFFIX,omfup5.at
 DOMAIN-SUFFIX,omg-best10.cc
@@ -44001,6 +44142,7 @@ DOMAIN-SUFFIX,onuky.com
 DOMAIN-SUFFIX,onvix.me
 DOMAIN-SUFFIX,onviz-premium.ru
 DOMAIN-SUFFIX,onway.fun
+DOMAIN-SUFFIX,onwh.51rry.com
 DOMAIN-SUFFIX,onx-buzz.ru
 DOMAIN-SUFFIX,onx069.top
 DOMAIN-SUFFIX,onx30.ru
@@ -44103,7 +44245,6 @@ DOMAIN-SUFFIX,openlinez.com
 DOMAIN-SUFFIX,openmedia.io
 DOMAIN-SUFFIX,openmustang.com
 DOMAIN-SUFFIX,openneo.life
-DOMAIN-SUFFIX,opennet.net
 DOMAIN-SUFFIX,openok.org
 DOMAIN-SUFFIX,openoptiondirectmarket.com
 DOMAIN-SUFFIX,openpornvideos.pro
@@ -44113,6 +44254,7 @@ DOMAIN-SUFFIX,openrainbow.app
 DOMAIN-SUFFIX,openrooting.com
 DOMAIN-SUFFIX,openrussia.org
 DOMAIN-SUFFIX,opensanctions.org
+DOMAIN-SUFFIX,opensea.io
 DOMAIN-SUFFIX,opensklad.club
 DOMAIN-SUFFIX,opensocietyfoundations.org
 DOMAIN-SUFFIX,openssource.biz
@@ -44121,6 +44263,7 @@ DOMAIN-SUFFIX,openssource.info
 DOMAIN-SUFFIX,openssource.org
 DOMAIN-SUFFIX,opentir.info
 DOMAIN-SUFFIX,opentmn.ru
+DOMAIN-SUFFIX,opentrackers.org
 DOMAIN-SUFFIX,opentv.media
 DOMAIN-SUFFIX,openukraine.org
 DOMAIN-SUFFIX,openuni.io
@@ -44223,7 +44366,6 @@ DOMAIN-SUFFIX,opulencemiragesystem.com
 DOMAIN-SUFFIX,opulon-trading-ai.com
 DOMAIN-SUFFIX,opvoskresensk.ru
 DOMAIN-SUFFIX,or.ashoo.me
-DOMAIN-SUFFIX,or.team
 DOMAIN-SUFFIX,or.zip-a-dip.com
 DOMAIN-SUFFIX,orabote.net
 DOMAIN-SUFFIX,orabote.sbs
@@ -44372,6 +44514,7 @@ DOMAIN-SUFFIX,oris33.ru
 DOMAIN-SUFFIX,orisstom.ru
 DOMAIN-SUFFIX,orkorostov.ru
 DOMAIN-SUFFIX,orkov.net
+DOMAIN-SUFFIX,orldcoalition.org
 DOMAIN-SUFFIX,orldwildlife.org
 DOMAIN-SUFFIX,orleupvl.kz
 DOMAIN-SUFFIX,orlic6.ru
@@ -44466,6 +44609,7 @@ DOMAIN-SUFFIX,osnovaremonta.ru
 DOMAIN-SUFFIX,osoboe-mesto.ru
 DOMAIN-SUFFIX,ososedki.com
 DOMAIN-SUFFIX,osp-design.ru
+DOMAIN-SUFFIX,osp.org.tr
 DOMAIN-SUFFIX,ospsouz.online
 DOMAIN-SUFFIX,ospsouz.ru
 DOMAIN-SUFFIX,oss.lozonefilms.buzz
@@ -44512,6 +44656,7 @@ DOMAIN-SUFFIX,otatturu.com
 DOMAIN-SUFFIX,otatturu.net
 DOMAIN-SUFFIX,otatturu.top
 DOMAIN-SUFFIX,otatuo.ru
+DOMAIN-SUFFIX,otbm.com
 DOMAIN-SUFFIX,otbnz.com
 DOMAIN-SUFFIX,otc-group54.ru
 DOMAIN-SUFFIX,otc-online-store.com
@@ -44794,6 +44939,7 @@ DOMAIN-SUFFIX,pacify.ru
 DOMAIN-SUFFIX,pack-man.uk
 DOMAIN-SUFFIX,packages.cachyos.org
 DOMAIN-SUFFIX,packages.gitlab.com
+DOMAIN-SUFFIX,packagist.org
 DOMAIN-SUFFIX,packdove.com
 DOMAIN-SUFFIX,packsrd.info
 DOMAIN-SUFFIX,pacom.mil
@@ -45900,7 +46046,6 @@ DOMAIN-SUFFIX,pitbaik-moto.ru
 DOMAIN-SUFFIX,pitbuh.ru
 DOMAIN-SUFFIX,pitchcapion.com
 DOMAIN-SUFFIX,piteq.com
-DOMAIN-SUFFIX,piter.fm
 DOMAIN-SUFFIX,pitomnik-rostok.ru
 DOMAIN-SUFFIX,pitpi.ru
 DOMAIN-SUFFIX,pitportal.ru
@@ -46023,6 +46168,7 @@ DOMAIN-SUFFIX,planb-gesh.ru
 DOMAIN-SUFFIX,planbaisebretagne.com
 DOMAIN-SUFFIX,planbmedia.io
 DOMAIN-SUFFIX,planbrand.xyz
+DOMAIN-SUFFIX,plancpills.org
 DOMAIN-SUFFIX,plandown.com
 DOMAIN-SUFFIX,planeclick.pro
 DOMAIN-SUFFIX,planer.tv
@@ -46154,7 +46300,6 @@ DOMAIN-SUFFIX,platona.net
 DOMAIN-SUFFIX,platovpn.mom
 DOMAIN-SUFFIX,platzi-aihiprex-engine.com
 DOMAIN-SUFFIX,plavsksosh2.ru
-DOMAIN-SUFFIX,play.google.com
 DOMAIN-SUFFIX,playnintendo.com
 DOMAIN-SUFFIX,plazahome.ru
 DOMAIN-SUFFIX,plazmabox.ru
@@ -46440,6 +46585,7 @@ DOMAIN-SUFFIX,podcast17.com
 DOMAIN-SUFFIX,podcastaddict.com
 DOMAIN-SUFFIX,podcastrus.ru
 DOMAIN-SUFFIX,podcasts.nv.ua
+DOMAIN-SUFFIX,podcasty.polskieradio.pl
 DOMAIN-SUFFIX,poddomen.megapeer.vip
 DOMAIN-SUFFIX,poddtoppen.se
 DOMAIN-SUFFIX,podelisteplom.ru
@@ -46616,7 +46762,6 @@ DOMAIN-SUFFIX,polishcanadians.ca
 DOMAIN-SUFFIX,polishing.digital
 DOMAIN-SUFFIX,polishit.icu
 DOMAIN-SUFFIX,polishme.icu
-DOMAIN-SUFFIX,polit.info
 DOMAIN-SUFFIX,polit.reactor.cc
 DOMAIN-SUFFIX,polit.ru
 DOMAIN-SUFFIX,politconsultant.org
@@ -46645,6 +46790,7 @@ DOMAIN-SUFFIX,politrussia.club
 DOMAIN-SUFFIX,politryk.ru
 DOMAIN-SUFFIX,polittika.wordpress.com
 DOMAIN-SUFFIX,politua.org
+DOMAIN-SUFFIX,politzek.me
 DOMAIN-SUFFIX,politzk.com
 DOMAIN-SUFFIX,poliv-master.ru
 DOMAIN-SUFFIX,polivkom.ru
@@ -46658,6 +46804,7 @@ DOMAIN-SUFFIX,pollinator.nl
 DOMAIN-SUFFIX,pollmax.ru
 DOMAIN-SUFFIX,polochka.net
 DOMAIN-SUFFIX,polomalbullish-remi.com
+DOMAIN-SUFFIX,polovinka.by
 DOMAIN-SUFFIX,polovnireketi.com
 DOMAIN-SUFFIX,polovoevospitanie.fans
 DOMAIN-SUFFIX,polozhenieveshej.online
@@ -46687,6 +46834,7 @@ DOMAIN-SUFFIX,polybiusdigital.com
 DOMAIN-SUFFIX,polycronos.com
 DOMAIN-SUFFIX,polyfinda.com
 DOMAIN-SUFFIX,polyglottic.biz
+DOMAIN-SUFFIX,polygon.com
 DOMAIN-SUFFIX,polygraphdv.ru
 DOMAIN-SUFFIX,polymath-brokerpro.com
 DOMAIN-SUFFIX,polysad.ru
@@ -47967,6 +48115,7 @@ DOMAIN-SUFFIX,portal.bgpmon.net
 DOMAIN-SUFFIX,portal.gerki.in
 DOMAIN-SUFFIX,portal.lviv.ua
 DOMAIN-SUFFIX,portal.nov.ru
+DOMAIN-SUFFIX,portal.odp.org.tr
 DOMAIN-SUFFIX,portal.salaminv.com
 DOMAIN-SUFFIX,portal.shcba.org
 DOMAIN-SUFFIX,portal.switchmarkets.com
@@ -48027,7 +48176,6 @@ DOMAIN-SUFFIX,postimees.ee
 DOMAIN-SUFFIX,postleafing.com
 DOMAIN-SUFFIX,postleafy.com
 DOMAIN-SUFFIX,postmarksocial.com
-DOMAIN-SUFFIX,postmaster.co.uk
 DOMAIN-SUFFIX,postmymedicine.com
 DOMAIN-SUFFIX,postoronnye.ru
 DOMAIN-SUFFIX,postskriptum.org
@@ -48219,6 +48367,7 @@ DOMAIN-SUFFIX,prav-status.ru
 DOMAIN-SUFFIX,prav-ussr.su
 DOMAIN-SUFFIX,pravda-dolinsk.ru
 DOMAIN-SUFFIX,pravda-vesti.com
+DOMAIN-SUFFIX,pravda.com
 DOMAIN-SUFFIX,pravda.com.ua
 DOMAIN-SUFFIX,pravda.eto-ya.com
 DOMAIN-SUFFIX,pravda.if.ua
@@ -48300,10 +48449,12 @@ DOMAIN-SUFFIX,preo8-arenda.ru
 DOMAIN-SUFFIX,preobrazhenec.ru
 DOMAIN-SUFFIX,preply.com
 DOMAIN-SUFFIX,preppylife.ru
+DOMAIN-SUFFIX,presearch.org
 DOMAIN-SUFFIX,present-on-don.ru
 DOMAIN-SUFFIX,presentium.es
 DOMAIN-SUFFIX,presentmart.ru
 DOMAIN-SUFFIX,preservareresistir.org
+DOMAIN-SUFFIX,president.gov.ua
 DOMAIN-SUFFIX,press-cards.ru
 DOMAIN-SUFFIX,press-center.news
 DOMAIN-SUFFIX,press-club.pro
@@ -48367,6 +48518,7 @@ DOMAIN-SUFFIX,pride-vl.ru
 DOMAIN-SUFFIX,pride1.de
 DOMAIN-SUFFIX,prideina-course.ru
 DOMAIN-SUFFIX,prideislove.com
+DOMAIN-SUFFIX,pridemedia.com
 DOMAIN-SUFFIX,prideoflondon.ru
 DOMAIN-SUFFIX,pridevestinv.com
 DOMAIN-SUFFIX,priem-makulaturi.com
@@ -48451,6 +48603,7 @@ DOMAIN-SUFFIX,privatemodele.com
 DOMAIN-SUFFIX,privatepantyhosepics.com
 DOMAIN-SUFFIX,privaterotic.actieforum.com
 DOMAIN-SUFFIX,privatesocietyporn.com
+DOMAIN-SUFFIX,privatevpn.biz
 DOMAIN-SUFFIX,privatevpn.com
 DOMAIN-SUFFIX,privateyoungnub.com
 DOMAIN-SUFFIX,privetvinegret.ru
@@ -48497,6 +48650,7 @@ DOMAIN-SUFFIX,pro-imbir.ru
 DOMAIN-SUFFIX,pro-karniz.ru
 DOMAIN-SUFFIX,pro-lazertag.ru
 DOMAIN-SUFFIX,pro-legal.kz
+DOMAIN-SUFFIX,pro-life.by
 DOMAIN-SUFFIX,pro-management.pro
 DOMAIN-SUFFIX,pro-mir.ru
 DOMAIN-SUFFIX,pro-mnogoe.ru
@@ -48618,6 +48772,7 @@ DOMAIN-SUFFIX,prodomderev.ru
 DOMAIN-SUFFIX,producerbocharova.ru
 DOMAIN-SUFFIX,production-line.ru
 DOMAIN-SUFFIX,production-openaicom-storage.azureedge.net
+DOMAIN-SUFFIX,production.cloudfront.docker.com
 DOMAIN-SUFFIX,produhovku.ru
 DOMAIN-SUFFIX,produktaltai.ru
 DOMAIN-SUFFIX,produkti-iz-finlandii.ru
@@ -48691,6 +48846,7 @@ DOMAIN-SUFFIX,progman.ru
 DOMAIN-SUFFIX,prognozibg.com
 DOMAIN-SUFFIX,progofro.ru
 DOMAIN-SUFFIX,progolyh.info
+DOMAIN-SUFFIX,progomel.by
 DOMAIN-SUFFIX,programart.ru
 DOMAIN-SUFFIX,programdownloadfree.com
 DOMAIN-SUFFIX,progress-sport.ru
@@ -48839,6 +48995,7 @@ DOMAIN-SUFFIX,proprentalsny.com
 DOMAIN-SUFFIX,proprepoda.com
 DOMAIN-SUFFIX,propress-com.ru
 DOMAIN-SUFFIX,proprivacy.com
+DOMAIN-SUFFIX,propublica.org
 DOMAIN-SUFFIX,propusk.kz
 DOMAIN-SUFFIX,propusk5.online
 DOMAIN-SUFFIX,prorector.org
@@ -49143,6 +49300,7 @@ DOMAIN-SUFFIX,psschool.ru
 DOMAIN-SUFFIX,pssh8.ru
 DOMAIN-SUFFIX,pstlvadcuqlwmzdu.bmeq4xku34je.live
 DOMAIN-SUFFIX,pstr-perm.ru
+DOMAIN-SUFFIX,psu.com
 DOMAIN-SUFFIX,psv-fc.ru
 DOMAIN-SUFFIX,psvideo.ru
 DOMAIN-SUFFIX,psy-y.com
@@ -49427,7 +49585,6 @@ DOMAIN-SUFFIX,putina-nado-unichtozhit.z-zasrancy.gleeze.com
 DOMAIN-SUFFIX,putina-nado-unichtozhit.z-zasrancy.mywire.org
 DOMAIN-SUFFIX,putina-nujno--unichtojit.z-zasrancy.giize.com
 DOMAIN-SUFFIX,putina-nuzhno-unichtojit.z-zasrancy.giize.com
-DOMAIN-SUFFIX,putinbog.wordpress.com
 DOMAIN-SUFFIX,putinho.net
 DOMAIN-SUFFIX,putinhuylo.blogspot.ru
 DOMAIN-SUFFIX,putinisakiller.com
@@ -49494,6 +49651,7 @@ DOMAIN-SUFFIX,pydocs.ru
 DOMAIN-SUFFIX,pyl.media
 DOMAIN-SUFFIX,pylonmarketandstocks.com
 DOMAIN-SUFFIX,pylt.mya5.ru
+DOMAIN-SUFFIX,pyramidseeds.com
 DOMAIN-SUFFIX,pyshkina-skaz.ru
 DOMAIN-SUFFIX,pyt-yah.velzepuz.online
 DOMAIN-SUFFIX,pythonanyway.ru
@@ -49547,6 +49705,7 @@ DOMAIN-SUFFIX,qaewrwrtbdfg.online
 DOMAIN-SUFFIX,qanoex-monex-tech.com
 DOMAIN-SUFFIX,qanoexmonex-solution.com
 DOMAIN-SUFFIX,qanoexmonexsolution.com
+DOMAIN-SUFFIX,qantar2022.org
 DOMAIN-SUFFIX,qatar-avialinii.ru
 DOMAIN-SUFFIX,qatarstreams.me
 DOMAIN-SUFFIX,qaterglobalfunds.net
@@ -50009,7 +50168,6 @@ DOMAIN-SUFFIX,radim-madarasz.com
 DOMAIN-SUFFIX,radio-biblioteka.ru
 DOMAIN-SUFFIX,radio-fresh.ru
 DOMAIN-SUFFIX,radio-service.kz
-DOMAIN-SUFFIX,radio-t.com
 DOMAIN-SUFFIX,radio-waves.ru
 DOMAIN-SUFFIX,radio.dn.ua
 DOMAIN-SUFFIX,radio.kavkazcenter.com
@@ -50069,6 +50227,7 @@ DOMAIN-SUFFIX,radugauvao.ru
 DOMAIN-SUFFIX,radugaznaniy64.ru
 DOMAIN-SUFFIX,radusmen.online
 DOMAIN-SUFFIX,radusmen.ru
+DOMAIN-SUFFIX,radzima.org
 DOMAIN-SUFFIX,rae-oosteroever.com
 DOMAIN-SUFFIX,raediup.com
 DOMAIN-SUFFIX,raf-cross.ru
@@ -50131,7 +50290,6 @@ DOMAIN-SUFFIX,ramedea.ru
 DOMAIN-SUFFIX,rami.tv
 DOMAIN-SUFFIX,ramp.city
 DOMAIN-SUFFIX,ramprazdnik.ru
-DOMAIN-SUFFIX,ran.org
 DOMAIN-SUFFIX,ranaahluwalia.com
 DOMAIN-SUFFIX,ranablog.com
 DOMAIN-SUFFIX,ranbox.club
@@ -50516,7 +50674,6 @@ DOMAIN-SUFFIX,rebeccapropes.com
 DOMAIN-SUFFIX,rebel666.fun
 DOMAIN-SUFFIX,reborn-art.ru
 DOMAIN-SUFFIX,rebornbabynetwork.com
-DOMAIN-SUFFIX,rebrandly.com
 DOMAIN-SUFFIX,rebublic.shop
 DOMAIN-SUFFIX,rebuildukrainefoundation.org
 DOMAIN-SUFFIX,rec-tube.com
@@ -50837,6 +50994,7 @@ DOMAIN-SUFFIX,relsy-relsy-shpaly-shpaly-salon.ru
 DOMAIN-SUFFIX,rem-96.ru
 DOMAIN-SUFFIX,rem-app-msk.ru
 DOMAIN-SUFFIX,rem-kvartir.ru
+DOMAIN-SUFFIX,remailer.paranoici.org
 DOMAIN-SUFFIX,remap-ru.com
 DOMAIN-SUFFIX,remap-ru.onrender.com
 DOMAIN-SUFFIX,remastered.valka.click
@@ -50955,6 +51113,7 @@ DOMAIN-SUFFIX,repression.info
 DOMAIN-SUFFIX,repro.msk.ru
 DOMAIN-SUFFIX,reproductiverights.org
 DOMAIN-SUFFIX,reprolegalhelpline.org
+DOMAIN-SUFFIX,reprouncensored.org
 DOMAIN-SUFFIX,reprua.org
 DOMAIN-SUFFIX,reptina.ru
 DOMAIN-SUFFIX,reptizillions.top
@@ -50974,6 +51133,8 @@ DOMAIN-SUFFIX,res-mods.ru
 DOMAIN-SUFFIX,res1.traffer.net
 DOMAIN-SUFFIX,rescron-ai.net
 DOMAIN-SUFFIX,rescue.org
+DOMAIN-SUFFIX,research.by
+DOMAIN-SUFFIX,reseed-pl.i2pd.xyz
 DOMAIN-SUFFIX,reserve-xelrin-system.com
 DOMAIN-SUFFIX,resetvpn.ru
 DOMAIN-SUFFIX,resh.news
@@ -51011,6 +51172,7 @@ DOMAIN-SUFFIX,resource-ehaat.life
 DOMAIN-SUFFIX,resource-pop-pravilam.info
 DOMAIN-SUFFIX,resp.app
 DOMAIN-SUFFIX,respeaker.io
+DOMAIN-SUFFIX,respublika-kz.com
 DOMAIN-SUFFIX,ressortfinvioraax.com
 DOMAIN-SUFFIX,resstr.com
 DOMAIN-SUFFIX,rest-in-anapa.ru
@@ -51302,6 +51464,7 @@ DOMAIN-SUFFIX,ringon.site
 DOMAIN-SUFFIX,ringon.space
 DOMAIN-SUFFIX,rington.biz
 DOMAIN-SUFFIX,ringtonbaza.com
+DOMAIN-SUFFIX,ringvpn.com
 DOMAIN-SUFFIX,rinkshkr.to
 DOMAIN-SUFFIX,rinkshkur.to
 DOMAIN-SUFFIX,rinkskr.to
@@ -51444,6 +51607,7 @@ DOMAIN-SUFFIX,rn.a-markets.org
 DOMAIN-SUFFIX,rn.wforex.org
 DOMAIN-SUFFIX,rnbee.kiev.ua
 DOMAIN-SUFFIX,rnbee.ru
+DOMAIN-SUFFIX,rnbo.gov.ua
 DOMAIN-SUFFIX,rnd.rosdos.club
 DOMAIN-SUFFIX,rnd.rosdos.love
 DOMAIN-SUFFIX,rnd.rosdos.top
@@ -51697,6 +51861,7 @@ DOMAIN-SUFFIX,romeo.com
 DOMAIN-SUFFIX,romtrading-software.com
 DOMAIN-SUFFIX,rondell-group.ru
 DOMAIN-SUFFIX,rondell-mag.ru
+DOMAIN-SUFFIX,rongshuxia.com
 DOMAIN-SUFFIX,ronice.ru
 DOMAIN-SUFFIX,ronix21.ru
 DOMAIN-SUFFIX,roofcenter.kz
@@ -51893,6 +52058,7 @@ DOMAIN-SUFFIX,rota-bashkort.vercel.app
 DOMAIN-SUFFIX,rotarytramplin.ru
 DOMAIN-SUFFIX,rotonda-proekt.ru
 DOMAIN-SUFFIX,rotozeev.net
+DOMAIN-SUFFIX,rottentomatoes.com
 DOMAIN-SUFFIX,rotter.net
 DOMAIN-SUFFIX,rousemilk.com
 DOMAIN-SUFFIX,router.lviv.ua
@@ -51993,6 +52159,7 @@ DOMAIN-SUFFIX,rskm.pro
 DOMAIN-SUFFIX,rskoshi-1.ru
 DOMAIN-SUFFIX,rskstatika.ru
 DOMAIN-SUFFIX,rsm-perm59.ru
+DOMAIN-SUFFIX,rsml.med.by
 DOMAIN-SUFFIX,rsmu.info
 DOMAIN-SUFFIX,rsn-ing.ru
 DOMAIN-SUFFIX,rsn-omsk.ru
@@ -52141,7 +52308,6 @@ DOMAIN-SUFFIX,ru-iptv.net
 DOMAIN-SUFFIX,ru-motor.com
 DOMAIN-SUFFIX,ru-muscle.de
 DOMAIN-SUFFIX,ru-music.com
-DOMAIN-SUFFIX,ru-news.us
 DOMAIN-SUFFIX,ru-nur.com
 DOMAIN-SUFFIX,ru-odnoklassniki.blogspot.com
 DOMAIN-SUFFIX,ru-planetvpn.com
@@ -52193,6 +52359,7 @@ DOMAIN-SUFFIX,ru.apkbe.com
 DOMAIN-SUFFIX,ru.ashemaletube.com
 DOMAIN-SUFFIX,ru.asterios.tm
 DOMAIN-SUFFIX,ru.axiomeinfo.org
+DOMAIN-SUFFIX,ru.b-ok.cc
 DOMAIN-SUFFIX,ru.baku.ws
 DOMAIN-SUFFIX,ru.ballpornvideo.com
 DOMAIN-SUFFIX,ru.bazaknigg.shop
@@ -52636,7 +52803,6 @@ DOMAIN-SUFFIX,ru.xvideos.com.ru
 DOMAIN-SUFFIX,ru.xvideos.tax
 DOMAIN-SUFFIX,ru.xvideos2.uk
 DOMAIN-SUFFIX,ru.xvix.eu
-DOMAIN-SUFFIX,ru.yahoo.com
 DOMAIN-SUFFIX,ru.yeswegays.com
 DOMAIN-SUFFIX,ru.yevgenykafelnikov.com
 DOMAIN-SUFFIX,ru.youporn.com
@@ -54298,6 +54464,7 @@ DOMAIN-SUFFIX,safe-mail.net
 DOMAIN-SUFFIX,safe-vpn.uptodown.com
 DOMAIN-SUFFIX,safe-web.ru
 DOMAIN-SUFFIX,safe.novyny.live
+DOMAIN-SUFFIX,safe2choose.org
 DOMAIN-SUFFIX,safeai.shop
 DOMAIN-SUFFIX,safeblockexchange.com
 DOMAIN-SUFFIX,safebooru.org
@@ -54528,6 +54695,7 @@ DOMAIN-SUFFIX,sanmechta.ru
 DOMAIN-SUFFIX,sansei-alex.ru
 DOMAIN-SUFFIX,sanskaarpanache.com
 DOMAIN-SUFFIX,sanstanko.ru
+DOMAIN-SUFFIX,sansursuzinternet.org.tr
 DOMAIN-SUFFIX,santa-kazan.online
 DOMAIN-SUFFIX,santa-kazan.ru
 DOMAIN-SUFFIX,santabean.ru
@@ -54566,6 +54734,7 @@ DOMAIN-SUFFIX,sarahpeake.org
 DOMAIN-SUFFIX,sarajay.com
 DOMAIN-SUFFIX,saransk.vipster.net
 DOMAIN-SUFFIX,saranskmotors-kia.ru
+DOMAIN-SUFFIX,sarap.kz
 DOMAIN-SUFFIX,sarapulfinans.ru
 DOMAIN-SUFFIX,sarastuslehti.com
 DOMAIN-SUFFIX,saratov-box.ru
@@ -55005,6 +55174,7 @@ DOMAIN-SUFFIX,scratchalpacasilver.top
 DOMAIN-SUFFIX,screwbox.com
 DOMAIN-SUFFIX,screwmywifeclub.com
 DOMAIN-SUFFIX,script-ok.ru
+DOMAIN-SUFFIX,script.google.com
 DOMAIN-SUFFIX,script.viserlab.com
 DOMAIN-SUFFIX,scriptone-studio.ru
 DOMAIN-SUFFIX,scriptvendor.ru
@@ -55014,6 +55184,7 @@ DOMAIN-SUFFIX,scrolller.com
 DOMAIN-SUFFIX,scrountsko.erokomiksi.biz
 DOMAIN-SUFFIX,scrrs.ru
 DOMAIN-SUFFIX,scrubbly.ru
+DOMAIN-SUFFIX,scruff.com
 DOMAIN-SUFFIX,scrumcinco.com
 DOMAIN-SUFFIX,scryde.link
 DOMAIN-SUFFIX,scryde.net
@@ -55128,7 +55299,6 @@ DOMAIN-SUFFIX,sebezh.mpk-college.ru
 DOMAIN-SUFFIX,seborea.ru
 DOMAIN-SUFFIX,sec-insturifysoftware.com
 DOMAIN-SUFFIX,secfirst.org
-DOMAIN-SUFFIX,seclists.org
 DOMAIN-SUFFIX,secool.ru
 DOMAIN-SUFFIX,secret-r.net
 DOMAIN-SUFFIX,secret-vape.shop
@@ -55958,6 +56128,7 @@ DOMAIN-SUFFIX,sf-house.ru
 DOMAIN-SUFFIX,sf.ashoo.cfd
 DOMAIN-SUFFIX,sf.casvn.ru
 DOMAIN-SUFFIX,sf74.biz
+DOMAIN-SUFFIX,sf77-ies-music-sg.tiktokcdn.com
 DOMAIN-SUFFIX,sfarbitrevo.com
 DOMAIN-SUFFIX,sfate.github.io
 DOMAIN-SUFFIX,sfcontact.ru
@@ -56022,6 +56193,7 @@ DOMAIN-SUFFIX,shadeit.icu
 DOMAIN-SUFFIX,shadowforum.cc
 DOMAIN-SUFFIX,shadowmarket.biz
 DOMAIN-SUFFIX,shadowsummonerelementals.top
+DOMAIN-SUFFIX,shadowz.fr
 DOMAIN-SUFFIX,shag-navstrechu.ru
 DOMAIN-SUFFIX,shah-lounge.ru
 DOMAIN-SUFFIX,shahdagmountainresort.com
@@ -56054,6 +56226,7 @@ DOMAIN-SUFFIX,shangrila.com
 DOMAIN-SUFFIX,shangrilalive.com
 DOMAIN-SUFFIX,shangrilavip.com
 DOMAIN-SUFFIX,shanlianvpn.info
+DOMAIN-SUFFIX,shantdigitaltv.com
 DOMAIN-SUFFIX,shaolin-school.ru
 DOMAIN-SUFFIX,shapeart.icu
 DOMAIN-SUFFIX,shapendo.com
@@ -56075,6 +56248,7 @@ DOMAIN-SUFFIX,sharavoz.tv
 DOMAIN-SUFFIX,sharavoz.xyz
 DOMAIN-SUFFIX,sharavozclub.online
 DOMAIN-SUFFIX,share.america.gov
+DOMAIN-SUFFIX,share.google
 DOMAIN-SUFFIX,sharelita.com
 DOMAIN-SUFFIX,shareman-tv.ru
 DOMAIN-SUFFIX,sharenting.it
@@ -56381,6 +56555,7 @@ DOMAIN-SUFFIX,shop.krasnoeibeloespb.ru
 DOMAIN-SUFFIX,shop.magictruffles.com
 DOMAIN-SUFFIX,shop.mibe-suxilep.ru
 DOMAIN-SUFFIX,shop.misterjoi.ru
+DOMAIN-SUFFIX,shop.mts.by
 DOMAIN-SUFFIX,shop.popersmag.com
 DOMAIN-SUFFIX,shop.popersmag.org
 DOMAIN-SUFFIX,shop.rosal-24.shop
@@ -56480,6 +56655,7 @@ DOMAIN-SUFFIX,shpok.live
 DOMAIN-SUFFIX,shpok.love
 DOMAIN-SUFFIX,shpok.vip
 DOMAIN-SUFFIX,shpok.xyz
+DOMAIN-SUFFIX,shram.kiev.ua
 DOMAIN-SUFFIX,shrewdvent.com
 DOMAIN-SUFFIX,shristmas.store
 DOMAIN-SUFFIX,shron1.chtyvo.org.ua
@@ -57103,6 +57279,7 @@ DOMAIN-SUFFIX,slantsy.goodspice.ru
 DOMAIN-SUFFIX,slantsy.kraevedlibstr.ru
 DOMAIN-SUFFIX,slantsy.uwolnenie.ru
 DOMAIN-SUFFIX,slasha.info
+DOMAIN-SUFFIX,slashfilm.com
 DOMAIN-SUFFIX,slashlib.me
 DOMAIN-SUFFIX,slastenacoffee.ru
 DOMAIN-SUFFIX,slastivers.ru
@@ -57552,6 +57729,7 @@ DOMAIN-SUFFIX,sobstvenniki-legal.ru
 DOMAIN-SUFFIX,sobstvenniki-legalno.ru
 DOMAIN-SUFFIX,sobstvenniki-registratsya.ru
 DOMAIN-SUFFIX,sobtphoto.ru
+DOMAIN-SUFFIX,sobytiya.info
 DOMAIN-SUFFIX,soc-karta.ru
 DOMAIN-SUFFIX,socarinfo.mystrikingly.com
 DOMAIN-SUFFIX,soccer-arena.ru
@@ -57707,6 +57885,7 @@ DOMAIN-SUFFIX,solinakitchen.ru
 DOMAIN-SUFFIX,solira-mistsoftware.com
 DOMAIN-SUFFIX,solisindex.com
 DOMAIN-SUFFIX,solistov.net
+DOMAIN-SUFFIX,solitary.supersystems.icu
 DOMAIN-SUFFIX,solitaryflare.com
 DOMAIN-SUFFIX,solkasin-osh101.ru
 DOMAIN-SUFFIX,solkz1.com
@@ -57891,7 +58070,6 @@ DOMAIN-SUFFIX,soundvor.ru
 DOMAIN-SUFFIX,soundwavekeywest.com
 DOMAIN-SUFFIX,sourceims.com
 DOMAIN-SUFFIX,sourceviewbible.com
-DOMAIN-SUFFIX,south-park.mult-fan.tv
 DOMAIN-SUFFIX,southasianspellingbee.com
 DOMAIN-SUFFIX,southbaysoulcare.com
 DOMAIN-SUFFIX,southcoastview.co.uk
@@ -58174,6 +58352,7 @@ DOMAIN-SUFFIX,spicyfatties.com
 DOMAIN-SUFFIX,spicymature.com
 DOMAIN-SUFFIX,spicytranny.com
 DOMAIN-SUFFIX,spicytrannyhd.com
+DOMAIN-SUFFIX,spid.center
 DOMAIN-SUFFIX,spiegel.de
 DOMAIN-SUFFIX,spike-imovaxneo.com
 DOMAIN-SUFFIX,spikechenixxpengine.com
@@ -58379,6 +58558,7 @@ DOMAIN-SUFFIX,sprintwm.ru
 DOMAIN-SUFFIX,sprmd2.ru
 DOMAIN-SUFFIX,sprmd3.ru
 DOMAIN-SUFFIX,sprmed7.ru
+DOMAIN-SUFFIX,sproot.it
 DOMAIN-SUFFIX,sprosiservis.ru
 DOMAIN-SUFFIX,sprotiv.org
 DOMAIN-SUFFIX,sprotyv.in.ua
@@ -58398,6 +58578,7 @@ DOMAIN-SUFFIX,spubl.kz
 DOMAIN-SUFFIX,spugle.com
 DOMAIN-SUFFIX,spunkbud.com
 DOMAIN-SUFFIX,sputnicc.biz
+DOMAIN-SUFFIX,sputnik.az
 DOMAIN-SUFFIX,sputnik.biz
 DOMAIN-SUFFIX,sputnik.kinm.ru
 DOMAIN-SUFFIX,sputnikcity.ru
@@ -58823,6 +59004,7 @@ DOMAIN-SUFFIX,starsessions.info
 DOMAIN-SUFFIX,starsessions.li
 DOMAIN-SUFFIX,starsessions.top
 DOMAIN-SUFFIX,starsgf.pw
+DOMAIN-SUFFIX,start.ubuntu.com
 DOMAIN-SUFFIX,startmail.com
 DOMAIN-SUFFIX,starvex.network
 DOMAIN-SUFFIX,starvex.pro
@@ -59124,6 +59306,7 @@ DOMAIN-SUFFIX,stramerus.online
 DOMAIN-SUFFIX,stramerus.ru
 DOMAIN-SUFFIX,strana-chudes-smertnikov.jut-su.to
 DOMAIN-SUFFIX,strana-kotoroy-net.ru
+DOMAIN-SUFFIX,strana.kz
 DOMAIN-SUFFIX,strana.news
 DOMAIN-SUFFIX,strana.one
 DOMAIN-SUFFIX,strana.today
@@ -59529,6 +59712,7 @@ DOMAIN-SUFFIX,surete-valbit.com
 DOMAIN-SUFFIX,surethinks.com
 DOMAIN-SUFFIX,surfboard.upwave.top
 DOMAIN-SUFFIX,surfcas.xyz
+DOMAIN-SUFFIX,surfeasy.com
 DOMAIN-SUFFIX,surfgayvideo.com
 DOMAIN-SUFFIX,surfshark.com
 DOMAIN-SUFFIX,surftv.tv
@@ -59648,6 +59832,7 @@ DOMAIN-SUFFIX,svettochka.ru
 DOMAIN-SUFFIX,svetuben.online
 DOMAIN-SUFFIX,svetuben.ru
 DOMAIN-SUFFIX,svg-nn.com
+DOMAIN-SUFFIX,svg.com
 DOMAIN-SUFFIX,svidanie.org.ua
 DOMAIN-SUFFIX,svidetelstva.top
 DOMAIN-SUFFIX,svidetelstva1.top
@@ -59747,7 +59932,6 @@ DOMAIN-SUFFIX,swedishproducts.online
 DOMAIN-SUFFIX,swedishvoice.se
 DOMAIN-SUFFIX,swedmarkets.net
 DOMAIN-SUFFIX,sweegirl.com
-DOMAIN-SUFFIX,sweetfern.net
 DOMAIN-SUFFIX,sweftlinkvolniks-tech.com
 DOMAIN-SUFFIX,swellbid.com
 DOMAIN-SUFFIX,swezhak0.ru
@@ -59924,6 +60108,7 @@ DOMAIN-SUFFIX,szk321.ru
 DOMAIN-SUFFIX,szkv97.ru
 DOMAIN-SUFFIX,szlightking.ru
 DOMAIN-SUFFIX,szru.gov.ua
+DOMAIN-SUFFIX,szse.cn
 DOMAIN-SUFFIX,szsm-kamensk.ru
 DOMAIN-SUFFIX,szu.ngo
 DOMAIN-SUFFIX,t-boom.space
@@ -60051,6 +60236,7 @@ DOMAIN-SUFFIX,tac1.tvfilms.club
 DOMAIN-SUFFIX,tac2.tvfilms.club
 DOMAIN-SUFFIX,tachelaps.online
 DOMAIN-SUFFIX,tachelaps.ru
+DOMAIN-SUFFIX,tachyon.eco
 DOMAIN-SUFFIX,tacit-index.com
 DOMAIN-SUFFIX,tacme.ru
 DOMAIN-SUFFIX,tacmedukraine.org
@@ -60066,6 +60252,7 @@ DOMAIN-SUFFIX,tagil.sexros.biz
 DOMAIN-SUFFIX,tahograf-perm.ru
 DOMAIN-SUFFIX,tahrir-syria.info
 DOMAIN-SUFFIX,tailorfields.com
+DOMAIN-SUFFIX,tails.net
 DOMAIN-SUFFIX,tailscale.com
 DOMAIN-SUFFIX,taimenfisher.ru
 DOMAIN-SUFFIX,taimp3zing.com
@@ -60154,6 +60341,7 @@ DOMAIN-SUFFIX,tangible-horizons.com
 DOMAIN-SUFFIX,tanico.cl
 DOMAIN-SUFFIX,tank-t-90.ru
 DOMAIN-SUFFIX,tank.gamesound.eu
+DOMAIN-SUFFIX,tantanapp.com
 DOMAIN-SUFFIX,tantproxai-engine.com
 DOMAIN-SUFFIX,tantraya.com
 DOMAIN-SUFFIX,tantv.kz
@@ -60190,7 +60378,6 @@ DOMAIN-SUFFIX,tarkvanem.ee
 DOMAIN-SUFFIX,tarmpi-innovation.kz
 DOMAIN-SUFFIX,taromasters.ru
 DOMAIN-SUFFIX,tarosreda.ru
-DOMAIN-SUFFIX,tarpit.fun
 DOMAIN-SUFFIX,tartustour.ru
 DOMAIN-SUFFIX,tarvets-omi.ru
 DOMAIN-SUFFIX,tas-ix.net
@@ -60364,10 +60551,10 @@ DOMAIN-SUFFIX,teachingforheroes.com
 DOMAIN-SUFFIX,teachmefisting.net
 DOMAIN-SUFFIX,teachmefisting.org
 DOMAIN-SUFFIX,teachmyass.com
+DOMAIN-SUFFIX,teafund.org
 DOMAIN-SUFFIX,teahouse-group.ru
 DOMAIN-SUFFIX,tealcourse.ru
 DOMAIN-SUFFIX,team-russia2014.ru
-DOMAIN-SUFFIX,team29.org
 DOMAIN-SUFFIX,teamelas.online
 DOMAIN-SUFFIX,teamelas.ru
 DOMAIN-SUFFIX,teamfirstconf.com
@@ -60977,6 +61164,8 @@ DOMAIN-SUFFIX,the-rats-online.ru
 DOMAIN-SUFFIX,the-review.ru
 DOMAIN-SUFFIX,the-ryphormercadoapp-news.com
 DOMAIN-SUFFIX,the-simpsonsporn.com
+DOMAIN-SUFFIX,the-village-kz.com
+DOMAIN-SUFFIX,the-village.online
 DOMAIN-SUFFIX,the-village.ru
 DOMAIN-SUFFIX,the-witcher-tv.ru
 DOMAIN-SUFFIX,the-world-wave.com
@@ -61118,6 +61307,7 @@ DOMAIN-SUFFIX,thelasten.ru
 DOMAIN-SUFFIX,thelavendereffect.org
 DOMAIN-SUFFIX,theleaksbay.com
 DOMAIN-SUFFIX,thelibertybookcompany.com
+DOMAIN-SUFFIX,thelist.com
 DOMAIN-SUFFIX,thelistlove.com
 DOMAIN-SUFFIX,theliverpoolginfestival.com
 DOMAIN-SUFFIX,thelobbyx.com
@@ -61140,6 +61330,7 @@ DOMAIN-SUFFIX,themoonrest.ru
 DOMAIN-SUFFIX,themoscowtimes.com
 DOMAIN-SUFFIX,themoviedb.org
 DOMAIN-SUFFIX,thenaturism.xyz
+DOMAIN-SUFFIX,thenerdstash.com
 DOMAIN-SUFFIX,thenewspocket.com
 DOMAIN-SUFFIX,thenewtab.io
 DOMAIN-SUFFIX,thenewtab.support
@@ -61345,8 +61536,10 @@ DOMAIN-SUFFIX,thunderboltunion.uk
 DOMAIN-SUFFIX,thunderpick.com
 DOMAIN-SUFFIX,thuonghieunguoiviet.com
 DOMAIN-SUFFIX,thyroidcancer.ru
+DOMAIN-SUFFIX,thz7.net
 DOMAIN-SUFFIX,ti-russia.org
 DOMAIN-SUFFIX,tiaglin.com
+DOMAIN-SUFFIX,tibetpolicy.eu
 DOMAIN-SUFFIX,tic-tac.fun
 DOMAIN-SUFFIX,tic75.ru
 DOMAIN-SUFFIX,tica-ru.ru
@@ -61360,6 +61553,7 @@ DOMAIN-SUFFIX,tierramadre.es
 DOMAIN-SUFFIX,tifilm.com
 DOMAIN-SUFFIX,tiger-sms.com
 DOMAIN-SUFFIX,tiger-team.ru
+DOMAIN-SUFFIX,tiger.com
 DOMAIN-SUFFIX,tigerfire.biz
 DOMAIN-SUFFIX,tight-twats.com
 DOMAIN-SUFFIX,tightassanal.com
@@ -62014,6 +62208,7 @@ DOMAIN-SUFFIX,tor-omgomg.cc
 DOMAIN-SUFFIX,tor-wiki.net
 DOMAIN-SUFFIX,tor.askapache.com
 DOMAIN-SUFFIX,tor.bs2site.ru
+DOMAIN-SUFFIX,tor.calyxinstitute.org
 DOMAIN-SUFFIX,tor.eff.org
 DOMAIN-SUFFIX,tor.eprci.net
 DOMAIN-SUFFIX,tor.hd-1080.online
@@ -62137,6 +62332,7 @@ DOMAIN-SUFFIX,torrent24.xatab.top
 DOMAIN-SUFFIX,torrent9.ru
 DOMAIN-SUFFIX,torrent9.to
 DOMAIN-SUFFIX,torrentbox.xyz
+DOMAIN-SUFFIX,torrentbus.com
 DOMAIN-SUFFIX,torrentdownload.info
 DOMAIN-SUFFIX,torrentdownloads.cc
 DOMAIN-SUFFIX,torrentdownloads.me
@@ -62575,7 +62771,6 @@ DOMAIN-SUFFIX,transushka4.top
 DOMAIN-SUFFIX,transushka5.top
 DOMAIN-SUFFIX,transvestite.ru
 DOMAIN-SUFFIX,transvestiter.com
-DOMAIN-SUFFIX,transwhiz.com
 DOMAIN-SUFFIX,transxvideos.com
 DOMAIN-SUFFIX,transych.cc
 DOMAIN-SUFFIX,transych.org
@@ -62747,6 +62942,7 @@ DOMAIN-SUFFIX,trikolortv-kabinet.ru
 DOMAIN-SUFFIX,trikop.ru
 DOMAIN-SUFFIX,trikota-opt.ru
 DOMAIN-SUFFIX,trikotag-lv.ru
+DOMAIN-SUFFIX,triller.co
 DOMAIN-SUFFIX,trillionairegame.top
 DOMAIN-SUFFIX,trillionsexpertsignals.top
 DOMAIN-SUFFIX,trillionware.com
@@ -62782,7 +62978,6 @@ DOMAIN-SUFFIX,trip-skan60.cc
 DOMAIN-SUFFIX,trip-skan63.cc
 DOMAIN-SUFFIX,trip-trial.blogspot.com
 DOMAIN-SUFFIX,trip-trip.biz
-DOMAIN-SUFFIX,triplebit.org
 DOMAIN-SUFFIX,tripm.biz
 DOMAIN-SUFFIX,tripmaster-biz.esti.city
 DOMAIN-SUFFIX,tripmaster-biz4.esti.city
@@ -62866,7 +63061,6 @@ DOMAIN-SUFFIX,triptochip.ru
 DOMAIN-SUFFIX,triptoporn.com
 DOMAIN-SUFFIX,triptri24.biz
 DOMAIN-SUFFIX,triptrip24-biz.mins.city
-DOMAIN-SUFFIX,trisquel.info
 DOMAIN-SUFFIX,triss.vodka
 DOMAIN-SUFFIX,tritentexchange.com
 DOMAIN-SUFFIX,tritrip24.biz
@@ -62925,6 +63119,7 @@ DOMAIN-SUFFIX,trubobit.com
 DOMAIN-SUFFIX,trubochist-1.ru
 DOMAIN-SUFFIX,trubsovet.ru
 DOMAIN-SUFFIX,truckerschool.ru
+DOMAIN-SUFFIX,trud.org
 DOMAIN-SUFFIX,trudovaya-at.ru
 DOMAIN-SUFFIX,trudovayaknigka.ru
 DOMAIN-SUFFIX,true-detective-series.ru
@@ -63063,6 +63258,7 @@ DOMAIN-SUFFIX,tsgc.ru
 DOMAIN-SUFFIX,tsharepro.com
 DOMAIN-SUFFIX,tsi-company.top
 DOMAIN-SUFFIX,tsimlyansk-gorod.ru
+DOMAIN-SUFFIX,tsip1974.com
 DOMAIN-SUFFIX,tsipulina.online
 DOMAIN-SUFFIX,tsipulina.ru
 DOMAIN-SUFFIX,tsk-rost.ru
@@ -63302,6 +63498,7 @@ DOMAIN-SUFFIX,turkdrama.my
 DOMAIN-SUFFIX,turkey-gt.ru
 DOMAIN-SUFFIX,turkeycappadociatour.com
 DOMAIN-SUFFIX,turkeycinema.ru
+DOMAIN-SUFFIX,turkeypurge.com
 DOMAIN-SUFFIX,turkeytextile.ru
 DOMAIN-SUFFIX,turkfans.tv
 DOMAIN-SUFFIX,turkfilm.fun
@@ -63309,6 +63506,7 @@ DOMAIN-SUFFIX,turkfilm.mom
 DOMAIN-SUFFIX,turkhan.my
 DOMAIN-SUFFIX,turkiru.cc
 DOMAIN-SUFFIX,turkiry.net
+DOMAIN-SUFFIX,turkishdirect.com
 DOMAIN-SUFFIX,turkishtv.mobi
 DOMAIN-SUFFIX,turkishtv.ru
 DOMAIN-SUFFIX,turkiyetanitimgrubu.org
@@ -63481,6 +63679,7 @@ DOMAIN-SUFFIX,tuxy.spb.ru
 DOMAIN-SUFFIX,tuyana.ru
 DOMAIN-SUFFIX,tuyetnhijapan.com
 DOMAIN-SUFFIX,tuzdes.cc
+DOMAIN-SUFFIX,tuzinfm.by
 DOMAIN-SUFFIX,tv-99.com
 DOMAIN-SUFFIX,tv-cartoonka-art.streamgtv.com
 DOMAIN-SUFFIX,tv-cinema.club
@@ -63601,6 +63800,7 @@ DOMAIN-SUFFIX,tvigo.club
 DOMAIN-SUFFIX,tvigo.net
 DOMAIN-SUFFIX,tvisa.ru
 DOMAIN-SUFFIX,tvispo58.ru
+DOMAIN-SUFFIX,tvline.com
 DOMAIN-SUFFIX,tvm-mena.com
 DOMAIN-SUFFIX,tvmarkets.com
 DOMAIN-SUFFIX,tvmatchvar.com
@@ -63646,6 +63846,7 @@ DOMAIN-SUFFIX,tvoydom62.ru
 DOMAIN-SUFFIX,tvoyimidj.ru
 DOMAIN-SUFFIX,tvoyobzor.ru
 DOMAIN-SUFFIX,tvpworld.com
+DOMAIN-SUFFIX,tvr.by
 DOMAIN-SUFFIX,tvradiomd.ru
 DOMAIN-SUFFIX,tvrain.ru
 DOMAIN-SUFFIX,tvrain.tv
@@ -63920,9 +64121,11 @@ DOMAIN-SUFFIX,ubsp.ru
 DOMAIN-SUFFIX,ubstv.click
 DOMAIN-SUFFIX,ubunlog.com
 DOMAIN-SUFFIX,ubuntism.ru
+DOMAIN-SUFFIX,ubuntu.com
 DOMAIN-SUFFIX,uc-sapron.ru
 DOMAIN-SUFFIX,uc.od.ua
 DOMAIN-SUFFIX,uc3734.craftum.io
+DOMAIN-SUFFIX,ucansupurge.org
 DOMAIN-SUFFIX,ucbt-perm.ru
 DOMAIN-SUFFIX,uccmma.com
 DOMAIN-SUFFIX,ucctoronto.ca
@@ -64341,7 +64544,6 @@ DOMAIN-SUFFIX,unikon-lab.ru
 DOMAIN-SUFFIX,unilux-radiator.ru
 DOMAIN-SUFFIX,unimoscow.ru
 DOMAIN-SUFFIX,unineuro.ru
-DOMAIN-SUFFIX,uninterest.ing
 DOMAIN-SUFFIX,union-connected.com
 DOMAIN-SUFFIX,union-mc.ru
 DOMAIN-SUFFIX,unionc-mc.ru
@@ -64606,6 +64808,7 @@ DOMAIN-SUFFIX,uranium7.com
 DOMAIN-SUFFIX,urasma.com
 DOMAIN-SUFFIX,uraua.info
 DOMAIN-SUFFIX,urb-a.dreamwidth.org
+DOMAIN-SUFFIX,urban-vpn.com
 DOMAIN-SUFFIX,urban-vpn.pro
 DOMAIN-SUFFIX,urban3p.com
 DOMAIN-SUFFIX,urban3p.ru
@@ -64682,11 +64885,11 @@ DOMAIN-SUFFIX,usdtminer.lol
 DOMAIN-SUFFIX,usdtminer.zone
 DOMAIN-SUFFIX,usdtpay-25.site
 DOMAIN-SUFFIX,usdtpay.biz
-DOMAIN-SUFFIX,use-application-dns.net
 DOMAIN-SUFFIX,usebesttraffic.com
 DOMAIN-SUFFIX,usegserwfwerg.pro
 DOMAIN-SUFFIX,usehtc.com
 DOMAIN-SUFFIX,usemycar.ru
+DOMAIN-SUFFIX,usemyvpn.com
 DOMAIN-SUFFIX,user-tech.ru
 DOMAIN-SUFFIX,user.asset-ace.net
 DOMAIN-SUFFIX,user.atlas-finance.info
@@ -64820,6 +65023,8 @@ DOMAIN-SUFFIX,uxo4.tvfilms.club
 DOMAIN-SUFFIX,uy11cans24.com
 DOMAIN-SUFFIX,uy11ccans24.com
 DOMAIN-SUFFIX,uy11ckany24.com
+DOMAIN-SUFFIX,uyghuramerican.org
+DOMAIN-SUFFIX,uyghurpress.com
 DOMAIN-SUFFIX,uyiiko.shop
 DOMAIN-SUFFIX,uyutnyy-dom.ru
 DOMAIN-SUFFIX,uyvd.rswrts.vip
@@ -65095,6 +65300,7 @@ DOMAIN-SUFFIX,valdai.rosbrs.ru
 DOMAIN-SUFFIX,valdai.rzelazny.ru
 DOMAIN-SUFFIX,valdevay.ru
 DOMAIN-SUFFIX,vale-davvero.com
+DOMAIN-SUFFIX,valence.community
 DOMAIN-SUFFIX,valencia.flagma.es
 DOMAIN-SUFFIX,valenkisovetsk.ru
 DOMAIN-SUFFIX,valeriasidorova.ru
@@ -65141,6 +65347,7 @@ DOMAIN-SUFFIX,vampired.com
 DOMAIN-SUFFIX,vamshtori.ru
 DOMAIN-SUFFIX,van-tokyo.com
 DOMAIN-SUFFIX,van.nude-moon.skin
+DOMAIN-SUFFIX,vandra.by
 DOMAIN-SUFFIX,vanguardinnovation.net
 DOMAIN-SUFFIX,vanil.kz
 DOMAIN-SUFFIX,vanilla-rock.com
@@ -66035,6 +66242,7 @@ DOMAIN-SUFFIX,virtuetdfundz.com
 DOMAIN-SUFFIX,virtuoscorevia.com
 DOMAIN-SUFFIX,virtus-et-gloria.com
 DOMAIN-SUFFIX,virusok.ru
+DOMAIN-SUFFIX,virustotal.com
 DOMAIN-SUFFIX,virvalnek.online
 DOMAIN-SUFFIX,virvoyeur.net
 DOMAIN-SUFFIX,virwox.net
@@ -66357,7 +66565,9 @@ DOMAIN-SUFFIX,vnuser.atgbrokers.com
 DOMAIN-SUFFIX,vnv.ashoo.bike
 DOMAIN-SUFFIX,vo-gonzo-new-ua.lets-fun.top
 DOMAIN-SUFFIX,vo-tme.swezhak-2025.art
+DOMAIN-SUFFIX,voachinese.com
 DOMAIN-SUFFIX,voanews.com
+DOMAIN-SUFFIX,voatibetan.com
 DOMAIN-SUFFIX,vobenur.ru
 DOMAIN-SUFFIX,voblago.club
 DOMAIN-SUFFIX,voblok.ru
@@ -66463,6 +66673,7 @@ DOMAIN-SUFFIX,vogfilm.online
 DOMAIN-SUFFIX,vogov.com
 DOMAIN-SUFFIX,vohrane3.top
 DOMAIN-SUFFIX,voicecrimea.com.ua
+DOMAIN-SUFFIX,voiceofbelarus.org
 DOMAIN-SUFFIX,voicerra.icu
 DOMAIN-SUFFIX,voices.org.ua
 DOMAIN-SUFFIX,voilaporno.com
@@ -66474,6 +66685,7 @@ DOMAIN-SUFFIX,voirdesfilms.net
 DOMAIN-SUFFIX,vois-lubren.ru
 DOMAIN-SUFFIX,voissa.cam
 DOMAIN-SUFFIX,voittobitroxsoft.com
+DOMAIN-SUFFIX,voka.tv
 DOMAIN-SUFFIX,vokalizm.ru
 DOMAIN-SUFFIX,vokzal39.ru
 DOMAIN-SUFFIX,voland.moscow
@@ -66756,6 +66968,7 @@ DOMAIN-SUFFIX,vpnbear.biz
 DOMAIN-SUFFIX,vpnbeaver.com
 DOMAIN-SUFFIX,vpnbeaver.info
 DOMAIN-SUFFIX,vpnblog.ru
+DOMAIN-SUFFIX,vpnclientapp.com
 DOMAIN-SUFFIX,vpnforandroid.help
 DOMAIN-SUFFIX,vpnforyoutube.com
 DOMAIN-SUFFIX,vpnfreepro.net
@@ -66928,6 +67141,7 @@ DOMAIN-SUFFIX,vt-service.ru
 DOMAIN-SUFFIX,vtailand.com
 DOMAIN-SUFFIX,vtb24-onlin.ru
 DOMAIN-SUFFIX,vtfilm.online
+DOMAIN-SUFFIX,vtk.kz
 DOMAIN-SUFFIX,vtk142.ru
 DOMAIN-SUFFIX,vtkmarket.ru
 DOMAIN-SUFFIX,vtkservice.ru
@@ -67651,6 +67865,7 @@ DOMAIN-SUFFIX,welcomepartners.com
 DOMAIN-SUFFIX,welcomeproject.net
 DOMAIN-SUFFIX,welcomernd.ru
 DOMAIN-SUFFIX,welcometorussia.info
+DOMAIN-SUFFIX,welcometotwinpeaks.com
 DOMAIN-SUFFIX,welho.ru
 DOMAIN-SUFFIX,welicanclub.com
 DOMAIN-SUFFIX,welikeitintheass.com
@@ -67921,7 +68136,6 @@ DOMAIN-SUFFIX,wikifind.org
 DOMAIN-SUFFIX,wikigamki.online
 DOMAIN-SUFFIX,wikigams.online
 DOMAIN-SUFFIX,wikigamse.online
-DOMAIN-SUFFIX,wikileaks.org
 DOMAIN-SUFFIX,wikimovies.ru
 DOMAIN-SUFFIX,wikiortodoncia.com
 DOMAIN-SUFFIX,wikirussya.com
@@ -68132,7 +68346,6 @@ DOMAIN-SUFFIX,worldcupperm2013.com
 DOMAIN-SUFFIX,worldex.cc
 DOMAIN-SUFFIX,worldex.global
 DOMAIN-SUFFIX,worldforukraine.org
-DOMAIN-SUFFIX,worldhealth.net
 DOMAIN-SUFFIX,worldmarketing.asia
 DOMAIN-SUFFIX,worldmarketing.info
 DOMAIN-SUFFIX,worldmarketing.pro
@@ -68285,6 +68498,7 @@ DOMAIN-SUFFIX,wuaze.com
 DOMAIN-SUFFIX,wuchtcorevia.com
 DOMAIN-SUFFIX,wudao.la
 DOMAIN-SUFFIX,wufilm.online
+DOMAIN-SUFFIX,wuhan2020.org.cn
 DOMAIN-SUFFIX,wul-can9.com
 DOMAIN-SUFFIX,wul-kancl.com
 DOMAIN-SUFFIX,wunden.tech
@@ -79981,7 +80195,6 @@ DOMAIN-SUFFIX,xr1.biz
 DOMAIN-SUFFIX,xram-online.com
 DOMAIN-SUFFIX,xranks.com
 DOMAIN-SUFFIX,xrayvpn.info
-DOMAIN-SUFFIX,xrayvpn.net
 DOMAIN-SUFFIX,xreferat.com
 DOMAIN-SUFFIX,xrest.info
 DOMAIN-SUFFIX,xrest.net
@@ -80028,6 +80241,7 @@ DOMAIN-SUFFIX,xtrememarkets.com
 DOMAIN-SUFFIX,xtremewrestlingtorrents.net
 DOMAIN-SUFFIX,xtube.love
 DOMAIN-SUFFIX,xuhuongmoi.com
+DOMAIN-SUFFIX,xujan.com
 DOMAIN-SUFFIX,xukru.org
 DOMAIN-SUFFIX,xut63.com
 DOMAIN-SUFFIX,xuxeneu.info
@@ -80640,7 +80854,6 @@ DOMAIN-SUFFIX,yo.casi3x.ru
 DOMAIN-SUFFIX,yobaporn.click
 DOMAIN-SUFFIX,yobaporn.com
 DOMAIN-SUFFIX,yobaporn.top
-DOMAIN-SUFFIX,yocity12.com
 DOMAIN-SUFFIX,yoencontre.com
 DOMAIN-SUFFIX,yoga-love.ru
 DOMAIN-SUFFIX,yoga-masters.com
@@ -80664,7 +80877,7 @@ DOMAIN-SUFFIX,yorki-strizhka.ru
 DOMAIN-SUFFIX,yorkshireweddingbarn.co.uk
 DOMAIN-SUFFIX,yorktheatre.org
 DOMAIN-SUFFIX,yoshla.ru
-DOMAIN-SUFFIX,yotube.com
+DOMAIN-SUFFIX,yostarplat.com
 DOMAIN-SUFFIX,you-anime.ru
 DOMAIN-SUFFIX,you-books.com
 DOMAIN-SUFFIX,you-repair.ru
@@ -80805,6 +81018,8 @@ DOMAIN-SUFFIX,yuaninternationalai.com
 DOMAIN-SUFFIX,yuanpayapp.com
 DOMAIN-SUFFIX,yuchansson.blogspot.com
 DOMAIN-SUFFIX,yuece-invix-soft.com
+DOMAIN-SUFFIX,yuehui.163.com
+DOMAIN-SUFFIX,yuemei.com
 DOMAIN-SUFFIX,yug-front.info
 DOMAIN-SUFFIX,yug.today
 DOMAIN-SUFFIX,yuga-doma.ru
@@ -80851,7 +81066,6 @@ DOMAIN-SUFFIX,yzxgyqxxjxdbiklq.a1g9l1r3x3oq.online
 DOMAIN-SUFFIX,z--zasrancy.putina-na-kol.giize.com
 DOMAIN-SUFFIX,z--zasrantsy.putina-na-kol.giize.com
 DOMAIN-SUFFIX,z-4k.net
-DOMAIN-SUFFIX,z-lib.org
 DOMAIN-SUFFIX,z-polus.info
 DOMAIN-SUFFIX,z-torrents.ru
 DOMAIN-SUFFIX,z-zasranci.z-zasrancy.giize.com
@@ -81037,6 +81251,7 @@ DOMAIN-SUFFIX,zaoritm.ru
 DOMAIN-SUFFIX,zaotimber.ru
 DOMAIN-SUFFIX,zaovoentorg.ru
 DOMAIN-SUFFIX,zaozeriekp.ru
+DOMAIN-SUFFIX,zap.by
 DOMAIN-SUFFIX,zap.stream2watch.sx
 DOMAIN-SUFFIX,zapadnaya-dvina.bunin-yur.online
 DOMAIN-SUFFIX,zapaha-net.ru
@@ -81233,7 +81448,6 @@ DOMAIN-SUFFIX,zencafecoffee.com
 DOMAIN-SUFFIX,zend2.com
 DOMAIN-SUFFIX,zendesk.com
 DOMAIN-SUFFIX,zendo-tatarstan.ru
-DOMAIN-SUFFIX,zenhub.com
 DOMAIN-SUFFIX,zenmate.com
 DOMAIN-SUFFIX,zenmatevpn.biz
 DOMAIN-SUFFIX,zenmatevpn.info
@@ -81268,6 +81482,7 @@ DOMAIN-SUFFIX,zeppelinpanama.com
 DOMAIN-SUFFIX,zergus.ru
 DOMAIN-SUFFIX,zerkala.top
 DOMAIN-SUFFIX,zerkalki.top
+DOMAIN-SUFFIX,zerkalo.az
 DOMAIN-SUFFIX,zerkalo.io
 DOMAIN-SUFFIX,zerkaly.top
 DOMAIN-SUFFIX,zernoru.com
@@ -81306,6 +81521,7 @@ DOMAIN-SUFFIX,zgk86.ru
 DOMAIN-SUFFIX,zgprint.ru
 DOMAIN-SUFFIX,zgraya-help.com
 DOMAIN-SUFFIX,zgvpn.info
+DOMAIN-SUFFIX,zh.amnesty.org
 DOMAIN-SUFFIX,zh.hentai-img-xxx.com
 DOMAIN-SUFFIX,zh.hentaipaw.com
 DOMAIN-SUFFIX,zh.wow-xxx-videos.com
@@ -81315,6 +81531,7 @@ DOMAIN-SUFFIX,zhaloba-na-pristava.ru
 DOMAIN-SUFFIX,zhalobi.com.ua
 DOMAIN-SUFFIX,zhantaq.kz
 DOMAIN-SUFFIX,zhar-ptitza101.ru
+DOMAIN-SUFFIX,zharov-lox.telegramproxy.me
 DOMAIN-SUFFIX,zhd.life
 DOMAIN-SUFFIX,zhelezniymir27.ru
 DOMAIN-SUFFIX,zheleznogorye.ru
@@ -81347,7 +81564,9 @@ DOMAIN-SUFFIX,zhk-jazz.ru
 DOMAIN-SUFFIX,zhk-skazka18.ru
 DOMAIN-SUFFIX,zhkh-data.ru
 DOMAIN-SUFFIX,zhovanniknp.com
+DOMAIN-SUFFIX,zhs.globalvoices.org
 DOMAIN-SUFFIX,zhsk-1.ru
+DOMAIN-SUFFIX,zht.globalvoices.org
 DOMAIN-SUFFIX,zhuichaguoji.org
 DOMAIN-SUFFIX,zhuk.world
 DOMAIN-SUFFIX,zhukov.city-driving.ru
