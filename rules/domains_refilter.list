@@ -1,9 +1,9 @@
 # NAME: domains_refilter.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-10-14 05:47:04 MSK
+# UPDATED: 2026-10-15 05:26:07 MSK
 # SOURCE: https://github.com/1andrevich/Re-filter-lists
-# TOTAL: 81971
+# TOTAL: 81974
 DOMAIN-SUFFIX,4pda.ru
 DOMAIN-SUFFIX,4pda.to
 DOMAIN-SUFFIX,abook-club.ru
@@ -240,6 +240,9 @@ DOMAIN-SUFFIX,essential.gg
 DOMAIN-SUFFIX,etsy.com
 DOMAIN-SUFFIX,event.on24.com
 DOMAIN-SUFFIX,events.ccc.de
+DOMAIN-SUFFIX,elevenlabs.io
+DOMAIN-SUFFIX,api.elevenlabs.io
+DOMAIN-SUFFIX,help.elevenlabs.io
 DOMAIN-SUFFIX,exler.ru
 DOMAIN-SUFFIX,e621.net
 DOMAIN-SUFFIX,static1.e621.net
