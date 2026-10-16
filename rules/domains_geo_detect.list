@@ -1,9 +1,9 @@
 # NAME: domains_geo_detect.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-10-15 05:25:31 MSK
+# UPDATED: 2026-10-16 05:19:19 MSK
 # SOURCE: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ip-geo-detect.list
-# Количество доменов: 229
+# Количество доменов: 230
 DOMAIN-SUFFIX,2ip.io
 DOMAIN-SUFFIX,2ip.ua
 DOMAIN-SUFFIX,51degrees.com
@@ -15,6 +15,7 @@ DOMAIN-SUFFIX,bgp.he.net
 DOMAIN-SUFFIX,bgp.tools
 DOMAIN-SUFFIX,bigdatacloud.net
 DOMAIN-SUFFIX,browserleaks.com
+DOMAIN-SUFFIX,bulkgeoip.com
 DOMAIN-SUFFIX,check-host.net
 DOMAIN-SUFFIX,checkip.amazonaws.com
 DOMAIN-SUFFIX,checkip.com.vn
