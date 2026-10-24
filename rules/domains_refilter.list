@@ -1,9 +1,9 @@
 # NAME: domains_refilter.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-10-23 05:36:55 MSK
+# UPDATED: 2026-10-24 05:35:16 MSK
 # SOURCE: https://github.com/1andrevich/Re-filter-lists
-# TOTAL: 82094
+# TOTAL: 82100
 DOMAIN-SUFFIX,4pda.ru
 DOMAIN-SUFFIX,4pda.to
 DOMAIN-SUFFIX,abook-club.ru
@@ -371,6 +371,12 @@ DOMAIN-SUFFIX,mariokart8.com
 DOMAIN-SUFFIX,mariosupersluggers.com
 DOMAIN-SUFFIX,miitomo.com
 DOMAIN-SUFFIX,miiverse.com
+DOMAIN-SUFFIX,miro.com
+DOMAIN-SUFFIX,miro-apps.com
+DOMAIN-SUFFIX,mirostatic.com
+DOMAIN-SUFFIX,onlinewhiteboard.com
+DOMAIN-SUFFIX,realtimeboard.com
+DOMAIN-SUFFIX,webwhiteboard.com
 DOMAIN-SUFFIX,netflix.com
 DOMAIN-SUFFIX,nih.gov
 DOMAIN-SUFFIX,nordvpn.com
