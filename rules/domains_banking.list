@@ -1,9 +1,9 @@
 # NAME: domains_banking.list
 # AUTHOR: misha-tgshv
 # REPO: https://github.com/misha-tgshv/shadowrocket-configuration-file
-# UPDATED: 2026-11-05 07:19:53 MSK
+# UPDATED: 2026-11-06 07:17:19 MSK
 # SOURCE: https://www.cbr.ru/banking_sector/credit/cowebsites/
-# TOTAL: 1048
+# TOTAL: 1047
 DOMAIN-SUFFIX,1.psbank.ru
 DOMAIN-SUFFIX,13.alfabank.ru
 DOMAIN-SUFFIX,131.ru
@@ -288,18 +288,15 @@ DOMAIN-SUFFIX,energotransbank.com
 DOMAIN-SUFFIX,enter.unicredit.ru
 DOMAIN-SUFFIX,envelope.lockobank.ru
 DOMAIN-SUFFIX,er-fin.com
-DOMAIN-SUFFIX,ermakbank.ru
 DOMAIN-SUFFIX,etbank.ru
 DOMAIN-SUFFIX,euroalliance.ru
 DOMAIN-SUFFIX,events.online.gpb.ru
 DOMAIN-SUFFIX,everyx.ru
-DOMAIN-SUFFIX,evrofinance.ru
 DOMAIN-SUFFIX,exibank.ru
 DOMAIN-SUFFIX,eximbank.ru
 DOMAIN-SUFFIX,expobank.ru
 DOMAIN-SUFFIX,factoring.alfabank.ru
 DOMAIN-SUFFIX,festival.gift-cards.ru
-DOMAIN-SUFFIX,fifa.alfabank.ru
 DOMAIN-SUFFIX,file.rshb.ru
 DOMAIN-SUFFIX,filebox-test.alfabank.ru
 DOMAIN-SUFFIX,fin-state.ru
@@ -544,7 +541,6 @@ DOMAIN-SUFFIX,metro.gift-cards.ru
 DOMAIN-SUFFIX,metropolis.gift-cards.ru
 DOMAIN-SUFFIX,mfk-bank.ru
 DOMAIN-SUFFIX,mfk-suncity.gift-cards.ru
-DOMAIN-SUFFIX,mia.ru
 DOMAIN-SUFFIX,million.vtb.ru
 DOMAIN-SUFFIX,mir.chelind.ru
 DOMAIN-SUFFIX,mizuhogroup.com
@@ -558,6 +554,7 @@ DOMAIN-SUFFIX,moretech.vtb.ru
 DOMAIN-SUFFIX,mortgage.vtb.ru
 DOMAIN-SUFFIX,moscombank.ru
 DOMAIN-SUFFIX,moskb.ru
+DOMAIN-SUFFIX,mosnarbank.ru
 DOMAIN-SUFFIX,mosoblbank.ru
 DOMAIN-SUFFIX,mp-bank.ru
 DOMAIN-SUFFIX,mp.akbars.ru
@@ -656,6 +653,7 @@ DOMAIN-SUFFIX,partnership.alfabank.ru
 DOMAIN-SUFFIX,pay.raif.ru
 DOMAIN-SUFFIX,payanyway.ru
 DOMAIN-SUFFIX,paycenter.ru
+DOMAIN-SUFFIX,payinrussia.com
 DOMAIN-SUFFIX,paymentcenter.ru
 DOMAIN-SUFFIX,paymentkit.ru
 DOMAIN-SUFFIX,payments.raiffeisen.ru
@@ -738,6 +736,7 @@ DOMAIN-SUFFIX,realty.pervbank.ru
 DOMAIN-SUFFIX,refinans.chelind.ru
 DOMAIN-SUFFIX,reg.lockobank.ru
 DOMAIN-SUFFIX,reg.ubrr.ru
+DOMAIN-SUFFIX,rencapbank.com
 DOMAIN-SUFFIX,rencapbank.ru
 DOMAIN-SUFFIX,rencredit.ru
 DOMAIN-SUFFIX,repository.nsd.ru
@@ -881,7 +880,6 @@ DOMAIN-SUFFIX,svoy.alfabank.ru
 DOMAIN-SUFFIX,t-mall.gift-cards.ru
 DOMAIN-SUFFIX,t-win.vtb.ru
 DOMAIN-SUFFIX,tagbank.ru
-DOMAIN-SUFFIX,taidon.ru
 DOMAIN-SUFFIX,tangrm.ru
 DOMAIN-SUFFIX,tatsotsbank.ru
 DOMAIN-SUFFIX,tbank.ru
@@ -1043,6 +1041,7 @@ DOMAIN-SUFFIX,ypmn.ru
 DOMAIN-SUFFIX,zalog.baltinvestbank.com
 DOMAIN-SUFFIX,zalog.sovcombank.ru
 DOMAIN-SUFFIX,zarplata.chelind.ru
+DOMAIN-SUFFIX,zemsky.ru
 DOMAIN-SUFFIX,zenit.ru
 DOMAIN-SUFFIX,zenitcard.ru
 DOMAIN-SUFFIX,zenitresearch.ru
