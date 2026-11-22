@@ -16,7 +16,7 @@
 | [sr_ru_whitelist.conf](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/conf/sr_ru_whitelist.conf)  | БС через провайдера, а остальное в прокси|
 
 ### Альтернативные ссылки на конфиги (при проблемах с github)
-- Базовый - https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/conf/sr_ru_basic.conf.conf
+- Базовый - https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/conf/sr_ru_basic.conf
 - Гео - https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/conf/sr_ru_geo.conf
 - БС - https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/conf/sr_ru_whitelist.conf
 
