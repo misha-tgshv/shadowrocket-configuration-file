@@ -15,7 +15,7 @@
 | [sr_ru_geo.conf](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/conf/sr_ru_geo.conf)  | Все в прокси кроме доменов ru/рф, они мимо туннеля. Лучший вариант для звонков Telegram, Whatsapp и Facetime. Подключите дополнительно ГЕО базы, ссылки на них есть в 94 строке. Обратите внимание, что может увеличиться время загрузки из Апстора и возможны другие минусы, которые автор пока не обнаружил. |
 | [sr_ru_whitelist.conf](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/main/conf/sr_ru_whitelist.conf)  | БС через провайдера, а остальное в прокси                                                                                                                                                                                                                                                                      |
 
-### Альтернативные ссылки на конфиги (при проблемах с github)
+### Альтернативные ссылки на конфиги (при проблемах с GitHub)
 - Базовый - https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/conf/sr_ru_basic.conf
 - Гео - https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/conf/sr_ru_geo.conf
 - БС - https://cdn.jsdelivr.net/gh/misha-tgshv/shadowrocket-configuration-file@main/conf/sr_ru_whitelist.conf
@@ -28,12 +28,12 @@
 
 ## Модули
 - Для YouTube доступен модуль [YT-Premium-V1-RU.module](https://raw.githubusercontent.com/misha-tgshv/shadowrocket-configuration-file/refs/heads/release/modules/YT-Premium-V1-RU.module) с отключенными китайскими субтитрами и необходимыми правилами. Требует выпуск HTTPS-сертификата на устройства. Хорошо работает на iOS, плохо на macOS и не работает на Apple TV.
-- Для расшифровки сертификатов используйте модуль [Сertificate](https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/modules/Certificate.module). Не придется каждый раз выпускать сертификаты после обновления iOS. Просто создайте один раз сертификат и закиньте в него свои ca-passphrase и ca-p12.
+- Для расшифровки сертификатов используйте модуль [Certificate](https://github.com/misha-tgshv/shadowrocket-configuration-file/blob/main/modules/Certificate.module). Не придется каждый раз выпускать сертификаты после обновления iOS. Просто создайте один раз сертификат и закиньте в него свои ca-passphrase и ca-p12.
 
 ## Актуальные списки
 - `domains_community.list` — домены сообщества «Про Shadowrocket на русском», включающие универсальные правила для популярных доменов;
-- `banking.list` — список доменов банков и финсервисов с сайта ЦБ РФ;
-- `domains_ipchecker` - чекеры, использующиеся в российских приложениях.
+- `domains_banking.list` — список доменов банков и финсервисов с сайта ЦБ РФ;
+- `domains_ipchecker.list` - чекеры, использующиеся в российских приложениях.
 
 ## Где брать еще списки?
 - Использовать популярные от Blackmatrix7. Например, для [ТГ](https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Shadowrocket/Telegram/README.md);
